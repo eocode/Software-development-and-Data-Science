@@ -17,6 +17,17 @@ Apuntes sobre pensamiento computacional con Python
   - [Enumeración exhaustiva](#enumeraci%c3%b3n-exhaustiva)
   - [Aproximación de soluciones](#aproximaci%c3%b3n-de-soluciones)
   - [Búsqueda binaria](#b%c3%basqueda-binaria)
+  - [Representaciones de flotantes](#representaciones-de-flotantes)
+- [Funciones, alcance y abstracción](#funciones-alcance-y-abstracci%c3%b3n)
+- [Funciones](#funciones)
+  - [Específicaciones de código](#espec%c3%adficaciones-de-c%c3%b3digo)
+  - [Recursividad](#recursividad)
+    - [Factorial](#factorial)
+    - [Serie de fibbonachi](#serie-de-fibbonachi)
+- [Tipos estructurados, mutabilidad y funciones de alto nivel](#tipos-estructurados-mutabilidad-y-funciones-de-alto-nivel)
+  - [Tuplas](#tuplas)
+  - [Rangos](#rangos)
+  - [Listas y mutabilidad](#listas-y-mutabilidad)
 
 # Computo
 * Conocimiento declarativo
@@ -170,3 +181,132 @@ else :
 ## Búsqueda binaria
 Cuándo la respuesta se encuentra en un conjunto ordenado, se puede usar búsqueda binaria
 Corta la operación en 2 en cada iteración, lo que lo hace bastante eficiente
+
+## Representaciones de flotantes
+[Problema Python para decimales](http://docs.python.org.ar/tutorial/3/floatingpoint.html)
+
+# Funciones, alcance y abstracción
+**Abstracción:** No se necesita saber como funciona algo para poder operarlo.
+**Decomposición:** Dividir algo en componentes que colaboren con un fin común 
+
+# Funciones 
+
+```python
+def suma(a,b):
+    total = a + b
+    print(total)
+    return total
+
+suma(2,2)
+```
+
+## Específicaciones de código
+
+Documentar docstrings en el código
+
+```python
+def suma(a,b):
+    """ Suma dos valores a y b.
+    param int a cualquier entero
+    param int b cualquier entero
+    returns la sumatoria de a y b
+    """
+    total = a + b
+    print(total)
+    return total
+```
+
+Ver documentación:
+```python
+help(suma)
+```
+
+## Recursividad
+Es una forma de crear soluciones con el principio de divide y venceras. Es una técnica mediante la cual una función es llamada a si misma
+
+### Factorial
+
+Todas las combinaciones posibles
+
+<div align="center">
+  <img src="images/productorio.jpg">
+  <small><p>Factorial metemático</p></small>
+</div>
+
+```bash
+n! = n * (n - 1)!
+
+def factorial(n):
+    """Calcula el factorial de n
+    n int > 0
+    return n!
+    """
+
+    if n == 1:
+        return 1
+
+    return n * factorial(n - 1)
+```
+
+Python restringe el número de veces que puede hacer recursividad, al momento de hacer este ejemplo permitió hasta el número 998
+
+### Serie de fibbonachi
+
+```python
+def fibonacci(n):
+    if n == 0 or n == 1:
+      return 1
+    a = fibonacci(n - 1) + fibonacci(n - 2)
+    print(a)
+    return a
+```
+
+# Tipos estructurados, mutabilidad y funciones de alto nivel
+
+## Tuplas
+* Son secuencias inmutables de objetos
+* Pueden contener cualquier tipo de objeto
+* Pueden devolver varios valores en una función
+
+```python
+my_tuple = (1, 'dos', True)
+my_tuple[0]
+my_tuple(1,)
+my_other_tuple = (2, 3, 4)
+my_tuple += my_other_tuple
+
+x, y, z = my_other_tuple
+
+def coordenadas():
+  return(5, 4)
+
+coordenada = coordenadas()
+x, y = coordenadas()
+```
+
+## Rangos
+
+* Representan una secuencia de enteros
+* `range(comienzo,fin,pasos)`
+* Son inmutables
+* Eficientes en uso de memoria y utilizados en for loops
+
+```python
+my_range = range(1, 5)
+for i in my_range:
+  print(i)
+my_range = range(0,7,2)
+my_other_range = range(0,8,2)
+my_range == my_other_range
+id(my_range)
+my_range is my_other_range
+for i in range(0, 101, 2):
+    print(i)
+```
+
+## Listas y mutabilidad
+* Son secuencias de objetos, pero mutables
+* Cuándo modificas unas lista, pueden existir efectos secundarios
+* Es posible iterar con ellas
+* Se pueden asignar via indice
+* Utilizar métodos: append, pop, remove, insert
