@@ -28,6 +28,22 @@ Apuntes sobre pensamiento computacional con Python
   - [Tuplas](#tuplas)
   - [Rangos](#rangos)
   - [Listas y mutabilidad](#listas-y-mutabilidad)
+    - [Clonación](#clonaci%c3%b3n)
+  - [List comprehension](#list-comprehension)
+  - [Funciones en Python](#funciones-en-python)
+    - [Funciones de expresiones](#funciones-de-expresiones)
+  - [Diccionarios](#diccionarios)
+- [Pruebas y debugging](#pruebas-y-debugging)
+  - [Pruebas de caja negra](#pruebas-de-caja-negra)
+  - [Pruebas de caja de cristal](#pruebas-de-caja-de-cristal)
+  - [Debugging](#debugging)
+    - [Diseño de experimentos](#dise%c3%b1o-de-experimentos)
+    - [Errores comúnes](#errores-com%c3%banes)
+  - [Exepciones y afirmaciones](#exepciones-y-afirmaciones)
+    - [Manejo de excepciones](#manejo-de-excepciones)
+      - [Excepciones como control de flujo](#excepciones-como-control-de-flujo)
+  - [Afirmaciones](#afirmaciones)
+- [POO](#poo)
 
 # Computo
 * Conocimiento declarativo
@@ -310,3 +326,141 @@ for i in range(0, 101, 2):
 * Es posible iterar con ellas
 * Se pueden asignar via indice
 * Utilizar métodos: append, pop, remove, insert
+
+```python
+my_list = [1,2,3]
+my_list[0]
+my_list.append(4)
+my_list[0] = 'a'
+my_list.pop()
+
+for element in my_list:
+ print(element)
+
+a = [1,2,3]
+b = a
+id(a)
+id(b)
+c = [a , b]
+a.append(5)
+c
+```
+
+### Clonación
+* Casi siempre es mejor clonar una lista en vez de mutarla
+* Para ello podemos usar slices o la funcion list
+
+```python
+a = [1,2,3]
+b = a
+id(a)
+id(b)
+c = list(a)
+d = a[::]
+```
+
+## List comprehension
+* Forma concisa de aplicar operaciones a los valores de una secuencia
+* También se pueden mostrar condiciones para filtrar
+
+```python
+my_list = list(range(100))
+double = [i * 2 for i in my_list]
+double
+pares = [i for i in my_list if i % 2 == 0]
+pares
+```
+
+## Funciones en Python
+* Tienen un tipo
+* Se pueden pasar como argumentos de otras funciones
+* Se pueden utilizar en expresiones
+* Se pueden incluir en estructuras de datos
+
+### Funciones de expresiones
+`lambda <vars> : <expresion>`
+
+## Diccionarios
+* Son como listas, pero en lugar de indices se utilizan mapas
+* No tienen orden interno
+* Son mutables 
+* Pueden iterarse
+
+```python
+for element in dict.values():
+  print(element)
+for element in dict.items():
+  print(element)
+
+'David' in dict
+'Tom' in dict
+```
+
+# Pruebas y debugging
+## Pruebas de caja negra
+* Se basan en la especificación de la función o el programa
+* Prueba inputs y valida outputs
+* Unit testing o integration testing
+
+## Pruebas de caja de cristal
+* Se basan en el flujo del programa
+* Prueba todos los caminos posibles de una función: Ramificaciones, bucles for y while, recursión
+* Regression testing o mocks
+
+## Debugging
+* No te molestes con el debugger. Aprende a utilizar el print statement.
+* Estudia los datos disponibles
+* Utiliza los datos para crear hipótesis y experimentos. Método científico
+* Ten una mente abierta. Si entendieras el programa, probablemente no habrían buggs
+* LLeva un registro de lo que has tratado, preferentemente en la forma de test
+
+### Diseño de experimentos
+* Debuggear es un proceso de búsqueda. Cada prueba debe acotar el espacio de busqueda
+* Búsqueda binaria con print statements
+
+### Errores comúnes
+* Encuentra los sospechosos comunes
+* En lugar de preguntarte por qué un programa no funciona preguntate por que está funcionando de está manera
+* Es posible que el bug no se encuentre donde crees que está
+* Explicale el problema a otra persona. De preferencia que no tenga contexto
+* Lleva un registro de lo que has tratado, preferentemente en la forma de test
+* Vete a dormir
+
+## Exepciones y afirmaciones
+Programación defensiva
+* Son muy comunes en la programación. No tienen nada excepcional
+* Se relacionan con errores de semántica
+* Se pueden crear excepciones propias
+* Cuándo una excepción no se maneja, el programa termina en error
+
+### Manejo de excepciones
+* Se manejan con ``try, except, finally``
+* Se pueden utilizar también para ramificar programas
+* No deben manejarse de manera silenciosa (con print statement)
+* Para aventar tu propia excepción utiliza el keyword ``raise``
+
+#### Excepciones como control de flujo
+La razón de usarlo en lugar del if es por EAFP(easier to ask for forgiveness than permission)
+Mientras que otros lenguajes utilizan LBYL(look before you leap)
+
+```javascript
+// Javascript
+/*
+* Paises es un objeto. Pais es la llave
+* Código con el principio LBYL
+*/
+
+function buscaPais(paises, pais){
+  if(!Object.keys(paises).includes(paises)){
+    return null
+  }
+  return paises[pais];
+}
+```
+
+## Afirmaciones
+* Programación defensiva
+* Pueden utilizarse pra verificar que los tipos sean correctos en una función
+* Sirven para debuguear
+
+# POO
