@@ -44,6 +44,14 @@ Apuntes sobre pensamiento computacional con Python
       - [Excepciones como control de flujo](#excepciones-como-control-de-flujo)
   - [Afirmaciones](#afirmaciones)
 - [POO](#poo)
+  - [Conceptos](#conceptos)
+    - [Clases](#clases)
+    - [Instancias](#instancias)
+    - [Atributos de la instancia](#atributos-de-la-instancia)
+    - [Métodos de instancia](#m%c3%a9todos-de-instancia)
+  - [Tipos de datos abstractos](#tipos-de-datos-abstractos)
+  - [Decomposición](#decomposici%c3%b3n)
+  - [Abstracción](#abstracci%c3%b3n)
 
 # Computo
 * Conocimiento declarativo
@@ -464,3 +472,80 @@ function buscaPais(paises, pais){
 * Sirven para debuguear
 
 # POO
+
+La clave es pensar en objetos como agrupaciones de datos y los métodos que operan en dichos datos. Estos pueden tener **propiedades** y **comportamientos**.
+
+La programación orientada a objetos nos permite modelar cosas reales y concretas del mundo y sus relaciones con otros objetos
+
+## Conceptos
+
+### Clases
+* Sirven para definir cosas complejas
+* Permiten organizar el código
+* Sólo proveen estructura
+
+### Instancias
+Mientras que las clases proveen la estrucutra, las instancias son los objetos reales que creamos en nuestro programa: un hotel llamado Hilton
+
+Otra forma de pensarlo es que las clases son como un formulario y una vez que se llena cada copia del formulario tenemos las instancias que pertenecen a cada clase. Cada copia puede tener datos distintos. Al igual que cada instancia es distinta a las demás
+
+* Los atributos de clase nos permiten
+  * Representar datos
+  * Procedimientos para interactuar con los métodos
+  * Esconder la representación interna
+* Se accede a los atributos con la notación de punto
+* Puede tener atributos privados. Por convención comienza con _
+
+```python
+class Hotel
+  pass
+```
+
+Una vez teniendo la clase, podemos generar una instancia llamando al constructor de la clase
+```python
+hotel = Hotel()
+```
+
+### Atributos de la instancia
+Todas las clases crean objetos y todos los objetos tienen atributos. Se usa el método especial ``__init__`` para definir el estado inicial de la instancia. Recibe como primer parametro obligatorio ``self`` (es simplemente una referencia a la instancia)
+
+```python
+class Hotel:
+  def __init__(self, numero_maximo_de_huespedes, lugares_de_estacionamiento):
+    self.numero_maximo_de_huespedes = numero_maximo_de_huespedes
+    self.lugares_de_estacionamiento = lugares_de_estacionamiento
+    self.huespedes = 0
+
+hotel = Hotel(numero_maximo_de_huespedes=50, lugares_de_estacionamiento=20)
+
+print(hotel.lugares_de_estacionamiento)
+```
+
+### Métodos de instancia
+Mientras que los atributos de la instancia describen lo que representa el objeto, los métodos de instancia nos indican que podemos hacer con las instancias de dicha clase y normalmente operan en los mencionados atributos.
+
+Los métodos son equivalentes a funciones dentro de la definición de la clase, pero todos reciben ``self`` como primer argumento
+
+## Tipos de datos abstractos
+* Todo es un objeto en Python y tiene un tipo
+  * Representan datos y formas de interactuar con ellos
+
+* Formas de interactuar con un objeto
+  * Creación
+  * Manipulación
+  * Destrucción
+
+* Ventajas
+  * Decomposición
+  * Abstracción
+  * Encapsulación 
+
+## Decomposición
+* Partir un problema en problemas más pequeños
+* Las clases permiten crear mayores abstracciones en forma de componentes
+* Cada clase se encarga de una parte del problema y el programa se vuelve más fácil de mantener
+
+## Abstracción
+* Enfocarnos en la información relevante
+* Separar la información centrar de los detalles
+* Podemos utilizar variables y métodos (privados o públicos)
