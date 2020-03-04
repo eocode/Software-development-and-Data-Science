@@ -52,6 +52,14 @@ Apuntes sobre pensamiento computacional con Python
   - [Tipos de datos abstractos](#tipos-de-datos-abstractos)
   - [Decomposición](#decomposici%c3%b3n)
   - [Abstracción](#abstracci%c3%b3n)
+  - [Encapsulación](#encapsulaci%c3%b3n)
+  - [Herencia](#herencia)
+  - [Polimorfismo](#polimorfismo)
+- [Complejidad algorítmica](#complejidad-algor%c3%adtmica)
+  - [Aproximaciones](#aproximaciones)
+  - [Notación asintotica / Big O Notation](#notaci%c3%b3n-asintotica--big-o-notation)
+    - [Crecimiento asintótico](#crecimiento-asint%c3%b3tico)
+    - [Clases de complejidad algorítmica](#clases-de-complejidad-algor%c3%adtmica)
 
 # Computo
 * Conocimiento declarativo
@@ -547,5 +555,55 @@ Los métodos son equivalentes a funciones dentro de la definición de la clase, 
 
 ## Abstracción
 * Enfocarnos en la información relevante
-* Separar la información centrar de los detalles
+* Separar la información central de los detalles
 * Podemos utilizar variables y métodos (privados o públicos)
+
+## Encapsulación
+* Permite agrupar datos y su comportamiento
+* Controlar el acceso a dichos datos
+* Previene modificaciones no autorizadas
+
+## Herencia
+* Permite modelar **jerarquias de clases (Arbol)**
+* Permite compartir comportamiento común
+* Al padre se le conoce como Superclase y al hijo como SubClase
+
+## Polimorfismo
+* Habilidad de tomar varias formas
+* Nos permite cambiar el comportamiento de una superclase para adaptarlo a la subclase
+
+# Complejidad algorítmica
+* Comparar algorítmos
+* Complejidad temporal (Cuánto se tarda) vs complejidad espacial (Cuánto espacio necesita)
+* Podemos definirla como T(n)
+
+## Aproximaciones
+* Conometrar el tiempo que corre un algoritmo
+* Contar con los pasos con una medida abstracta de operación
+* Contar los pasos conforme nos aproximamos al infinito **Forma estándar**
+
+Se pueden generar ecuaciones matemáticas para evaluar el rendimiento por medio de la estructura del algorítmo
+```python
+1002 + x + 2x**
+```
+
+## Notación asintotica / Big O Notation
+### Crecimiento asintótico
+* No importan variaciones pequeñas
+* El enfoque se centra en lo que pasa conforme el tamaño del problema se acerca a infinito
+* Mejor de los caso, promedio, peor de los casos
+* Big O
+* Nada más importa el término de mayor tamaño
+
+### Clases de complejidad algorítmica
+* O(1) Constante
+* O(n) Lineal
+* O(log n) Logaritmica
+* O(n log n) log lineal
+* O(n**2) Polinomial
+* O(2**n) Exponencial
+
+<div align="center">
+  <img src="images/big-o-complexity-chart.png">
+  <small><p>Big O</p></small>
+</div>
