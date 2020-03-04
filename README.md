@@ -1,5 +1,5 @@
 
-# Pensamiento computacional <!-- omit in toc -->
+# Mundo Python <!-- omit in toc -->
 
 Apuntes sobre pensamiento computacional con Python
 
