@@ -13,6 +13,10 @@ Apuntes sobre pensamiento computacional con Python
   - [Ramificación de programas](#ramificaci%c3%b3n-de-programas)
   - [Iteraciones](#iteraciones)
     - [Iterators](#iterators)
+  - [Strings y String literals](#strings-y-string-literals)
+    - [Accediendo a elementos](#accediendo-a-elementos)
+    - [Slices](#slices)
+    - [String Methods](#string-methods)
 - [Programas númericos](#programas-n%c3%bamericos)
   - [Enumeración exhaustiva](#enumeraci%c3%b3n-exhaustiva)
   - [Aproximación de soluciones](#aproximaci%c3%b3n-de-soluciones)
@@ -60,6 +64,9 @@ Apuntes sobre pensamiento computacional con Python
   - [Notación asintotica / Big O Notation](#notaci%c3%b3n-asintotica--big-o-notation)
     - [Crecimiento asintótico](#crecimiento-asint%c3%b3tico)
     - [Clases de complejidad algorítmica](#clases-de-complejidad-algor%c3%adtmica)
+- [Búsqueda y ordenamiento](#b%c3%basqueda-y-ordenamiento)
+  - [Búsqueda lineal](#b%c3%basqueda-lineal)
+  - [Búsqueda binaria](#b%c3%basqueda-binaria-1)
 
 # Computo
 * Conocimiento declarativo
@@ -173,6 +180,115 @@ iterador = iter(frutas)
 next(iterador)
 next(iterador)
 next(iterador)
+```
+
+## Strings y String literals
+Son cadenas con funciones especiales, una cadena es inmutable
+```python
+mystr1 = 'cadena'
+mystr2 = "cadena"
+mystr3 = """
+esto es un texto con varias
+lineas
+en el código
+
+"""
+```
+
+### Accediendo a elementos
+```python
+mystr1[1]
+```
+
+### Slices
+Permite jugar con rangos, el tercer campo es para saltos, y también puede indicar que sea todo al revés
+```python
+mystr1[1:5]
+```
+
+Longitud
+```python
+len(mystr1)
+```
+
+### String Methods
+Strip limpia de caracteres
+```python
+mystr1.strip()
+```
+
+lower (es más sencilla) / casefold (forza todo a minuscula para cualquier idioma)
+```python
+mystr1.lower()
+mystr1.casefold()
+```
+
+upper
+```python
+mystr1.upper()
+```
+
+capitalize (primera letra a mayuscula de la oración) / title (todas las palabras)
+
+```python
+mystr1.capitalize()
+mystr1.title()
+```
+
+replace
+```python
+mystr1.replace('a','uo')
+```
+
+split parte con un separador
+```python
+mystr1.split(',')
+```
+
+center para uso en terminal, undica cuantos caracteres y rellena con un caracter
+```python
+mystr1.center(30,'-')
+```
+
+count cuenta apariciones de un caracter
+```python
+mystr1.count('l')
+```
+
+endswith / startwith
+```python
+mystr1.endswith('ld')
+mystr1.startwith('ld')
+```
+
+find / index
+-1 indica que no encontro el substring con index falla
+```python
+mystr1.find('a')
+mystr1.index('a')
+```
+
+isMethods()
+retorna verdadero o falso
+```python
+mystr1.isalpha() # solo letras
+mystr1.isnumeric()
+mystr1.isidentifier()
+mystr1.isspace()
+mystr1.islower()
+mystr1.isupper()
+mystr1.istitle()
+```
+
+join
+es el opuesto a split
+```python
+separator = ' '
+mylist = ['1','2','3']
+print(mylist)
+
+ex = separator.join(mylist)
+print(ex)
 ```
 
 # Programas númericos
@@ -607,3 +723,16 @@ Se pueden generar ecuaciones matemáticas para evaluar el rendimiento por medio 
   <img src="images/big-o-complexity-chart.png">
   <small><p>Big O</p></small>
 </div>
+
+# Búsqueda y ordenamiento
+## Búsqueda lineal
+* Busca en todos los elementos de manera secuencial
+* ¿Cuál es el peor caso?
+
+
+## Búsqueda binaria
+* Divide y conquista
+* El problema se divide en 2 en cada iteración
+* ¿Cuál es el peor caso?
+* Funciona en listas ordenadas
+* Intercambia tiempo por espacio, guarda la lista ordenada en disco
