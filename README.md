@@ -67,6 +67,7 @@ Apuntes sobre pensamiento computacional con Python
 - [Búsqueda y ordenamiento](#b%c3%basqueda-y-ordenamiento)
   - [Búsqueda lineal](#b%c3%basqueda-lineal)
   - [Búsqueda binaria](#b%c3%basqueda-binaria-1)
+  - [Ordenamiento burbuja](#ordenamiento-burbuja)
 
 # Computo
 * Conocimiento declarativo
@@ -731,8 +732,12 @@ Se pueden generar ecuaciones matemáticas para evaluar el rendimiento por medio 
 
 
 ## Búsqueda binaria
+Asume que la lista está ordenada
 * Divide y conquista
 * El problema se divide en 2 en cada iteración
 * ¿Cuál es el peor caso?
 * Funciona en listas ordenadas
 * Intercambia tiempo por espacio, guarda la lista ordenada en disco
+
+## Ordenamiento burbuja
+Es un algoritmo que recorre repetidamente una lista que necesita ordenarse. Compara sus elementos adyacentes y los intercambia si están en el orden incorrecto. Este es un procedimiento que se repite hasta que no se requieren más intercambios, lo que indica que la lista se encuentra ordenada
