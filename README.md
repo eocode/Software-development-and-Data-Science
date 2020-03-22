@@ -68,6 +68,13 @@ Apuntes sobre pensamiento computacional con Python
   - [Búsqueda lineal](#b%c3%basqueda-lineal)
   - [Búsqueda binaria](#b%c3%basqueda-binaria-1)
   - [Ordenamiento burbuja](#ordenamiento-burbuja)
+  - [Ordenamiento por inserción](#ordenamiento-por-inserci%c3%b3n)
+- [Ambientes virtuales](#ambientes-virtuales)
+  - [Pip](#pip)
+- [Graficado](#graficado)
+  - [Gráficado simple](#gr%c3%a1ficado-simple)
+- [Optimización](#optimizaci%c3%b3n)
+- [El problema del morral](#el-problema-del-morral)
 
 # Computo
 * Conocimiento declarativo
@@ -741,3 +748,59 @@ Asume que la lista está ordenada
 
 ## Ordenamiento burbuja
 Es un algoritmo que recorre repetidamente una lista que necesita ordenarse. Compara sus elementos adyacentes y los intercambia si están en el orden incorrecto. Este es un procedimiento que se repite hasta que no se requieren más intercambios, lo que indica que la lista se encuentra ordenada
+
+## Ordenamiento por inserción
+El ordenamiento por inserción es uno de los algoritmos más comunes que estudian
+los Científicos del Cómputo. Es intuitivo y fácil de implementar, pero es muy
+ineficiente para listas de gran tamaño.
+
+Una de las características del ordenamiento por inserción es que ordena en “su
+lugar.” Es decir, no requiere memoria adicional para realizar el ordenamiento
+ya que simplemente modifican los valores en memoria.
+
+# Ambientes virtuales
+* Permiten aislar el ambiente para poder instalar diversas versiones de paquetes
+* A partir de Python 3 se incluye en la libreria estandar en el modulo venv
+* Ningún ingeniero profesional de Python trabaja sin ellos
+
+## Pip
+* Permite descargar paquetes de terceros para utilizar en nuestro programa
+* Permite compartir nuestros paquetes con terceros
+* Permite especificar la version del paquete que necesitamos
+
+```bash
+python -m venv env
+cd env
+cd Scripts
+activate.bat
+pip install bokeh
+pip freeze
+deactivate
+python3 freeze
+```
+
+# Graficado
+* Reconocimiento de patrones
+* Predicción de una serie
+* Simplifica la interpretación y las conclusiones acerca de los datos
+
+## Gráficado simple
+* Bokeh permite construir gráficas complejas de manera rápida con comando simples
+* Permite exportar a varios formatos como html, notebooks, imagenes
+* Bokeh se puede utilizar en el servidor con Flask y Django
+
+[Documentación de Bokeh](https://docs.bokeh.org/en/latest/index.html)
+
+# Optimización
+* Permite resolver muchos problemas de manera computacional
+* Una función objetivo que debemos maximizar o minimizar, el input que nos da el resultado más alto y bajo
+* Una serie de limitantes que debemos respetar, po ejemplo algunas reglas de negocio
+
+> “P versus NP” es algo más que un rompecabezas matemático abstracto. Su objetivo es determinar —de una vez por todas— qué tipo de problemas se pueden resolver con ordenadores, y cuáles no. 
+> 
+> Los problemas de clase “P” son “fáciles” de resolver para los ordenadores; es decir, las soluciones a estos problemas pueden ser calculadas en una cantidad razonable de tiempo, en comparación con la complejidad del problema.
+
+[Problema P vs NP](https://www.youtube.com/watch?v=UR2oDYZ-Sao)
+
+# El problema del morral
+Obtener el mayor valor en una mochila
