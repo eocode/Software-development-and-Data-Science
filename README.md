@@ -6,7 +6,9 @@ Apuntes sobre pensamiento computacional con Python
 ## Tabla de Contenido<!-- omit in toc -->
 - [Computo](#computo)
 - [Python](#python)
+  - [El Zen de Python](#el-zen-de-python)
   - [Elementos básicos](#elementos-b%c3%a1sicos)
+    - [Prioridad de operadores PEMDAS](#prioridad-de-operadores-pemdas)
   - [Asiganción de variables](#asiganci%c3%b3n-de-variables)
   - [Operaciones en cadenas](#operaciones-en-cadenas)
   - [Entrada de datos](#entrada-de-datos)
@@ -17,26 +19,31 @@ Apuntes sobre pensamiento computacional con Python
     - [Accediendo a elementos](#accediendo-a-elementos)
     - [Slices](#slices)
     - [String Methods](#string-methods)
+  - [ASCII vs Unicode](#ascii-vs-unicode)
 - [Programas númericos](#programas-n%c3%bamericos)
   - [Enumeración exhaustiva](#enumeraci%c3%b3n-exhaustiva)
   - [Aproximación de soluciones](#aproximaci%c3%b3n-de-soluciones)
   - [Búsqueda binaria](#b%c3%basqueda-binaria)
   - [Representaciones de flotantes](#representaciones-de-flotantes)
 - [Funciones, alcance y abstracción](#funciones-alcance-y-abstracci%c3%b3n)
-- [Funciones](#funciones)
-  - [Específicaciones de código](#espec%c3%adficaciones-de-c%c3%b3digo)
-  - [Recursividad](#recursividad)
-    - [Factorial](#factorial)
-    - [Serie de fibbonachi](#serie-de-fibbonachi)
+  - [Funciones](#funciones)
+    - [Específicaciones de código](#espec%c3%adficaciones-de-c%c3%b3digo)
+    - [Recursividad](#recursividad)
+      - [Factorial](#factorial)
+      - [Serie de fibbonachi](#serie-de-fibbonachi)
 - [Tipos estructurados, mutabilidad y funciones de alto nivel](#tipos-estructurados-mutabilidad-y-funciones-de-alto-nivel)
   - [Tuplas](#tuplas)
   - [Rangos](#rangos)
   - [Listas y mutabilidad](#listas-y-mutabilidad)
+    - [Operaciones con listas](#operaciones-con-listas)
+    - [Listas con slices](#listas-con-slices)
+    - [Modificacion de listas](#modificacion-de-listas)
     - [Clonación](#clonaci%c3%b3n)
   - [List comprehension](#list-comprehension)
   - [Funciones en Python](#funciones-en-python)
     - [Funciones de expresiones](#funciones-de-expresiones)
   - [Diccionarios](#diccionarios)
+    - [Iteración de diccionarios](#iteraci%c3%b3n-de-diccionarios)
 - [Pruebas y debugging](#pruebas-y-debugging)
   - [Pruebas de caja negra](#pruebas-de-caja-negra)
   - [Pruebas de caja de cristal](#pruebas-de-caja-de-cristal)
@@ -74,7 +81,11 @@ Apuntes sobre pensamiento computacional con Python
 - [Graficado](#graficado)
   - [Gráficado simple](#gr%c3%a1ficado-simple)
 - [Optimización](#optimizaci%c3%b3n)
-- [El problema del morral](#el-problema-del-morral)
+  - [El problema del morral](#el-problema-del-morral)
+- [Programación dinámica y estocástica](#programaci%c3%b3n-din%c3%a1mica-y-estoc%c3%a1stica)
+  - [Programación dinámica](#programaci%c3%b3n-din%c3%a1mica)
+    - [La optimizacion se basa en la **“Memorization” (memorizacion)**](#la-optimizacion-se-basa-en-la-memorization-memorizacion)
+    - [Fibonacci](#fibonacci)
 
 # Computo
 * Conocimiento declarativo
@@ -91,6 +102,28 @@ Apuntes sobre pensamiento computacional con Python
     * Interpretado o compilado
 
 # Python
+
+## El Zen de Python
+* Hermoso es mejor que feo.
+* Explícito es mejor que implícito.
+* Simple es mejor que complejo.
+* Complejo es mejor que complicado.
+* Sencillo es mejor que anidado.
+* Escaso es mejor que denso.
+* La legibilidad cuenta.
+* Los casos especiales no son lo suficientemente * Especiales para romper las reglas.
+* Lo práctico le gana a la pureza.
+* Los errores no debe pasar en silencio.
+* A menos que sean silenciados.
+* En cara a la ambigüedad, rechazar la tentación de adivinar.
+* Debe haber una - y preferiblemente sólo una - manera obvia de hacerlo.
+* Aunque esa manera puede no ser obvia en un primer momento a menos que seas holandés.
+* Ahora es mejor que nunca.
+* Aunque “nunca” es a menudo mejor que “ahora mismo”.
+* Si la aplicación es difícil de explicar, es una mala idea.
+* Si la aplicación es fácil de explicar, puede ser una buena idea.
+* Los espacios de nombres son una gran idea ¡hay que hacer más de eso!
+
 ## Elementos básicos
 * Literales
 * Operadores
@@ -101,6 +134,14 @@ Apuntes sobre pensamiento computacional con Python
   ```python
   a = 2
   ```
+
+### Prioridad de operadores PEMDAS
+* Parentesis
+* Exponenciales
+* Multiplicación
+* División
+* Adición
+* Substracción
 
 ## Asiganción de variables
 Operador de asignación (=)
@@ -211,7 +252,11 @@ mystr1[1]
 ### Slices
 Permite jugar con rangos, el tercer campo es para saltos, y también puede indicar que sea todo al revés
 ```python
-mystr1[1:5]
+mystr1[1]
+mystr1[1:]
+mystr1[1:3]
+mystr1[1:6:2]
+mystr1[::-1]
 ```
 
 Longitud
@@ -299,6 +344,13 @@ ex = separator.join(mylist)
 print(ex)
 ```
 
+## ASCII vs Unicode
+* Ambos son codificadores de caracteres
+* ASCII (American Standart Code for Information Interchange) toma en cuenta solamente el lenguaje inglés
+* UNICODE incluye la mayoria de alfabetos del mundo
+
+Python 3 por defecto usa Unicode
+
 # Programas númericos
 ## Enumeración exhaustiva
 Prueba todas las posibilidades hasta que encuentres la respuesta para la mayoria de los casos el rendimiento no es importante, las computadoras son muy rápidas
@@ -345,7 +397,7 @@ Corta la operación en 2 en cada iteración, lo que lo hace bastante eficiente
 **Abstracción:** No se necesita saber como funciona algo para poder operarlo.
 **Decomposición:** Dividir algo en componentes que colaboren con un fin común 
 
-# Funciones 
+## Funciones 
 
 ```python
 def suma(a,b):
@@ -356,7 +408,7 @@ def suma(a,b):
 suma(2,2)
 ```
 
-## Específicaciones de código
+### Específicaciones de código
 
 Documentar docstrings en el código
 
@@ -377,10 +429,10 @@ Ver documentación:
 help(suma)
 ```
 
-## Recursividad
+### Recursividad
 Es una forma de crear soluciones con el principio de divide y venceras. Es una técnica mediante la cual una función es llamada a si misma
 
-### Factorial
+#### Factorial
 
 Todas las combinaciones posibles
 
@@ -406,7 +458,7 @@ def factorial(n):
 
 Python restringe el número de veces que puede hacer recursividad, al momento de hacer este ejemplo permitió hasta el número 998
 
-### Serie de fibbonachi
+#### Serie de fibbonachi
 
 ```python
 def fibonacci(n):
@@ -486,6 +538,33 @@ a.append(5)
 c
 ```
 
+### Operaciones con listas
+
+```python
+lista = ['a']
+lista2 = lista * 10
+lista2
+```
+
+### Listas con slices
+Al igual que con los strings las listas se pueden rebanar
+```python
+lista = [1,2,3,4,5,6]
+lista[1:]
+lista[1:3]
+lista[1:6:2]
+lista[::-1] 
+```
+
+### Modificacion de listas
+```python
+lista = ['juan','pedro','pepe']
+lista[0] = 'laura'
+lista.append('estela')
+nombre = lista.pop()
+nombre == 'estela'
+```
+
 ### Clonación
 * Casi siempre es mejor clonar una lista en vez de mutarla
 * Para ello podemos usar slices o la funcion list
@@ -521,12 +600,32 @@ pares
 `lambda <vars> : <expresion>`
 
 ## Diccionarios
+Son mapas de llaves a valores. Los valores pueden ser de cualquier tipo
+* Se crean con llaves o con el keyword dict
+* Se añaden elementos al diccionario señalando la llave y el valor
 * Son como listas, pero en lugar de indices se utilizan mapas
 * No tienen orden interno
 * Son mutables 
 * Pueden iterarse
 
 ```python
+d = {}
+d['llave'] = 'valor'
+d{'llave':'valor'}
+```
+
+### Iteración de diccionarios
+* Al iterar de forma predeterminada se obtienen las llaves
+* Es posible iterar sobre los valores
+* Se pueden obtener llaves y valores al mismo tiempo
+
+```python
+d = {}
+d['primero'] = 'Hola'
+d['segundo'] = 'adios'
+d['primero']
+for element in dict.keys():
+  print(element)
 for element in dict.values():
   print(element)
 for element in dict.items():
@@ -802,5 +901,27 @@ python3 freeze
 
 [Problema P vs NP](https://www.youtube.com/watch?v=UR2oDYZ-Sao)
 
-# El problema del morral
-Obtener el mayor valor en una mochila
+## El problema del morral
+Obtener el mayor valor en una mochila}
+
+# Programación dinámica y estocástica
+
+## Programación dinámica
+> “[El nombre] Programacion Dinamica se escogio para esconder a patrocinadores gubernamentales el hecho de que en realidad estaba haciendo Matematicas. La frase Programacion Dinamica es algo a lo que ningun congresiste puede oponerse” - 
+> 
+> **Richard Bellman**
+
+Los problemas que esta técnica puede optimizar son los que tienen una subestructura optima y ademas tiene ser un tipo de problema empalmado (ejem: Fibonacci)
+
+* **Subestructura Optima:** una solucion optima local se puede encontrar al combinar soluciones optimas de subproblemas locales.
+
+* **Problemas empalmados:** Una solucion optima que involucra resolver el mismo problema en varias ocaciones
+
+### La optimizacion se basa en la **“Memorization” (memorizacion)**
+
+* Es una tecnica para guardar computos previos con el fin de no realizarlos nuevamente
+* Normalmente se utiliza un diccionario donde las consultas se pueden hacer en O(1)
+* Intercambia Tiempo por Espacio
+
+### Fibonacci
+Fn = Fn-1 + Fn-2
