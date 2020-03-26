@@ -56,6 +56,7 @@ Apuntes sobre pensamiento computacional con Python
   - [Exepciones y afirmaciones](#exepciones-y-afirmaciones)
     - [Manejo de excepciones](#manejo-de-excepciones)
       - [Excepciones como control de flujo](#excepciones-como-control-de-flujo)
+    - [Jerarquía de errores](#jerarqu%c3%ada-de-errores)
   - [Afirmaciones](#afirmaciones)
 - [POO](#poo)
   - [Conceptos](#conceptos)
@@ -69,6 +70,7 @@ Apuntes sobre pensamiento computacional con Python
   - [Encapsulación](#encapsulaci%c3%b3n)
   - [Herencia](#herencia)
   - [Polimorfismo](#polimorfismo)
+- [Decoradores](#decoradores)
 - [Complejidad algorítmica](#complejidad-algor%c3%adtmica)
   - [Aproximaciones](#aproximaciones)
   - [Notación asintotica / Big O Notation](#notaci%c3%b3n-asintotica--big-o-notation)
@@ -81,13 +83,15 @@ Apuntes sobre pensamiento computacional con Python
   - [Ordenamiento por inserción](#ordenamiento-por-inserci%c3%b3n)
 - [Ambientes virtuales](#ambientes-virtuales)
   - [Pip](#pip)
+    - [Archivo de dependencias](#archivo-de-dependencias)
+- [Manejo de archivos con Python](#manejo-de-archivos-con-python)
 - [Graficado](#graficado)
   - [Gráficado simple](#gr%c3%a1ficado-simple)
 - [Optimización](#optimizaci%c3%b3n)
   - [El problema del morral](#el-problema-del-morral)
 - [Programación dinámica y estocástica](#programaci%c3%b3n-din%c3%a1mica-y-estoc%c3%a1stica)
   - [Programación dinámica](#programaci%c3%b3n-din%c3%a1mica)
-    - [La optimizacion se basa en la **“Memorization” (memorizacion)**](#la-optimizacion-se-basa-en-la-memorization-memorizacion)
+    - [La optimizacion se basa en la memorizacion](#la-optimizacion-se-basa-en-la-memorizacion)
     - [Fibonacci](#fibonacci)
 
 # Computo
@@ -710,7 +714,8 @@ Programación defensiva
 * Cuándo una excepción no se maneja, el programa termina en error
 
 ### Manejo de excepciones
-* Se manejan con ``try, except, finally``
+* Cuando se avienta (**throw**) un error, si el error no se atrapa el programa se detiene
+* Se manejan con ``try, except, else, finally``
 * Se pueden utilizar también para ramificar programas
 * No deben manejarse de manera silenciosa (con print statement)
 * Para aventar tu propia excepción utiliza el keyword ``raise``
@@ -734,6 +739,12 @@ function buscaPais(paises, pais){
 }
 ```
 
+### Jerarquía de errores
+
+Python maneja una jerarqui de errores
+
+https://docs.python.org/3.5/reference/compound_stmts.html#try
+
 ## Afirmaciones
 * Programación defensiva
 * Pueden utilizarse pra verificar que los tipos sean correctos en una función
@@ -745,12 +756,21 @@ La clave es pensar en objetos como agrupaciones de datos y los métodos que oper
 
 La programación orientada a objetos nos permite modelar cosas reales y concretas del mundo y sus relaciones con otros objetos
 
+<div align="center">
+  <img src="images/Clases-y-Objetos-min-577x1024-min.png">
+  <small><p>Resumen</p></small>
+</div>
+
 ## Conceptos
 
 ### Clases
 * Sirven para definir cosas complejas
 * Permiten organizar el código
 * Sólo proveen estructura
+* Pueden tener variables de clase, instancia y locales
+* Aunque python no maneja variables privadas es común declararlas con ``_``
+* Para determinar si pertenece a una clase especifica ``isinstance`` o si tiene un atributo específico ``hasattr``
+* Casi toda clase debe tener el metodo ``__init_`` o ``__str__``
 
 ### Instancias
 Mientras que las clases proveen la estrucutra, las instancias son los objetos reales que creamos en nuestro programa: un hotel llamado Hilton
@@ -822,6 +842,7 @@ Los métodos son equivalentes a funciones dentro de la definición de la clase, 
 * Permite agrupar datos y su comportamiento
 * Controlar el acceso a dichos datos
 * Previene modificaciones no autorizadas
+* Esconde la complejidad
 
 ## Herencia
 * Permite modelar **jerarquias de clases (Arbol)**
@@ -831,6 +852,14 @@ Los métodos son equivalentes a funciones dentro de la definición de la clase, 
 ## Polimorfismo
 * Habilidad de tomar varias formas
 * Nos permite cambiar el comportamiento de una superclase para adaptarlo a la subclase
+
+# Decoradores
+* Permite agregar mayor funcionalidad a una función
+* Un decorador es una función que recibe otra función y regresa una tercera función.
+* Para reconocer un decorador, puedes ver que tienes un arroba sobre la declaración de una función.
+
+> A, B y C son funciones
+> A recibe como parametro B para poder crear C
 
 # Complejidad algorítmica
 * Comparar algorítmos
@@ -905,6 +934,10 @@ ya que simplemente modifican los valores en memoria.
 * Permite especificar la version del paquete que necesitamos
 
 ```bash
+# Python 3 ya tiene virtualenv en el core, ya no es necesario instalarlo
+pip install virtualenv
+virtualenv env
+# Forma actual
 python -m venv env
 cd env
 cd Scripts
@@ -914,6 +947,24 @@ pip freeze
 deactivate
 python3 freeze
 ```
+
+### Archivo de dependencias
+En Python es posible tener las dependencias en un fichero requirements.txt
+
+```bash
+pip install -r requirements.txt
+```
+
+# Manejo de archivos con Python
+* Python puede leer y escribir con la funcion open
+* La funcion open regresa un objeto de tipo archivo (file)
+* Se tiene que especificar el modo en que se maneja el archivo
+  * 'r' = read
+  * 'w' = write
+  * 'a' = append
+  * 'r+' = read and write
+* El archivo se debe cerrar con el método close
+* La mejor manera de manejar archivos es con el Keryword with
 
 # Graficado
 * Reconocimiento de patrones
@@ -954,7 +1005,7 @@ Los problemas que esta técnica puede optimizar son los que tienen una subestruc
 
 * **Problemas empalmados:** Una solucion optima que involucra resolver el mismo problema en varias ocaciones
 
-### La optimizacion se basa en la **“Memorization” (memorizacion)**
+### La optimizacion se basa en la memorizacion
 
 * Es una tecnica para guardar computos previos con el fin de no realizarlos nuevamente
 * Normalmente se utiliza un diccionario donde las consultas se pueden hacer en O(1)
