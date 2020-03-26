@@ -40,6 +40,9 @@ Apuntes sobre pensamiento computacional con Python
     - [Modificacion de listas](#modificacion-de-listas)
     - [Clonación](#clonaci%c3%b3n)
   - [List comprehension](#list-comprehension)
+  - [Dictionary comprehension](#dictionary-comprehension)
+  - [Sets](#sets)
+    - [Operaciones con sets](#operaciones-con-sets)
   - [Funciones en Python](#funciones-en-python)
     - [Funciones de expresiones](#funciones-de-expresiones)
   - [Diccionarios](#diccionarios)
@@ -473,8 +476,11 @@ def fibonacci(n):
 
 ## Tuplas
 * Son secuencias inmutables de objetos
+* Son secuencias de valores indexadas por enteros
+* Se crean separando los valores por comas
+  * Se encierran los valores por parentesis
 * Pueden contener cualquier tipo de objeto
-* Pueden devolver varios valores en una función
+* Se pueden utilizar para devolver más de un valor en una función o crear estructuras de datos ligeras
 
 ```python
 my_tuple = (1, 'dos', True)
@@ -581,14 +587,45 @@ d = a[::]
 ## List comprehension
 * Forma concisa de aplicar operaciones a los valores de una secuencia
 * También se pueden mostrar condiciones para filtrar
+* Sintaxis más natural
 
 ```python
+pares = [x for x in range(100) if x % 2 == 0]
+
+nones = [x for x in range(100) if x % 2 != 0]
+
+cuadrados = {x: x**2 for x in range(100)}
+
 my_list = list(range(100))
 double = [i * 2 for i in my_list]
 double
+
 pares = [i for i in my_list if i % 2 == 0]
 pares
 ```
+
+## Dictionary comprehension
+
+## Sets
+Son similares a las listas pero no permiten elementos repetidos
+* S y T, teoria de conjuntos
+
+### Operaciones con sets
+* Unión. Todos los elementos
+* Intersección. Elementos en común
+* Diferencia. Elementos que no se comparten
+
+```python
+s = set([1,2,3])
+t = set([]3,4,5)
+s.union(t)
+s.intersection(t)
+s.difference(t)
+1 in s
+1 not in s
+```
+
+Es mejor realizar operaciones con conjuntos que con listas
 
 ## Funciones en Python
 * Tienen un tipo
