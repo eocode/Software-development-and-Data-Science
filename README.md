@@ -8,6 +8,9 @@ Apuntes sobre pensamiento computacional con Python
 - [Python](#python)
   - [El Zen de Python](#el-zen-de-python)
   - [Elementos básicos](#elementos-b%c3%a1sicos)
+  - [Variables y expresiones](#variables-y-expresiones)
+    - [Reglas de Variables:](#reglas-de-variables)
+    - [Palabras reservadas](#palabras-reservadas)
     - [Prioridad de operadores PEMDAS](#prioridad-de-operadores-pemdas)
   - [Asiganción de variables](#asiganci%c3%b3n-de-variables)
   - [Operaciones en cadenas](#operaciones-en-cadenas)
@@ -44,7 +47,8 @@ Apuntes sobre pensamiento computacional con Python
   - [Sets](#sets)
     - [Operaciones con sets](#operaciones-con-sets)
   - [Funciones en Python](#funciones-en-python)
-    - [Funciones de expresiones](#funciones-de-expresiones)
+    - [Funciones anonimas (Lamdas)](#funciones-anonimas-lamdas)
+    - [Funciones en Python](#funciones-en-python-1)
   - [Diccionarios](#diccionarios)
     - [Iteración de diccionarios](#iteraci%c3%b3n-de-diccionarios)
 - [Pruebas y debugging](#pruebas-y-debugging)
@@ -71,6 +75,8 @@ Apuntes sobre pensamiento computacional con Python
   - [Herencia](#herencia)
   - [Polimorfismo](#polimorfismo)
 - [Decoradores](#decoradores)
+- [Librerias interesantes](#librerias-interesantes)
+  - [Turtle](#turtle)
 - [Complejidad algorítmica](#complejidad-algor%c3%adtmica)
   - [Aproximaciones](#aproximaciones)
   - [Notación asintotica / Big O Notation](#notaci%c3%b3n-asintotica--big-o-notation)
@@ -141,6 +147,38 @@ Apuntes sobre pensamiento computacional con Python
   ```python
   a = 2
   ```
+
+## Variables y expresiones
+
+### Reglas de Variables:
+* Pueden contener números y letras
+* Pueden reasignarse cuantas veces se necesite
+* No pueden comenzar con numeros
+* No se pueden utilizar las palabras reservadas de Python como variable.
+* Se utiliza snake_case (guión bajo) para dividir las * palabras de las variables multipalabra
+
+Expresiones son instrucciones para el interprete para evaluar la expresión. Los enunciados tienen efectos dentro del programa, como print que genera un output.
+
+### Palabras reservadas
+
+| and | del | for | is | raise | assert |
+| if | else | elif | from | lambda | return |
+| break | global | not | try | class | except |
+| or | while | continue | exec | import | yield |
+| def | finally | in | print |
+
+**CONSTANTES:** Una variable toda en mayuscula no debería de modificarse
+
+**_privada: Single Leading Underscore:** ` _var : una variable que empieza con guion bajo ( “_” )` se deberá tratar como _privada y no se deberá de acceder fuera de la clase
+
+``__importante: Double Leading Underscore:__`` variables que empiezan con doble guion bajo ( “__”) son variables importantes, si se llegara a modificar es provable que se pierda estabilidad del programa, así que mejor no tocarla mucho
+
+**var_: Single Trailing Underscore:** var_: A veces, el nombre más apropiado para una variable lo toma una palabra clave. Por lo tanto, los nombres como class o def no se pueden usar como nombres de variables en Python. 
+
+En este caso, puede agregar un solo guión bajo ("_") para romper el conflicto de nombres:
+__main__: Double Leading and Trailing Underscore: __var__: 
+
+Las variables rodeadas por un prefijo de subrayado doble y un postfix quedan reservadas por el intérprete de Python.
 
 ### Prioridad de operadores PEMDAS
 * Parentesis
@@ -637,8 +675,26 @@ Es mejor realizar operaciones con conjuntos que con listas
 * Se pueden utilizar en expresiones
 * Se pueden incluir en estructuras de datos
 
-### Funciones de expresiones
+### Funciones anonimas (Lamdas)
 `lambda <vars> : <expresion>`
+
+Son funciones de una única instrucción de código, en una única línea.
+
+```python
+def mifuncion(nombre):
+  return "Hola %s!" % nombre
+```
+
+```python
+mifuncion = lambda nombre: "Hola %s!" % nombre
+```
+
+### Funciones en Python
+
+<div align="center">
+  <img src="images/Screenshot_1.png">
+  <small><p>Funciones nativas en Python</p></small>
+</div>
 
 ## Diccionarios
 Son mapas de llaves a valores. Los valores pueden ser de cualquier tipo
@@ -860,6 +916,14 @@ Los métodos son equivalentes a funciones dentro de la definición de la clase, 
 
 > A, B y C son funciones
 > A recibe como parametro B para poder crear C
+
+# Librerias interesantes
+
+## Turtle
+
+Es una pizarra para poder dibujar
+
+https://opentechschool.github.io/python-beginners/es_CL/simple_drawing.html
 
 # Complejidad algorítmica
 * Comparar algorítmos
