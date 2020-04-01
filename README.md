@@ -580,8 +580,24 @@ Modifica la lista
 `lista.sort()`
 
 ### Argumentos dinámicos
-* n valores -> tuplas
-* n valores -> diccionarios1
+
+Se pueden pasar argumentos dinámicos a las funciones para evitar crear varias funciones de un mismo tipo
+
+```python
+def suma2(n, n2):
+    return n + n2
+
+def suma3(n, n2, n3):
+    return n + n2 + n3
+
+def suma4(valor_uno):
+    print(valor_uno)
+
+suma4(valor_uno=4)
+```
+
+* ***args:** n valores -> tuplas
+* ****kwargs:** n valores -> diccionarios1
 
 ```python
 # Crea una tupla
