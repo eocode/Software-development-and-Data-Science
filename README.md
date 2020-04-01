@@ -86,6 +86,8 @@ Apuntes sobre pensamiento computacional con Python
     - [Jerarquía de errores](#jerarqu%c3%ada-de-errores)
   - [Afirmaciones](#afirmaciones)
 - [POO](#poo)
+  - [Identificadores](#identificadores)
+  - [Namespaces y Scope](#namespaces-y-scope)
   - [Conceptos](#conceptos)
     - [Clases](#clases)
     - [Instancias](#instancias)
@@ -1222,13 +1224,53 @@ La programación orientada a objetos nos permite modelar cosas reales y concreta
 Principios básicos:
 * Encapsulación
 * Abstracción
-* Inherencia
+* Herencia
 * Polimorfismo
 
 <div align="center">
   <img src="images/Clases-y-Objetos-min-577x1024-min.png">
   <small><p>Resumen</p></small>
 </div>
+
+## Identificadores
+
+Es la forma de acceder al objeto en memoria y el name es el nombre que se le da al objeto, ya sean variables o funciones
+
+```python
+my_var = 5
+id(my_var)
+id(5)
+```
+
+## Namespaces y Scope
+
+Es un conjunto de names, existe una relación que liga los nombre definidos con sus respectivos objetos. Por ejemplo, existe un namespace especifico que agrupa todas las variables globales (por eso pueden utilizarse varias funciones sin tener que importar los modulos correspondientes), cada vez que declaramos un módulo o una función, dicho módulo o función tiene asignado otro namespace
+
+> Scope es la parte del programa en el que podemos tener acceso a un namespace sin necesidad de prefijos
+
+* Scope dentro de una funcion (con nombres locales)
+* Scope del modulo (con nombres globales)
+* Scope raíz (que tiene los built in names)
+
+Python busca los objetos primero en el scope local, luego en el global y por último en el raíz
+
+```python
+def outer_function(some_local_name):
+  def inner_function(other_local_name):
+    # Tiene acceso a la built-in function print y al nombre local some_local_name
+    print(some_local_name)
+    # También tiene acceso a su scope local
+    print(other_local_name)
+```
+
+**Para poder manipular una variable que se encuentra fuera del scope local** podemos utilizar los keywords global y nonlocal
+
+```python
+some_var_in_other_scope = 10
+def some_function():
+  global some_var_in_other_scope
+  some_var_in_other_scope += 1
+```
 
 ## Conceptos
 
