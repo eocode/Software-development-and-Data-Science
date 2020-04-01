@@ -54,12 +54,19 @@ Apuntes sobre pensamiento computacional con Python
     - [Listas con slices](#listas-con-slices)
     - [Modificacion de listas](#modificacion-de-listas)
     - [Clonación](#clonaci%c3%b3n)
-  - [List comprehension](#list-comprehension)
-  - [Dictionary comprehension](#dictionary-comprehension)
-  - [Sets](#sets)
+  - [Sets o conjuntos](#sets-o-conjuntos)
     - [Operaciones con sets](#operaciones-con-sets)
   - [Diccionarios](#diccionarios)
     - [Iteración de diccionarios](#iteraci%c3%b3n-de-diccionarios)
+  - [Comprehensions](#comprehensions)
+    - [List comprehension](#list-comprehension)
+    - [Dictionary comprehensions](#dictionary-comprehensions)
+    - [Set comprehensions](#set-comprehensions)
+  - [Collections](#collections)
+    - [Contadores](#contadores)
+  - [Otros usos](#otros-usos)
+    - [Diccionarios ordenados](#diccionarios-ordenados)
+    - [Tuplas con nombre](#tuplas-con-nombre)
 - [Pruebas y debugging](#pruebas-y-debugging)
   - [Pruebas de caja negra](#pruebas-de-caja-negra)
   - [Pruebas de caja de cristal](#pruebas-de-caja-de-cristal)
@@ -631,7 +638,8 @@ def fibonacci(n):
 * Se crean separando los valores por comas
   * Se encierran los valores por parentesis
 * Pueden contener cualquier tipo de objeto
-* Se pueden utilizar para devolver más de un valor en una función o crear estructuras de datos ligeras
+* ``Se pueden utilizar para devolver más de un valor en una función o crear estructuras de datos ligeras``
+* También se puede usar la función `tuple`
 
 ```python
 my_tuple = (1, 'dos', True)
@@ -647,6 +655,13 @@ def coordenadas():
 
 coordenada = coordenadas()
 x, y = coordenadas()
+
+a = (1,2,3,1,1,1,2,3,4)
+dir(a)
+a.count(2)
+a.count(1)
+a.index(1)
+a.index(3)
 ```
 
 ## Rangos
@@ -719,6 +734,79 @@ lista2 = lista * 10
 lista2
 ```
 
+Suma (+) Concatena dos o más listas:
+```python
+a=[1,2]
+b=[3,4]
+a + b --> [1,2,3,4]
+```
+
+Multiplicación (*) Repite la misma lista:
+
+```python
+a=[1,2]
+a * 2 —> [1,2,1,2]
+```
+
+Añadir elemento al final de la lista:
+
+```python
+a=[1]
+a.append(2)=[1,2]
+```
+
+Eliminar elemento al final de la lista:
+
+```python
+a=[1,2]
+b=a.pop()
+a=[1]
+```
+
+Eliminar elemento dado un indice:
+```python
+a=[1,2]
+b=a.pop(1)
+a=[2]
+```
+
+Ordenar lista de menor a mayor, esto modifica la lista inicial
+```python
+a=[3,8,1]
+a.sort() —> [1,3,8]
+```
+
+Ordenar lista de menor a mayor, esto NO modifica la lista inicial
+```python
+a=[3,8,1]
+a.sorted() —> [1,3,8]
+```
+
+Eliminar elementos de lista Elimina el elemento de la lista dado su indice
+```python
+a=[1,2,3]
+del a[0] —> a[2,3]
+```
+
+Eliminar elementos de lista Elimina el elemento de la lista dado su valor
+```python
+a=[0, 2, 4, 6, 8]
+a.remove(6)
+a=[0, 2, 4, 8]
+```
+
+Range creacion de listas en un rango determinado
+```python
+a=(list(range(0,10,2))) -->crea un conteo desde 0 hasta 10 en pasos de 2 en 2.
+a=[0,2,4,6,8]
+```
+
+Tamaño lista len Devuelve el valor del tamaño de la lista:
+```python
+a=[0,2,4,6,8]
+len(a)=5
+```
+
 ### Listas con slices
 Al igual que con los strings las listas se pueden rebanar
 ```python
@@ -751,31 +839,23 @@ c = list(a)
 d = a[::]
 ```
 
-## List comprehension
-* Forma concisa de aplicar operaciones a los valores de una secuencia
-* También se pueden mostrar condiciones para filtrar
-* Sintaxis más natural
+## Sets o conjuntos
+Son similares a las listas pero no permiten elementos repetidos
+* (S) y (T), teoria de conjuntos
+* Se inicializan con la función ``set``
+* Para añadir elementos se usa ``add``
+* Para eliminar se usa ``remove``
 
 ```python
-pares = [x for x in range(100) if x % 2 == 0]
-
-nones = [x for x in range(100) if x % 2 != 0]
-
-cuadrados = {x: x**2 for x in range(100)}
-
-my_list = list(range(100))
-double = [i * 2 for i in my_list]
-double
-
-pares = [i for i in my_list if i % 2 == 0]
-pares
+a = set{[1,2,3]}
+b = {3,4,5}
+type(a)
+type(b)
+a.add(3)
+a.add(20)
+a.remove(20)
+dir(a)
 ```
-
-## Dictionary comprehension
-
-## Sets
-Son similares a las listas pero no permiten elementos repetidos
-* S y T, teoria de conjuntos
 
 ### Operaciones con sets
 * Unión. Todos los elementos
@@ -806,7 +886,10 @@ Son mapas de llaves a valores. Los valores pueden ser de cualquier tipo
 ```python
 d = {}
 d['llave'] = 'valor'
-d{'llave':'valor'}
+d.get('helado',None)
+d.keys()
+d.values()
+d.items()
 ```
 
 ### Iteración de diccionarios
@@ -828,6 +911,156 @@ for element in dict.items():
 
 'David' in dict
 'Tom' in dict
+```
+
+## Comprehensions
+Son constructors que nos permiten generar una secuencia a partir de otra secuencia
+
+### List comprehension
+* Forma concisa de aplicar operaciones a los valores de una secuencia
+* También se pueden mostrar condiciones para filtrar
+* Sintaxis más natural
+
+`[element for element in element_list if condition]`
+
+```python
+pares = [x for x in range(100) if x % 2 == 0]
+
+nones = [x for x in range(100) if x % 2 != 0]
+
+cuadrados = {x: x**2 for x in range(100)}
+
+my_list = list(range(100))
+double = [i * 2 for i in my_list]
+double
+
+pares = [i for i in my_list if i % 2 == 0]
+pares
+```
+
+### Dictionary comprehensions
+
+`{key: element for element in element_list if condition}`
+
+```python
+student_uid = [1,2,3]
+students = ['juan','pedro','jose']
+students_with_uid = {uid: student for uid, student in zip(student_uid, students)}
+```
+
+### Set comprehensions
+
+`{element for element in element_list if condition}`
+
+```python
+import random
+random_numbers = []
+for i in range(10):
+  random_numbers.append(random.randint(1,3))
+
+non_repeat = {number for number in random_numbers}
+```
+
+## Collections
+
+El módulo collections nos proveé otros tipos o mejoras de las colecciones clásicas
+
+### Contadores
+ ```python
+from collections import Counter
+l = [1,2,3,4,1,2,3,1,2,1]
+Counter(l)
+Counter("palabra")
+animales = "gato perro canario perro canario perro"
+c = Counter(animales.split())
+print(c.most_common(1)) # Primeros elementos más repetidos
+print(c.most_common(2)) # Primeros dos elementos más repetidos
+print(c.most_common())  # Ordenados por repeticiones
+
+l = [10,20,30,40,10,20,30,10,20,10]
+c = Counter(l)
+print(c.items())
+print(c.keys())
+print(c.values())
+
+print(sum(c.values()))
+
+print(list(c))
+print(dict(c))
+print(set(c))
+ ```
+
+## Otros usos
+
+### Diccionarios ordenados
+La clase ``OrderedDict`` es otra subclase de diccionario, pero está vez con la capacidad de conservar el orden en que añadimos los registros
+
+```python
+from collections import OrderedDict
+n = OrderedDict()
+n['uno'] = 'one'
+n['dos'] = 'two'
+n['tres'] = 'three'
+print(n)
+
+# con diccionarios normales
+n1 = {}
+n1['uno'] = 'one'
+n1['dos'] = 'two'
+n2 = {}
+n2['dos'] = 'two'
+n2['uno'] = 'one'
+
+print(n1 == n2) # Los elementos aparentemente están en el mismo orden
+
+n1 = OrderedDict()
+n1['uno'] = 'one'
+n1['dos'] = 'two'
+n2 = OrderedDict()
+n2['dos'] = 'two'
+n2['uno'] = 'one'
+
+print(n1 == n2) # Los elementos aparentemente están en el mismo orden
+```
+
+### Tuplas con nombre
+
+NamedTuple es utilizada para crear pequeñas estructuras inmutables parecidas a una clase y sus objetos, pero mucho más simples:
+
+```python
+from collections import namedtuple
+Persona = namedtuple('Persona', ('nombre apellido edad'))
+p = Persona(nombre='Hector', apellido='Costa', edad=27)
+print(p)
+# Son accesibles como objetos o por indices
+print(p.nombre)
+print(p.edad)
+print(p[0])
+print(p[-1])
+```
+
+```python
+Coffee = collection.NamedTuple('Coffee', ('Size','Bean', 'Price'))
+def get_coffee(cofee_type):
+  if coffee_type == 'HouseBlend':
+    return Coffee('large','premium',10)
+```
+
+```python
+class SecretDict(collections.UserDict):
+  def _password_is_valid(self, password):
+    pass
+  def _get_item(self, key):
+    pass
+  def __getitem__(self, key):
+    password, key.split(':')
+    if self._password_is_valid(password):
+      return self._get_item(key)
+
+    return None
+
+my_secret_dict = SecretDict(...)
+my_secret_dict['password:key']
 ```
 
 # Pruebas y debugging
