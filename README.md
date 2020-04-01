@@ -40,6 +40,7 @@ Apuntes sobre pensamiento computacional con Python
   - [Funciones](#funciones)
     - [Funciones anonimas (Lamdas)](#funciones-anonimas-lamdas)
     - [Funciones en Python](#funciones-en-python)
+      - [Función de ordenamiento](#funci%c3%b3n-de-ordenamiento)
     - [Específicaciones de código](#espec%c3%adficaciones-de-c%c3%b3digo)
     - [Recursividad](#recursividad)
       - [Factorial](#factorial)
@@ -107,6 +108,8 @@ Apuntes sobre pensamiento computacional con Python
   - [Pip](#pip)
     - [Archivo de dependencias](#archivo-de-dependencias)
 - [Manejo de archivos con Python](#manejo-de-archivos-con-python)
+  - [Context Managers](#context-managers)
+  - [Módulo CSV](#m%c3%b3dulo-csv)
 - [Graficado](#graficado)
   - [Gráficado simple](#gr%c3%a1ficado-simple)
 - [Optimización](#optimizaci%c3%b3n)
@@ -568,6 +571,12 @@ mifuncion = lambda nombre: "Hola %s!" % nombre
   <img src="images/Screenshot_1.png">
   <small><p>Funciones nativas en Python</p></small>
 </div>
+
+#### Función de ordenamiento
+Devuelve una lista sin modificar la original
+`sorted()`
+Modifica la lista
+`lista.sort()`
 
 ### Específicaciones de código
 
@@ -1297,13 +1306,12 @@ Se pueden generar ecuaciones matemáticas para evaluar el rendimiento por medio 
 * Busca en todos los elementos de manera secuencial
 * ¿Cuál es el peor caso?
 
-
 ## Búsqueda binaria
 Asume que la lista está ordenada
 * Divide y conquista
 * El problema se divide en 2 en cada iteración
 * ¿Cuál es el peor caso?
-* Funciona en listas ordenadas
+* **Funciona en listas ordenadas**
 * Intercambia tiempo por espacio, guarda la lista ordenada en disco
 
 ## Ordenamiento burbuja
@@ -1351,15 +1359,38 @@ pip install -r requirements.txt
 ```
 
 # Manejo de archivos con Python
-* Python puede leer y escribir con la funcion open
+* Python puede leer y escribir con la funcion ``open``
+  * ``f = open('file')``
+* Es importante cerrar el archivo para que se guarden los datos y no se desperdicie memoria
+  * `f.close()`
 * La funcion open regresa un objeto de tipo archivo (file)
+* El archivo se debe cerrar con el método close
+
+## Context Managers
+Está función permite garantizar que el archivo se cierre de forma automática
+
+```python
+with open(filename) as f:
+  # do something with the file
+```
+
+Existen varios metodos para abrir un archivo se específica con el atributo ``mode=''`` dentro de open
 * Se tiene que especificar el modo en que se maneja el archivo
   * 'r' = read
   * 'w' = write
   * 'a' = append
   * 'r+' = read and write
-* El archivo se debe cerrar con el método close
-* La mejor manera de manejar archivos es con el Keryword with
+
+## Módulo CSV
+Nos permite manipular archivos separados por comas
+* Almacena archivos de forma tabular
+* Basta con importarlo `import csv`
+
+Existen dos readers y dos writers
+* csv.reader y csv.writer, permiten manipular los valores a través de listas que representan filas
+  * Solo se puede acceder por indice a los valores
+* csv.DictReader y csv.DictWriter nos permiten maniplar los valores a través de diccionarios que representan filas
+  * Se puede acceder a traves de llaves a los valores
 
 # Graficado
 * Reconocimiento de patrones
