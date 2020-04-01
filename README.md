@@ -41,6 +41,7 @@ Apuntes sobre pensamiento computacional con Python
     - [Funciones anonimas (Lamdas)](#funciones-anonimas-lamdas)
     - [Funciones en Python](#funciones-en-python)
       - [Función de ordenamiento](#funci%c3%b3n-de-ordenamiento)
+    - [Argumentos dinámicos](#argumentos-din%c3%a1micos)
     - [Específicaciones de código](#espec%c3%adficaciones-de-c%c3%b3digo)
     - [Recursividad](#recursividad)
       - [Factorial](#factorial)
@@ -577,6 +578,31 @@ Devuelve una lista sin modificar la original
 `sorted()`
 Modifica la lista
 `lista.sort()`
+
+### Argumentos dinámicos
+* n valores -> tuplas
+* n valores -> diccionarios1
+
+```python
+# Crea una tupla
+def sumadinamica(*argumento):
+    print(argumento)
+    print(type(argumento))
+
+def sumadinamica2(*args):
+    resultado = 0
+    for valor in args:
+        resultado += valor
+    return resultado
+
+# Crea un diccionario
+def sumadinamica3(**kwargs):
+    valor = kwargs.get('valor','No contiene el valor')
+    print(valor)
+
+resultado = sumadinamica3(valor='Eduardo', x=2, y=9, z=True)
+print(resultado)
+```
 
 ### Específicaciones de código
 
