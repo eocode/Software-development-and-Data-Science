@@ -1,10 +1,15 @@
 
 # Mundo Python <!-- omit in toc -->
 
-Apuntes sobre pensamiento computacional con Python
+Apuntes con Python
+
+# Python Projects
+
+[CRUD CLI](https://github.com/eocode/Python-Clients-CLI)
 
 ## Tabla de Contenido<!-- omit in toc -->
-- [Computo](#computo)
+- [Python Projects](#python-projects)
+- [Pensamiento Computacional](#pensamiento-computacional)
 - [Python](#python)
   - [Aplicaciones de Python](#aplicaciones-de-python)
     - [Ciencias](#ciencias)
@@ -80,11 +85,11 @@ Apuntes sobre pensamiento computacional con Python
   - [Debugging](#debugging)
     - [Diseño de experimentos](#dise%c3%b1o-de-experimentos)
     - [Errores comúnes](#errores-com%c3%banes)
-  - [Exepciones y afirmaciones](#exepciones-y-afirmaciones)
-    - [Manejo de excepciones](#manejo-de-excepciones)
-    - [Generación de errores propios](#generaci%c3%b3n-de-errores-propios)
-      - [Excepciones como control de flujo](#excepciones-como-control-de-flujo)
-    - [Jerarquía de errores](#jerarqu%c3%ada-de-errores)
+- [Exepciones y afirmaciones](#exepciones-y-afirmaciones)
+  - [Manejo de excepciones](#manejo-de-excepciones)
+  - [Generación de errores propios](#generaci%c3%b3n-de-errores-propios)
+    - [Excepciones como control de flujo](#excepciones-como-control-de-flujo)
+  - [Jerarquía de errores](#jerarqu%c3%ada-de-errores)
   - [Afirmaciones](#afirmaciones)
 - [POO](#poo)
   - [Identificadores](#identificadores)
@@ -130,7 +135,7 @@ Apuntes sobre pensamiento computacional con Python
     - [La optimizacion se basa en la memorizacion](#la-optimizacion-se-basa-en-la-memorizacion)
     - [Fibonacci](#fibonacci)
 
-# Computo
+# Pensamiento Computacional
 * Conocimiento declarativo
   * Formula matemática
 * Conocimiento imperativo
@@ -1172,19 +1177,27 @@ my_secret_dict['password:key']
 * Lleva un registro de lo que has tratado, preferentemente en la forma de test
 * Vete a dormir
 
-## Exepciones y afirmaciones
+# Exepciones y afirmaciones
+
+
+
 Programación defensiva
 * Son muy comunes en la programación. No tienen nada excepcional
 * Se relacionan con errores de semántica
 * Se pueden crear excepciones propias
 * Cuándo una excepción no se maneja, el programa termina en error
 
-### Manejo de excepciones
+## Manejo de excepciones
 * Cuando se avienta (**throw**) un error, si el error no se atrapa el programa se detiene
 * Se manejan con ``try, except, else, finally``
 * Se pueden utilizar también para ramificar programas
 * No deben manejarse de manera silenciosa (con print statement)
 * Para aventar tu propia excepción utiliza el keyword ``raise``
+
+<div align="center">
+  <img src="images/Screenshot_7.png">
+  <small><p>Excepciones</p></small>
+</div>
 
 ```python
 def divide(numerador,denominador):
@@ -1197,7 +1210,7 @@ except TakeOffError as error:
   airplane.land()
 ```
 
-### Generación de errores propios
+## Generación de errores propios
 
 Necesitamos extender de BaseException
 
@@ -1206,7 +1219,7 @@ class TakeOffError(BaseException):
   pass
 ```
 
-#### Excepciones como control de flujo
+### Excepciones como control de flujo
 La razón de usarlo en lugar del if es por EAFP(easier to ask for forgiveness than permission)
 Mientras que otros lenguajes utilizan LBYL(look before you leap)
 
@@ -1225,7 +1238,7 @@ function buscaPais(paises, pais){
 }
 ```
 
-### Jerarquía de errores
+## Jerarquía de errores
 
 Python maneja una jerarquia de errores
 
