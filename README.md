@@ -10,6 +10,11 @@ Apuntes sobre pensamiento computacional con Python
     - [Ciencias](#ciencias)
     - [CLI](#cli)
     - [Aplicaciones web](#aplicaciones-web)
+  - [Paradigmas de programación](#paradigmas-de-programaci%c3%b3n)
+    - [Programación estructurada:](#programaci%c3%b3n-estructurada)
+    - [Programación por procedimientos](#programaci%c3%b3n-por-procedimientos)
+      - [Programación funcional](#programaci%c3%b3n-funcional)
+    - [Programación orientada a objetos](#programaci%c3%b3n-orientada-a-objetos)
   - [El Zen de Python](#el-zen-de-python)
   - [Elementos básicos](#elementos-b%c3%a1sicos)
   - [Variables y expresiones](#variables-y-expresiones)
@@ -162,6 +167,24 @@ Apuntes sobre pensamiento computacional con Python
 * Webapp2
 * Gunicorn
 * Tornado
+
+## Paradigmas de programación
+
+### Programación estructurada: 
+> Es un paradigma de programación **orientado a mejorar la claridad, calidad y tiempo de desarrollo** de un programa de computadora recurriendo únicamente a subrutinas y tres estructuras básicas: secuencia, selección (if y switch) e iteración (bucles for y while)
+
+### Programación por procedimientos
+
+> La programación procedimental o programación por procedimientos es un paradigma de la programación. Muchas veces es aplicable tanto en lenguajes de programación de bajo nivel como en lenguajes de alto nivel. En el caso de que esta técnica se aplique en lenguajes de alto nivel, recibirá el nombre de programación funcional. Esta técnica consiste en basarse de un número muy bajo de expresiones repetidas, englobarlas todas en un procedimiento o función y llamarlo cada vez que tenga que ejecutarse.
+
+#### Programación funcional
+> Es un paradigma de **programación declarativa** basado en el uso de **funciones matemáticas**, en contraste con la programación imperativa, que enfatiza los cambios de estado mediante la mutación de variables.
+
+### Programación orientada a objetos
+
+> Es un paradigma de programación que **usa objetos y sus interacciones**, para diseñar aplicaciones y programas informáticos. Está basado en varias técnicas, incluyendo herencia, abstracción, polimorfismo y encapsulamiento.
+> 
+> Los objetos manipulan los datos de entrada para la obtención de datos de salida específicos, donde cada objeto ofrece una funcionalidad especial.
 
 ## El Zen de Python
 * Hermoso es mejor que feo.
@@ -1190,9 +1213,17 @@ https://docs.python.org/3.5/reference/compound_stmts.html#try
 
 # POO
 
+Otorga los medios para estructurar programas de tal manera que las propiedades y comportamientos esten envueltos en objetos individuales
+
 La clave es pensar en objetos como agrupaciones de datos y los métodos que operan en dichos datos. Estos pueden tener **propiedades** y **comportamientos**.
 
 La programación orientada a objetos nos permite modelar cosas reales y concretas del mundo y sus relaciones con otros objetos
+
+Principios básicos:
+* Encapsulación
+* Abstracción
+* Inherencia
+* Polimorfismo
 
 <div align="center">
   <img src="images/Clases-y-Objetos-min-577x1024-min.png">
