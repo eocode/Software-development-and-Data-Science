@@ -6,6 +6,10 @@ Apuntes sobre pensamiento computacional con Python
 ## Tabla de Contenido<!-- omit in toc -->
 - [Computo](#computo)
 - [Python](#python)
+  - [Aplicaciones de Python](#aplicaciones-de-python)
+    - [Ciencias](#ciencias)
+    - [CLI](#cli)
+    - [Aplicaciones web](#aplicaciones-web)
   - [El Zen de Python](#el-zen-de-python)
   - [Elementos básicos](#elementos-b%c3%a1sicos)
   - [Variables y expresiones](#variables-y-expresiones)
@@ -18,6 +22,10 @@ Apuntes sobre pensamiento computacional con Python
   - [Ramificación de programas](#ramificaci%c3%b3n-de-programas)
   - [Iteraciones](#iteraciones)
     - [Iterators](#iterators)
+    - [Generators](#generators)
+  - [Ayuda de Python](#ayuda-de-python)
+  - [Con variables](#con-variables)
+  - [Con funciones](#con-funciones)
   - [Strings y String literals](#strings-y-string-literals)
     - [Accediendo a elementos](#accediendo-a-elementos)
     - [Slices](#slices)
@@ -30,6 +38,8 @@ Apuntes sobre pensamiento computacional con Python
   - [Representaciones de flotantes](#representaciones-de-flotantes)
 - [Funciones, alcance y abstracción](#funciones-alcance-y-abstracci%c3%b3n)
   - [Funciones](#funciones)
+    - [Funciones anonimas (Lamdas)](#funciones-anonimas-lamdas)
+    - [Funciones en Python](#funciones-en-python)
     - [Específicaciones de código](#espec%c3%adficaciones-de-c%c3%b3digo)
     - [Recursividad](#recursividad)
       - [Factorial](#factorial)
@@ -37,7 +47,9 @@ Apuntes sobre pensamiento computacional con Python
 - [Tipos estructurados, mutabilidad y funciones de alto nivel](#tipos-estructurados-mutabilidad-y-funciones-de-alto-nivel)
   - [Tuplas](#tuplas)
   - [Rangos](#rangos)
+- [Estructuras de datos](#estructuras-de-datos)
   - [Listas y mutabilidad](#listas-y-mutabilidad)
+    - [Copiar una lista](#copiar-una-lista)
     - [Operaciones con listas](#operaciones-con-listas)
     - [Listas con slices](#listas-con-slices)
     - [Modificacion de listas](#modificacion-de-listas)
@@ -46,9 +58,6 @@ Apuntes sobre pensamiento computacional con Python
   - [Dictionary comprehension](#dictionary-comprehension)
   - [Sets](#sets)
     - [Operaciones con sets](#operaciones-con-sets)
-  - [Funciones en Python](#funciones-en-python)
-    - [Funciones anonimas (Lamdas)](#funciones-anonimas-lamdas)
-    - [Funciones en Python](#funciones-en-python-1)
   - [Diccionarios](#diccionarios)
     - [Iteración de diccionarios](#iteraci%c3%b3n-de-diccionarios)
 - [Pruebas y debugging](#pruebas-y-debugging)
@@ -115,6 +124,33 @@ Apuntes sobre pensamiento computacional con Python
     * Interpretado o compilado
 
 # Python
+
+## Aplicaciones de Python
+### Ciencias
+* Astropy
+* Biopython
+* Sympy
+* Numpy
+* Pandas
+* Matplotlib
+* Scipy
+* Sunpy
+* Tomopy
+
+### CLI
+* aws
+* gcloud
+* rebound
+* geeknote
+
+### Aplicaciones web
+* Django
+* Flask
+* Bottle
+* Chalice
+* Webapp2
+* Gunicorn
+* Tornado
 
 ## El Zen de Python
 * Hermoso es mejor que feo.
@@ -268,6 +304,12 @@ Todas las llamadas anteriores regresan un objeto de tipo iterator.
 Un iterator es un objeto que regresa sucesivamente los valores asociados con
 el iterable.
 
+Un iterador es por ejemplo
+```python
+for i in range(10):
+  print(i)
+```
+
 ```python
 frutas = ['manzana', 'pera', 'mango']
 iterador = iter(frutas)
@@ -276,7 +318,48 @@ next(iterador)
 next(iterador)
 ```
 
+### Generators
+Son una forma rápida de crear iterables sin la necesidad de declarar una clase que implemente el protocolo de iteración. Para crear un generator simplemente declaramos una función y utilizamos el keyword **yield** en vez de return para regresar el siguiente valor en una iteración.
+
+Es importante recalcar que una vez se ha agotado un generator ya no podemos utilizarlo y debemos crear una nueva instancia
+
+```python
+def fibonacci(max):
+  a, b = 0, 1
+  while a < max:
+    yield  a
+    a, b = b, a+b
+
+fib1 = fibonacci(20)
+fib_nums = [num for num in fib1]
+double_fib_nums = [num * 2 for num in fib1]
+double_fib_nums = [num * 2 for num in fibonacci(30)]
+```
+
+## Ayuda de Python
+
+## Con variables
+Para ver que podemos hacer con un String, basta con poner:
+
+Ejemplo:
+
+`a = 'Hola'`
+`dir(a)`
+
+## Con funciones
+Para ver la documentación
+`help(len)`
+
+Para tus propias funciones usa docstring
+
+```python
+def m():
+  """Este es un texto de ayuda para la función"""
+  pass
+```
+
 ## Strings y String literals
+
 Son cadenas con funciones especiales, una cadena es inmutable
 ```python
 mystr1 = 'cadena'
@@ -444,6 +527,11 @@ Corta la operación en 2 en cada iteración, lo que lo hace bastante eficiente
 
 ## Funciones 
 
+* Tienen un tipo
+* Se pueden pasar como argumentos de otras funciones
+* Se pueden utilizar en expresiones
+* Se pueden incluir en estructuras de datos
+
 ```python
 def suma(a,b):
     total = a + b
@@ -452,6 +540,27 @@ def suma(a,b):
 
 suma(2,2)
 ```
+
+### Funciones anonimas (Lamdas)
+`lambda <vars> : <expresion>`
+
+Son funciones de una única instrucción de código, en una única línea.
+
+```python
+def mifuncion(nombre):
+  return "Hola %s!" % nombre
+```
+
+```python
+mifuncion = lambda nombre: "Hola %s!" % nombre
+```
+
+### Funciones en Python
+
+<div align="center">
+  <img src="images/Screenshot_1.png">
+  <small><p>Funciones nativas en Python</p></small>
+</div>
 
 ### Específicaciones de código
 
@@ -560,12 +669,18 @@ for i in range(0, 101, 2):
     print(i)
 ```
 
+# Estructuras de datos
+Nos permiten agrupar de distintas maneras varios valores y elementos para poderlos manipular con mayor facilidad
+
 ## Listas y mutabilidad
+
 * Son secuencias de objetos, pero mutables
 * Cuándo modificas unas lista, pueden existir efectos secundarios
 * Es posible iterar con ellas
 * Se pueden asignar via indice
 * Utilizar métodos: append, pop, remove, insert
+
+Se inician con `[]` o con la built-in function `list`
 
 ```python
 my_list = [1,2,3]
@@ -584,6 +699,16 @@ id(b)
 c = [a , b]
 a.append(5)
 c
+```
+
+### Copiar una lista
+```python
+import copy
+a = [1,2,3,4]
+b = copy.copy(a)
+a[0] = 0
+a
+b
 ```
 
 ### Operaciones con listas
@@ -668,33 +793,6 @@ s.difference(t)
 ```
 
 Es mejor realizar operaciones con conjuntos que con listas
-
-## Funciones en Python
-* Tienen un tipo
-* Se pueden pasar como argumentos de otras funciones
-* Se pueden utilizar en expresiones
-* Se pueden incluir en estructuras de datos
-
-### Funciones anonimas (Lamdas)
-`lambda <vars> : <expresion>`
-
-Son funciones de una única instrucción de código, en una única línea.
-
-```python
-def mifuncion(nombre):
-  return "Hola %s!" % nombre
-```
-
-```python
-mifuncion = lambda nombre: "Hola %s!" % nombre
-```
-
-### Funciones en Python
-
-<div align="center">
-  <img src="images/Screenshot_1.png">
-  <small><p>Funciones nativas en Python</p></small>
-</div>
 
 ## Diccionarios
 Son mapas de llaves a valores. Los valores pueden ser de cualquier tipo
