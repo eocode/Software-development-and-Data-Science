@@ -82,6 +82,7 @@ Apuntes sobre pensamiento computacional con Python
     - [Errores comúnes](#errores-com%c3%banes)
   - [Exepciones y afirmaciones](#exepciones-y-afirmaciones)
     - [Manejo de excepciones](#manejo-de-excepciones)
+    - [Generación de errores propios](#generaci%c3%b3n-de-errores-propios)
       - [Excepciones como control de flujo](#excepciones-como-control-de-flujo)
     - [Jerarquía de errores](#jerarqu%c3%ada-de-errores)
   - [Afirmaciones](#afirmaciones)
@@ -99,6 +100,7 @@ Apuntes sobre pensamiento computacional con Python
   - [Encapsulación](#encapsulaci%c3%b3n)
   - [Herencia](#herencia)
   - [Polimorfismo](#polimorfismo)
+- [Context managers](#context-managers)
 - [Decoradores](#decoradores)
   - [Framework CLick](#framework-click)
 - [Librerias interesantes](#librerias-interesantes)
@@ -117,7 +119,7 @@ Apuntes sobre pensamiento computacional con Python
   - [Pip](#pip)
     - [Archivo de dependencias](#archivo-de-dependencias)
 - [Manejo de archivos con Python](#manejo-de-archivos-con-python)
-  - [Context Managers](#context-managers)
+  - [Context Managers](#context-managers-1)
   - [Módulo CSV](#m%c3%b3dulo-csv)
 - [Graficado](#graficado)
   - [Gráficado simple](#gr%c3%a1ficado-simple)
@@ -1184,6 +1186,26 @@ Programación defensiva
 * No deben manejarse de manera silenciosa (con print statement)
 * Para aventar tu propia excepción utiliza el keyword ``raise``
 
+```python
+def divide(numerador,denominador):
+  if denominador == 0:
+    raise ZeroDivisionError
+
+try:
+  airplane.takeoff()
+except TakeOffError as error:
+  airplane.land()
+```
+
+### Generación de errores propios
+
+Necesitamos extender de BaseException
+
+```python
+class TakeOffError(BaseException):
+  pass
+```
+
 #### Excepciones como control de flujo
 La razón de usarlo en lugar del if es por EAFP(easier to ask for forgiveness than permission)
 Mientras que otros lenguajes utilizan LBYL(look before you leap)
@@ -1205,9 +1227,24 @@ function buscaPais(paises, pais){
 
 ### Jerarquía de errores
 
-Python maneja una jerarqui de errores
+Python maneja una jerarquia de errores
 
 https://docs.python.org/3.5/reference/compound_stmts.html#try
+
+```python
+try:
+  # run this code
+  pass
+except:
+  # execute this code when there is an exception
+  pass
+else:
+  # no exceptions? Run this code
+  pass
+finally:
+  # Always run this code
+  pass
+```
 
 ## Afirmaciones
 * Programación defensiva
@@ -1364,6 +1401,54 @@ Los métodos son equivalentes a funciones dentro de la definición de la clase, 
 ## Polimorfismo
 * Habilidad de tomar varias formas
 * Nos permite cambiar el comportamiento de una superclase para adaptarlo a la subclase
+
+# Context managers
+Son objetos de Python que proveen información contextual adicioal al bloque de código. Consiste en correr una función (o cualquier callable) cuando se inicia el contexto con el keyword with; al igual que correr otra función cuando el código dentro del bloque with concluye
+
+```python
+with open('some_file.txt') as f:
+  lines = f.readlines()
+```
+
+Existen dos formas de implementar un context manager: 
+* Con una clase
+* Con un generador
+
+```python
+class CustomOpen(object):
+  def __init__(self, filename):
+    self.file = open(filename)
+
+  def __enter__(self):
+    return self.file
+
+  def __exit__(self, ctx_type, ctx_value, ctx_traceback)
+    self.file.close()
+
+with CustomOpen('file') as f:
+  contents = f.read()
+```
+
+El ejemplo anterior es una clase con dos métodos adicionales **enter** y **exit**. Estos métodos son utilizados por el keyword **with** para determinar las acciones de inicialización, entrada y salida del contexto
+
+El mismo código puede implementarse usando el módulo **contextlib** que forma parte de la librería estándar de Python
+
+```python
+from contextlib import contextmanager
+
+@contextmanager
+def custom_open(filename):
+  f = open(filename)
+  try:
+    yield f
+  finally:
+    f.close()
+
+with custom_open('file') as f
+  contents = f.read()
+```
+
+Yield retorna una secuencia de valores y no un valor final
 
 # Decoradores
 * Permite agregar mayor funcionalidad a una función
