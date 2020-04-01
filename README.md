@@ -100,6 +100,7 @@ Apuntes sobre pensamiento computacional con Python
   - [Herencia](#herencia)
   - [Polimorfismo](#polimorfismo)
 - [Decoradores](#decoradores)
+  - [Framework CLick](#framework-click)
 - [Librerias interesantes](#librerias-interesantes)
   - [Turtle](#turtle)
 - [Complejidad algorítmica](#complejidad-algor%c3%adtmica)
@@ -1371,6 +1372,22 @@ Los métodos son equivalentes a funciones dentro de la definición de la clase, 
 
 > A, B y C son funciones
 > A recibe como parametro B para poder crear C
+
+## Framework CLick
+
+Click es un framework que nos permite crear aplicaciones de línea de comandos
+
+* Utiliza decoradores para implementar su funcionalidad
+  * @click.group
+  * @click.command
+  * @click.argument
+  * @click.option
+* Nos otorga una interfaz personalizable
+* Realiza las conversiones de tipo por nosotros
+
+La documentación oficial se puede ver aquí
+
+https://click.palletsprojects.com/en/7.x/
 
 # Librerias interesantes
 
