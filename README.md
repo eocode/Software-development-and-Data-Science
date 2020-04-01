@@ -5,6 +5,8 @@ Apuntes con Python
 
 # Python Projects
 
+Proyectos realizados con Python
+
 [CRUD CLI](https://github.com/eocode/Python-Clients-CLI)
 
 ## Tabla de Contenido<!-- omit in toc -->
