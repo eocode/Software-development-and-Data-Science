@@ -7,6 +7,8 @@ Apuntes con Python
 
 Proyectos realizados con Python
 
+[Tasks WebApp](https://github.com/eocode/Flask_TaskApp)
+[Juego del ahorcado](https://github.com/eocode/Juego-del-ahorcado-Python)
 [CRUD CLI](https://github.com/eocode/Python-Clients-CLI)
 
 ## Tabla de Contenido<!-- omit in toc -->
