@@ -8,11 +8,13 @@ Apuntes, proyectos y códigos realizados con Python.
 
 Proyectos realizados con Python
 
+* [COVIT-19 México with Python, Sheets and DataStudio](https://github.com/eocode/COVIT-19-Mexico)
 * [Rider App with Docker-Django-DRF-Celery-Redis-Postgresql](https://github.com/eocode/Rider-App)
 * [Photogram with Django](https://github.com/eocode/PhotoGram)
 * [Tasks WebApp with Flask](https://github.com/eocode/Flask_TaskApp)
 * [Juego del ahorcado](https://github.com/eocode/Juego-del-ahorcado-Python)
 * [CRUD CLI with Click](https://github.com/eocode/Python-Clients-CLI)
+* [Python-Mongo](https://github.com/eocode/Python-Mongo)
 
 # Prácticas con Python
 
