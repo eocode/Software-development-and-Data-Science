@@ -20,8 +20,8 @@ Proyectos realizados con Python
 
 # El camino de la serpiente <!-- omit in toc -->
 
-* [1.- Python](/Docs/1.%20Python/README.MD)
+* [1.- Python](/Docs/1.%20Python/)
 * [2.- Django Backend Skills]()
 * [3.- DRF Backend Skills]()
-* [4.- DataScience](/Docs/4.%20DataScience/README.md)
+* [4.- DataScience](/Docs/4.%20DataScience)
 * [5.- Machine Learning]()
