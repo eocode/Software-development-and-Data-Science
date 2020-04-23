@@ -3,8 +3,6 @@
 
 > Nada se aprende si no se práctica
 
-## Tabla de Contenido<!-- omit in toc -->
-- [Data](#data)
+# Sobre este repositorio
 
-# Data
-
+Códigos aleatorios realizados en lenguaje Python

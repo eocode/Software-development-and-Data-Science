@@ -1,4 +1,6 @@
+# Ignore enviroments
 env/*
 0. Codigos/scrapper/env/*
 0. Codigos/flask virtualenv/env/*
+# Ignore vs configs
 .vscode
