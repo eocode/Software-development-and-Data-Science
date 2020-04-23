@@ -20,6 +20,12 @@ Proyectos realizados con Python
 
 * [Códigos y practicas](/Codigos)
 
+# Python challenges
+1. [Palindrome](https://github.com/eocode/MasterChallenge-Python01)
+2. [Generate a password](https://github.com/eocode/MasterChallenge-Python02)
+3. [Decode the message](https://github.com/eocode/MasterChallenge-Python03)
+4. [Decorators](https://github.com/eocode/MasterChallenge-Python04)
+
 # El camino de la serpiente <!-- omit in toc -->
 
 * [1.- Python](/Docs/1.%20Python)
