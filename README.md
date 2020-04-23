@@ -1,8 +1,9 @@
 
 # The Python World <!-- omit in toc -->
-Apuntes, proyectos y códigos realizados con Python.
 
-> Python es sin duda un lenguaje que permite hacer muchas cosas, por lo que también es bastante extenso y me he dado a la tarea de organizar mejor el repositorio dividiendolo en **teoría/proyectos**
+Reuní trabajo realizado en Python de forma ordenada y organizada con el lenguaje
+
+> **Python** es sin duda un lenguaje que permite hacer muchas cosas, por lo que también es bastante extenso y me he dado a la tarea de organizar mejor el repositorio dividiendolo en **Proyectos/Retos/Codigos/Notas**
 
 # Proyecto con Python <!-- omit in toc -->
 
