@@ -1,5 +1,5 @@
 
-# Mundo Python <!-- omit in toc -->
+# The Python World <!-- omit in toc -->
 Apuntes, proyectos y códigos realizados con Python.
 
 > Python es sin duda un lenguaje que permite hacer muchas cosas, por lo que también es bastante extenso y me he dado a la tarea de organizar mejor el repositorio dividiendolo en **teoría/proyectos**
@@ -16,11 +16,11 @@ Proyectos realizados con Python
 
 # Prácticas con Python
 
-* [Códigos y practicas](/Codigos/README.md)
+* [Códigos y practicas](/Codigos)
 
 # El camino de la serpiente <!-- omit in toc -->
 
-* [1.- Python](/Docs/1.%20Python/)
+* [1.- Python](/Docs/1.%20Python)
 * [2.- Django Backend Skills]()
 * [3.- DRF Backend Skills]()
 * [4.- DataScience](/Docs/4.%20DataScience)
