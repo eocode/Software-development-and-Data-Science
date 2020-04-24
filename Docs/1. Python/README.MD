@@ -12,6 +12,10 @@ Apuntes, proyectos y códigos realizados con Python.
     - [Ciencias](#ciencias)
     - [CLI](#cli)
     - [Aplicaciones web](#aplicaciones-web)
+  - [Lenguajes de programación](#lenguajes-de-programaci%c3%b3n)
+    - [TIpos de datos](#tipos-de-datos)
+    - [Tiempo de ejecusión](#tiempo-de-ejecusi%c3%b3n)
+  - [Clasificación de tipado de lenguaje](#clasificaci%c3%b3n-de-tipado-de-lenguaje)
   - [Paradigmas de programación](#paradigmas-de-programaci%c3%b3n)
     - [Programación estructurada:](#programaci%c3%b3n-estructurada)
     - [Programación por procedimientos](#programaci%c3%b3n-por-procedimientos)
@@ -194,6 +198,86 @@ Apuntes, proyectos y códigos realizados con Python.
 * Webapp2
 * Gunicorn
 * Tornado
+
+## Lenguajes de programación
+Instrucciones que se convierten a código de maquina
+
+<div align="center">
+  <img src="img/1.png">
+  <small><p>Funciones nativas en Python</p></small>
+</div>
+
+### TIpos de datos
+
+Clasificación de un valor dentro del lenguaje
+
+<div align="center">
+  <img src="img/2.png">
+  <small><p>Funciones nativas en Python</p></small>
+</div>
+
+### Tiempo de ejecusión
+
+<div align="center">
+  <img src="img/3.png">
+  <small><p>Funciones nativas en Python</p></small>
+</div>
+
+
+## Clasificación de tipado de lenguaje
+* **Tipado Estatico**. Los errores que tienen que ver con tipos son elevados en tiempo de compilación
+
+<div align="center">
+  <img src="img/4.png">
+  <small><p>Tipado Estatico</p></small>
+</div>
+
+<div align="center">
+  <img src="img/5.png">
+  <small><p>Typescript</p></small>
+</div>
+
+<div align="center">
+  <img src="img/6.png">
+  <small><p>Java</p></small>
+</div>
+
+* **Tipado Dinamico**. Elevan los errores de tipos en tiempo de ejecusión
+
+<div align="center">
+  <img src="img/dinamic.png">
+  <small><p>Tipado dinamico</p></small>
+</div>
+
+<div align="center">
+  <img src="img/6.png">
+  <small><p>PHP</p></small>
+</div>
+
+<div align="center">
+  <img src="img/6.png">
+  <small><p>Python</p></small>
+</div>
+
+* **Tipado fuerte**. No se pueden combinar distintos tipos de datos
+
+<div align="center">
+  <img src="img/9.png">
+  <small><p>Python</p></small>
+</div>
+
+* **Tipado debil**. Se pueden combinar distintos tipos de datos
+
+<div align="center">
+  <img src="img/10.png">
+  <small><p>Js</p></small>
+</div>
+
+<div align="center">
+  <img src="img/11.png">
+  <small><p>PHP</p></small>
+</div>
+
 
 ## Paradigmas de programación
 

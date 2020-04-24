@@ -21,7 +21,7 @@ Proyectos realizados con Python
 
 * [Códigos y practicas](/Codigos)
 
-# Python challenges
+# Retos con Python
 1. [Palindrome](https://github.com/eocode/MasterChallenge-Python01)
 2. [Generate a password](https://github.com/eocode/MasterChallenge-Python02)
 3. [Decode the message](https://github.com/eocode/MasterChallenge-Python03)
@@ -30,7 +30,24 @@ Proyectos realizados con Python
 # El camino de la serpiente <!-- omit in toc -->
 
 * [1.- Python](/Docs/1.%20Python)
-* [2.- Django Backend Skills]()
-* [3.- DRF Backend Skills]()
+* [2.- Django Backend Skills](/Docs/2.%20Django)
+* [3.- DRF Backend Skills](/Docs/3.%20DRF)
 * [4.- DataScience](/Docs/4.%20DataScience)
-* [5.- Machine Learning]()
+
+# El camino del saber
+
+Saber y tener conocimiento de algo implica poder explicarlo de forma simple a alguien más
+
+> El que sabe pensar, pero no sabe expresar lo que piensa, está al mismo nivel del que no sabe pensar.
+
+
+## La técnica de Feynman
+
+* **Paso 1.** Elige el concepto que quieres entender.
+> Puedes anotarlo como título en una página en blanco.
+* **Paso 2.** Pretende que le estás enseñando ésta idea a alguien más.
+> Explica (escribí) al concepto a ti mismo como si fuera que estas enseñando a un niño, utilizando palabras simples en vez de jerga técnica.
+* **Paso 3.** Si no puedes explicarlo bien, entonces vuelve al libro. 
+> Cada vez que te atasques, vuelve nuevamente al material y re-aprende esa parte que no puedes explicar bien.
+* **Paso 4.** Simplifica tu explicación y crea analogías. 
+> El objetivo de esta técnica es que puedas describir el concepto en palabras simples y claras. Si tardas mucho en explicarlo tienes que simplificarlo aún mas, usando analogías si es necesario.

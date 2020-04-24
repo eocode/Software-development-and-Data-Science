@@ -30,6 +30,9 @@
   - [Introducción al Machine Learning](#introducci%c3%b3n-al-machine-learning)
     - [Future vectors](#future-vectors)
     - [Métricas de distancia](#m%c3%a9tricas-de-distancia)
+  - [Agrupamiento y clusterización](#agrupamiento-y-clusterizaci%c3%b3n)
+    - [Introducción](#introducci%c3%b3n)
+    - [Agrupamiento jerárquico](#agrupamiento-jer%c3%a1rquico)
 
 # Algoritmos de Optimización
 * Permite resolver muchos problemas de manera computacional
@@ -337,3 +340,26 @@ Ejemplos
 * Distancia euclidiana
 * Distancia de Manhathan
 
+## Agrupamiento y clusterización
+
+### Introducción
+* Es un proceso mediante el cuál se **agrupan objetos similares** en clusters que los identifican
+* Se clasifica como **aprendizaje no supervisado** ya que no requiere la utilización de etiquetas
+* **Permite entender la estructura de los datos y la similitud** entre los mismos
+* Es utilizado en motores de recomendación, análisis de redes sociales, análisis de riesgo crediticio, clasificación de genes, riesgos medicos, etc.
+
+<div align="center">
+  <img src="images/clusteralgorithms.png">
+</div>
+
+### Agrupamiento jerárquico
+* Es un algoritmo que **agrupa objetos** **similares** en grupos llamados clusters
+* Trata a cada objeto como un **cluster individual** y luego realiza los siguientes pasos de manera recursiva
+  * **Identifica los dos clusters con menor distancia** (los más similares)
+  * **Agrupa los dos clusters en uno nuevo**
+* El **output** final es un **dendrograma** que muestra la **relación entre objetos y grupos**
+* Es importante **determinar qué medida de distancia vamos a utilizar y los puntos a utilizar en cada cluster** (Linkage criteria)
+
+<div align="center">
+  <img src="images/agrupamientojerarquico.png">
+</div>
