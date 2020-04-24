@@ -19,6 +19,12 @@
   - [Búsqueda binaria](#b%c3%basqueda-binaria-1)
   - [Ordenamiento burbuja](#ordenamiento-burbuja)
   - [Ordenamiento por inserción](#ordenamiento-por-inserci%c3%b3n)
+- [Algoritmos de Optimización](#algoritmos-de-optimizaci%c3%b3n)
+  - [El problema del morral](#el-problema-del-morral)
+- [Programación dinámica y estocástica](#programaci%c3%b3n-din%c3%a1mica-y-estoc%c3%a1stica)
+  - [Programación dinámica](#programaci%c3%b3n-din%c3%a1mica)
+    - [La optimizacion se basa en la memorizacion](#la-optimizacion-se-basa-en-la-memorizacion)
+    - [Fibonacci](#fibonacci)
 
 
 # Complejidad algorítmica
@@ -124,3 +130,40 @@ ineficiente para listas de gran tamaño.
 Una de las características del ordenamiento por inserción es que ordena en “su
 lugar.” Es decir, no requiere memoria adicional para realizar el ordenamiento
 ya que simplemente modifican los valores en memoria.
+
+
+# Algoritmos de Optimización
+* Permite resolver muchos problemas de manera computacional
+* Una función objetivo que debemos maximizar o minimizar, el input que nos da el resultado más alto y bajo
+* Una serie de limitantes que debemos respetar, po ejemplo algunas reglas de negocio
+
+> “P versus NP” es algo más que un rompecabezas matemático abstracto. Su objetivo es determinar —de una vez por todas— qué tipo de problemas se pueden resolver con ordenadores, y cuáles no. 
+> 
+> Los problemas de clase “P” son “fáciles” de resolver para los ordenadores; es decir, las soluciones a estos problemas pueden ser calculadas en una cantidad razonable de tiempo, en comparación con la complejidad del problema.
+
+[Problema P vs NP](https://www.youtube.com/watch?v=UR2oDYZ-Sao)
+
+## El problema del morral
+Obtener el mayor valor en una mochila
+
+# Programación dinámica y estocástica
+
+## Programación dinámica
+> “[El nombre] Programacion Dinamica se escogio para esconder a patrocinadores gubernamentales el hecho de que en realidad estaba haciendo Matematicas. La frase Programacion Dinamica es algo a lo que ningun congresiste puede oponerse” - 
+> 
+> **Richard Bellman**
+
+Los problemas que esta técnica puede optimizar son los que tienen una subestructura optima y ademas tiene ser un tipo de problema empalmado (ejem: Fibonacci)
+
+* **Subestructura Optima:** una solucion optima local se puede encontrar al combinar soluciones optimas de subproblemas locales.
+
+* **Problemas empalmados:** Una solucion optima que involucra resolver el mismo problema en varias ocaciones
+
+### La optimizacion se basa en la memorizacion
+
+* Es una tecnica para guardar computos previos con el fin de no realizarlos nuevamente
+* Normalmente se utiliza un diccionario donde las consultas se pueden hacer en O(1)
+* Intercambia Tiempo por Espacio
+
+### Fibonacci
+Fn = Fn-1 + Fn-2

@@ -38,7 +38,7 @@ Proyectos realizados con Python
 * [DRF](/learn/DRF)
 
 ## Manejo de datos
-* [DataScience](/learn/DataScience)
+* [Data Science](/learn/DataScience)
 
 # El camino del saber
 
