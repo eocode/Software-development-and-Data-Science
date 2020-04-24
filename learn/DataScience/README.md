@@ -33,6 +33,11 @@
   - [Agrupamiento y clusterización](#agrupamiento-y-clusterizaci%c3%b3n)
     - [Introducción](#introducci%c3%b3n)
     - [Agrupamiento jerárquico](#agrupamiento-jer%c3%a1rquico)
+    - [Agrupamiento K-Means](#agrupamiento-k-means)
+    - [Otras técnicas de agrupamiento](#otras-t%c3%a9cnicas-de-agrupamiento)
+  - [Clasificación](#clasificaci%c3%b3n)
+    - [K-Nearest neighbors](#k-nearest-neighbors)
+    - [Otras técnicas de clasificación](#otras-t%c3%a9cnicas-de-clasificaci%c3%b3n)
 
 # Algoritmos de Optimización
 * Permite resolver muchos problemas de manera computacional
@@ -342,6 +347,16 @@ Ejemplos
 
 ## Agrupamiento y clusterización
 
+Es una técnica de Machine Learning que consiste en dividir una población en grupos con la consecuencia de que los datos en gurpo son más similares entre ellos que entre los otros grupos.
+
+Si tuvieras un E-commerce y quisieras tener una estrategía de venta para tus clientes. Es casi imposible diseñar una estrategía para cada individuo, pero se puede utilizar el agrupamiento para dividir a los clientes en grupos que tengan similitudes relevantes y así reducir el problema a unas cuantas estrategias.
+
+<div align="center">
+  <img src="images/clvscla.webp">
+</div>
+
+https://www.jacobsoft.com.mx/es_mx/clustering-analysis/
+
 ### Introducción
 * Es un proceso mediante el cuál se **agrupan objetos similares** en clusters que los identifican
 * Se clasifica como **aprendizaje no supervisado** ya que no requiere la utilización de etiquetas
@@ -363,3 +378,69 @@ Ejemplos
 <div align="center">
   <img src="images/agrupamientojerarquico.png">
 </div>
+
+### Agrupamiento K-Means
+* Es un algoritmo que agrupa utilizando cetroideas
+* Funciona asignando puntos al azar (k define el número inicial de clusters) y despues:
+  * En cada iteración el punto se ajusta
+
+https://www.jacobsoft.com.mx/es_mx/k-means-clustering-con-python/
+
+### Otras técnicas de agrupamiento
+* Agrupamiento estricto (Hard clustering): En el cual cada dato pertenece a un grupo u otro. No hay puntos medios
+* Agrupamiento laxo (Soft clustering): En lugar de asignar un dato a un grupo, se asigna probabilidades a cada dato de pertenecer o no a un grupo
+
+> Un punto importante a considerar cuando ejecutas técnicas de agrupamiento es que debes definir muy claro a qué te refieres cuando hablas de similitud entre puntos, por que esto puede ayudarte a definir el algoritmo correcto para tus necesidades particulares
+
+Existen cuatro aproximaciones para definir similitud
+
+* **Modelos conectivos:** Estos modelos asumen que los puntos más similares son los que se encuentran más cercanos en el espacio de búsqueda. Recuerda que este espacio puede ser altamente dimensional cuando tus feature vectors definen muchas características a analizar. Una desventaja de este tipo de modelos es que no escalan para conjuntos de datos grandes
+* **Modelos de centroid:** Este tipo de modelos definen similitud en términos de cercanía con el centroide del grupo. Los datos se agrupan al determinar cuál es el centroide más cercano
+* **Modelos de distribución:** Este tipo de modelos trata de asignar probabilidades a cada dato para determinar si pertenecen a una distribución específica o no (normal, binomial, poisson, etc)
+* **Modelos de densidad:** Estos modelos analizan la densidad de los datos en diferentes regiones y dividen el conjunto en grupos. Luego asignan los puntos de acuerdo a las áreas de densidad en las que se haya dividido el dataset
+
+Se pueden usar varios modelos con el mismo conjunto de datos para analizar el rendimiento
+
+<div align="center">
+  <img src="images/machinelearning.png">
+</div>
+
+## Clasificación
+
+Entra dentro del aprendizaje supervisado ya que para entrenar el modelo necesita un conjunto de datos (dataset) que ya tenga etiquetas (labels) para entrenar nuestros modelos. 
+
+Se puede ver como el sombrero clasificador de Harry Potter. CUando un nuevo alumno de Hogwarts entra a la escuela es necesario asignarlo/clasificarlo en una de las 4 casas. El sombrero obtiene los datos cuando se lo coloca el alumno y define cuál es el mejor match para su caso particular.
+
+<div align="center">
+  <img src="images/clasificador.png">
+</div>
+
+* Es el proceso mediante el cual se predice la clase de cierto dato
+* Es un tipo de **aprendizaje supervisado** ya que para que funcione, se necesitan etiquetas con los datos (labels)
+* Se utiliza en muchos dominios, incluyendo medicina, aprobación crediticia, reconocimiento de imagenes, vehiculos autónomos, entre otros
+* Sigue dos pasos, aprendizaje (creación del modelo) y clasificación
+
+https://blog.bismart.com/es/la-clasificaci%C3%B3n-y-la-clusterizaci%C3%B3n-una-explicaci%C3%B3n-pr%C3%A1ctica
+
+### K-Nearest neighbors
+* Parte del supuesto de que ya tenemos un conjunto de datos clasificado
+* Trata de encontrar los vecinos más cercanos
+* K se refiere a la cantidad de vecinos que utilizarán para clasificar un ejemplo que aún no ha sido clasificado
+* Es sencillo de implementar y tiene aplicaciones en medicina, finanzas, agricultura
+* Es computacionalmente muy costoso y no sirve con datos de alta dimensionalidad
+
+https://www.aprendemachinelearning.com/clasificar-con-k-nearest-neighbor-ejemplo-en-python/
+
+> A diferencia de K-means, que es un algoritmo no supervisado y donde la «K» significa la cantidad de «grupos» (clusters) que deseamos clasificar, en K-Nearest Neighbor la «K» significa la cantidad de «puntos vecinos» que tenemos en cuenta en las cercanías para clasificar los «n» grupos -que ya se conocen de antemano, pues es un algoritmo supervisado-.
+
+### Otras técnicas de clasificación
+
+* **Clasificadores lineales**. Estos tipos de clasificadores se distinguen porque dividen el conjunto de datos con una línea (que puede ser multidimensional dependiendo de la cantidad de features que hemos utilizado para definir nuestros datos). Esto genera áreas dentro de nuestro espacio de búsqueda. Son poco flexibles cuando el conjunto de datos no puede ser separado facilmente con una simple lúnea y se necesita una figura más compleja
+* **Regresión logística**. No se dividen con una línea sino con un gradiente que determina la probabilidad de que un punto perteneza a una categoría u otra. Generan un área difusa en la que no estamos seguros de la clasificación y un área clara en la que tenemos un alto grado de certeza en cuanto a la categoría que pertenece el punto
+* **Nearest neghbor**. Se apoyan de datos que ya fueron clasificados para determinar la distancia entre sus vecinos más cercanos. Se identifican los datos más cercanos y en el caso más sencillo se hace una votación simple (5 azules, 2 rojos por lo tanto azul)
+* **Support Vector Machines**. Estos algoritmos se diferencian por tener la habilidad de generar figuras complejas (Polígonos) que pueden agrupar datos
+* **Arboles de decisión**. Permite generar un arbol que tenemos que recorrer y tomar decisiones cada vez que avanzamos en un nivel
+  * Si un feature en análisis es mayor a 5, dibuja la línea y = 2x+3 de lo contrario dibuja y=3x+5
+  * Si el feature siguiente es menor a 2 dibuja otra línea y así sucesivamente
+
+https://scikit-learn.org/stable/user_guide.html

@@ -19,7 +19,7 @@ Proyectos realizados con Python
 
 # Prácticas con Python
 
-* [Códigos y practicas](/Codigos)
+* [Códigos y practicas](/codes)
 
 # Retos con Python
 1. [Palindrome](https://github.com/eocode/MasterChallenge-Python01)
@@ -29,10 +29,16 @@ Proyectos realizados con Python
 
 # El camino de la serpiente <!-- omit in toc -->
 
-* [1.- Python](/Docs/1.%20Python)
-* [2.- Django Backend Skills](/Docs/2.%20Django)
-* [3.- DRF Backend Skills](/Docs/3.%20DRF)
-* [4.- DataScience](/Docs/4.%20DataScience)
+## Lenguaje y programación
+* [Python](/learn/Python)
+* [Algoritmos](/learn/Algoritmos)
+
+## Backend
+* [Django](/learn/Django)
+* [DRF](/learn/DRF)
+
+## Manejo de datos
+* [DataScience](/learn/DataScience)
 
 # El camino del saber
 
