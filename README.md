@@ -38,6 +38,9 @@ Proyectos realizados con Python
 * [DRF](/learn/DRF)
 * [Graphene](/learn/Graphene)
 
+## Matemáticas
+* [Logica](/learn/Matematicas/logica)
+
 ## Manejo de datos
 * [Data Science](/learn/DataScience)
 

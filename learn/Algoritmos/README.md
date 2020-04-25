@@ -4,9 +4,6 @@
 > Mejora de habilidades como programador
 
 ## Tabla de Contenido<!-- omit in toc -->
-- [Pensamiento lógico](#pensamiento-l%c3%b3gico)
-  - [Habilidades básicas del pensamiento](#habilidades-b%c3%a1sicas-del-pensamiento)
-  - [Lógica proposicional](#l%c3%b3gica-proposicional)
 - [Complejidad algorítmica](#complejidad-algor%c3%adtmica)
   - [Aproximaciones](#aproximaciones)
   - [Notación asintotica / Big O Notation](#notaci%c3%b3n-asintotica--big-o-notation)
@@ -28,49 +25,6 @@
   - [Programación dinámica](#programaci%c3%b3n-din%c3%a1mica)
     - [La optimizacion se basa en la memorizacion](#la-optimizacion-se-basa-en-la-memorizacion)
     - [Fibonacci](#fibonacci)
-
-# Pensamiento lógico
-## Habilidades básicas del pensamiento
-Proceso que permiten ***obtener información precisa y ordenada de las características de un objeto de observación y así poder tomar decisiones, hacer conclusiones o resolver problemas***
-* **Observación.** La percepción se da a partir de nuestros 5 sentidos. **Puede ser concreta** (que se da en el instante ante una situación o hecho) y **la abstracta** que se da con experiencia previa
-  * Percibimos por nuestros sentidos
-  * Recopilamos la información
-  * La registramos
-  * Identificamos lo que está pasando
-* **Descripción.** **Respondemos preguntas** sobre lo que ya percibimos. **Informa de manera** **clara** las características del objeto observado
-  * ¿Qué es?
-  * ¿Qué tiene?
-  * ¿Cómo es?
-  * ¿Qué función cumple?
-  * ¿Qué pasó?
-* **Comparación.** se da a partir de la observación. Cuándo logras establecer **diferencias y semejanzas**, llegas a **particularizar** o **generalizar** y como consecuencia comparar
-* **Relación.** Observamos, comparamos y unimos con algún nexo >,<,=. ¿Qué puedes afirmar o negar del objeto?
-  * Por ejemplo: Violeta tiene 18 años y Luvia 21. La **variable** es la edad. Violeta es menor que lluvia
-* **Clasificación.** Es el proceso de **agrupar** objetos que cuentan con **semejanzas**. 
-  * Zapatos rojos
-  * Zapatos marrones
-  * Zapatos altos
-  * Zapatos con agujetas
-  * Zapatos deportivos
-
-## Lógica proposicional
-
-Proceso que **analiza** las relaciones entre las **preposiciones**, como la **verdad o falsedad** de las mismas
-
-* Variables
-  * p,q,r,s,t
-* Conectores
-  * -> <-> ~ ^
-* Auxiliares
-  * ()[]{}
-
-Hay 5 conceptos
-
-* Enunciado
-* Preposición
-* Premisa
-* Argumento
-* Conclusión
 
 # Complejidad algorítmica
 * Comparar algorítmos
