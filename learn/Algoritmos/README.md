@@ -6,6 +6,7 @@
 ## Tabla de Contenido<!-- omit in toc -->
 - [Pensamiento lógico](#pensamiento-l%c3%b3gico)
   - [Habilidades básicas del pensamiento](#habilidades-b%c3%a1sicas-del-pensamiento)
+  - [Lógica proposicional](#l%c3%b3gica-proposicional)
 - [Complejidad algorítmica](#complejidad-algor%c3%adtmica)
   - [Aproximaciones](#aproximaciones)
   - [Notación asintotica / Big O Notation](#notaci%c3%b3n-asintotica--big-o-notation)
@@ -51,6 +52,25 @@ Proceso que permiten ***obtener información precisa y ordenada de las caracter�
   * Zapatos altos
   * Zapatos con agujetas
   * Zapatos deportivos
+
+## Lógica proposicional
+
+Proceso que **analiza** las relaciones entre las **preposiciones**, como la **verdad o falsedad** de las mismas
+
+* Variables
+  * p,q,r,s,t
+* Conectores
+  * -> <-> ~ ^
+* Auxiliares
+  * ()[]{}
+
+Hay 5 conceptos
+
+* Enunciado
+* Preposición
+* Premisa
+* Argumento
+* Conclusión
 
 # Complejidad algorítmica
 * Comparar algorítmos
