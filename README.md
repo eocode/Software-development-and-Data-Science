@@ -1,11 +1,11 @@
 
-# The Python World <!-- omit in toc -->
+# The Python World love Data <!-- omit in toc -->
 
 Reuní trabajo realizado en Python de forma ordenada y organizada con el lenguaje
 
 > **Python** es sin duda un lenguaje que permite hacer muchas cosas, por lo que también es bastante extenso y me he dado a la tarea de organizar mejor el repositorio dividiendolo en **Proyectos/Retos/Codigos/Notas**
 
-# Proyecto con Python <!-- omit in toc -->
+# Proyectos con Python <!-- omit in toc -->
 
 Proyectos realizados con Python
 
@@ -22,12 +22,22 @@ Proyectos realizados con Python
 * [Códigos y practicas](/codes)
 
 # Retos con Python
+
+Platzi Master Challenges
+
 1. [Palindrome](https://github.com/eocode/MasterChallenge-Python01)
 2. [Generate a password](https://github.com/eocode/MasterChallenge-Python02)
 3. [Decode the message](https://github.com/eocode/MasterChallenge-Python03)
 4. [Decorators](https://github.com/eocode/MasterChallenge-Python04)
 
 # El camino de la serpiente <!-- omit in toc -->
+
+## Matemáticas
+* [Logica](/learn/Matematicas/logica)
+* [Fundamentos de Matemáticas](/learn/Matematicas/fundamentos)
+* [Algebra](/learn/Matematicas/algebra)
+* [Matemáticas Discretas](/learn/Matematicas/discretas)
+* [Probabilidad y Estadística](/learn/Matematicas/pye)
 
 ## Lenguaje y programación
 * [Python](/learn/Python)
@@ -38,8 +48,11 @@ Proyectos realizados con Python
 * [DRF](/learn/DRF)
 * [Graphene](/learn/Graphene)
 
-## Matemáticas
-* [Logica](/learn/Matematicas/logica)
+## Bases de datos
+* [Fundamentos](/learn/BasesDatos/Fundamentos%20de%20Bases%20de%20Datos)
+* [SQL y MySQL](/learn/BasesDatos/SQL%20y%20MySQL)
+* [PostgreSQL](/learn/BasesDatos/PostgreSQL)
+* [Mongo y Redis](/learn/BasesDatos/MongoDB%20y%20Redis)
 
 ## Manejo de datos
 * [Data Science](/learn/DataScience)

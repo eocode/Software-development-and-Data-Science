@@ -13,6 +13,7 @@
       - [Según el número de premisas](#seg%c3%ban-el-n%c3%bamero-de-premisas)
       - [Según la forma de razonamiento.](#seg%c3%ban-la-forma-de-razonamiento)
       - [Proposiciones lógicas](#proposiciones-l%c3%b3gicas)
+        - [DOBLE NEGACIÓN (DN)](#doble-negaci%c3%93n-dn)
 
 # Pensamiento lógico
 ## Habilidades básicas del pensamiento
@@ -92,4 +93,21 @@ premisas de las cuales se deriva la conclusión.
 La lógica proposicional es la parte de la lógica que estudia la formación
 de proposiciones complejas a partir de proposiciones simples.
 
-A continuación hay una tabla que despliega todas las conectivas lógicas que ocupan a la lógica proposicional, incluyendo ejemplos de su uso en el lenguaje natural y los símbolos que se utilizan para representarlas.
+<div align="center">
+  <img src="img/1.png">
+  <small><p>Proposiciones lógicas</p></small>
+</div>
+
+Considérese el siguiente argumento:
+> P1. Mañana es miércoles o mañana es jueves.
+> P2. Mañana no es jueves.
+> C. Por lo tanto, mañana es miércoles.
+
+##### DOBLE NEGACIÓN (DN)
+¬¬p ↔ p
+El esquema representa, “p doblemente negada equivale a p”. Siguiendo el esquema de una inferencia por pasos, la representaríamos así:
+
+¬¬p “No ocurre que Ana no es una estudiante”
+_____________________________________________________
+p “Ana es una estudiante”
+La regla ‘doble negación’, simplemente.
