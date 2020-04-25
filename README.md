@@ -36,6 +36,7 @@ Proyectos realizados con Python
 ## Backend
 * [Django](/learn/Django)
 * [DRF](/learn/DRF)
+* [Graphene](/learn/Graphene)
 
 ## Manejo de datos
 * [Data Science](/learn/DataScience)

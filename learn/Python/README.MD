@@ -115,6 +115,7 @@ Apuntes, proyectos y códigos realizados con Python.
   - [Módulo CSV](#m%c3%b3dulo-csv)
 - [Graficado](#graficado)
   - [Gráficado simple](#gr%c3%a1ficado-simple)
+- [Tipado estático en Python](#tipado-est%c3%a1tico-en-python)
 
 # Pensamiento Computacional
 * Conocimiento declarativo
@@ -1594,3 +1595,5 @@ Existen dos readers y dos writers
 * Bokeh se puede utilizar en el servidor con Flask y Django
 
 [Documentación de Bokeh](https://docs.bokeh.org/en/latest/index.html)
+
+# Tipado estático en Python
