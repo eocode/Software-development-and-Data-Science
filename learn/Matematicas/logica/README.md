@@ -43,16 +43,16 @@ Proceso que permiten ***obtener información precisa y ordenada de las caracter�
 
 Proceso que **analiza** las relaciones entre las **preposiciones**, asó como la **verdad o falsedad** de las mismas
 
-* **Lógica** es la disciplina que estudia los métodos y principios que se usan para distinguir el razonamiento bueno (correcto) del malo (incorrecto).
+* **Lógica** estudia los métodos y principios que se usan para distinguir el razonamiento correcto del incorrecto.
+* **Enunciado**. Conjunto de palabras.
+* **Proposición**. Enunciado que es verdadero o falso.
+* **Argumento**. Proposiciones que conducen a una conclusión.
+* **Premisa**. Proposición aseverada o supuesta que sirve de apoyo o razón para aceptar la conclusión de un argumento.
+* **Conclusión**. Es la proposición aseverada con base en otras proposiciones (premisas) del argumento.
+<hr>
+
 * **Inferencia** es el proceso de razonamiento, compuesto por proposiciones, por el cual se deriva o extrae una conclusión de una o varias premisas.
     > El término Inferencia es considerado como sinónimo de: “predicción”, “derivación” o “deducción”.
-
-* **Enunciado**. Entidad lingüística conformada por palabras.
-* **Proposición**. Información contenida en un enunciado que es verdadera o falsa.
-* **Argumento**. Conjunto de proposiciones que sirven de premisas que conducen a una conclusión.
-* **Premisa**. Proposición aseverada o supuesta que sirve de apoyo o razón para aceptar la conclusión de un argumento.
-* **Conclusión**. Es la proposición aseverada con base en otras proposiciones (premisas) del
-argumento.
 
 ### Elementos
 
