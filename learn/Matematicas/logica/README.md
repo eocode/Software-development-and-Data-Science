@@ -14,6 +14,8 @@
       - [Según la forma de razonamiento.](#seg%c3%ban-la-forma-de-razonamiento)
       - [Proposiciones lógicas](#proposiciones-l%c3%b3gicas)
         - [DOBLE NEGACIÓN (DN)](#doble-negaci%c3%93n-dn)
+  - [Habilidades lógico matemáticas](#habilidades-l%c3%b3gico-matem%c3%a1ticas)
+    - [Observación atenta](#observaci%c3%b3n-atenta)
 
 # Pensamiento lógico
 ## Habilidades básicas del pensamiento
@@ -63,7 +65,8 @@ Proceso que **analiza** las relaciones entre las **preposiciones**, asó como la
 corchetes […].**
 
 ### Inferencia lógica
-Es un razonamiento, compuesto por proposiciones, por el cual se deriva o extrae una conclusión de una o varias premisas.
+> **Es un razonamiento, compuesto por proposiciones**, **por el cual se deriva o extrae una conclusión de una o varias premisas.**
+
 El término Inferencia es considerado como sinónimo de: **“predicción”, “derivación” o “deducción”.**
 
 ### Tipos de inferencia
@@ -111,3 +114,19 @@ El esquema representa, “p doblemente negada equivale a p”. Siguiendo el esqu
 _____________________________________________________
 p “Ana es una estudiante”
 La regla ‘doble negación’, simplemente.
+
+## Habilidades lógico matemáticas
+
+> Algunas veces lo que vemos, no es lo que nuestro cerebro procesa
+
+* Númerico
+* Espacial
+* Medida
+* Aleatorio
+* Variaciones
+
+### Observación atenta
+* Completar valores
+* letras en desorden
+* Conteo de figuras
+* Observación atenta
