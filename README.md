@@ -1,5 +1,5 @@
 
-# :snake: Love Data Python | R | SQL | Scala <!-- omit in toc -->
+# :snake: Love Data With Python | R | SQL | Scala <!-- omit in toc -->
 
 Reuní trabajo relacionado con datos de forma ordenada y organizada que se irá complementando con el tiempo
 

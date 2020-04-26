@@ -31,7 +31,10 @@
     - [Razones](#razones)
     - [Proporciones](#proporciones)
     - [Teorema de Thales](#teorema-de-thales)
-  - [Series númericas](#series-n%c3%bamericas)
+  - [Series](#series)
+    - [Series númericas](#series-n%c3%bamericas)
+    - [Series alfabéticas](#series-alfab%c3%a9ticas)
+    - [Series de figuras](#series-de-figuras)
 
 # Pensamiento lógico
 ## Habilidades básicas del pensamiento
@@ -380,4 +383,43 @@ Ejemplos
   <small><p>Triangulos semejantes</p></small>
 </div>
 
-## Series númericas
+## Series
+### Series númericas
+
+Son sucesiones ordenadas de números que guardan un vínculo entre sí
+
+* Finitas
+* Infinitas
+* Ascendentes
+* Descendentes
+
+Ejemplos
+
+a) 1, 3, 5, 7,... R. 9
+b) 10, 11, 40, 12, 13, 50,... R. 14
+c) 2000, 1000, 500, 250,... R. 125
+d) 40, 5, 8, 20, 4,... R. 5
+e) 76543, 2109, 876,... R. 54
+
+### Series alfabéticas
+
+Sucesiones ordenadas de letras que guardan un vínculo entre sí
+
+* Ascendente
+* Descendente
+
+a) a, m, b, c, m, d, e, f, m, g, h, i, j,… m
+b) a, z, b, b, y, c, c, c, x, d, d, d,… d
+c) G - F - H - L - K - M - P - O - Q - ... U
+d) A - Z - C - V - F - S - J -... Q
+
+### Series de figuras
+
+Sucesiones ordenadas de figuras que fuardan un vínculo entre sí
+
+Poseen uno o más patrones para establecer la siguiente figura
+
+<div align="center">
+  <img src="img/22.png">
+  <small><p>Series de figuras</p></small>
+</div>
