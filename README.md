@@ -5,7 +5,7 @@ Reuní trabajo relacionado con datos de forma ordenada y organizada que se irá 
 
 > El mundo de los datos es apacionante, es por ello que en este repo reuní **Proyectos/Retos/Codigos/Notas** relacionados al tema
 
-# :snake: Proyectos con Python <!-- omit in toc -->
+# Proyectos con Python <!-- omit in toc -->
 
 Proyectos realizados con Python
 
@@ -17,11 +17,11 @@ Proyectos realizados con Python
 * [CRUD CLI with Click](https://github.com/eocode/Python-Clients-CLI)
 * [Python-Mongo](https://github.com/eocode/Python-Mongo)
 
-# :snake: Prácticas con Python
+# Prácticas con Python
 
 * [Códigos y practicas](/codes)
 
-# :snake: Retos con Python
+# Retos con Python
 
 Platzi Master Challenges
 
@@ -30,36 +30,36 @@ Platzi Master Challenges
 3. [Decode the message](https://github.com/eocode/MasterChallenge-Python03)
 4. [Decorators](https://github.com/eocode/MasterChallenge-Python04)
 
-# :snake: El camino de la serpiente <!-- omit in toc -->
+# El camino de la serpiente <!-- omit in toc -->
 
 Ruta de aprendizaje con los lenguajes Python, R, Scala y Bases de datos
 
-## :exclamation: Matemáticas
+## Matemáticas
 * [Logica](/learn/Matematicas/logica)
 * [Fundamentos de Matemáticas](/learn/Matematicas/fundamentos)
 * [Algebra](/learn/Matematicas/algebra)
 * [Matemáticas Discretas](/learn/Matematicas/discretas)
 * [Probabilidad y Estadística](/learn/Matematicas/pye)
 
-## :computer: Lenguajes y programación
+## Lenguajes y programación
 * [Python](/learn/Python)
 * [Algoritmos](/learn/Algoritmos)
 
-## :desktop_computer: Backend
+## Backend
 * [Python Django](/learn/Django)
 * [Python Django DRF](/learn/DRF)
 * [Python Django Graphene](/learn/Graphene)
 
-## :date: Bases de datos
+## Bases de datos
 * [Fundamentos](/learn/BasesDatos/Fundamentos%20de%20Bases%20de%20Datos)
 * [SQL y MySQL](/learn/BasesDatos/SQL%20y%20MySQL)
 * [PostgreSQL](/learn/BasesDatos/PostgreSQL)
 * [Mongo y Redis](/learn/BasesDatos/MongoDB%20y%20Redis)
 
-## :man_scientist: Manejo de datos
+## Manejo de datos
 * [Data Science](/learn/DataScience)
 
-# :leaves: El camino del saber
+# El camino del saber
 
 Saber y tener conocimiento de algo implica poder explicarlo de forma simple a alguien más
 
