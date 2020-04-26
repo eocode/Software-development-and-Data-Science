@@ -35,6 +35,19 @@
     - [Series númericas](#series-n%c3%bamericas)
     - [Series alfabéticas](#series-alfab%c3%a9ticas)
     - [Series de figuras](#series-de-figuras)
+  - [Diagramas de flujo](#diagramas-de-flujo)
+    - [Toma de decisiones](#toma-de-decisiones)
+    - [Simbología](#simbolog%c3%ada)
+    - [¿Cómo hacer un diagrama de flujo?](#%c2%bfc%c3%b3mo-hacer-un-diagrama-de-flujo)
+    - [Algoritmos](#algoritmos)
+    - [Estructuras de control : Palabras reservadas](#estructuras-de-control--palabras-reservadas)
+      - [Estructura de control secuencial](#estructura-de-control-secuencial)
+      - [Estructura de control de selección simple](#estructura-de-control-de-selecci%c3%b3n-simple)
+      - [Estructura de control de selección doble](#estructura-de-control-de-selecci%c3%b3n-doble)
+      - [Estructura de control de selección multiple](#estructura-de-control-de-selecci%c3%b3n-multiple)
+      - [Repetición mientras](#repetici%c3%b3n-mientras)
+      - [Repetición hacer mientras](#repetici%c3%b3n-hacer-mientras)
+      - [Repetición para hasta](#repetici%c3%b3n-para-hasta)
 
 # Pensamiento lógico
 ## Habilidades básicas del pensamiento
@@ -422,4 +435,143 @@ Poseen uno o más patrones para establecer la siguiente figura
 <div align="center">
   <img src="img/22.png">
   <small><p>Series de figuras</p></small>
+</div>
+
+## Diagramas de flujo
+
+Un diagrama de flujo es la **representación gráfica de la secuencia de rutinas** **simples¸ describe un proceso, sistema o algoritmo informático.**
+
+### Toma de decisiones
+
+El diagrama de flujo ofrece una **descripción visual de las actividades implicadas en un proceso.** Muestra la relación secuencial entre ellas, facilitando la rápida comprensión de cada actividad y su relación con las demás, el flujo de la información y los materiales, las ramas en el proceso, la existencia de bucles repetitivos, el número de pasos del proceso, facilita también la selección de la decisión.
+
+### Simbología
+
+<div align="center">
+  <img src="img/23.png">
+  <small><p>Diagrama de flujo</p></small>
+</div>
+
+<div align="center">
+  <img src="img/24.png">
+  <small><p>Diagrama de flujo</p></small>
+</div>
+
+<div align="center">
+  <img src="img/25.png">
+  <small><p>Diagrama de flujo</p></small>
+</div>
+
+### ¿Cómo hacer un diagrama de flujo?
+
+1. **Define tu propósito y alcance**... ¿Qué deseas lograr? ¿Estás considerando las
+cosas correctas con un punto inicial y final apropiado para alcanzar ese propósito? Realiza una investigación lo suficientemente detallada, pero lo suficientemente simple a la hora de crear tus diagramas para comunicarte con tu audiencia.
+2. **Identifica las tareas en orden cronológico.** Esto puede involucrar las
+conversaciones con los participantes, la observación de un proceso o la
+revisión de cualquier documentación existente. Puedes escribir los pasos en
+forma de notas o comenzar con un diagrama en versión borrador.
+3. **Organízalos** por tipo y figura correspondiente, como procesos, decisiones,
+datos, entradas o salidas.
+4. **Crea tu diagrama**, ya sea dibujándolo a mano o usando un programa.
+5. **Confirma tu diagrama de flujo**, verificando todos los pasos con las personas
+que participan en el proceso. Observa el proceso para asegurarte de no dejar
+de lado nada que sea importante para tu propósito.
+
+### Algoritmos
+
+Como una representación visual del flujo de datos, los diagramas de flujo son **útiles para escribir un programa o algoritmo** y explicárselo a otros o colaborar con otros en el mismo. Puedes usar un diagrama de flujo para explicar detalladamente la lógica detrás de un programa antes de empezar a codificar el proceso automatizado.
+
+Puede ayudar a organizar una perspectiva general y ofrecer una guía cuando llega
+el momento de codificar.
+
+**Los diagramas de flujo pueden:**
+
+* Explicar la lógica
+* Organizar una perspectiva general antes de codificar
+* Demostrar cómo el código está organizado.
+* Visualizar la ejecución de un código dentro de un programa.
+* Mostrar la estructura de un sitio web o aplicación.
+* Comprender cómo los usuarios navegan por un sitio web o programa.
+
+Los diagramas relacionados que se emplean en el software informático incluyen:
+* **Lenguaje unificado de modelado (UML):** este es el lenguaje de propósito general usado en la ingeniería de software para el modelado.
+* **Diagramas Nassi-Shneiderman (NSD):** usados para la programación informática estructurada. Llevan el nombre de sus creadores: Isaac Nassi y Ben Shneiderman, quienes los desarrollaron en 1972 en la Universidad Estatal de Nueva York en Stony Brook. También se denominan "estructogramas".
+* **Diagramas DRAKON:** DRAKON es un lenguaje de programación visual de algoritmos empleado para crear diagramas de flujo.
+
+### Estructuras de control : Palabras reservadas
+
+#### Estructura de control secuencial
+
+La estructura de control secuencial **representa la organización de sentencias o instrucciones consecutivas que se van ejecutando una después de la otra.** Este diagrama comienza con el punto de entrada y la línea de flujo ( −→ ) apunta al primer rectángulo de acción que indica la primera sentencia a ejecutar y continua con el flujo que apunta a otro rectángulo de acción y así podríamos seguir colocando n rectángulos de acción y termina con el punto de salida. **Todas las estructuras de control tienen la característica de tener un único punto de entrada y un único punto de salida.**
+
+<div align="center">
+  <img src="img/27.png">
+  <small><p>estructuras de control</p></small>
+</div>
+
+#### Estructura de control de selección simple
+
+La estructura de control de selección simple representa una estructura que si se cumple alguna condición se realizan algunas acciones, mientras que si no se cumple, no se realizan dichas acciones.
+
+Conocido como IF
+
+<div align="center">
+  <img src="img/26.png">
+  <small><p>estructuras de control</p></small>
+</div>
+
+#### Estructura de control de selección doble
+
+La estructura de control de selección doble es una estructura que introduce una condición, si es verdadera, realiza un bloque de acciones; y si es falsa, hace otro bloque de acciones.
+
+Conocido como IF - Else
+
+<div align="center">
+  <img src="img/28.png">
+  <small><p>estructuras de control</p></small>
+</div>
+
+#### Estructura de control de selección multiple
+
+La estructura de control de selección múltiple, es una estructura que evalúa una expresión que puede tomar varios y dependiendo del valor que tome realiza un conjunto de acciones.
+
+Conocido como Switch
+
+<div align="center">
+  <img src="img/29.png">
+  <small><p>estructuras de control</p></small>
+</div>
+
+#### Repetición mientras
+
+La estructura de control de repetición mientras es un ciclo que repite un bloque de
+instrucciones mientras la condición es verdadera. La característica que la distingue de otros ciclos es que verifica la condición antes de ejecutar las acciones.
+
+Conocido como While
+
+<div align="center">
+  <img src="img/30.png">
+  <small><p>estructuras de control</p></small>
+</div>
+
+#### Repetición hacer mientras
+
+La estructura de control de repetición hacer/mientras es otro de los ciclos que proporciona el lenguaje C. De manera semejante al ciclo anterior, esta estructura repite un bloque de instrucciones mientras una condición sea verdadera. La característica que distingue a este ciclo, es que primero realiza las acciones y después verifica la condición. Es decir, que en esta estructura las acciones se realizan al menos una vez.
+
+Conocido como Do-While
+
+<div align="center">
+  <img src="img/31.png">
+  <small><p>estructuras de control</p></small>
+</div>
+
+#### Repetición para hasta
+
+Se utiliza para repetir un conjunto de acciones, hasta que se deje de cumplir una condición. La característica que distingue este ciclo es que está diseñado para repetir un bloque de instrucciones de un valor inicial hasta un valor final.
+
+Conocido como For
+
+<div align="center">
+  <img src="img/32.png">
+  <small><p>estructuras de control</p></small>
 </div>
