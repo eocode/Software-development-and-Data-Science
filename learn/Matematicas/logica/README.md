@@ -26,7 +26,7 @@
     - [Letras en desorden](#letras-en-desorden)
   - [Teoría de conjuntos](#teor%c3%ada-de-conjuntos)
     - [Tipos de conjuntos](#tipos-de-conjuntos)
-    - [Operaciones con conjuntos](#operaciones-con-conjuntos)
+    - [Operaciones con conjuntos / Diagramas de Venn](#operaciones-con-conjuntos--diagramas-de-venn)
 
 # Pensamiento lógico
 ## Habilidades básicas del pensamiento
@@ -266,7 +266,9 @@ El conjunto { b, b, b, d, d } simplemente será { b, d }.
 * **CONJUNTO INFINITO.**
 Es aquel conjunto cuya cantidad de elemento no se puede contar; es decir, es aquel conjunto en que sus elementos no se pueden nombrar o enumerar. Son ejemplos de conjuntos infinitos los numeros naturales (N), los enteros (Z), los racionales (Q), los imaginarios (I), los complejos (C)
 
-### Operaciones con conjuntos
+### Operaciones con conjuntos / Diagramas de Venn
+
+Son regiones cerradas que nos permiten visualizar las relaciones entre conjuntos
 
 <div align="center">
   <img src="img/10.png">
