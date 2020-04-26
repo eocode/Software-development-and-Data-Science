@@ -27,6 +27,11 @@
   - [Teoría de conjuntos](#teor%c3%ada-de-conjuntos)
     - [Tipos de conjuntos](#tipos-de-conjuntos)
     - [Operaciones con conjuntos / Diagramas de Venn](#operaciones-con-conjuntos--diagramas-de-venn)
+  - [Aritmética en la lógica](#aritm%c3%a9tica-en-la-l%c3%b3gica)
+    - [Razones](#razones)
+    - [Proporciones](#proporciones)
+    - [Teorema de Thales](#teorema-de-thales)
+  - [Series númericas](#series-n%c3%bamericas)
 
 # Pensamiento lógico
 ## Habilidades básicas del pensamiento
@@ -279,3 +284,100 @@ Son regiones cerradas que nos permiten visualizar las relaciones entre conjuntos
 * **INTERSECCIÓN** La intersección de dos conjuntos A y B es el conjunto A ∩ B que contiene todos los elementos comunes de A y B.
 * **DIFERENCIA** La diferencia entre dos conjuntos A y B es el conjunto A \ B que contiene todos los elementos de A que no pertenecen a B.
 * **COMPLEMENTO** El complemento de un conjunto A es el conjunto A que contiene todos los elementos (respecto C de algún conjunto referencial) que no pertenecen a A.
+
+## Aritmética en la lógica
+
+INTERPRETACIÓN DE LOS NÚMEROS Y SIGNOS. 
+ 
+**La recta numérica** es una recta en la que a cada uno de sus puntos le podemos asignar el
+valor de un número real.
+
+<div align="center">
+  <img src="img/11.png">
+  <small><p>Recta númerica</p></small>
+</div>
+
+**Ley de los signos.**
+
+<div align="center">
+  <img src="img/12.png">
+  <small><p>Ley de los signos</p></small>
+</div>
+
+### Razones
+
+Una razón es una **comparación entre dos o más cantidades**. Puede expresarse mediante una **fracción**. Si las cantidades a comparar son a y b, la razón entre ellas se escribe como:
+
+<div align="center">
+  <img src="img/13.png">
+  <small><p>Razon</p></small>
+</div>
+
+Las razones se pueden amplificar y/o simplificar, y se mantiene la razón.
+
+<div align="center">
+  <img src="img/14.png">
+  <small><p>Razon</p></small>
+</div>
+
+**Ejemplo:**
+
+Si hay 33 vehículos entre automóviles y camionetas y la razón entre ellos es 4:7 ¿cuántos
+automóviles hay? En este caso se está comparando la cantidad de automóviles con el de camionetas. Para conocer la cantidad de automóviles que hay podemos seguir los siguientes pasos:
+* 1 se considera el total de vehículos: 33
+* 2 Se divide 33 por la suma entre el numerador y el denominador de nuestra razón (4+7= 11. Con esto se obtienen 11 partes con 3 unidades cada una (ya que 33:11 = 3). 
+* 3 Se consideran 4 partes para los automóviles y 7 para las camionetas.
+
+<div align="center">
+  <img src="img/15.png">
+  <small><p>Ejemplo</p></small>
+</div>
+
+### Proporciones
+
+Una proporción **es la igualdad de dos razones**.
+
+<div align="center">
+  <img src="img/16.png">
+  <small><p>Igualdad entre razones</p></small>
+</div>
+
+En toda proporción, el producto de los términos medios es igual al producto de los términos
+extremos (Teorema fundamental de las proporciones). Es decir:
+
+<div align="center">
+  <img src="img/17.png">
+  <small><p>Teorema fundamental de las proporciones</p></small>
+</div>
+
+<div align="center">
+  <img src="img/18.png">
+  <small><p>Ejercicio</p></small>
+</div>
+
+### Teorema de Thales 
+
+**Semejanza de triángulos.** Esencialmente, **dos triángulos son semejantes si sus ángulos son congruentes (tienen la misma medida).** Esto da lugar al hecho de que, si dos triángulos son semejantes, sus lados correspondientes (u homólogos) son proporcionales
+
+> El **primer teorema de Tales** enuncia que si en un triángulo dado se traza una recta paralela a cualquiera de sus lados, el nuevo triángulo que se obtiene será semejante al triángulo inicial.
+
+<div align="center">
+  <img src="img/19.png">
+  <small><p>Triangulos semejantes</p></small>
+</div>
+
+Ejemplos
+
+<div align="center">
+  <img src="img/20.png">
+  <small><p>Triangulos semejantes</p></small>
+</div>
+
+2. Las maderas de las repisas de la figura son paralelas. Calcula las longitudes de las maderas representadas como x e y.
+
+<div align="center">
+  <img src="img/21.png">
+  <small><p>Triangulos semejantes</p></small>
+</div>
+
+## Series númericas
