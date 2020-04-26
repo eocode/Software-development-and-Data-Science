@@ -1,9 +1,9 @@
 
-# The Python World love Data <!-- omit in toc -->
+# :snake: Love Data Python | R | SQL | Scala <!-- omit in toc -->
 
-Reuní trabajo realizado en Python de forma ordenada y organizada con el lenguaje
+Reuní trabajo relacionado con datos de forma ordenada y organizada que se irá complementando con el tiempo
 
-> **Python** es sin duda un lenguaje que permite hacer muchas cosas, por lo que también es bastante extenso y me he dado a la tarea de organizar mejor el repositorio dividiendolo en **Proyectos/Retos/Codigos/Notas**
+> El mundo de los datos es apacionante, es por ello que en este repo reuní **Proyectos/Retos/Codigos/Notas** relacionados al tema
 
 # Proyectos con Python <!-- omit in toc -->
 
@@ -32,6 +32,8 @@ Platzi Master Challenges
 
 # El camino de la serpiente <!-- omit in toc -->
 
+Ruta de aprendizaje con los lenguajes Python, R, Scala y Bases de datos
+
 ## Matemáticas
 * [Logica](/learn/Matematicas/logica)
 * [Fundamentos de Matemáticas](/learn/Matematicas/fundamentos)
@@ -39,14 +41,14 @@ Platzi Master Challenges
 * [Matemáticas Discretas](/learn/Matematicas/discretas)
 * [Probabilidad y Estadística](/learn/Matematicas/pye)
 
-## Lenguaje y programación
+## Lenguajes y programación
 * [Python](/learn/Python)
 * [Algoritmos](/learn/Algoritmos)
 
 ## Backend
-* [Django](/learn/Django)
-* [DRF](/learn/DRF)
-* [Graphene](/learn/Graphene)
+* [Python Django](/learn/Django)
+* [Python Django DRF](/learn/DRF)
+* [Python Django Graphene](/learn/Graphene)
 
 ## Bases de datos
 * [Fundamentos](/learn/BasesDatos/Fundamentos%20de%20Bases%20de%20Datos)

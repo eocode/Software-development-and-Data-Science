@@ -15,7 +15,18 @@
       - [Proposiciones lógicas](#proposiciones-l%c3%b3gicas)
         - [DOBLE NEGACIÓN (DN)](#doble-negaci%c3%93n-dn)
   - [Habilidades lógico matemáticas](#habilidades-l%c3%b3gico-matem%c3%a1ticas)
+    - [Asociación de puntos](#asociaci%c3%b3n-de-puntos)
+    - [Triángulos matemáticos](#tri%c3%a1ngulos-matem%c3%a1ticos)
+    - [Acertijos](#acertijos)
+    - [Sudoku](#sudoku)
     - [Observación atenta](#observaci%c3%b3n-atenta)
+    - [Laberintos](#laberintos)
+    - [Conteo de figuras](#conteo-de-figuras)
+    - [Completar valores](#completar-valores)
+    - [Letras en desorden](#letras-en-desorden)
+  - [Teoría de conjuntos](#teor%c3%ada-de-conjuntos)
+    - [Tipos de conjuntos](#tipos-de-conjuntos)
+    - [Operaciones con conjuntos](#operaciones-con-conjuntos)
 
 # Pensamiento lógico
 ## Habilidades básicas del pensamiento
@@ -119,14 +130,150 @@ La regla ‘doble negación’, simplemente.
 
 > Algunas veces lo que vemos, no es lo que nuestro cerebro procesa
 
-* Númerico
-* Espacial
-* Medida
-* Aleatorio
-* Variaciones
+### Asociación de puntos
+
+<div align="center">
+  <img src="img/2.png">
+  <small><p>Une los puntos</p></small>
+</div>
+
+### Triángulos matemáticos
+
+Escribir los números del 1 al 6 sin que se repitan de tal forma que la suma por cada lado del triángulo sea igual
+
+<div align="center">
+  <img src="img/3.png">
+  <small><p>Problema númerico</p></small>
+</div>
+
+### Acertijos
+
+1. ¿Cuántas veces puede restarse el número 1 del número 1.111?
+R. 1, puesto que en las ocasiones consecutivas estaríamos restándolo al número 1.110, 1.109,
+1.108…
+2. María tiene un hermano llamado Juan. Juan tiene tantos hermanos como hermanas. María
+tiene el doble de hermanos que de hermanas. ¿Cuantos chicos y chicas hay en la familia?
+R. M++ J***
+3. Una viejecita llevaba huevos al mercado cuando se le cayó la cesta. - ¿Cuántos huevos
+llevabas? - le preguntaron, - No lo sé, recuerdo que al contarlos en grupos de 2, 3, 4 y 5,
+sobraban 1, 2, 3 y 4 respectivamente. ¿Cuantos huevos tenía la viejecita?
+R. 59 (Tabla de primos y eliminación por criterios de divisibilidad).
+4. En una carrera, un corredor adelanta al que va segundo. ¿En qué posición se coloca?
+R. En segundo lugar.
+
+### Sudoku
+
+Complete los cuadros con números del 1 al 9 de modo tal que al sumarse en sentido horizontal, vertical y diagonal corresponda al mismo resultado.
+
+<div align="center">
+  <img src="img/4.png">
+  <small><p>Completa el cuadro</p></small>
+</div>
+
 
 ### Observación atenta
-* Completar valores
-* letras en desorden
-* Conteo de figuras
-* Observación atenta
+
+Determine en cada una de las figuras el número de caras planas.
+
+<div align="center">
+  <img src="img/5.png">
+  <small><p>Observación atenta</p></small>
+</div>
+
+<div align="center">
+  <img src="img/6.png">
+  <small><p>Observación atenta</p></small>
+</div>
+
+### Laberintos
+
+<div align="center">
+  <img src="img/7.png">
+  <small><p>Laberinto</p></small>
+</div>
+
+### Conteo de figuras
+
+<div align="center">
+  <img src="img/8.png">
+  <small><p>Conteos</p></small>
+</div>
+
+### Completar valores
+
+Completar los valores que faltan, sabiendo que el valor en cada círculo corresponde a la suma de los valores en los dos círculos debajo.
+
+<div align="center">
+  <img src="img/9.png">
+  <small><p>Completar</p></small>
+</div>
+
+### Letras en desorden
+
+* tagriarlne: Inglaterra
+* urpe: Perú
+* omlaiboc: Colombia
+* xmioec: México
+* iaalit: Italia
+* aiusr: Rusia
+* ianhc: China
+* anadac: Canadá
+
+## Teoría de conjuntos
+
+Nos permite clasificar y ordenar los conocimientos adquiridos desarrollando la compleja red conceptual en que almacenamos nuestro aprendizaje
+
+* **CONJUNTO.** Un conjunto es la agrupación, clase, o colección de objetos o elementos que pertenecen y responden a la misma categoría.
+
+  * **Extensión o enumeración:** Sus elementos son encerrados entre llaves y separados por comas. **Cada conjunto describe un listado de todos sus elementos. Además, sus elementos no se repiten.**
+    >A = {A, E, I, O, U}
+    B = {0, 2, 4, 6, 8, 10}
+  * **Comprensión:** Sus elementos se determinan a través de una **condición** que se establece entre llaves.
+    >A = {x/x es una vocal}
+    B = {x/x es un número par menor que 11}
+  * **Diagramas de Venn:** Regiones cerradas que nos permiten visualizar las relaciones entre los conjuntos.
+  * **Descripción verbal:** Se trata de un enunciado que describe una característica común a todos los elementos del conjunto. “A contiene a todos los animales que tienen esqueleto interno”
+  
+* **ELEMENTO.** Es cada uno de los objetos por los cuales está conformado un conjunto. xϵA **(El elemento x Pertenece al conjunto A)**. El símbolo ∉ se utiliza cuando un elemento no pertenece al
+conjunto.
+* **SUBCONJUNTO.** Sean los conjuntos A={ 0, 1, 2, 3, 5, 8 } y B={ 1, 2, 5 } En este caso decimos que B está contenido en A, o que B es subconjunto de A. En general si A y B son dos conjuntos cualesquiera, decimos que B es un subconjunto de A si todo
+elemento de B lo es de A también.
+  > ∴ si B es un subconjunto de A se escribe B ⊆ A.
+Si B no es subconjunto de A se indicará con una diagonal B ⊄ A.
+
+### Tipos de conjuntos
+
+* **CONJUNTO UNIVERSO (U, Ω).**
+Se denomina así al conjunto formado por todos los elementos del tema de referencia.
+U = {x/x es un animal}
+A = {x/x es un mamífero}
+B = {x/x es un reptil}
+* **CONJUNTO VACÍO ( { }, Ø).**
+Se denomina así al conjunto que no tiene ningún elemento. A pesar de no tener elementos se le considera como conjunto. **Ejemplos:** Conjunto de los meses del año que terminan en a. Conjunto de números impares múltiplos de 2.
+* **CONJUNTO UNITARIO.**
+Es el conjunto que tiene un solo elemento. **Ejemplo:** Conjunto de los meses del año que tiene menos de treinta días, solamente febrero pertenece a dicho conjunto.
+* **CONJUNTOS DISJUNTOS.**
+Se llaman conjuntos disjuntos aquellos que no tienen ningún elemento que pertenezca a ambos al mismo tiempo. **Ejemplo:** Los dos conjuntos siguientes:
+{x/x es un número natural}
+{x/x es un día de la semana}
+Son disjuntos ya que no tienen ningún elemento común.
+* **CONJUNTOS IGUALES.**
+Los conjuntos son iguales, si tienen los mismos elementos, por ejemplo:
+El conjunto { a, b, c } también puede escribirse:
+{ a, c, b }, { b, a, c }, { b, c, a }, { c, a, b }, { c, b, a } 
+> En teoría de conjuntos se acostumbra no repetir a los elementos por ejemplo:
+El conjunto { b, b, b, d, d } simplemente será { b, d }.
+* **CONJUNTO INFINITO.**
+Es aquel conjunto cuya cantidad de elemento no se puede contar; es decir, es aquel conjunto en que sus elementos no se pueden nombrar o enumerar. Son ejemplos de conjuntos infinitos los numeros naturales (N), los enteros (Z), los racionales (Q), los imaginarios (I), los complejos (C)
+
+### Operaciones con conjuntos
+
+<div align="center">
+  <img src="img/10.png">
+  <small><p>Diagrama de Venn</p></small>
+</div>
+
+* **UNIÓN** La unión de dos conjuntos A y B es el conjunto A ∪ B que contiene cada elemento que está por lo menos en uno de ellos.
+* **INTERSECCIÓN** La intersección de dos conjuntos A y B es el conjunto A ∩ B que contiene todos los elementos comunes de A y B.
+* **DIFERENCIA** La diferencia entre dos conjuntos A y B es el conjunto A \ B que contiene todos los elementos de A que no pertenecen a B.
+* **COMPLEMENTO** El complemento de un conjunto A es el conjunto A que contiene todos los elementos (respecto C de algún conjunto referencial) que no pertenecen a A.
