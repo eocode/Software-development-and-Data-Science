@@ -19,6 +19,7 @@
   - [Campos en español](#campos-en-espa%c3%b1ol)
   - [Campos especiales](#campos-especiales)
   - [Ficheros multimedia](#ficheros-multimedia)
+  - [Patrón MVT Modelo-Vista-Template](#patr%c3%b3n-mvt-modelo-vista-template)
 
 # Pycharm
 
@@ -514,3 +515,5 @@ if settings.DEBUG:
 ```
 
 Lo que hemos hecho es cargar el módulo de ficheros estáticos genérico y hacer que Django sirva ficheros como algo excepcional, sólo si tenemos el modo DEBUG activo.
+
+## Patrón MVT Modelo-Vista-Template
