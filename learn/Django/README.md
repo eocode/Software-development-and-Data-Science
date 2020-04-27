@@ -15,6 +15,10 @@
   - [Imagenes](#imagenes)
 - [Modelos](#modelos)
 - [Panel de administrador](#panel-de-administrador)
+  - [Nombre de la app](#nombre-de-la-app)
+  - [Campos en español](#campos-en-espa%c3%b1ol)
+  - [Campos especiales](#campos-especiales)
+  - [Ficheros multimedia](#ficheros-multimedia)
 
 # Pycharm
 
@@ -319,4 +323,194 @@ No tenemos ningún usuario creado. Vamos a crear uno, pero no uno cualquiera, si
 python manage.py createsuperuser
 ```
 
-Para que nuestro modelo aparezca en el administrador tenemos que registrarlo en el fichero **{your module app}/admin.py**:
+Para que nuestro modelo aparezca en el administrador tenemos que registrarlo en el fichero **{your module app}/admin.py**
+
+```python
+from django.contrib import admin
+from portfolio.models import Project
+
+
+admin.site.register(Project)
+```
+
+## Nombre de la app
+Nuestra aplicación se llama Portfolio en inglés y quizá queremos que en el administrador aparezca Portafolio en español. Para lograrlo hay que cambiar dos cosas, primero añadir un campo verbose_name en el fichero portfolio/apps.py
+
+```python
+from django.apps import AppConfig
+
+class PortfolioConfig(AppConfig):
+    name = 'portfolio'
+    verbose_name = 'Portafolio'
+```
+
+De esta forma podemos establecer una configuración extendida.
+
+**Lo segundo es establecer esta configuración en settings.py**, lo cual se hace **llamando a esta clase PortfolioConfig** en lugar de portfolio a secas:
+
+```python
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'core',
+    'portfolio.apps.PortfolioConfig',  # <====
+]
+```
+
+## Campos en español
+Vamos de vuelta a nuestro fichero de modelos e introduciremos dos nuevos conceptos para nuestros modelos, la subclase Meta y el método especial __str__.
+
+Al crear la clase Proyecto hemos decidido ponerle Project para seguir una lógica en todo el proyecto, pero podemos cambiar el nombre a mostrar en el panel de forma muy sencilla creando una subclase con Meta información:
+
+```python
+from django.db import models
+
+class Project(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    image = models.ImageField()
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "proyecto"
+        verbose_name_plural = "proyectos"
+        ordering = ["-created"]  # <===
+```
+
+Ordering es una lista porque permite ordenar con prioridades entre distintos campos. Además si añadimos un guión delante del nombre del campo, es posible ordenar de forma revertida. Al hacer -created, le indicamos que nos muestre primero los proyectos de más actuales a más antiguos.
+
+> Ahora **para que nos aparezca el nombre del proyecto en el desplegable simplemente podemos redefinir el método especial __str__ para que devuelva la cadena que nosotros queramos:**
+
+```python
+from django.db import models
+
+class Project(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    image = models.ImageField()
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "proyecto"
+        verbose_name_plural = "proyectos"
+        ordering = ["-created"] 
+
+    def __str__(self):
+        return self.title  # <=====
+```
+
+En cuanto a los nombres de los campos, también podemos utilizar el atributo verbose_name para cambiarlos:
+
+```python
+from django.db import models
+
+class Project(models.Model):
+    title = models.CharField(max_length=200, 
+        verbose_name="Título")
+    description = models.TextField(
+        verbose_name="Descripción")
+    image = models.ImageField(
+        verbose_name="Imagen")
+    created = models.DateTimeField(auto_now_add=True, 
+        verbose_name="Fecha de creación")
+    updated = models.DateTimeField(auto_now=True,
+        verbose_name="Fecha de edición")
+
+    class Meta:
+        verbose_name = "proyecto"
+        verbose_name_plural = "proyectos"
+        ordering = ["-created"]
+
+    def __str__(self):
+        return self.title
+```
+
+## Campos especiales
+
+Como podréis observar los campos de fecha y hora automatizados no aparecen en el adminstrador, Django los esconde para que no se puedan modificar, pero podemos mostrarlos como campos de tipo "sólo lectura".
+
+Para hacerlo tenemos que extender un poco la configuración base del administrador de la siguiente forma:
+
+```python
+from django.contrib import admin
+from .models import Project
+
+class ProjectAdmin(admin.ModelAdmin):
+    readonly_fields = ('created', 'updated')
+
+admin.site.register(Project, ProjectAdmin)
+```
+
+## Ficheros multimedia
+
+Por defecto se cargan en la raíz del proyecto.
+
+Para que Django pueda servir ficheros Media durante el desarrollo, necesitaremos crear un directorio donde almacenar todos estos archivos. Normalmente le llamaremos media y lo crearemos en la raíz de nuestro proyecto.
+
+Ahora nos dirigiremos al fichero settings.py y abajo del todo añadiremos estas dos variables, una para indicar indicar la URL externa y otra para el directorio interno donde se encuentran los ficheros media (unido al core_dir del proyecto):
+
+```python
+# Media files
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+```
+
+Ahora vamos a nuestro modelo Proyecto y vamos a añadir a la imagen un atributo llamado upload_to:
+
+```python
+from django.db import models
+
+class Project(models.Model):
+    title = models.CharField(max_length=200, 
+        verbose_name="Título")
+    description = models.TextField(
+        verbose_name="Descripción")
+    image = models.ImageField(upload_to="projects",  # <=====
+        verbose_name="Imagen")
+    created = models.DateTimeField(auto_now_add=True, 
+        verbose_name="Fecha de creación")
+    updated = models.DateTimeField(auto_now=True,
+        verbose_name="Fecha de edición")
+
+    class Meta:
+        verbose_name = "proyecto"
+        verbose_name_plural = "proyectos"
+        ordering = ["-created"]
+
+    def __str__(self):
+        return self.title
+```
+
+Ahora fijaos en una cosa, si abrimos nuestro primer proyecto no podemos acceder a la imagen:
+
+Vamos a nuestro fichero settings/urls.py y vamos a editarlo de la siguiente manera:
+
+```python
+from django.contrib import admin
+from django.urls import path
+from core import views
+
+from django.conf import settings  # <=====
+
+urlpatterns = [
+    path('', views.home, name="home"),
+    path('about-me/', views.about, name="about"),
+    path('portfolio/', views.portfolio, name="portfolio"),
+    path('contact/', views.contact, name="contact"),
+    path('admin/', admin.site.urls),
+]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, 
+        document_root=settings.MEDIA_ROOT)
+```
+
+Lo que hemos hecho es cargar el módulo de ficheros estáticos genérico y hacer que Django sirva ficheros como algo excepcional, sólo si tenemos el modo DEBUG activo.
