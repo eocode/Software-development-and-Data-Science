@@ -3,12 +3,24 @@
 > Conceptos clave de Django
 
 ## Tabla de Contenido<!-- omit in toc -->
+- [Pycharm](#pycharm)
 - [¿Qué es Django?](#%c2%bfqu%c3%a9-es-django)
   - [Crear un proyecto nuevo](#crear-un-proyecto-nuevo)
   - [Jerarquía de ficheros](#jerarqu%c3%ada-de-ficheros)
 - [Django APPS](#django-apps)
   - [HttpResponse](#httpresponse)
 - [Templates](#templates)
+  - [Herencia de templates](#herencia-de-templates)
+  - [Template tag {% url %}](#template-tag--url)
+  - [Imagenes](#imagenes)
+- [Modelos](#modelos)
+- [Panel de administrador](#panel-de-administrador)
+
+# Pycharm
+
+Descarga el mejor editor de código para Python
+
+https://www.jetbrains.com/es-es/pycharm/
 
 # ¿Qué es Django?
 
@@ -155,3 +167,156 @@ def home(request):
 ```
 
 # Templates
+
+Django nos ofrece la posibilidad de utilizar plantillas HTML mucho más cómodas y repletas de funcionalidades.
+
+Lo primero es **crear un directorio templates en nuestra app**, que dentro debe contener otro directorio con el mismo nombre que la app. Los archivos tienen **extensión .html**
+
+Ahora necesitamos cambiar nuestra vista para que funcione con el template
+
+```python
+def home(request):
+    return render(request, "core/home.html")
+```
+
+**Por defecto Django optimiza el uso de la memoria** así que no carga las plantillas de una app que no esté instalada en **settings.py.** Para cargar la app core y sus plantillas en memoria debemos ir al fichero settings.py y añadir la app en la lista INSTALLED_APPS justo abajo del todo:
+
+```python
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'core',  # <====
+]
+```
+Ahora el home estará cargando desde un template
+
+<div align="center">
+  <img src="img/3.png">
+  <small><p>Template</p></small>
+</div>
+
+## Herencia de templates
+
+> En programación, si estás repitiendo código, es que lo estás haciendo mal.
+
+Podemos crear un archivo base.html para usar como base
+
+```python
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mi Web Personal</title>
+</head>
+<body>
+    <h1>Mi Web Personal</h1>
+    <ul>
+        <li><a href="/">Portada</a></li>
+        <li><a href="/about/">Acerca de</a></li>
+        <li><a href="/portfolio/">Portafolio</a></li>
+        <li><a href="/contact/">Contacto</a></li>
+    </ul>
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>
+```
+
+Esto es un **template tag**, una etiqueta de template, y sirve para añadir lógica de programación dentro del propio HTML.
+
+> En este caso el **template tag block sirve para definir un bloque de contenido con un nombre.**
+
+Ahora podemos heredar en el template home.html
+```python
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <h2>Mi Web Personal</h2>
+
+    <p>Bienvenidos.</p>
+{% endblock %}
+```
+
+## Template tag {% url %}
+
+Se usa para enlazar templates
+
+```python
+{% url 'nombre_en_el_path %'}
+```
+
+En la práctica es lo mismo, pero si vamos a nuestro urls.py y cambiamos una dirección, por ejemplo about por about-me
+
+Sin cambiar absolutamente nada en el template, la url del menú se habrá actualizado y seguirá funcionando perfecto:
+
+> Nunca utilices hard-code para tus enlaces, en su lugar usa el template tag url.
+
+## Imagenes
+Para manejar imagenes Django necesita Pillow
+
+```shell
+pip install Pillow
+```
+
+# Modelos
+
+Para definir un nuevo modelo Proyecto nos vamos a dirigir al fichero **models.py**, pero no podemos hacerlo de cualquier forma, debemos seguir unas pautas.
+
+Crear un modelo es fácil, sólo tenemos que crear una clase heredando de una clase padre llamada **models.Model**.
+
+> **Es importante que el nombre de la clase siempre sea en singular**:
+
+```python
+from django.db import models
+
+class Project(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    image = models.ImageField()
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+```
+
+Esta clase representará una tabla dentro de la base de datos. Lo siguiente será crear sus columnas, que no serán otra cosa que los atributos de la clase.
+
+**Para migrar la app necesitaremos dos comandos:**
+
+El primero es **makemigrations**, que sirve para indicarle a Django que hay cambios en algún modelo, de manera que creará un fichero de migraciones. Si en el futuro tenemos algún problema, siempre podremos restaurar una migración anterior.
+
+```shell
+python manage.py makemigrations portfolio
+```
+
+> Sólo nos falta aplicarla a la base de datos, que lo haremos con el **comando migrate**:
+
+```shell
+python manage.py migrate portfolio
+```
+
+Cada vez que hagamos un cambio en nuestro ficheros models.py ejecutaremos estos dos comandos para crear una migración y posteriormente aplicarla.
+
+# Panel de administrador
+
+El panel de administrador de Django es una funcionalidad que viene creada por defecto. Para acceder tenemos que entrar a la dirección /admin de nuestra página
+
+<div align="center">
+  <img src="img/4.png">
+  <small><p>Admin</p></small>
+</div>
+
+Sí abres el **urls.py** del proyecto veréis que ya está configurado por defecto para abrirse en esa dirección como si se tratara de otra app:
+
+No tenemos ningún usuario creado. Vamos a crear uno, pero no uno cualquiera, sino el superusuario.
+
+```shell
+python manage.py createsuperuser
+```
+
+Para que nuestro modelo aparezca en el administrador tenemos que registrarlo en el fichero **{your module app}/admin.py**:
