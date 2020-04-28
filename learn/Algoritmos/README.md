@@ -4,6 +4,7 @@
 > Mejora de habilidades como programador
 
 ## Tabla de Contenido<!-- omit in toc -->
+- [Tipos de soluciones de problemas](#tipos-de-soluciones-de-problemas)
 - [Complejidad algorítmica](#complejidad-algor%c3%adtmica)
   - [Aproximaciones](#aproximaciones)
   - [Notación asintotica / Big O Notation](#notaci%c3%b3n-asintotica--big-o-notation)
@@ -27,6 +28,25 @@
     - [Fibonacci](#fibonacci)
   - [Caminos aleatorios](#caminos-aleatorios)
     - [Camino de borrachos](#camino-de-borrachos)
+- [Programación Estocástica](#programaci%c3%b3n-estoc%c3%a1stica)
+  - [Aplicaciones](#aplicaciones)
+  - [Cálculo de probabilidades](#c%c3%a1lculo-de-probabilidades)
+    - [Probabilidades](#probabilidades)
+  - [Inferencia estadística](#inferencia-estad%c3%adstica)
+    - [Proceso](#proceso)
+    - [Ley de los grandes números](#ley-de-los-grandes-n%c3%bameros)
+    - [Falacia del apostador](#falacia-del-apostador)
+    - [Medidas de tendencia central](#medidas-de-tendencia-central)
+      - [Media](#media)
+      - [Varianza](#varianza)
+      - [Desviación estándar](#desviaci%c3%b3n-est%c3%a1ndar)
+      - [Distribución normal](#distribuci%c3%b3n-normal)
+        - [Regla empírica](#regla-emp%c3%adrica)
+
+# Tipos de soluciones de problemas
+
+* **Deterministicas**. Una entrada misma salida
+* **Estocásticas**. Los resultados varian acorde a las probabilidades
 
 # Complejidad algorítmica
 * Comparar algorítmos
@@ -183,3 +203,161 @@ https://www.washingtonpost.com/graphics/2020/world/corona-simulator/
 A mayor número de pasos, mayor distancia del punto original
 
 Las simulaciones se corren multiples veces y se genera una media
+
+# Programación Estocástica
+
+https://economipedia.com/definiciones/proceso-estocastico.html
+
+* Un **programa es determinístico si cuando se corre con el mismo input produce el mismo output**
+* Los programas deterministicos son muy importantes, pero existen problemas que no puedden resolverse de esa manera
+* La programación estocástica permite introducir aleatoriedad a nuestro programas para crear simulaciones que permiten resolver otro tipo de problemas
+* Se aprovechan de que las **distribuciones probabilísticas** de un problema se conocen o pueden ser estimadas
+
+> Se apoya de la inferencia estadística para obtener datos como la media, desviación estándar e intervalos de confianza
+> Automatización de soluciones para un problema específico
+
+## Aplicaciones
+* Trafico
+* **Control de semaforos tradicional vs estocástico**
+* Simulaciones físicas y financieras
+* Efecto de diferentes drogas o medicamentos
+* Vehículos autonomos
+* Predicción de desastres naturales
+
+## Cálculo de probabilidades
+* La probabilidad es una medida de la certidumbre asociada a un evento o suceso futuro y suele expresarse como un número entre 0 y 1
+* Una probabilidad de 0 significa que un suceso jamás sucederá
+* Una probabilidad de 1 significa que un suceso está garantizado a suceder en el futuro
+
+### Probabilidades
+* Preguntamos qué fracción de todos los posibles eventos tiene la propiedad que buscamos
+* Por eso es importante poder calcular todas las posibilidades de un evento para entender su probabilidad
+* La probabilidad de que un evento suceda y de que no suceda es siempre 1
+
+<div align="center">
+  <img src="images/1.png">
+  <small><p>Probabilidades</p></small>
+</div>
+
+**Probabilidades en los dados**
+
+* ¿Cuál es la probabilidad de obtener un 1?
+* ¿Cuál es la probabilidad de obtener un 1 y un 2?
+* ¿Cuál es la probabilidad de no obtener un 1?
+* ¿Cuál es la probabilidad de no obtener un 1 en 10 tiros?
+* ¿Cuál es la probabilidad de por lo menos obtener un 1 en 10 tiros?
+
+<div align="center">
+  <img src="images/dados.png">
+  <small><p>Probabilidades con dados</p></small>
+</div>
+
+A mayor número de simulaciones, los datos teoricos y los prácticos son más semejantes
+
+<div align="center">
+  <img src="images/simulate.png">
+  <small><p>Simulación 1 - 10000</p></small>
+</div>
+
+
+## Inferencia estadística
+
+* Con las simulaciones podemos calcular las probabilidades de eventos complejos sabiendo las probabilidades de eventos simples
+* ¿Qué pasa cuando no sabemos las probabilidades de los eventos simples?
+* Las técnicas de la inferencia estadística nos **permiten inferir/concluir las propiedades de una población a partir de una** **muestra aleatoria**
+
+> El principio guía de la Inferencia Estadística es que una muestra aleatoria tiende a exhibir las mismas propiedades que la población de la que fue extraída
+> **John Guttag**
+
+### Proceso
+<div align="center">
+  <img src="images/infestadistica.png">
+  <small><p>Proceso de muestreo</p></small>
+</div>
+
+<div align="center">
+  <img src="images/muestras.png">
+  <small><p>Obtención de muestras</p></small>
+</div>
+
+### Ley de los grandes números
+* **En pruebas independientes repetidas** con la misma probabilidad p de un resultado, la fracción de desviaciones de p converge a cero conforme la cantidad de pruebas se acerca al infinito
+
+<div align="center">
+  <img src="images/leygrandesnúmeros.png">
+  <small><p>Ley de los grandes números</p></small>
+</div>
+
+### Falacia del apostador
+* Señala que despues de un evento extremo, ocurrirán eventos menos extremos para nivelar la media
+* **La regresión a la media señala que después de un evento aleatorio extremo, el siguiente evento probablemente será menos extremo**
+
+> Cada evento es independiente
+
+<div align="center">
+  <img src="images/apostador.png">
+  <small><p>Falacia del apostador</p></small>
+</div>
+
+### Medidas de tendencia central
+
+#### Media
+* Es una medida de tendencia central
+* Comúnmente es **conocida como promedio**
+
+> Nos indica dónde se encuentra la mayoría de los valores
+
+<div align="center">
+  <img src="images/media.png">
+  <small><p>Media</p></small>
+</div>
+
+#### Varianza
+* La varianza **mide que tan propagados se encuentran un conjunto de valores** **aleatorios de su media**
+* Siempre debe entenderse con respecto a la media
+
+<div align="center">
+  <img src="images/varianza.png">
+  <small><p>Varianza</p></small>
+</div>
+
+#### Desviación estándar
+* **La desviación estándar es la raíz cuadrada de la varíanza**
+* Nos permite entender, también, la propagación y se debe entender siempre relacionado a la media
+* La ventaja sobre la varianza es que la desviación estándar está en las mismas unidades que la media
+
+> Nos ayuda a conocer la dispersión de los datos
+
+<div align="center">
+  <img src="images/varianza.png">
+  <small><p>Desviación estándar</p></small>
+</div>
+
+#### Distribución normal
+* Es una de las distribuciones más recurrentes en cualquier ámbito
+* **Se define completamente por su media y su desviación estándar**
+* Permite **calcular intervalos de confianza** con la **regla empírica**
+
+<div align="center">
+  <img src="images/distribución%20normal.png">
+  <small><p>Distribución normal</p></small>
+</div>
+
+> **Mientras la desviación estándar sea más pequeña la variabilidad de los datos es menor.** Se usa en las finanzas para calcular la inversión
+
+<div align="center">
+  <img src="images/variacion.png">
+  <small><p>Variación de los datos</p></small>
+</div>
+
+##### Regla empírica
+* También conocida como la regla 68-95-99.7
+* Señala cuál es la dispersión de los datos en una distribución normal a uno, dos y tres sigmas
+* Permite calcular probabilidades con la densidad de la distribución normal
+
+> Permite analizar como se distribuye a través de una distribución normal los datos. Cuales son los datos que podemos encontrar a 1, 2 y 3 sigmas (desviaciones estándar) de distancia
+
+<div align="center">
+  <img src="images/histograma.png">
+  <small><p>Regla empirica</p></small>
+</div>
