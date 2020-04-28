@@ -3,6 +3,8 @@
 ## Tabla de Contenido<!-- omit in toc -->
 - [Conceptos Básicos](#conceptos-b%c3%a1sicos)
 
+https://www.youtube.com/watch?v=-TTtDlKkxIo
+
 # Conceptos Básicos
 En el álgebra usamos símbolos para representar las cantidades. Estos símbolos se pueden dividir en dos grupos:
 

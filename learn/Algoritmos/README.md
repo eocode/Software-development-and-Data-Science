@@ -42,6 +42,12 @@
       - [Desviación estándar](#desviaci%c3%b3n-est%c3%a1ndar)
       - [Distribución normal](#distribuci%c3%b3n-normal)
         - [Regla empírica](#regla-emp%c3%adrica)
+  - [Simulaciones de Montecarlo](#simulaciones-de-montecarlo)
+    - [Cálculo de PI](#c%c3%a1lculo-de-pi)
+  - [Muestreo](#muestreo)
+    - [Teorema del límite central](#teorema-del-l%c3%admite-central)
+  - [Datos experimentales](#datos-experimentales)
+  - [Regresión lineal](#regresi%c3%b3n-lineal)
 
 # Tipos de soluciones de problemas
 
@@ -361,3 +367,79 @@ A mayor número de simulaciones, los datos teoricos y los prácticos son más se
   <img src="images/histograma.png">
   <small><p>Regla empirica</p></small>
 </div>
+
+## Simulaciones de Montecarlo
+
+> Se uso por primera vez para simular el juego de solitario en la computadora ENIAC
+
+* **Permite crear simulaciones para predecir el resultado de un problema**
+* Permite convertir problemas determinísticos en problemas estocásticos
+* Es utilizado en una gran diversidad de áreas desde la ingeniearía hasta la biología y el derecho
+
+> Juego de cartas
+
+### Cálculo de PI
+
+> PI es la cantidad de veces que cabe el diametro de un circulo en su circunferencia
+
+https://www.youtube.com/watch?v=WJjDr67frtM
+
+<div align="center">
+  <img src="images/pi.png">
+  <small><p>Calcular PI</p></small>
+</div>
+
+> Convertir un problema complejo en uno sencillo
+
+<div align="center">
+  <img src="images/pi2.png">
+  <small><p>Calcular PI</p></small>
+</div>
+
+https://www.youtube.com/watch?v=pvimAM_SLic
+
+<div align="center">
+  <img src="images/pi3.png">
+  <small><p>Calcular PI</p></small>
+</div>
+
+Cálculo del intervalo de confianza
+
+https://www.youtube.com/watch?v=2wugQGs1GNY
+
+https://es.wikipedia.org/wiki/Intervalo_de_confianza
+
+## Muestreo
+* Hay ocasiones en la que no tenemos acceso a toda la población que queremos explorar
+* Uno de los grandes descubrimientos de la estadística es que **las muestras aleatorias tienden a mostrar las mismas propiedades de la población objetivo**
+* El tipo de muestreo que hemos hecho hasta ahora es muestreo probabilistico
+* En un muestreo aleatorio cualquier miembro de la población tiene la misma probabilidad de ser escogido
+* En un **muestreo estratificado** tomamos en consideración las características de la población para **partirla en subgrupos y luego tomamos muestras de cada subgrupo**
+  * Incrementa la probabilidad de que el muestreo sea representativo de la población
+
+
+### Teorema del límite central
+* Es uno de los teoremas más importantes de la estadística
+* Establece que **muestras aleatorias de cualquier distribución van a tener una distribución normal**
+*** Permite entender cualquier distribución como la distribución normal de sus medias** y eso nos permite aplicar todo lo que sabemos de distribuciones normales
+
+<div align="center">
+  <img src="images/teoremadellimite.png">
+  <small><p>Teorema del limite central</p></small>
+</div>
+
+http://195.134.76.37/applets/AppletCentralLimit/Appl_CentralLimit2.html
+
+https://www.youtube.com/watch?v=z2V1LX8tK7U&feature=youtu.be
+
+https://www.youtube.com/watch?v=EC1bTDBz46k
+
+## Datos experimentales
+* Es la aplicación del método científico
+* **Es necesario comenzar con una teoría o hipótesis sobre el resultado al que se quiere llegar**
+* **Basado en la hipótesis se debe crear un experimento** para validar o falsear la hipótesis
+* **Se valida o falsea una hipótesis midiendo la diferencia entre las mediciones** **experimentales y aquellas mediciones predichas por la hipótesis**
+
+## Regresión lineal
+* **Permite aproximar una función a un conjunto de datos** obtenidos de manera experimental
+* No necesariamente permite aproximar funciones lineales, sino que sus variantes permiten aproximar cualquier funcion polinómica
