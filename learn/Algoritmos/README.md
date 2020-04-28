@@ -25,6 +25,8 @@
   - [Programación dinámica](#programaci%c3%b3n-din%c3%a1mica)
     - [La optimizacion se basa en la memorizacion](#la-optimizacion-se-basa-en-la-memorizacion)
     - [Fibonacci](#fibonacci)
+  - [Caminos aleatorios](#caminos-aleatorios)
+    - [Camino de borrachos](#camino-de-borrachos)
 
 # Complejidad algorítmica
 * Comparar algorítmos
@@ -166,3 +168,18 @@ Los problemas que esta técnica puede optimizar son los que tienen una subestruc
 
 ### Fibonacci
 Fn = Fn-1 + Fn-2
+
+## Caminos aleatorios
+
+* **Es un tipo de simulación que elige aleatoriamente una decisión dentro de un conjunto de decisiones validas**
+* Se utiliza en muchos campos del conocimiento cuando los sistemas no son deterministas e incluyen elementos de aleatoriedad
+
+Ayuda a crear simulaciones
+
+https://www.washingtonpost.com/graphics/2020/world/corona-simulator/
+
+### Camino de borrachos
+
+A mayor número de pasos, mayor distancia del punto original
+
+Las simulaciones se corren multiples veces y se genera una media

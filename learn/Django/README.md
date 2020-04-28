@@ -19,7 +19,8 @@
   - [Nombre de la app](#nombre-de-la-app)
   - [Campos en español](#campos-en-espa%c3%b1ol)
   - [Campos especiales](#campos-especiales)
-  - [Ficheros multimedia](#ficheros-multimedia)
+  - [Personalizar el admin](#personalizar-el-admin)
+- [Ficheros multimedia](#ficheros-multimedia)
   - [Patrón MVT Modelo-Vista-Template](#patr%c3%b3n-mvt-modelo-vista-template)
 - [Relaciones (ORM)](#relaciones-orm)
 - [Internacionalización con Django](#internacionalizaci%c3%b3n-con-django)
@@ -462,7 +463,23 @@ class ProjectAdmin(admin.ModelAdmin):
 admin.site.register(Project, ProjectAdmin)
 ```
 
-## Ficheros multimedia
+## Personalizar el admin
+
+```python
+class PostAdmin(admin.ModelAdmin):
+    readonly_fields = ('created', 'updated')
+    list_display = ('title', 'author', 'published')
+    ordering = ('author', 'published')
+    search_fields = ('translations__title',)
+    date_hierarchy = 'published'
+    list_filter = ('author__username', 'categories')
+```
+
+https://django-parler.readthedocs.io/en/stable/compatibility.html
+
+Si quisiéramos indicar sólo un campo de ordenación igualmente debéis crear una tupla con por lo menos un campo y una coma, sino Django no entenderá que es una tupla.
+
+# Ficheros multimedia
 
 Por defecto se cargan en la raíz del proyecto.
 
@@ -621,7 +638,8 @@ Hay varios tipos de relaciones que podemos hacer
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                verbose_name=_("Autor"))
 # Relación 1 a muchos
-    categories = models.ManyToManyField(Category,
+    categories = models.ManyToManyField
+    (Category,
                                         verbose_name=_("Categorías"))
 ```
 
