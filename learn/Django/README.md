@@ -4,6 +4,7 @@
 
 ## Tabla de Contenido<!-- omit in toc -->
 - [Pycharm](#pycharm)
+- [Python Hosting](#python-hosting)
 - [¿Qué es Django?](#%c2%bfqu%c3%a9-es-django)
   - [Crear un proyecto nuevo](#crear-un-proyecto-nuevo)
   - [Jerarquía de ficheros](#jerarqu%c3%ada-de-ficheros)
@@ -20,12 +21,25 @@
   - [Campos especiales](#campos-especiales)
   - [Ficheros multimedia](#ficheros-multimedia)
   - [Patrón MVT Modelo-Vista-Template](#patr%c3%b3n-mvt-modelo-vista-template)
+- [Relaciones (ORM)](#relaciones-orm)
+- [Internacionalización con Django](#internacionalizaci%c3%b3n-con-django)
+  - [Dependencias necesarias](#dependencias-necesarias)
+  - [Marcar texto para traducir](#marcar-texto-para-traducir)
+  - [Generar archivos de traducción](#generar-archivos-de-traducci%c3%b3n)
+  - [Compilar archivos de traducción](#compilar-archivos-de-traducci%c3%b3n)
+  - [Traducción de modelos](#traducci%c3%b3n-de-modelos)
+- [Integrar Django + React](#integrar-django--react)
 
 # Pycharm
 
 Descarga el mejor editor de código para Python
 
-https://www.jetbrains.com/es-es/pycharm/
+https://www.jetbrains.com/es-es/pycharm
+
+# Python Hosting
+
+https://www.pythonanywhere.com/
+https://heroku.com
 
 # ¿Qué es Django?
 
@@ -517,3 +531,309 @@ if settings.DEBUG:
 Lo que hemos hecho es cargar el módulo de ficheros estáticos genérico y hacer que Django sirva ficheros como algo excepcional, sólo si tenemos el modo DEBUG activo.
 
 ## Patrón MVT Modelo-Vista-Template
+
+Hasta ahora lo que hemos hecho no requería de interactuar con la base de datos Podríamos decir que simplemente se recibe una petición del navegador, se ejecuta la vista correspondiente y se renderiza el Template para que el navegador muestre el HTML resultante:
+
+<div align="center">
+  <img src="img/5.png">
+  <small><p>Admin</p></small>
+</div>
+
+Sin embargo en el momento en que aparecen las base de datos y los modelos, este proceso se extendiende. Ahora se recibirá la petición, se pasará a la vista, en la vista recuperaremos los datos del modelo correspondiente, y finalmente la renderizaremos el Template pero esta vez integrando los datos dinámicos recuperados del modelo, antes de enviar el HTML final al navegador:
+
+<div align="center">
+  <img src="img/6.png">
+  <small><p>Admin</p></small>
+</div>
+
+Es buena práctica separar las vistas como aplicaciones
+
+```python
+from django.contrib import admin
+from django.urls import path
+
+from core import views as core_views
+from portfolio import views as portfolio_views
+
+from django.conf import settings
+
+urlpatterns = [
+    path('', core_views.home, name="home"),
+    path('about-me/', core_views.about, name="about"),
+    path('portfolio/', portfolio_views.portfolio, name="portfolio"),
+    path('contact/', core_views.contact, name="contact"),
+    path('admin/', admin.site.urls),
+]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT)
+```
+
+Separar las apps siempre viene bien. Nos permite organizar mejor el código y prepararlo para escalarlo en el futuro.
+
+De vuelta a nuestra vista portfolio, necesitamos hacer referencia a nuestro modelo Project para recuperar sus instancias y enviarlas al template:
+
+```python
+from django.shortcuts import render
+from .models import Project
+
+def portfolio(request):
+    projects = Project.objects.all()  
+    return render(request, "portfolio/portfolio.html", 
+        {'projects':projects})  # <=====
+```
+
+Con esto, en el template ya se podrá visualizar la información:
+
+```python
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Portafolio{% endblock %}
+
+{% block background %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Portafolio</h1>
+    <span class="subheading">Currículo</span>
+{% endblock %}
+
+{% block content %}
+    {% for project in projects %}
+        Proyecto: {{project.title}} creado {{project.created}} <br>
+    {% endfor %}
+{% endblock %}
+```
+
+Probamos la página y mostrará algo llamado **QuerySet**, como una lista y dentro aparece nuestro proyecto.
+
+**Un QuerySet es la representación del resultado de una consulta a la base de datos**, pero devuelta como una lista de instancias. Al ser una especie de lista, lo bueno que tiene es que podemos iterarla con otro templatetag llamado for, y dentro de cada iteración mostrar para cada Proyecto sus atributos.
+
+# Relaciones (ORM)
+
+Hay varios tipos de relaciones que podemos hacer
+
+```python
+# Relación por llave foranea
+    author = models.ForeignKey(User, on_delete=models.CASCADE,
+                               verbose_name=_("Autor"))
+# Relación 1 a muchos
+    categories = models.ManyToManyField(Category,
+                                        verbose_name=_("Categorías"))
+```
+
+# Internacionalización con Django
+
+https://github.com/iris9112/WWCode-python
+
+Django ofrece un robusto framework de internacionalización y localización para ayudarte a desarrollo aplicaciones para múltiples idiomas y regiones del mundo.
+
+* **Internacionalización:** proceso de diseñar programas para el uso potencial de cualquier localidad (ciudad, país). Es decir poder traducir a diferentes idiomas elementos de la interfaz, texto, mensajes de error, y además configurar elementos como fechas y horas, de manera que sea posible respetar diferentes estándares locales. Generalmente hecho por desarrolladores.
+
+> **Dato curioso:** Encontrarás a menudo "internacionalización" abreviada como **I18N** dónde el número 18 se refiere al número de letras omitidos entre la I inicial y la N final.
+
+* **Localización:** proceso específico de traducir un programa internacionalizado para su uso en una localidad en particular. Generalmente hecho por traductores.
+
+> Encontrarás a menudo "localización" abreviada como **L10N**
+
+## Dependencias necesarias
+
+```python
+python-gettext==4.0
+django>=2.2.4
+django-parler==2.0.1
+```
+
+https://django-parler.readthedocs.io/en/stable/quickstart.html#installing-django-parler
+
+
+https://steemit.com/utopian-io/@mateo.vergara/como-usar-el-sistema-de-traducciones-en-django-i18
+
+Editar el Settings
+```python
+from django.utils.translation import ugettext_lazy as _
+...
+MIDDLEWARE = [
+    ...
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    ...
+]
+
+...
+
+TEMPLATES = [
+    {
+        ...{
+            'context_processors': [
+                ...
+                'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',  # Util para internacionalizacion
+            ],
+        },
+    },
+]
+
+...
+
+# Internationalization
+# https://docs.djangoproject.com/en/3.0/topics/i18n/
+
+LANGUAGE_CODE = 'es-mx'
+
+TIME_ZONE = 'America/Mexico_City'
+
+USE_I18N = True
+
+USE_L10N = True
+
+USE_TZ = True
+
+LANGUAGES = [
+    ('es', ('Español')),
+    ('en', ('English'))
+]
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale')
+]
+
+# configuraciones django-parler
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'es', },
+        {'code': 'en', },
+    ),
+    'default': {
+        'fallback': 'es',
+        'hide_untranslated': True,
+    }
+}
+
+PARLER_DEFAULT_LANGUAGE = 'es'
+PARLER_SHOW_EXCLUDED_LANGUAGE_TABS = True
+
+```
+
+Para todas las cadenas de traducción utiliza lo siguiente, aplica en el settings, modelos y vistas
+
+```python
+from django.utils.translation import ugettext_lazy as _
+
+# _("label")
+```
+
+Además en el archivo global de urls agregar:
+
+```python
+path('i18n/', include('django.conf.urls.i18n')),
+```
+
+
+
+
+## Marcar texto para traducir
+
+Lo primero es cargar la etiqueta {% load i18n %} en el template de django, para una línea sencilla utilizamos el templatetag {% trans 'texto' %} pero si tenemos contenido un poco más complejo, por ejemplo que incluya multiples elementos HTML o variables, utilizaremos los templatetag blocktrans / endblocktrans.
+
+Ejemplo:
+
+```python
+{% load i18n %}
+
+{% comment %}Translators: por favor se creativo{% endcomment %}
+<h1>{% trans '¡Bienvenido a nuestro sitio!' %}</h1>
+<p>
+   {% blocktrans trimmed %}
+       Conoce nuestro servicio del mes {{ service.name }}
+   {% endblocktrans %}
+</p>
+```
+
+https://docs.djangoproject.com/en/3.0/topics/i18n/translation/#gettext-on-windows
+* Debes tener instalado en Windows: 
+https://mlocati.github.io/articles/gettext-iconv-windows.html
+
+* En linux apt-get install gettext
+
+* Requiere reiniciar IDE
+
+## Generar archivos de traducción
+
+```python
+django-admin makemessages -l en_us
+```
+
+## Compilar archivos de traducción
+
+```python
+django-admin makemessages -l es_mx
+```
+
+## Traducción de modelos
+
+Django-parler ofrece la clase TranslatedModel para los modelos y el wrapper TranslatedFields para envolver los campos de los modelos que se quieren traducir.
+
+```python
+# models.py
+from django.db import models
+from django.utils.translation import ugettext_lazy as _
+from parler.models import TranslatableModel, TranslatedFields
+
+class Category(TranslatableModel):
+    translations = TranslatedFields(
+        name=models.CharField(max_length=200, verbose_name=_('Nombre Categoría'))
+    )
+    created = models.DateTimeField(auto_now_add=True, verbose_name=_("Fecha de creación"))
+    updated = models.DateTimeField(auto_now=True, verbose_name=_("Fecha de edición"))
+
+    class Meta:
+        verbose_name = _('Categoría')
+        verbose_name_plural = _('Categorías')
+```
+
+# Integrar Django + React
+
+https://fedeg.gitlab.io/django-react-workshop/#/es/
+
+Crear un proyecto Django
+```shell
+django-admin startproject ejemplo
+```
+
+Creamos una aplicación
+```shell
+django-admin startapp demo
+```
+
+Creamos una vista simple
+```python
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse('Hola mundo')
+```
+
+Crear un componente en React con ES6, Clases, JSX, props
+Funciona como un template
+```js
+import React from "react"
+
+export default class HelloWorld extends React.Component{
+    render(){
+        return(<div>Hola mundo</div>)
+    }
+}
+```
+
+WebPack
+Instalamos Django WebPack Loader / React Code Spliting
+```shell
+pip install django-webpack-loader
+```
+
+Una vez instalado el paquete se agrega en INSTALLED_APPS y en el settings.py la dirección de webpack
