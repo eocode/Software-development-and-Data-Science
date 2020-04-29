@@ -32,6 +32,7 @@
   - [Discriminantes en las Ecuaciones](#discriminantes-en-las-ecuaciones)
   - [Ecuaciones completas de segundo grado](#ecuaciones-completas-de-segundo-grado)
   - [Ecuaciones incompletas de segundo grado: Tipo 1](#ecuaciones-incompletas-de-segundo-grado-tipo-1)
+  - [Ecuaciones lineales con fracciones](#ecuaciones-lineales-con-fracciones)
 
 # Importancia de las matemáticas
 
@@ -456,4 +457,14 @@ Podemos resolver todas las ecuaciones cuadráticas usando la fórmula general o 
 
 <div align="center">
   <img src="img/28.png">
+</div>
+
+## Ecuaciones lineales con fracciones
+
+<div align="center">
+  <img src="img/29.png">
+</div>
+
+<div align="center">
+  <img src="img/30.png">
 </div>
