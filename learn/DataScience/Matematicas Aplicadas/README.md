@@ -1,7 +1,7 @@
 
-# Ciencia de datos con Python <!-- omit in toc -->
+# Matemáticas aplicadas a ciencia de datos <!-- omit in toc -->
 
-> Python es sin duda un lenguaje que permite hacer muchas cosas, por lo que también es bastante extenso y me he dado a la tarea de organizar mejor el repositorio
+> * Notas sobre matemáticas y algoritmos orientados al tratamiento de datos
 
 ## Tabla de Contenido<!-- omit in toc -->
 - [Matemáticas para programar](#matem%c3%a1ticas-para-programar)
