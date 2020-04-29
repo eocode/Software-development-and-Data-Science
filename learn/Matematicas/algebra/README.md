@@ -13,6 +13,11 @@
   - [Multiplicación](#multiplicaci%c3%b3n)
   - [División](#divisi%c3%b3n)
 - [Productos notables](#productos-notables)
+  - [Binomio al cuadrado](#binomio-al-cuadrado)
+  - [Bionomio al cuadrado](#bionomio-al-cuadrado)
+  - [Binomio a la n potencia](#binomio-a-la-n-potencia)
+  - [Binomios conjugados](#binomios-conjugados)
+- [Factorización](#factorizaci%c3%b3n)
 
 # Importancia de las matemáticas
 
@@ -149,3 +154,63 @@ El coeficiente que acompaña a la variable se divide normalmente. **La ley de lo
 </div>
 
 # Productos notables
+
+## Binomio al cuadrado
+
+**Un binomio es aquél que cuenta con dos términos**, los cuales están **separados por signos**. Los podemos encontrar separados por paréntesis y nos indicará que todo lo que esté dentro del paréntesis va a estar elevado al cuadrado. La regla nos dice que **el resultado del binomio al cuadrado será el primer término al cuadrado** **más dos veces el primer término por el segundo término más el segundo término al cuadrado.**
+
+Estas reglas siempre se cumplirán y no es necesario hacer las multiplicaciones, haciendo más fácil el resolver el problema.
+
+El signo del medio de nuestro binomio al cuadrado será el primer signo de nuestro resultado. En el resultado siempre los signos del primer y tercer términos serán positivos.
+
+Cuando estás elevando una fracción al cuadrado, tanto numerador como denominador serán elevados al cuadrado de manera independiente.
+
+<div align="center">
+  <img src="img/8.png">
+</div>
+
+## Bionomio al cuadrado
+
+Elevar al cuadrado a+b equivale a multiplicar este binomio por si mismo y tendremos:
+
+<div align="center">
+  <img src="img/1.webp">
+</div>
+
+Realizando la operación tenemos
+
+<div align="center">
+  <img src="img/2.jpg">
+</div>
+
+El cuadrado de dos cantidades es igual al cuadrado de la primera cantidad más el duplo de la primera cantidad por la segunda más el cuadrado de la segunda cantidad.
+
+Escribir por simple inspección el resultado de:
+
+<div align="center">
+  <img src="img/3.jpg">
+</div>
+
+## Binomio a la n potencia
+
+**Cuando elevamos un factor (como un binomio con dos términos) al cuadrado, quiere decir que vamos a multiplicar ese factor dos veces**, **al cubo se multiplicaría a sí mismo 3 veces y así.** Para hacer estas multiplicaciones más fáciles contamos con algo llamado el **triángulo de Pascal** que nos dará los coeficientes que vamos a tener en nuestros binomios elevados a x potencia.
+
+> El triángulo de Pascal se realiza comenzando la primera línea (punta) con un 1, la segunda línea con dos términos (ambos unos), la tercera con un uno en cada esquina y en el medio la sumatoria de los términos de arriba y así consecutivamente cada línea.
+
+<div align="center">
+  <img src="img/9.png">
+</div>
+
+El exponente al cual está elevado nuestra expresión nos dará el valor máximo del grado de nuestras variables (lo cual se ve reflejado en los términos de las esquinas) Siempre que tengamos un signo negativo en nuestro binomio, los signos irán alternados (primero positivo) en el resultado.
+
+## Binomios conjugados
+
+Un **binomio es un producto entre dos términos** y c**onjugado quiere decir que tendremos los mismos términos del binomio en un lado como en el otro con signos contrarios (uno positivo y otro negativo)**
+
+> La regla nos dice que al efectuar el producto entre estos términos tendremos una diferencia de cuadrados perfectos donde elevamos nuestro primer término al cuadrado menos el segundo término al cuadrado.
+
+<div align="center">
+  <img src="img/10.png">
+</div>
+
+# Factorización
