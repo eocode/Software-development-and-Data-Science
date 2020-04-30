@@ -116,6 +116,8 @@ Apuntes, proyectos y códigos realizados con Python.
 - [Graficado](#graficado)
   - [Gráficado simple](#gr%c3%a1ficado-simple)
 - [Tipado estático en Python](#tipado-est%c3%a1tico-en-python)
+- [Números flotantes en profundidad](#n%c3%bameros-flotantes-en-profundidad)
+  - [Módulos útiles](#m%c3%b3dulos-%c3%batiles)
 
 # Pensamiento Computacional
 * Conocimiento declarativo
@@ -1597,3 +1599,73 @@ Existen dos readers y dos writers
 [Documentación de Bokeh](https://docs.bokeh.org/en/latest/index.html)
 
 # Tipado estático en Python
+
+# Números flotantes en profundidad
+
+La computadora no trabaja con números decimales, sino con binarios
+
+```Python
+print(0.1+0.1+0.1 == 0.3)
+```
+
+Base 10 vs Base 2
+25 = 11001
+
+Aplica a cualquier base
+25 = 2x10^1 + 5x10^0
+
+<div align="center">
+  <img src="img/12.png">
+  <small><p>Decimal a binario</p></small>
+</div>
+
+El número máximo que se puede representar con n bits es (2^n)-1
+
+Para números decimales
+
+<div align="center">
+  <img src="img/13.png">
+  <small><p>Decimal a binario</p></small>
+</div>
+
+<div align="center">
+  <img src="img/14.png">
+  <small><p>Decimal a binario</p></small>
+</div>
+
+<div align="center">
+  <img src="img/15.png">
+  <small><p>Decimal a binario</p></small>
+</div>
+
+Para representar 0.1
+
+<div align="center">
+  <img src="img/16.png">
+  <small><p>Decimal a binario</p></small>
+</div>
+
+Las computadoras no pueden representar el número exacto, el estándar es representarlo hasta la cantidad de bits del procesador
+<div align="center">
+  <img src="img/17.png">
+  <small><p>Decimal a binario</p></small>
+</div>
+
+Se puede resolver mediante formateo de Strings
+
+<div align="center">
+  <img src="img/18.png">
+  <small><p>Decimal a binario</p></small>
+</div>
+
+<div align="center">
+  <img src="img/19.png">
+  <small><p>Decimal a binario</p></small>
+</div>
+
+## Módulos útiles
+* **Decimal:** implementa la aritmética decimal de forma exacta, para aplicaciones de alta precisión
+* **Fractions:** implementa la representación de números fraccionarios como 1/3 de manera exacta
+* **Numpy** que es externa
+
+https://docs.python.org/3/tutorial/floatingpoint.html
