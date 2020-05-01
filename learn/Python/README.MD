@@ -118,6 +118,10 @@ Apuntes, proyectos y códigos realizados con Python.
 - [Tipado estático en Python](#tipado-est%c3%a1tico-en-python)
 - [Números flotantes en profundidad](#n%c3%bameros-flotantes-en-profundidad)
   - [Módulos útiles](#m%c3%b3dulos-%c3%batiles)
+- [Manejo de fechas](#manejo-de-fechas)
+  - [Módulo Datetime](#m%c3%b3dulo-datetime)
+  - [Timestamp](#timestamp)
+  - [Universal time coordinator (UTC)](#universal-time-coordinator-utc)
 
 # Pensamiento Computacional
 * Conocimiento declarativo
@@ -1669,3 +1673,28 @@ Se puede resolver mediante formateo de Strings
 * **Numpy** que es externa
 
 https://docs.python.org/3/tutorial/floatingpoint.html
+
+# Manejo de fechas
+
+Python dispone de un módulo
+
+## Módulo Datetime
+```python
+import datetime
+my_time = datetime.datetime.now()
+print(my_time)
+my_day = datetime.date.today()
+print(my_day)
+my_birthday = datetime.date(1999,12,20)
+print(my_birthday)
+```
+
+## Timestamp
+Tiempo (segundos) transcurrido desde UNIX 1 enero de 1970, estándart de tiempo para las computadoras
+
+```python
+my_timestamp = datetime.date.fromtimestamp(1588048333)
+print(my_timestamp)
+```
+
+## Universal time coordinator (UTC)

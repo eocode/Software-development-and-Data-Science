@@ -16,10 +16,16 @@
     - [Herramientas para encontrar DataSets](#herramientas-para-encontrar-datasets)
   - [ETL](#etl)
 - [Web Scrapping](#web-scrapping)
+  - [Etica y legalidad](#etica-y-legalidad)
   - [Requests](#requests)
   - [Beautiful Soup](#beautiful-soup)
   - [Solicitudes a la web: Requests](#solicitudes-a-la-web-requests)
   - [Page Object Patter (Patrón de diseño)](#page-object-patter-patr%c3%b3n-de-dise%c3%b1o)
+  - [Scrapping JS usando Selenium](#scrapping-js-usando-selenium)
+    - [XPath CheatSheet](#xpath-cheatsheet)
+  - [Scrapy](#scrapy)
+  - [Proxys](#proxys)
+  - [Tesseract](#tesseract)
 - [Pandas](#pandas)
   - [Estructuras de datos: Series](#estructuras-de-datos-series)
   - [Estructura de datos: DataFrames](#estructura-de-datos-dataframes)
@@ -32,6 +38,12 @@
 - [Sistemas de información](#sistemas-de-informaci%c3%b3n)
   - [SQLite](#sqlite)
 - [Nube](#nube)
+- [Introducción a las APIs](#introducci%c3%b3n-a-las-apis)
+  - [¿Qué es una API?](#%c2%bfqu%c3%a9-es-una-api)
+  - [REST](#rest)
+  - [Documentación](#documentaci%c3%b3n)
+  - [JSON](#json)
+  - [Spotify API](#spotify-api)
 
 # Introducción
 
@@ -249,6 +261,43 @@ Las tecnologías web en principio podemos pensarlas como el internet, pero el in
 
 El internet también se compone de otros pedazos como telefonía(voip), mail(pop3, imap), compartir archivos(ftp). **El internet es una red que une varias redes públicas, privadas, académicas, de negocios, de gobiernos, etc.**
 
+* **Web Scrapping** es el proceso de extracción de datos almacenados en la web.
+  * Recopilar información almacenada en un servidor web
+* **Web Crawling** es para mapear e indexar páginas web para conocer su contenido, así como hace Google y varios buscadores.
+  * Conocer la estructura de la web
+
+## Etica y legalidad
+
+Es legal... depende
+
+* Estoy violando alguna reglamentación local
+* Estoy violando los "Términos y Condiciones" del sitio
+* ¿Estoy accediendo a lugares no autorizados?
+* ¿Es legal el uso que le voy a dar a los datos?
+
+Estados Unidos lo define de la siguiente manera
+
+> Quienquiera que acceda a una computadora sin autorización o exceda la autorización otorgada y de este modo obtenga información protegida
+
+Toma en cuenta: 
+* Robots.txt
+  * Define reglas de buenas prácticas de scrapping
+  * https://andres-dev.com/guia-completa-robots/
+* Mapa del sitio
+
+> Se responsable!
+
+Para México Articulo 211 bis 1:
+http://www.diputados.gob.mx/LeyesBiblio/pdf/9_240120.pdf
+
+> “Artículo 211 bis 1.- Al que sin autorización modifique, destruya o provoque pérdida de información
+contenida en sistemas o equipos de informática protegidos por algún mecanismo de seguridad, se le
+impondrán de seis meses a dos años de prisión y de cien a trescientos días multa.
+Al que sin autorización conozca o copie información contenida en sistemas o equipos de informática
+protegidos por algún mecanismo de seguridad, se le impondrán de tres meses a un año de prisión y de
+cincuenta a ciento cincuenta días multa.”
+
+
 <hr>
 
 **La web específicamente es un espacio de información** en el cual varios documentos(y otros recursos web) se pueden acceder a través de URLs y vínculos(links). La comunicación se da a través del protocolo HTTP.
@@ -306,6 +355,50 @@ https://medium.com/tech-tajawal/page-object-model-pom-design-pattern-f9588630800
 <div align="center">
   <img src="img/2.png">
 </div>
+
+## Scrapping JS usando Selenium
+
+https://selenium-python.readthedocs.io/installation.html
+
+* Instalar los bindings de Selenium para Python. Éstos nos permitirán controlar un navegador desde el código.
+
+``pip install selenium``
+
+``conda install -c conda-forge selenium``
+
+``pip install webdriver-manager``
+
+### XPath CheatSheet
+http://labs.timtom.ch/library-webscraping/extras/xpath-cheatsheet.md.pdf
+
+> Selenium se debe de usar unicamente cuándo sea necesario
+
+## Scrapy
+
+* Scrapear en paralelo
+* Trabajar con Xpath en lugar de BS4
+* Limitar Requests en paralelo
+* Setear demoras
+* Limitar dominios
+
+## Proxys
+
+http://cualesmiip.com/
+https://www.free-proxy-list.net/
+https://github.com/Anorov/PySocks
+
+## Tesseract
+
+https://pypi.org/project/tesserocr/
+
+Solución al error RuntimeError: Failed to init API, possibly an invalid tessdata path:
+
+Descargar la carpeta tessdata del siguiente link --> https://github.com/tesseract-ocr/tessdata/archive/master.zip
+Descomprimir en el escritorio la carpeta y cambiarle el nombre a solo “tessdata”
+Moverla a la ruta donde tienen instalado Python, en mi caso es C:\Program Files (x86)\Python37-32
+¡Problema solucionado! 😄
+
+Otra biblioteca es OpenCV para el tratamiento de imagenes
 
 # Pandas
 
@@ -430,6 +523,8 @@ La verdad es que para los profesionales de los datos, especialmente los profesio
 
 ## SQLite
 
+https://www.sqlalchemy.org/
+
 # Nube
 
 La nube nos da un poder de cómputo casi inimaginable, nos permite procesar terabytes de datos en segundos. La nube se puede usar en dos grandes ocasiones. Cuando los datos ya no caben en tu computadora loca o cuando el tiempo de procesamiento esta siendo muy extenso, es en ese momento donde deberías usar la nube.
@@ -445,3 +540,22 @@ Diversas nubes ya ofrecen paquetes completos para el ciclo de datos, como Google
 * BigQuery
 * Dataproc
 * Firestore
+
+# Introducción a las APIs
+
+## ¿Qué es una API?
+
+Por sus siglas en inglés, una API es una i**nterfaz para programar aplicaciones (Application Programming Interface).** Es decir que es un conjunto de funciones, métodos, reglas y definiciones que nos permitirán desarrollar aplicaciones (en este caso un scraper) que se comuniquen con los servidores de Spotify. **Las APIs son diseñadas y desarrolladas por las empresas que tienen interés en que se desarrollen aplicaciones (públicas o privadas) que utilicen sus servicios.** 
+
+## REST
+Un término se seguramente te vas a encontrar cuando estés buscando información en internet es REST o RESTful.**Significa representational state transfer y si una API es REST o RESTful, implica que respeta unos determinados principios de arquitectura, como por ejemplo un protocolo de comunicación cliente/servidor (que será HTTP) y (entre otras cosas) un conjunto de operaciones definidas que conocemos como métodos.** Ya veníamos usando el método GET para hacer solicitudes a servidores web.
+
+## Documentación
+Las APIs son diseñadas por las mismas empresas que tienen interés en que se desarrollen aplicaciones (públicas o privadas) que consuman sus servicios o información. Es por eso que la forma de utilizar las APIs variará dependiendo del servicio que querramos consumir. No es lo mismo utilizar las APIs de Spotify que las APIs de Twitter. Por esta razón es de suma importancia leer la documentación disponible, generalmente en la sección de desarrolladores de cada sitio. 
+
+## JSON
+**Json significa JavaScript Object Notation y es un formato para describir objetos que ganó tanta popularidad en su uso que ahora se lo considera independiente del lenguaje.** De hecho, lo utilizaremos en este proyecto por más que estemos trabajando en Python, porque es la forma en la que obtendremos las respuestas a las solicitudes que realicemos utilizando las APIs. 
+
+## Spotify API
+
+https://developer.spotify.com/documentation/

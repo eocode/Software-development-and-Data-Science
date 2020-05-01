@@ -9,7 +9,8 @@ Reuní trabajo relacionado con datos de forma ordenada y organizada que se irá 
 
 Proyectos realizados con Python
 
-* [News Scrapper with Python full ETL Process](https://github.com/eocode/News-Scrapper)
+* [Web Scraper Tools](https://github.com/eocode/Web-Scraper-Tools)
+* [News Scraper with Python full ETL Process](https://github.com/eocode/News-Scraper)
 * [COVIT-19 México with Python, Sheets and DataStudio](https://github.com/eocode/COVIT-19-Mexico)
 * [Rider App with Docker-Django-DRF-Celery-Redis-Postgresql](https://github.com/eocode/Rider-App)
 * [Photogram with Django](https://github.com/eocode/PhotoGram)
