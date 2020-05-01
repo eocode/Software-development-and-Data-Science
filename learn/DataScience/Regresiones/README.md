@@ -83,3 +83,6 @@ También dispones de una **constante** y una **pendiente**
 <div align="center">
   <img src="img/9.png">
 </div>
+
+https://www.youtube.com/watch?v=gfs5bp2j_bA
+https://es.wikipedia.org/wiki/Regresi%C3%B3n_lineal

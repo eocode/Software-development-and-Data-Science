@@ -9,16 +9,20 @@ Reuní trabajo relacionado con datos de forma ordenada y organizada que se irá 
 
 Proyectos realizados con Python
 
-* [Web Scraper Tools](https://github.com/eocode/Web-Scraper-Tools)
-* [News Scraper with Python full ETL Process](https://github.com/eocode/News-Scraper-A-Complete-ETL-Process)
-* [COVIT-19 México with Python, Sheets and DataStudio](https://github.com/eocode/COVIT-19-Mexico)
-* [Rider App with Docker-Django-DRF-Celery-Redis-Postgresql](https://github.com/eocode/Rider-App)
-* [Photogram with Django](https://github.com/eocode/PhotoGram)
-* [Personal Page with Django](https://github.com/eocode/PersonalPage-with-Django)
+### Backend
 * [Tasks WebApp with Flask](https://github.com/eocode/Flask_TaskApp)
 * [Juego del ahorcado](https://github.com/eocode/Juego-del-ahorcado-Python)
 * [CRUD CLI with Click](https://github.com/eocode/Python-Clients-CLI)
+* [Rider App with Docker-Django-DRF-Celery-Redis-Postgresql](https://github.com/eocode/Rider-App)
+* [Photogram with Django](https://github.com/eocode/PhotoGram)
+* [Personal Page with Django](https://github.com/eocode/PersonalPage-with-Django)
 * [Python-Mongo](https://github.com/eocode/Python-Mongo)
+
+### Data
+* [Algoritmos de Regresión lineal simple con Python](https://github.com/eocode/Algoritmo-de-regresion-lineal-simple-en-Python)
+* [COVIT-19 México with Python, Sheets and DataStudio](https://github.com/eocode/COVIT-19-Mexico)
+* [Web Scraper Tools](https://github.com/eocode/Web-Scraper-Tools)
+* [News Scraper with Python full ETL Process](https://github.com/eocode/News-Scraper-A-Complete-ETL-Process)
 
 # Prácticas con Python
 
