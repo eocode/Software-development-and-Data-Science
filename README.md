@@ -10,7 +10,7 @@ Reuní trabajo relacionado con datos de forma ordenada y organizada que se irá 
 Proyectos realizados con Python
 
 * [Web Scraper Tools](https://github.com/eocode/Web-Scraper-Tools)
-* [News Scraper with Python full ETL Process](https://github.com/eocode/News-Scraper)
+* [News Scraper with Python full ETL Process](https://github.com/eocode/News-Scraper-A-Complete-ETL-Process)
 * [COVIT-19 México with Python, Sheets and DataStudio](https://github.com/eocode/COVIT-19-Mexico)
 * [Rider App with Docker-Django-DRF-Celery-Redis-Postgresql](https://github.com/eocode/Rider-App)
 * [Photogram with Django](https://github.com/eocode/PhotoGram)
@@ -60,8 +60,8 @@ Ruta de aprendizaje con los lenguajes Python, R, Scala y Bases de datos
 * [PostgreSQL](/learn/BasesDatos/PostgreSQL)
 * [Mongo y Redis](/learn/BasesDatos/MongoDB%20y%20Redis)
 
-## Manejo de datos
-* [Data Science](/learn/DataScience)
+## Ciencia de datos y Machine Learning
+* [Data Science y ML](/learn/DataScience)
 
 # El camino del saber
 
