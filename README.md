@@ -45,6 +45,7 @@ Ruta de aprendizaje con los lenguajes Python, R, Scala y Bases de datos
 * [Logica](/learn/Matematicas/logica)
 * [Fundamentos de Matemáticas](/learn/Matematicas/fundamentos)
 * [Algebra](/learn/Matematicas/algebra)
+* [Cálculo](/learn/Matematicas/calculo)
 * [Probabilidad y Estadística](/learn/Matematicas/pye)
 * [Matemáticas Discretas](/learn/Matematicas/discretas)
 
