@@ -1,5 +1,5 @@
 
-# Ciencia de datos con Python <!-- omit in toc -->
+# Ciencia de datos <!-- omit in toc -->
 
 > La ciencia de datos es un campo interdisciplinario que **utiliza métodos, procesos, algoritmos y sistemas científicos para extraer valor de los datos**. Los científicos de datos combinan una variedad de habilidades, entre ellas **estadísticas, informática y conocimiento empresarial**, para analizar datos recopilados de la web, de teléfonos inteligentes, de clientes, sensores y otras fuentes.
 
@@ -17,6 +17,7 @@ La ciencia de datos **revela tendencias y genera información que las empresas p
 * [Aprendizaje supervisado: Regresiones](/learn/DataScience/Regresiones)
 * [Estadistica y análisis de datos](/learn/DataScience/StatsAndDataAnalysis)
 * [Excel análisis de datos](/learn/DataScience/Excel)
+* [DataScience con R](/learn/DataScience/Datascience/)
 
 # Flujo en el tratamiento de datos
 

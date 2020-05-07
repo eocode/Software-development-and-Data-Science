@@ -3,7 +3,7 @@
 
 Apuntes, proyectos y códigos realizados con Python.
 
-> Python es sin duda un lenguaje que permite hacer muchas cosas, por lo que también es bastante extenso y me he dado a la tarea de organizar mejor el repositorio
+> Python es sin duda un lenguaje que permite hacer muchas cosas, por lo que también es bastante extenso y en está sección lo descubriremos
 
 ## Tabla de Contenido<!-- omit in toc -->
 - [Pensamiento Computacional](#pensamiento-computacional)
@@ -122,6 +122,7 @@ Apuntes, proyectos y códigos realizados con Python.
   - [Módulo Datetime](#m%c3%b3dulo-datetime)
   - [Timestamp](#timestamp)
   - [Universal time coordinator (UTC)](#universal-time-coordinator-utc)
+- [Time](#time)
 
 # Pensamiento Computacional
 * Conocimiento declarativo
@@ -1698,3 +1699,69 @@ print(my_timestamp)
 ```
 
 ## Universal time coordinator (UTC)
+
+# Time
+
+Sirve para realizar mediciones específicas de tiempo
+
+<div align="center">
+  <img src="img/time1.png">
+</div>
+
+<div align="center">
+  <img src="img/time2.png">
+</div>
+
+<div align="center">
+  <img src="img/time3.png">
+</div>
+
+La variable isdst indica si está activo el uso horario
+
+<div align="center">
+  <img src="img/time4.png">
+</div>
+
+Hora a partir del horario universal
+
+<div align="center">
+  <img src="img/time5.png">
+</div>
+
+<div align="center">
+  <img src="img/time6.png">
+</div>
+
+Crear una fecha
+
+<div align="center">
+  <img src="img/time7.png">
+</div>
+
+Fecha en un string
+
+<div align="center">
+  <img src="img/time8.png">
+</div>
+
+Formato
+
+<div align="center">
+  <img src="img/time9.png">
+</div>
+
+Genera el Structime que corresponde a la fecha
+
+<div align="center">
+  <img src="img/time10.png">
+</div>
+
+Diferencias con Time y Datetime
+
+Datetime
+* Trabajar con fechas / Operaciones
+
+Time
+* Mediciones de tiempo
+* Es más fácil trabajar con el horario de verano
+* TimestampUNIX

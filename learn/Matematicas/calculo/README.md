@@ -124,6 +124,8 @@ Regla de la cadena
 # Aplicaciones de la derivada
 ## Optimización
 
+https://www.youtube.com/watch?v=q9Oj5j5q7zc
+
 Se compra un rectuangulo de terreno con 4 **estanques** de separación de 2 metros, se requiere optimizar el valor de base y altura para ese terreno
 
 <div align="center">

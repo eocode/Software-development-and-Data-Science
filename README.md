@@ -52,6 +52,7 @@ Ruta de aprendizaje con los lenguajes Python, R, Scala y Bases de datos
 ## Lenguajes y programación
 * [Python](/learn/Python)
 * [Scala](/learn/Scala)
+* [R](/learn/R)
 * [Algoritmos](/learn/Algoritmos)
 
 ## Backend
