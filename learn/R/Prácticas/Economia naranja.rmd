@@ -1,0 +1,154 @@
+---
+title: "Economia Naranja"
+author: "EOCode"
+date: "7/5/2020"
+output: html_document
+---
+
+Para ejecutar este notebook se requiere de:
+
+```{r}
+library(rmarkdown)
+library(knitr)
+library(ggplot2)
+library(dplyr)
+library(RColorBrewer)
+```
+
+Importamos el Dataset
+
+```{r}
+orange = read.csv("data.csv")
+data(orange)
+summary(orange)
+```
+
+¿Cuál es el máximo PIB Percápita en los paises de latam (GDP.PC )?
+
+```{r}
+max(orange$GDP.PC)
+```
+
+¿Qué país o países aportan con su economía naranja más del 5% al PIB y además tienen una tasa de desempleo menor al 5%?
+
+```{r}
+library(dplyr)
+TopCountries = filter(orange, Unemployment < 5 & Creat.Ind...GDP > 5)
+TopCountries = subset(TopCountries, select = c("Country","Unemployment","Creat.Ind...GDP"))
+TopCountries
+```
+
+Al hacer un diagrama de dispersión con las variables Aporte de economía naranja al PIB (Creat.Ind…en eje X) y crecimiento del pib del país (GDP Growth en eje y), la forma de los datos…
+
+```{r}
+plot(orange$Creat.Ind...GDP~orange$GDP.Growth..)
+```
+
+Al hacer un histograma del aporte de la economía naranja al pib (Creat.Ind) con binwith de 1, vemos que hay más países que con la economía naranja aportan
+
+```{r}
+ggplot(orange, aes(x=Creat.Ind...GDP))+
+  geom_histogram(binwidth = 1)+
+  labs(x="Aporte PIB industria creativa",
+       y="Cantidad", 
+       title="Mayor aportación industria creativa")+
+  theme(legend.position = "none")+
+  theme(panel.background = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+```
+
+Si hacemos dos box plot según el tipo de país (Strong_economy) para ver la penetración de internet en la población de sus países, veremos que…
+
+```{r}
+mean_economy = mean(orange$GDP.PC)
+orange = orange %>%
+  mutate(Strong_economy = ifelse(GDP.PC < mean_economy, 
+                                 "Por debajo del promedio pib per capita",
+                                 "Sobre arriba promedio pib per capita"))
+```
+
+```{r}
+ggplot(orange, aes(x=Internet.penetration...population, y=Country))+
+  geom_point()+
+  facet_wrap(~Strong_economy)
+```
+
+En un scatter plot (gráfica de dispersión) en donde relacionamos la inversión en educación(Education.invest…GDP) en el eje X y el aporte de la economia naranja al pib (Creat.Ind…GDP) en el eje Y, en el dataset orangeec, coloreando los puntos según la variable Strong_economy, la cantidad de puntos rosados que aparecen son:
+
+```{r}
+myColors = brewer.pal(9,"Blues")
+ggplot(orange, aes(x=Education.invest...GDP, y=Creat.Ind...GDP, fill=GDP.PC))+
+  geom_point()+
+  facet_wrap(~Strong_economy)+
+  scale_fill_gradientn(colors=myColors)
+```
+
+En el dataset orangeec, al usar pairs, vemos que en la relación entre el aporte de los servicios al pib (Services…GDP) y el PIB per cápita (GDP.PC), los puntos:
+
+```{r}
+a = subset(orange, select=c("Services...GDP","GDP.PC"))
+pairs(a[,1:2])
+cor(a[,1:2])
+```
+
+En el dataset orangeec, la correlación entre el crecimiento del pib de un pais (GDP.Growth…) y el aporte de la economía naranja al pib del país (Creat.Ind…GDP) es de:
+
+```{r}
+b = subset(orange, select=c("GDP.Growth..","Creat.Ind...GDP"), na.rm = TRUE)
+b <- b[!is.na(b$Creat.Ind...GDP),]
+cor(b[,1:2])
+pairs(orange[,3:6])
+```
+
+Al hacer un scatter plot con el dataset orangeec usando facet_wrap cruzando dos variables (numéricas) , al escribir al final facet_wrap(~Crecimiento_GDP), lo que veremos será:
+
+```{r}
+orange = orange %>%
+  mutate(Crecimiento_GDP = ifelse(GDP.Growth.. >= 2.5,
+                                  "2.5% o más",
+                                  "Menos de 2.5%"))
+ggplot(orange, aes(x=Education.invest...GDP, y=Creat.Ind...GDP))+
+  geom_point()+
+  facet_wrap(~Crecimiento_GDP)
+```
+
+
+Parece que hay correlación entre aporte de economía naranja al PIB y la tasa de desempleo
+
+```{r}
+pairs(orange[,6:10])
+```
+
+```{r}
+ggplot()+geom_histogram(data=orange,
+                        aes(x=Internet.penetration...population),fill='red',color='yellow',
+                        binwidth=5)+
+  labs(x="Penetración internet(%) población", y="Cantidad de paises",
+       title="Penetracion de internet en paises de LATAM")+
+  theme(legend.position = 'none')+
+  theme(panel.background = element_blank(),panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+```
+
+```{r}
+economy <- mean(orange$GDP.PC)
+economy
+orange <-orange %>%
+  mutate(Strong_economy = ifelse(GDP.PC < economy,
+                                 "Por debajo promedio pib per capita",
+                                 "Sobre-Arriba promedio pib per capita"))
+```
+
+```{r}
+ggplot(orange, aes(x=Strong_economy, y=Creat.Ind...GDP,
+                    fill=Strong_economy))+
+  geom_boxplot(alpha=0.4)+
+  labs(c="Tipo de pais", y="Aporte economia naranja al pib",
+       title="Aporte economia naranja en pib paises latam con
+       alto y bajo pib per capita")+
+  theme(legend.position = "none")+
+  theme(panel.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+```
+
+El boxplot indica que los países sobre el promedio en PIB per cápita, tienen una dispersión mucho más alta en cueanto a los aportes de la economía naranja del paí. Ojo confirmar con desviación estándar.

@@ -1,0 +1,39 @@
+---
+title: "MTcars"
+author: "EOCode"
+date: "7/5/2020"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+library(dplyr)
+```
+
+
+Al hacer un histograma de los cilindros de los carros, con un binwith de 1, vemos que hay más carros de
+
+```{r}
+ggplot(mtcars, aes(x=cyl))+
+  geom_histogram(binwidth = 1)+
+  labs(x="Cilindros",
+       y="Cantidad", 
+       title="Autos con más cilindros")+
+  theme(legend.position = "none")+
+  theme(panel.background = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+```
+
+En un scatter plot (gráfica de dispersión) en donde relacionamos los caballos de fuerza (hp) en el eje X y el tiempo en recorrer un cuarto de milla (qsec) en el eje Y, en el dataset mtcars, los puntos parecen…
+
+```{r}
+ggplot(mtcars, aes(x=hp, y=qsec))+
+  geom_point()
+```
+
+En el dataset mtcars, la correlación entre las variables cilindros (cyl) y caballos de fuerza (hp) es de:
+
+```{r}
+a = subset(mtcars, select = c("cyl","hp"))
+cor(a[,1:2])
+```
+
