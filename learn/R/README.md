@@ -11,8 +11,11 @@
 - [Introducción a R](#introducci%c3%b3n-a-r-1)
   - [Primeros cálculos con R](#primeros-c%c3%a1lculos-con-r)
   - [Tipos de datos con R](#tipos-de-datos-con-r)
-  - [Vectores](#vectores)
-  - [Matrices](#matrices)
+    - [Vectores](#vectores)
+    - [Listas](#listas)
+    - [Matrices](#matrices)
+  - [Vectores](#vectores-1)
+  - [Matrices](#matrices-1)
   - [Operadores de comparación y ubicación de datos](#operadores-de-comparaci%c3%b3n-y-ubicaci%c3%b3n-de-datos)
   - [Factores y listas](#factores-y-listas)
 - [EDA: Exploratory Data Analysis](#eda-exploratory-data-analysis)
@@ -71,6 +74,7 @@ Un científico de datos necesita tener los conocimientos de:
 
 https://es.r4ds.hadley.nz/
 https://myrbooksp.netlify.app/
+https://bookdown.org/jboscomendoza/r-principiantes4/
 
 Para la ciencia de datos es común utilizar dos lenguajes: **R y Python**.
 
@@ -163,6 +167,22 @@ nota_final
 ```
 
 ## Tipos de datos con R
+
+### Vectores
+Dentro de R podemos crear vectores a través de la función c().
+Los vectores solamente pueden contener elementos del mismo tipo de variable, no puedes mezclar valores numéricos con texto dentro de un vector.
+Para acceder a un elemento en particular puedes usar los corchetes e indicar el índice del elemento, dentro de R los índices comienzan en 1 en lugar de 0 como en otros lenguajes de programación.
+Puedes eliminar un elemento anteponiendo signo de menos al índice de un elemento: c[-4]
+
+### Listas
+Puedes crear listas a través de la función list().
+A diferencia del vector, una lista permite almacenar diferentes elementos sin importar su tipo valor.
+Para acceder a uno de los elementos debes usar el signo $.
+
+### Matrices
+Las matrices son tablas que contienen filas y columnas del mismo tipo.
+Puedes crear matrices a través de la función matrix() e indicarle el número de columnas de filas con los parámetros nrow y ncol.
+
 Es importante conocer la estructura de los datos para saber como trabajar con ellos
 <div align="center">
   <img src="img/mtcarsDataTypes.png">

@@ -60,6 +60,7 @@ Si hacemos dos box plot según el tipo de país (Strong_economy) para ver la pen
 
 ```{r}
 mean_economy = mean(orange$GDP.PC)
+mean_economy
 orange = orange %>%
   mutate(Strong_economy = ifelse(GDP.PC < mean_economy, 
                                  "Por debajo del promedio pib per capita",
@@ -67,9 +68,11 @@ orange = orange %>%
 ```
 
 ```{r}
-ggplot(orange, aes(x=Internet.penetration...population, y=Country))+
+myColors = brewer.pal(9,"Blues")
+ggplot(orange, aes(x=Internet.penetration...population, y=Country, fill=GDP.PC))+
   geom_point()+
-  facet_wrap(~Strong_economy)
+  facet_wrap(~Strong_economy)+
+  scale_fill_gradientn(colors=myColors)
 ```
 
 En un scatter plot (gráfica de dispersión) en donde relacionamos la inversión en educación(Education.invest…GDP) en el eje X y el aporte de la economia naranja al pib (Creat.Ind…GDP) en el eje Y, en el dataset orangeec, coloreando los puntos según la variable Strong_economy, la cantidad de puntos rosados que aparecen son:

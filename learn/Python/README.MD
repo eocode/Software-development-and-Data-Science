@@ -123,6 +123,8 @@ Apuntes, proyectos y códigos realizados con Python.
   - [Timestamp](#timestamp)
   - [Universal time coordinator (UTC)](#universal-time-coordinator-utc)
 - [Time](#time)
+- [XPath](#xpath)
+  - [Probando en el navegadpr](#probando-en-el-navegadpr)
 
 # Pensamiento Computacional
 * Conocimiento declarativo
@@ -1765,3 +1767,40 @@ Time
 * Mediciones de tiempo
 * Es más fácil trabajar con el horario de verano
 * TimestampUNIX
+
+# XPath
+XML Path Language, el lenguage del web scraping profesional.
+
+* **Xpath** es un lenguaje para encontrar información dentro de una respuesta. 
+* **Selenium** es un emulador del navegador web
+
+## Probando en el navegadpr
+
+http://quotes.toscrape.com/
+
+Navegar entre los nodos
+
+``$x('/')``
+``$x('/html/body')``
+
+Doble // indica un salto
+
+``$x('//span')``
+
+Predicados van en []
+``$x('//span[@class="text"]/text()')``
+``$x('//span[@class="text"]/text()').map(x => x.wholeText)``
+``$x('//div[contains(@class, "tags-box")]//a[@class="tag"]/text()').map(x=>x.wholeText)``
+
+https://www.amazon.com/s?k=python+books&__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2
+
+Amazon: 
+``$x('//h2/a[@class="a-link-normal a-text-normal"]/span[contains(@class, "a-text-normal")]/text()').map(x => x.wholeText)``
+
+El espectador:
+
+https://www.elespectador.com/tecnologia/alphabet-dice-adios-proyecto-de-ciudad-inteligente-en-toronto-articulo-918490
+
+``$x('//div[contains(@class, "node-title") and @itemprop="name"]/h1/text()')[0]``
+
+``$x('//div[contains(@class, "group-container")]//div[contains(@class, "node-image")]//img/@src').map(x => x.value)``
