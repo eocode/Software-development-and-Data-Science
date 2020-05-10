@@ -14,6 +14,11 @@
     - [apply(X, Margin, FUN)](#applyx-margin-fun)
     - [lapply(X, FUN)](#lapplyx-fun)
 - [Adecuación y análisis de los datos](#adecuaci%c3%b3n-y-an%c3%a1lisis-de-los-datos)
+- [Algoritmo K-means](#algoritmo-k-means)
+  - [Implementación en R](#implementaci%c3%b3n-en-r)
+    - [Elegir el número de clústers](#elegir-el-n%c3%bamero-de-cl%c3%basters)
+- [Cómo hacer un punto de API con plumber en R](#c%c3%b3mo-hacer-un-punto-de-api-con-plumber-en-r)
+- [Shiny](#shiny)
 
 
 # Introducción a la ciencia de datos
@@ -159,3 +164,96 @@ https://bookdown.org/jboscomendoza/r-principiantes4/la-familia-apply.html
   * Convertir tipos de datos a números
 * Selección de variables
 * Separado de columnas
+
+# Algoritmo K-means
+
+https://towardsdatascience.com/k-means-clustering-from-a-to-z-f6242a314e9a
+
+El algoritmo K-means es una técnica de clusterización que se basa en un aprendizaje no supervisado para agrupar elementos con atributos similares.
+
+El algoritmo sigue los siguientes pasos hasta converger:
+
+* Selecciona el número de clusters.
+* Calcula la distancia entre todos los puntos al centro del cluster.
+* Asocia cada punto al cluster más cercano.
+* Recalcula de nuevo el centro de los cluster a partir de los puntos que lo componen.
+
+<div align="center">
+  <img src="img/4.png">
+</div>
+
+<div align="center">
+  <img src="img/5.png">
+</div>
+
+## Implementación en R
+
+<div align="center">
+  <img src="img/6.png">
+</div>
+
+<div align="center">
+  <img src="img/7.png">
+</div>
+
+En R solamente **corremos la función Kmeans()**y le pasamos los parámetros necesarios:
+
+Dataframe que va a utilizar.
+* Número de clusters.
+* El número de inicios aleatorios.
+* El máximo de iteraciones.
+
+La función de Kmeans() nos va a regresar:
+
+* Los clusters asociados a cada columna de datos.
+* Un vector de cómo ha clasificado a cada dato del dataframe.
+* La suma de la distancia de los elementos al centro del cluster, esto sirve para medir el error.
+* Los componentes disponibles.
+* El coste de error total.
+
+### Elegir el número de clústers
+
+Método elbow o del codo
+
+<div align="center">
+  <img src="img/8.png">
+</div>
+
+https://github.com/sergio2526/Modelo-Accidentes/blob/master/Codigo/m%C3%A9todo_del_codo.ipynb
+
+Elegir el número óptimo de clusters para nuestro dataframe no es sencillo, pero utilizando el método elbow podemos elegirlo de manera adecuada.
+
+Este método lo que hace es:
+
+* Ejecutamos el K-mean para distintos clusters, por ejemplo del 1 al 10.
+* Calculamos la distancia de error que hay a los centros de los clusters.
+* Graficamos la distancia de error con el número de clusters.
+* El punto donde cambie la tendencia va a parecerse a un codo (elbow), ese número de clusters es el adecuado para nuestro dataframe.
+
+# Cómo hacer un punto de API con plumber en R
+
+https://www.rplumber.io/
+
+La librería Plumber nos permite crear un servidor de manera sencilla utilizando R. Para instalar esta librería recuerda que debemos correr la función install.packages("plumber").
+
+> Solamente **debemos crear un archivo con la función de la API que queramos**, luego en un archivo principal corremos la función plumb(<dirección del archivo>) y levantamos el servidor con $run(port=puerto).
+
+Al declarar nuestra función que se encontrará en nuestra API debemos indicarle la ruta y los parámetros que necesitemos a través de #*, quedando de la siguiente manera:
+
+```r
+#* @param msg
+#* @get /echo
+```
+
+<div align="center">
+  <img src="img/9.png">
+</div>
+
+# Shiny
+
+https://shiny.rstudio.com/gallery/kmeans-example.html
+
+Shiny es una librería de R que tiene su propio código y **permite crear páginas web con código embebido de R**, se estructura en 2 archivos que deben estar en un mismo directorio:
+
+* **Server.R:** Es la lógica de nuestra aplicación, esto se va a mandar a la parte visual.
+* **ui.R:** Es la parte visual de nuestra aplicación.
