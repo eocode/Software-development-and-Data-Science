@@ -23,6 +23,7 @@ Proyectos realizados con Python
 * [COVIT-19 México with Python, Sheets and DataStudio](https://github.com/eocode/COVIT-19-Mexico)
 * [Web Scraper Tools](https://github.com/eocode/Web-Scraper-Tools)
 * [News Scraper with Python full ETL Process](https://github.com/eocode/News-Scraper-A-Complete-ETL-Process)
+* [Amazon Web Scraping y Clusterizacion con R](https://github.com/eocode/Amazon-Web-Scraping-y-Clusterizacion-con-R)
 
 # Prácticas con Python
 
