@@ -168,6 +168,7 @@ https://bookdown.org/jboscomendoza/r-principiantes4/la-familia-apply.html
 # Algoritmo K-means
 
 https://towardsdatascience.com/k-means-clustering-from-a-to-z-f6242a314e9a
+https://rpubs.com/rdelgado/399475
 
 El algoritmo K-means es una técnica de clusterización que se basa en un aprendizaje no supervisado para agrupar elementos con atributos similares.
 

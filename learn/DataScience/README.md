@@ -17,7 +17,8 @@ La ciencia de datos **revela tendencias y genera información que las empresas p
 * [Aprendizaje supervisado: Regresiones](/learn/DataScience/Regresiones)
 * [Estadistica y análisis de datos](/learn/DataScience/StatsAndDataAnalysis)
 * [Excel análisis de datos](/learn/DataScience/Excel)
-* [DataScience con R](/learn/DataScience/Datascience/)
+* [DataScience con R](/learn/DataScience/Datascience)
+* [PostgreSQL para Ciencia de Datos](/lear/DataScience/PostgreSQL)
 
 # Flujo en el tratamiento de datos
 
