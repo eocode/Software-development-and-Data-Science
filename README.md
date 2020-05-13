@@ -71,6 +71,9 @@ Ruta de aprendizaje con los lenguajes Python, R, Scala y Bases de datos
 ## Ciencia de datos y Machine Learning
 * [Data Science y ML](/learn/DataScience)
 
+## Cloud Computing
+* [GCP](/learn/GCP)
+
 # El camino del saber
 
 Saber y tener conocimiento de algo implica poder explicarlo de forma simple a alguien más
