@@ -30,6 +30,7 @@
   - [Compilar archivos de traducción](#compilar-archivos-de-traducci%c3%b3n)
   - [Traducción de modelos](#traducci%c3%b3n-de-modelos)
 - [Integrar Django + React](#integrar-django--react)
+- [Graphql con Django](#graphql-con-django)
 
 # Pycharm
 
@@ -66,6 +67,13 @@ Algunas de sus características más importantes son:
 Consulta la documentación
 
 https://www.djangoproject.com/start/
+
+```python
+python -m venv env
+python -m pip install Django
+
+django-admin startproject mysite
+```
 
 ## Jerarquía de ficheros
 
@@ -784,12 +792,13 @@ https://mlocati.github.io/articles/gettext-iconv-windows.html
 
 ```python
 django-admin makemessages -l en_us
+django-admin makemessages -l es_mx
 ```
 
 ## Compilar archivos de traducción
 
 ```python
-django-admin makemessages -l es_mx
+django-admin.py compilemessages
 ```
 
 ## Traducción de modelos
@@ -825,8 +834,10 @@ django-admin startproject ejemplo
 
 Creamos una aplicación
 ```shell
-django-admin startapp demo
+django-admin startapp links
 ```
+
+Agregamos la app en settings.py
 
 Creamos una vista simple
 ```python
@@ -855,3 +866,34 @@ pip install django-webpack-loader
 ```
 
 Una vez instalado el paquete se agrega en INSTALLED_APPS y en el settings.py la dirección de webpack
+
+```python
+INSTALLED_APPS = [
+    ...
+    'webpack_loader',
+]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'links/static'),
+]
+```
+
+# Graphql con Django
+
+Instalar graphene
+
+`pip install graphene-django`
+
+Se agrega la aplicación
+
+```python
+INSTALLED_APPS = [
+    ...
+    'django.contrib.staticfiles', # Required for GraphiQL
+    'graphene_django'
+]
+```
+
+Pasos de instalación completa
+
+
+https://docs.graphene-python.org/projects/django/en/latest/installation/
