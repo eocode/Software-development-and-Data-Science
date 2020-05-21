@@ -31,6 +31,7 @@
   - [Traducción de modelos](#traducci%c3%b3n-de-modelos)
 - [Integrar Django + React](#integrar-django--react)
 - [Graphql con Django](#graphql-con-django)
+- [Multi-Tenant](#multi-tenant)
 
 # Pycharm
 
@@ -897,3 +898,7 @@ Pasos de instalación completa
 
 
 https://docs.graphene-python.org/projects/django/en/latest/installation/
+
+# Multi-Tenant
+
+https://django-tenant-schemas.readthedocs.io/en/latest/index.html
