@@ -64,10 +64,15 @@ Ruta de aprendizaje con los lenguajes Python, R, Scala y Bases de datos
 
 ## Bases de datos
 * [Fundamentos](/learn/BasesDatos/Fundamentos%20de%20Bases%20de%20Datos)
+
+
 **Relacionales**
+
 * [SQL y MySQL](/learn/BasesDatos/SQL%20y%20MySQL)
 * [PostgreSQL](/learn/BasesDatos/PostgreSQL)
+
 **No relacionales**
+
 * [Mongo DB Basada en documentos](/learn/BasesDatos/MongoDB)
 * [Redis Basada en clave valor](/learn/BasesDatos/Redis)
 

@@ -6,7 +6,6 @@
   - [Utilidades](#utilidades)
   - [Instalación](#instalación)
   - [Ejecución de código](#ejecución-de-código)
-- [Enlaces de Interés](#enlaces-de-interés)
 
 ## Redis
 
@@ -45,12 +44,14 @@ Si tienes Windows 10, utilizar Linux for Windows:
 ### Ejecución de código
 
 **Principales**
+
 * `redis-server` inicia el servidor de BD.
 * `redis-cli` iniciar el cliente de BD.
 * `select [número de la BD]` cambiar de base de datos.
 * `info` ver la información del cluster de redis.
 
 **Obtención y asignación de datos**
+
 * `keys *` muestra todas las claves almacenadas
 * `SET [clave] [valor]` setea el valor en la clave. La información se guarda como string
 * `GET [clave]` lee el valor de la clave
@@ -60,22 +61,17 @@ Si tienes Windows 10, utilizar Linux for Windows:
 * `exists [clave]` prueba si existe una clave
 * `expire [clave] [seconds]` asigna tiempo de expiración a una clave
 
+**Comandos de gestion**
+
 * `EVAL "return redis.call('del', unpack(redis.call('keys', ARGV[1])))" 0 pattern*` elimina todas las clave que empiezan con pattern
 * `SETEX [clave] [tiempo en segundos] [valor]` setea el valor en la clave por un tiempo determinado.
 * `FLUSHDB` elimina toda la base de datos donde se encuentra seleccionada.
 * `FLUSHALL` elimina toda la información de todas las bases de datos.
 
 **Operadores**
+
 * `incr [clave]` incrementa una clave númerica si el valor actual es 0, pasa a 1
 * `decr [clave]` decrementa una clave númerica si el valor actual es 1, pasa a 0
-
-<div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
-</div>
-
-## Enlaces de Interés
-* [Curso de MongoDB y Redis](https://platzi.com/clases/mongodb-redis/)
-* [Cryptongo](https://github.com/MineiToshio/cryptongo)
 
 <div align="right">
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
