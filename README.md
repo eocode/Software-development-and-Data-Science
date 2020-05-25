@@ -32,12 +32,9 @@ Proyectos realizados con Python
 
 # Retos con Python
 
-Platzi Master Challenges
+Prácticas de desarrollo y algoritmos con Python
 
-1. [Palindrome](https://github.com/eocode/MasterChallenge-Python01)
-2. [Generate a password](https://github.com/eocode/MasterChallenge-Python02)
-3. [Decode the message](https://github.com/eocode/MasterChallenge-Python03)
-4. [Decorators](https://github.com/eocode/MasterChallenge-Python04)
+[Retos realizados](https://github.com/eocode?tab=repositories&q=challenge&type=&language=)
 
 # El camino de la serpiente <!-- omit in toc -->
 
@@ -57,10 +54,15 @@ Ruta de aprendizaje con los lenguajes Python, R, Scala y Bases de datos
 * [R](/learn/R)
 * [Algoritmos](/learn/Algoritmos)
 
+Libro para resolver problemas y algoritmos
+
+http://biblioteca.inu.edu.sv/?wpfb_dl=263
+
 ## Backend
 * [Python Django](/learn/Django)
 * [Python Django DRF](/learn/DRF)
 * [Python Django Graphene](/learn/Graphene)
+* [Python Celery](/learn/Celery)
 
 ## Bases de datos
 * [Fundamentos](/learn/BasesDatos/Fundamentos%20de%20Bases%20de%20Datos)
