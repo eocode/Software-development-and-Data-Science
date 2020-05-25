@@ -4,12 +4,17 @@
 
 ## Tabla de Contenido<!-- omit in toc -->
 - [Introducción](#introducción)
-- [Brokers de tareas](#brokers-de-tareas)
-  - [Algunos brokers de tareas:](#algunos-brokers-de-tareas)
-- [Cuándo debemos usar celery](#cuándo-debemos-usar-celery)
-- [Casos de uso de Celery](#casos-de-uso-de-celery)
+  - [Brokers de tareas](#brokers-de-tareas)
+    - [Algunos brokers de tareas:](#algunos-brokers-de-tareas)
+  - [Cuándo debemos usar celery](#cuándo-debemos-usar-celery)
+  - [Casos de uso de Celery](#casos-de-uso-de-celery)
+- [Bots](#bots)
+  - [Casos de uso:](#casos-de-uso)
+  - [¿Cómo lo hace?](#cómo-lo-hace)
+  - [Aplicaciones que admiten Bots](#aplicaciones-que-admiten-bots)
+  - [API de Slack para bots](#api-de-slack-para-bots)
 
-## Introducción
+# Introducción
 
 Celery es una biblioteca en Python para **gestionar colas de tareas distribuidas.** Es software libre y está liberado con una licencia BSD. Cuenta con con más de diez mil commits en este momento en Github.
 
@@ -81,3 +86,42 @@ Casos de usos actuales:
 * CKAN, el almacén para datos abiertos, lo usa para ejecutar tareas y procesar webhooks.
 * Airflow es un sistema de flujos de trabajo o workflow que usa Celery para mensajería
 * Uso con Django.
+
+# Bots
+
+**Un bot es un programa que actúa como interlocutor en un software de mensajería**, es una **nueva interfaz de usuario**, es una nueva forma de interacción. El software debe estar preparado para reaccionar a una orden y dar una respuesta inmediata.
+
+> Un Bot siempre está escuchando sin perder ningún mensaje, responde lo que necesitas y realiza tareas.
+
+<div align="center">
+  <img src="img/1.png">
+</div>
+
+## Casos de uso:
+
+* **Atención inmediata** al cliente.
+* Solicitudes de **información de búsquedas**.
+* **Comprobaciones de identidad y de seguridad**.
+* **Información de otro lugar y alertas.**
+* Juegos.
+
+## ¿Cómo lo hace?
+* A través de una API provista por la aplicación
+* Bibliotecas que abstraen la API
+* Backend que procesa las peticiones y responde a las mismas
+* Interacción con el usuario
+
+## Aplicaciones que admiten Bots
+* Slack
+* Telegram
+* FB Messenger
+
+## API de Slack para bots
+
+1. Crea una app con Slack: https://api.slack.com/apps/new
+2. Agregar ganchos de entrada
+   * Add features and functionality
+   * Bots
+   * Permission - Obteneer fichas para usar desde nuestro programa
+
+https://cookiecutter-project.slack.com/apps
