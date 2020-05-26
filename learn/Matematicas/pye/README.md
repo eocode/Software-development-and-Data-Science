@@ -4,6 +4,7 @@
 > Mejora de habilidades para el pensamiento
 
 ## Tabla de Contenido<!-- omit in toc -->
+- [Libros digitales](#libros-digitales)
 - [Introducción](#introducción)
   - [Investigación](#investigación)
     - [Propositos](#propositos)
@@ -28,6 +29,15 @@
   - [Los percentiles (Pp)](#los-percentiles-pp)
   - [Diagrama de bigotes](#diagrama-de-bigotes)
   - [Asimetría](#asimetría)
+    - [Coeficiente de Karl Pearson**](#coeficiente-de-karl-pearson)
+    - [Medida de Yule Bowley o medida cuaartílica](#medida-de-yule-bowley-o-medida-cuaartílica)
+    - [Medida de fisher](#medida-de-fisher)
+
+# Libros digitales
+
+https://joanby.github.io/bookdown-probabilidad/
+
+https://joanby.github.io/bookdown-estadistica-inferencial/
 
 # Introducción
 
@@ -420,3 +430,33 @@ Viendo otro ejemplo:
 
 
 ## Asimetría
+
+Se dice así cuando la media, mediana y la moda no coinciden, por ende son asimetricas
+
+<div align="center">
+  <img src="img/42.png">
+</div>
+
+La **Simetría** se da cuando hay aproximadamente la misma cantidad de los datos a ambos lados de la media aritmética. La media aritmética, la mediana y la moda son iguales
+
+<div align="center">
+  <img src="img/43.png">
+</div>
+
+### Coeficiente de Karl Pearson**
+
+<div align="center">
+  <img src="img/44.png">
+</div>
+
+### Medida de Yule Bowley o medida cuaartílica
+
+<div align="center">
+  <img src="img/45.png">
+</div>
+
+### Medida de fisher
+
+<div align="center">
+  <img src="img/46.png">
+</div>
