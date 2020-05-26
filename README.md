@@ -102,6 +102,12 @@ Saber y tener conocimiento de algo implica poder explicarlo de forma simple a al
 * **Paso 4.** Simplifica tu explicación y crea analogías. 
 > El objetivo de esta técnica es que puedas describir el concepto en palabras simples y claras. Si tardas mucho en explicarlo tienes que simplificarlo aún mas, usando analogías si es necesario.
 
+# Algunas herramientas interesantes
+
+https://www.screentogif.com/
+https://quest-app.appspot.com/
+https://app.prntscr.com/es/
+
 # Contribuir al repositorio
 
 Enviame un pull request o contactame en redes sociales como eocode

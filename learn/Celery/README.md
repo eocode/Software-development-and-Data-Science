@@ -13,6 +13,13 @@
   - [¿Cómo lo hace?](#cómo-lo-hace)
   - [Aplicaciones que admiten Bots](#aplicaciones-que-admiten-bots)
   - [API de Slack para bots](#api-de-slack-para-bots)
+  - [¿Cómo crear un bot reactivo?](#cómo-crear-un-bot-reactivo)
+  - [Posibles aplicaciones de un bot](#posibles-aplicaciones-de-un-bot)
+  - [Creación de los bots](#creación-de-los-bots)
+- [Brokers de mensajeria](#brokers-de-mensajeria)
+  - [¿Qué es un broker de mensajería y cuándo debe usarse?](#qué-es-un-broker-de-mensajería-y-cuándo-debe-usarse)
+  - [Conceptos](#conceptos)
+  - [Brokers de mensajería open source](#brokers-de-mensajería-open-source)
 
 # Introducción
 
@@ -37,6 +44,8 @@ No es la única. Tiene ciertos equivalentes en otros lenguajes, pero no hay ning
 <div align="center">
   <img src="img/celery.webp">
 </div>
+
+https://swapps.com/es/blog/como-integrar-tu-aplicacion-python-a-slack-usando-bots/
 
 ## Brokers de tareas
 
@@ -125,3 +134,80 @@ Casos de usos actuales:
    * Permission - Obteneer fichas para usar desde nuestro programa
 
 https://cookiecutter-project.slack.com/apps
+
+## ¿Cómo crear un bot reactivo?
+
+**Celery es una biblioteca en Python para gestionar colas de tareas distribuidas.** Es software libre y está liberado con una licencia BSD. Cuenta con con más de diez mil commits en este momento en Github. Cuenta con algunas ventajas como escabilidad, eficiencia, orden de transacciones garantizado, resistencia a fallos, aguantar picos de mensajes
+
+```python
+git clone https://github.com/JJ/slack-bot-platzi.git 
+cd slack-bot-platzi
+sudo pip install -r requirements.txt
+touch .env
+```
+
+## Posibles aplicaciones de un bot
+
+* **Un bot puede escuchar**, almacenar información de conversaciones, analizar esas conversaciones para realizar análisis de sentimientos
+
+* Puede responder, Inteligencia Artificial en las conversaciones, acceder a información fija y almacenada, juegos conversacionales. 
+
+* Puede realizar tareas como búsquedas en motores de búsqueda, consultar a base de datos o almacenes de imágenes, consultar agendas o agendar.
+
+## Creación de los bots
+* Decidir que comandos va a usar
+* Crear la infraestructura para que respondan a ese comando
+* Programar el comando específio
+
+# Brokers de mensajeria
+
+## ¿Qué es un broker de mensajería y cuándo debe usarse?
+Un broker de mensajería o message-oriented middleware es algo que está en medio, un intermediario. El broker de mensajería se va asegurar de que lo mensajes lleguen a su destino y esos mensajes tendrán una serie de cliente.
+
+Nunca hacen una interacción directa de uno a otro ya que sería una interacción síncrona.
+
+## Conceptos
+
+En el mundo de los brokers de mensajería se utilizan principalmente dos tipos de metáforas. Unas vienen del mundo del correo, donde hay mensajes que tienen un emisor y un receptor, como una carta. Pero no todos los mensajes son de este tipo: hay mensajes que se emiten y puede recibir mucha gente: usamos en este caso metáforas del mundo de la radio.
+
+En la radio tenemos un emisor que es el que emite el mensaje. Ese mensaje se retransmite, es decir, se hace un broadcast, de forma que todo el mundo puede recibirlo. En este caso no importa demasiado que quien escuche acuse recibo del mensaje, simplemente que haya un mecanismo eficiente que permita hacer llegar, a todos los que lo deseen, el mensaje que se emita.
+
+**¿Y quién va a recibir ese mensaje?**
+
+En el mundo de la radio, diferentes canales tienen diferente programación, y los oyentes seleccionan un canal para escuchar. En el mundo de los brokers de mensajería, los canales permiten concentrar los mensajes y que no se mezclen los relativos a diferentes tareas o partes de la aplicación, y adicionalmente los canales pueden tener suscriptores que serán los que únicamente reciban un mensaje que se envíe a este canal.
+
+A este mecanismo se le denomina también pub/sub, o **publicación/suscripción**. Cuando el emisor publica, lo hace en un canal. Los posibles receptores son suscriptores del canal y simplemente tienen que indicar el canal al que quieren escuchar para ser alertados y funcionar de forma reactiva cada vez que un nuevo mensaje se emita en el canal.
+
+**Las estafetas**
+
+Las estafetas, intercambiadores o exchanges permiten regular este tráfico de publicación y suscripción y asignar a diferentes canales dependiendo de una serie de reglas. Los intercambiadores son fundamentales y le añaden flexibilidad a este tipo de sistemas, permitiendo el envío programable de mensajes dependiendo en metadatos de los mismos o incluso en su contenido.
+
+La mayor parte de los brokers de mensajería pueden trabajar de las dos formas. **Los brokers siguen protocolos tales como AMQP (Advanced Queue Messaging Protocol)** que permite trabajar como correos y emisora de radio. **AMQP se implementa en diferentes brokers de mensajería tales como RabbitMQ o ActiveMQ.**
+
+Otros protocolos se centran sólo en una parte de este mundo de la mensajería: **MQTT, Message Queuing Telemetry Transport es un protocolo pub/sub, de publicación y suscripción.**
+
+**Las colas de tareas**
+
+Por la variedad de protocolos y diferencia de implementaciones, muchas veces lo que se busca por parte del desarrollador es una biblioteca de alto nivel que abstraiga esto y permita trabajar con conceptos que estén en el dominio del problema. Celery, por ejemplo, usa principalmente el concepto de cola de tareas. Esto permite al usuario diseñar la aplicación en función de qué tareas se quiere que se ejecuten y de qué forma (con qué periodicidad, con qué prioridad) se van a ejecutar.
+
+A la vez, Celery tiene acceso a los mecanismos básicos (intercambiadores, colas de mensajes), que se pueden programar de la forma que desee. Partiendo de una aplicación básica, Celery te permite crecer hasta hacer una verdadera aplicación avanzada de cómputo distribuido.
+
+## Brokers de mensajería open source
+
+**Características comunes:**
+
+* Protocolos de mensajerías usados.
+* Soporte de estándares de mensajería, cómo se envían, reciben y procesan los mensajes.
+* Licencias libres.
+* API REST, a parte de usarlos con una librería puedes trabajar con ellos con un simple API.
+* Soporte Activo.
+
+**Principales Brokers**
+
+* **RabbitMQ**: Cola de tareas distribuida y robusta.
+* **ActiveMQ/Apollo**: Cola de mensajes de altas prestaciones con soporte de JMS.
+* **RocketMQ**: Message-oriented middleware con MQTT y JMS
+* **Apache Kafka**: Sistema orientado a procesamiento de streams en tiempo real.
+* **NATS**: Sistema de mensajería distribuido.
+
+> **RabbitMQ:** Es el más popular y el que tiene más soporte de bibliotecas. Es relativamente simple de instalar y mantener, tiene una buena comunidad para soportarlo.
