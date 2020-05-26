@@ -20,6 +20,8 @@
         - [Medidas de tendencia central (centralización)](#medidas-de-tendencia-central-centralización)
         - [Medidas de dispersión](#medidas-de-dispersión)
       - [Resumiendo](#resumiendo)
+  - [Datos agrupados con frecuencias](#datos-agrupados-con-frecuencias)
+    - [Datos agrupados y no agrupados (agregaciones)](#datos-agrupados-y-no-agrupados-agregaciones)
 
 # Introducción
 
@@ -193,3 +195,53 @@ La desviación típica es la raíz de la varianza
 * Los resúmenes numéricos: media, mediana, varianza, desviación típica, etc.
 
 [Formulas](../pye/Formulas1.pdf)
+
+## Datos agrupados con frecuencias
+
+Se ha solicitado a un grupo de 50 individuos información sobre el número de horas que dedican diariamente a dormir. La clasificación de las respuestas ha permitido elaborar la siguiente tabla
+
+<div align="center">
+  <img src="img/14.png">
+</div>
+
+### Datos agrupados y no agrupados (agregaciones)
+
+Es una forma distinta de representar y analizar la información que se ha reunido.
+
+* Los **datos no agrupados** es el conjunto de observaciones que se presentan en su forma original tal y como fueron recolectados, para obtener información directamente de ellos
+* Los **datos agrupados** es cuando tenemos los valores o **intervalos de valores** (buckets) que toma la variable y la **frecuencia de ocurrencia**. Es una forma más compacta de ver los datos
+
+Para calcular la media o promedio
+
+<div align="center">
+  <img src="img/15.png">
+</div>
+
+Para calcular la mediana
+
+La media es el valor central de los datos ordenados. Al ser un valor par 50, la mitad es 25, hay dos valores centrales. Posición 25 y 26 y hay que obtener la media de ellos. Para ello podemos usar la frecuencia absoluta acumulada
+
+<div align="center">
+  <img src="img/16.png">
+</div>
+
+Para la moda
+
+Con la frecuencia absoluta tenemos el valor que más se repite:
+
+<div align="center">
+  <img src="img/17.png">
+</div>
+
+En el caso de que las clases estén representadas con intervalos, hablaremos de 
+
+Desviación típica y la varianza
+
+<div align="center">
+  <img src="img/18.png">
+</div>
+
+<div align="center">
+  <img src="img/19.png">
+</div>
+
