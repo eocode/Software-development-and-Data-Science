@@ -143,6 +143,14 @@ Apuntes, proyectos y códigos realizados con Python.
 
 # Python
 
+https://www.toptal.com/python/por-que-hay-tantos-pythons
+
+https://speakerdeck.com/pablotrinidad
+
+https://github.com/python/cpython/blob/master/Objects/listobject.c
+
+https://alexgaynor.net/2010/may/15/pypy-future-python/
+
 ## Aplicaciones de Python
 ### Ciencias
 * Astropy

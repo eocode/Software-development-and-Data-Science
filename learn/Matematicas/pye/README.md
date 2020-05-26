@@ -4,11 +4,14 @@
 > Mejora de habilidades para el pensamiento
 
 ## Tabla de Contenido<!-- omit in toc -->
-- [Introducción](#introducci%c3%b3n)
-  - [Investigación](#investigaci%c3%b3n)
+- [Introducción](#introducción)
+  - [Investigación](#investigación)
     - [Propositos](#propositos)
     - [Proceso](#proceso)
-    - [Pasos en el proceso de investigación](#pasos-en-el-proceso-de-investigaci%c3%b3n)
+    - [Pasos en el proceso de investigación](#pasos-en-el-proceso-de-investigación)
+- [Muestra](#muestra)
+- [Estadística descriptiva](#estadística-descriptiva)
+  - [Tablas de frecuencias](#tablas-de-frecuencias)
 
 # Introducción
 
@@ -63,3 +66,49 @@ Proceso que sigue una serie de pasos utilizando herramientas en situaciones de n
 * Difundir los resultados
   * Defender tu investigación
   * Aprobar o rechazar hipotesis
+
+# Muestra
+
+Todo subconjunto de la población es una muestra, está tiene qu ser
+
+* **Aleatoria** - Todos los elementos deben tener la misma probabilidad de ser elegidos
+* **Representativa**
+
+<div align="center">
+  <img src="img/muestra-estadistica.jpg">
+</div>
+
+**Variable aleatoria**
+
+* Es una característica de la población
+* Sigue un determinado comportamiento **"Distribución"**
+  * **Discreta** - valores enteros, contables, númerables, opciones finitas (Ciudades)
+  * **Continua** - númericos Valores reales (peso), altura
+
+Ejemplo
+
+<div align="center">
+  <img src="img/1.png">
+</div>
+
+* Nos interesa una característica, que va a ser la **variable aleatoria**
+  * Puede ser discreta o continua
+* Se mide la característica en una población, pero es demasiado grande, se toma una muestra representativa de esa característica en la pobleción
+* Obtenemos información de esa población
+
+# Estadística descriptiva
+
+Tiene como característica resumir, analizar y sacar conclusiones de un conjunto de datos
+* Tabla de frecuencias
+* Gráficas
+* Resumenes númericos
+
+## Tablas de frecuencias
+
+<div align="center">
+  <img src="img/2.png">
+</div>
+
+<div align="center">
+  <img src="img/3.png">
+</div>
