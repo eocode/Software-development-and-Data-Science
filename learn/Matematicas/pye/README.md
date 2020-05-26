@@ -27,6 +27,7 @@
   - [Los deciles](#los-deciles)
   - [Los percentiles (Pp)](#los-percentiles-pp)
   - [Diagrama de bigotes](#diagrama-de-bigotes)
+  - [Asimetría](#asimetría)
 
 # Introducción
 
@@ -392,3 +393,30 @@ Son una representación visual que describe varias características importantes,
 <div align="center">
   <img src="img/38.png">
 </div>
+
+<div align="center">
+  <img src="img/39.png">
+</div>
+
+* Podemos encontrar datos mucho más grandes o mucho más pequeños que el resto de los datos. Esos valores son llamados atípicos o outliers
+* Se representan con un punto y pueden estar en cualquiera de los dos extremos del diagrama
+
+**Regla para encontrar valores atipicos:**
+
+* Mayor que Q3 por al menos 1.5 veces el rango intercuartilico (RI)
+* Menor que Q1 por al menos 1.5 veces el rango intercuartilico (RI)
+
+A estos dos límites a partir de los cuales vamos a decir que un datos es atípico, les llamaremos barreras
+
+<div align="center">
+  <img src="img/40.png">
+</div>
+
+Viendo otro ejemplo:
+
+<div align="center">
+  <img src="img/41.png">
+</div>
+
+
+## Asimetría
