@@ -10,8 +10,16 @@
     - [Proceso](#proceso)
     - [Pasos en el proceso de investigación](#pasos-en-el-proceso-de-investigación)
 - [Muestra](#muestra)
-- [Estadística descriptiva](#estadística-descriptiva)
-  - [Tablas de frecuencias](#tablas-de-frecuencias)
+- [Estadística descriptiva univariada](#estadística-descriptiva-univariada)
+  - [Los tres análisis descriptivos fundamentales](#los-tres-análisis-descriptivos-fundamentales)
+    - [Tablas de frecuencias](#tablas-de-frecuencias)
+    - [Gráficos](#gráficos)
+      - [Pastel](#pastel)
+      - [Histograma](#histograma)
+      - [Resúmenes numéricos](#resúmenes-numéricos)
+        - [Medidas de tendencia central (centralización)](#medidas-de-tendencia-central-centralización)
+        - [Medidas de dispersión](#medidas-de-dispersión)
+      - [Resumiendo](#resumiendo)
 
 # Introducción
 
@@ -96,14 +104,16 @@ Ejemplo
 * Se mide la característica en una población, pero es demasiado grande, se toma una muestra representativa de esa característica en la pobleción
 * Obtenemos información de esa población
 
-# Estadística descriptiva
+# Estadística descriptiva univariada
+
+## Los tres análisis descriptivos fundamentales
 
 Tiene como característica resumir, analizar y sacar conclusiones de un conjunto de datos
 * Tabla de frecuencias
 * Gráficas
 * Resumenes númericos
 
-## Tablas de frecuencias
+### Tablas de frecuencias
 
 <div align="center">
   <img src="img/2.png">
@@ -112,3 +122,74 @@ Tiene como característica resumir, analizar y sacar conclusiones de un conjunto
 <div align="center">
   <img src="img/3.png">
 </div>
+
+### Gráficos
+
+#### Pastel
+<div align="center">
+  <img src="img/4.png">
+</div>
+
+#### Histograma
+<div align="center">
+  <img src="img/5.png">
+</div>
+
+<div align="center">
+  <img src="img/6.png">
+</div>
+
+#### Resúmenes numéricos
+
+##### Medidas de tendencia central (centralización)
+
+Media o promedio
+<div align="center">
+  <img src="img/7.png">
+</div>
+
+<div align="center">
+  <img src="img/8.png">
+</div>
+
+<div align="center">
+  <img src="img/9.png">
+</div>
+
+Ejercicios
+
+Calcular la media y la mediana
+
+<div align="center">
+  <img src="img/10.png">
+</div>
+
+Para la mediana, ordenar los datos de menor a mayor y escoger el del medio
+
+<div align="center">
+  <img src="img/11.png">
+</div>
+
+##### Medidas de dispersión
+
+Varianza y desviación típica: Cuán alejados están los datos de la media
+
+La varianza es el promedio de las distancias hacia la media
+
+<div align="center">
+  <img src="img/12.png">
+</div>
+
+La desviación típica es la raíz de la varianza
+
+<div align="center">
+  <img src="img/13.png">
+</div>
+
+#### Resumiendo
+
+* Las tablas de frecuencias: informaición numérica sobre los datos
+* Los gráficos son información visual
+* Los resúmenes numéricos: media, mediana, varianza, desviación típica, etc.
+
+[Formulas](../pye/Formulas1.pdf)
