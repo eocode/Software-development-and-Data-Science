@@ -22,6 +22,11 @@
       - [Resumiendo](#resumiendo)
   - [Datos agrupados con frecuencias](#datos-agrupados-con-frecuencias)
     - [Datos agrupados y no agrupados (agregaciones)](#datos-agrupados-y-no-agrupados-agregaciones)
+  - [Medidas de posición](#medidas-de-posición)
+    - [Los cuartiles (Q)](#los-cuartiles-q)
+  - [Los deciles](#los-deciles)
+  - [Los percentiles (Pp)](#los-percentiles-pp)
+  - [Diagrama de bigotes](#diagrama-de-bigotes)
 
 # Introducción
 
@@ -245,3 +250,145 @@ Desviación típica y la varianza
   <img src="img/19.png">
 </div>
 
+Ejemplo
+
+Se tienen los siguientes datos de peso en kg de 100 individuos
+
+<div align="center">
+  <img src="img/20.png">
+</div>
+
+Para calcular la media
+
+<div align="center">
+  <img src="img/21.png">
+</div>
+
+Para la mediana se encuentra en n/2
+
+<div align="center">
+  <img src="img/22.png">
+</div>
+
+n/2=100/2=50, en este caso el intervalo de la mediana es (66,69)
+
+<div align="center">
+  <img src="img/23.png">
+</div>
+
+Para la moda
+
+<div align="center">
+  <img src="img/24.png">
+</div>
+
+<div align="center">
+  <img src="img/25.png">
+</div>
+
+<div align="center">
+  <img src="img/26.png">
+</div>
+
+[Ejercicio](../pye/Ejercicio1.pdf)
+
+## Medidas de posición
+
+Se llaman en general **cuantiles** y se pueden clasificar en tres grandes grupos
+
+* **Cuartiles** (25%, 50%, 75%)
+* **Quintiles** (20%, 40%, 60%, 80%)
+* **Deciles** (10%, 20%, 30% ... 90%)
+
+Dividen a una distribución ordenada en partes iguales
+
+Para calcular las medidas de posición es necesario que los datos estén ordenados de menor a mayor
+
+### Los cuartiles (Q)
+Son los tres valores de la variable de una distribución que la dividen en cuatro partes iguales
+
+<div align="center">
+  <img src="img/27.png">
+</div>
+
+Para calcularlos se debe seguir lo siguiente:
+
+1. Se ordenan los datos, entonces el primer valor será el mínimo y el último el máximo
+2. Se determina la posición que ocupa cada cuartil, se puede usar la fórmula:
+   * Q1 es el que deja por debajo un 25%
+   * Q2 es el que deja por debajo un 50%, **coincide con la mediana**
+   * Q3 es el que deja por debajo un 75%
+<div align="center">
+  <img src="img/28.png">
+</div>
+
+Ejemplo
+
+<div align="center">
+  <img src="img/29.png">
+</div>
+
+## Los deciles
+
+Corresponden a los 9 valores que dividen a los datos en 10 partes iguales, es decir, 10%, 20% .... 90%
+
+<div align="center">
+  <img src="img/30.png">
+</div>
+
+## Los percentiles (Pp)
+
+Son los noventa y nueve valores de la variable que la dividen en cien partes, se designan por P1, P2 ... P99
+
+> P50 coincide con la mediana
+
+El percentil p(pp) es un valor de la variable tal que el p% de la muestra está por debajo
+
+Se calcula de la siguiente manera
+
+<div align="center">
+  <img src="img/31.png">
+</div>
+
+* Sí es decimal **se aproxima al entero más cercano superior**
+* Buscamos este valor en la columna de la frecuencia acumulada
+* El primer valor de x cuya frecuencia acumulada sobrepasa el resultado de este cálculo es el percentil buscado
+* También se puede hacer con frecuencias relativas acumuladas
+
+Ejemplo
+
+<div align="center">
+  <img src="img/32.png">
+</div>
+
+<div align="center">
+  <img src="img/33.png">
+</div>
+
+<div align="center">
+  <img src="img/34.png">
+</div>
+
+<div align="center">
+  <img src="img/35.png">
+</div>
+
+Para este caaso entre las notas 3 y 7 hay un 50%. El intervalo estaría centrado en la evaluación 5 que es la mediana
+
+## Diagrama de bigotes
+
+Son una representación visual que describe varias características importantes, al mismo tiempo, tales como la dispersión y la simetría
+
+* Se representan los 3 cuartiles, Q1, Q2 (mediana) y Q3
+
+<div align="center">
+  <img src="img/36.png">
+</div>
+
+<div align="center">
+  <img src="img/37.png">
+</div>
+
+<div align="center">
+  <img src="img/38.png">
+</div>
