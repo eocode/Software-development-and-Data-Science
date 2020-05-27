@@ -58,6 +58,11 @@ https://joanby.github.io/bookdown-estadistica-inferencial/
 
 https://www.odiolaestadistica.com/estadistica-python/
 
+**Contenido complementario**
+
+[DataScience](../pye/DataScience.pdf)
+[Series temporales](../pye/SeriesTemporales.pdf)
+
 # Introducción
 
 > La estadística está muy **involucrada en la toma de decisiones**
