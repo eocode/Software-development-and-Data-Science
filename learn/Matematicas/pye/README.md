@@ -49,6 +49,7 @@
   - [Regresión líneal simple](#regresión-líneal-simple)
     - [Coeficiente de determinación](#coeficiente-de-determinación)
   - [Ejercicios y explicaciones](#ejercicios-y-explicaciones)
+- [Probabilidades](#probabilidades)
 
 # Libros digitales
 
@@ -61,6 +62,7 @@ https://www.odiolaestadistica.com/estadistica-python/
 **Contenido complementario**
 
 [DataScience](../pye/DataScience.pdf)
+
 [Series temporales](../pye/SeriesTemporales.pdf)
 
 # Introducción
@@ -766,3 +768,6 @@ Una medida de cuán bueno es el modelo de regresión es el siguiente:
 [Explicación coeficiente de variación](../pye/coeficienteVariacion.pdf)
 
 [Formulas de regresión](../pye/Formulas2.pdf)
+
+# Probabilidades
+
