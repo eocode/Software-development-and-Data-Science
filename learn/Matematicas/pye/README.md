@@ -760,4 +760,4 @@ Una medida de cuán bueno es el modelo de regresión es el siguiente:
 
 [Explicación coeficiente de variación](../pye/coeficienteVariacion.pdf)
 
-[Explicación coeficiente de variación](../pye/Formulas2.pdf)
+[Formulas de regresión](../pye/Formulas2.pdf)
