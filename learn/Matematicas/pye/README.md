@@ -32,6 +32,15 @@
     - [Coeficiente de Karl Pearson**](#coeficiente-de-karl-pearson)
     - [Medida de Yule Bowley o medida cuaartílica](#medida-de-yule-bowley-o-medida-cuaartílica)
     - [Medida de fisher](#medida-de-fisher)
+  - [Ejercicios](#ejercicios)
+- [Estadística bidimensional o bivariada](#estadística-bidimensional-o-bivariada)
+  - [Dos variables aleatorias](#dos-variables-aleatorias)
+  - [Tabla de doble entrada o tabla de contingencia](#tabla-de-doble-entrada-o-tabla-de-contingencia)
+  - [Relación entre dos variables](#relación-entre-dos-variables)
+    - [Distribuciones bidimensionales](#distribuciones-bidimensionales)
+    - [Regresión líneal](#regresión-líneal)
+    - [Medidas de relación entre dos variables](#medidas-de-relación-entre-dos-variables)
+  - [Covarianza](#covarianza)
 
 # Libros digitales
 
@@ -459,4 +468,172 @@ La **Simetría** se da cuando hay aproximadamente la misma cantidad de los datos
 
 <div align="center">
   <img src="img/46.png">
+</div>
+
+## Ejercicios
+
+Ejercicio 1
+
+<div align="center">
+  <img src="img/47.png">
+</div>
+
+Ejercicio 2
+
+<div align="center">
+  <img src="img/48.png">
+</div>
+
+Identificando los cuartiles
+
+<div align="center">
+  <img src="img/49.png">
+</div>
+
+<div align="center">
+  <img src="img/50.png">
+</div>
+
+# Estadística bidimensional o bivariada
+
+## Dos variables aleatorias
+
+Es una variable en la que cada individuo está definida por un par de características (x,y)
+
+Estás dos son a su vez variables aleatorias en las que existe relación entre ellas, **una de las dos es la variable independiente y la otra la variable dependiente**
+
+<div align="center">
+  <img src="img/51.png">
+</div>
+
+<div align="center">
+  <img src="img/52.png">
+</div>
+
+## Tabla de doble entrada o tabla de contingencia
+
+Es una tabla de fecuencias conjuntas donde se ponen en las columnas los valores de una de las variables, y en las filas los valores de la otra variabl. Puede ser con frecuencias absolutas y también con frecuencias relativas
+
+**Con frecuencias absolutas**
+
+<div align="center">
+  <img src="img/53.png">
+</div>
+
+¿Cuál es el número de estudiantes mujeres del Dpto que están haciendo un doctorado PhD?
+
+<div align="center">
+  <img src="img/54.png">
+</div>
+
+**Con frecuencias relativas (Porcentajes)**
+
+<div align="center">
+  <img src="img/55.png">
+</div>
+
+¿Cuál es el procentaje de estudiantes hombres que están haciendo un master?
+
+<div align="center">
+  <img src="img/56.png">
+</div>
+
+Dividiendo por el total de la fila
+
+<div align="center">
+  <img src="img/57.png">
+</div>
+
+Del total de chicas ¿Cuántas de ellas están haciendo un master?
+Del total de chicos ¿Cuántos están haciendo un master?
+
+<div align="center">
+  <img src="img/58.png">
+</div>
+
+## Relación entre dos variables
+
+x e y están relacionadas estadísticamente cuando conocida una de ellas se puede estimar aproximadamente el valor de la otra
+
+* Ingresos y gastos de una familia
+* Producción y ventas de una fábrica
+* Gastos en publicidad y beneficios de una empresa
+* Altura y peso
+* Notas de un examen y nivel de estrés
+
+### Distribuciones bidimensionales
+
+Son aquellas en las que a cada individuo le corresponden los valores de dos variables, las representamos por el par (x,y)
+
+Si representamos cada par de valores como las coordenadas de un punto, el  conjunto de todos los individuos representados de esta forma se llama **nube de puntos** y el gráfico se llama **diagrama de dispersión**
+
+Si las variables tienen una tendencia lineal positiva (una crece cuando la otra decrece) o negativa una decrece cuando la otra crece, entonce sobre la nube de puntos puede trazarse una recta que se ajusta a ellos lo mejor posible, llamada **recta de regresión**
+
+### Regresión líneal
+
+Supongamos que las notas de 12 alumnos de una clase en Matemáticas y Física son las siguientes:
+
+<div align="center">
+  <img src="img/59.png">
+</div>
+
+Se muestra una tendencia líneal positiva
+
+<div align="center">
+  <img src="img/60.png">
+</div>
+
+### Medidas de relación entre dos variables
+
+La **covarianza** de una variable bidimensional (x,y) es la media aritmética de los productos de las desviaciones de cada una de las variables respecto a sus medias respectivas
+
+Si hablamos de covarianza como parámetro **muestral** se denota como
+<div align="center">
+  <img src="img/61.png">
+</div>
+En cambio si es como parámetro poblacional se denota como
+<div align="center">
+  <img src="img/62.png">
+</div>
+
+Infica el sentido de la relación
+
+<div align="center">
+  <img src="img/63.png">
+</div>
+
+<div align="center">
+  <img src="img/64.png">
+</div>
+
+> Su valor depende de la escala elegida por los ejes
+
+Para evitar los problemas de escala y unidades de medida de las dos variables en cuestión, se utilizo una medida llamada **correlación** que trata de establecer **la relación o dependencia que existe entre las dos variables que intervienen en una distribución bidimensional sin depender de su escala**
+
+Si los cambios en una de las variables influyen en los cambios de la otra, diremos que las variables están correlacionadas o que hay correlación entre ellas
+
+<div align="center">
+  <img src="img/65.png">
+</div>
+
+## Covarianza
+
+**Para datos no agrupados**
+
+Es la media aritméticad de los productos de las desviaciones de cada una de las variables respecto a sus medias respectivas
+
+<div align="center">
+  <img src="img/66.png">
+</div>
+
+Ejemplo: las notas de 12 alumnos de la clase de Matemáticas y Física son las siguientes:
+
+<div align="center">
+  <img src="img/67.png">
+</div>
+
+**Para datos agrupados**
+
+<div align="center">
+  <img src="img/68.png">
 </div>
