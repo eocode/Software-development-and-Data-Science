@@ -41,6 +41,13 @@
     - [Regresión líneal](#regresión-líneal)
     - [Medidas de relación entre dos variables](#medidas-de-relación-entre-dos-variables)
   - [Covarianza](#covarianza)
+  - [Correlación](#correlación)
+    - [Correlación directa o positiva](#correlación-directa-o-positiva)
+    - [Correlación inversa o negativa](#correlación-inversa-o-negativa)
+    - [Correlación nula](#correlación-nula)
+    - [Coeficiente de correlación lineal de pearson](#coeficiente-de-correlación-lineal-de-pearson)
+  - [Regresión líneal simple](#regresión-líneal-simple)
+    - [Coeficiente de determinación](#coeficiente-de-determinación)
 
 # Libros digitales
 
@@ -494,6 +501,8 @@ Identificando los cuartiles
   <img src="img/50.png">
 </div>
 
+[Ejercicios de la unidad](../pye/Ejercicio2.pdf)
+
 # Estadística bidimensional o bivariada
 
 ## Dos variables aleatorias
@@ -637,3 +646,109 @@ Ejemplo: las notas de 12 alumnos de la clase de Matemáticas y Física son las s
 <div align="center">
   <img src="img/68.png">
 </div>
+
+<div align="center">
+  <img src="img/69.png">
+</div>
+
+<div align="center">
+  <img src="img/70.png">
+</div>
+
+<div align="center">
+  <img src="img/71.png">
+</div>
+
+## Correlación
+
+Trata de establecer la relación o dependencia lineal que existe entre las dos variables que intervienen: x e y
+
+### Correlación directa o positiva
+
+<div align="center">
+  <img src="img/72.png">
+</div>
+
+### Correlación inversa o negativa
+
+<div align="center">
+  <img src="img/73.png">
+</div>
+
+### Correlación nula
+
+Sucede cuándo no hay dependencia entre las variables. La nube de puntos tiene una forma redondeada
+
+Puede que no haya una dependencia lineal entre las variables pero si exista otro tipo de dependencia, como cuadrática exponencial, etc. Es decir, que la correlación sea nula no necesaria mente implica independencia entre las dos variables
+
+<div align="center">
+  <img src="img/74.png">
+</div>
+
+En caso de que haya correlación líneal. El **grado de correlación** indica la proximidad que hay entre los puntos y lo que seria la recta de regresión que representa la tendencia
+
+<div align="center">
+  <img src="img/75.png">
+</div>
+
+### Coeficiente de correlación lineal de pearson
+
+<div align="center">
+  <img src="img/76.png">
+</div>
+
+<div align="center">
+  <img src="img/77.png">
+</div>
+
+<div align="center">
+  <img src="img/78.png">
+</div>
+
+Para datos no agrupados
+
+<div align="center">
+  <img src="img/79.png">
+</div>
+
+Para datos agrupados
+
+<div align="center">
+  <img src="img/80.png">
+</div>
+
+<div align="center">
+  <img src="img/81.png">
+</div>
+
+## Regresión líneal simple
+
+La recta de regresión es la que mejor se ajusta a la nube de puntos
+
+<div align="center">
+  <img src="img/82.png">
+</div>
+
+Para el ejemplo de los alumnos de matemáticas
+
+<div align="center">
+  <img src="img/83.png">
+</div>
+
+<div align="center">
+  <img src="img/84.png">
+</div>
+
+<div align="center">
+  <img src="img/85.png">
+</div>
+
+### Coeficiente de determinación
+
+Una medida de cuán bueno es el modelo de regresión es el siguiente:
+
+<div align="center">
+  <img src="img/86.png">
+</div>
+
+[Ejercicios de la unidad](../pye/Ejercicio3.pdf)
