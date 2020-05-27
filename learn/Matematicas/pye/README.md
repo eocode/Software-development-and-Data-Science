@@ -48,6 +48,7 @@
     - [Coeficiente de correlación lineal de pearson](#coeficiente-de-correlación-lineal-de-pearson)
   - [Regresión líneal simple](#regresión-líneal-simple)
     - [Coeficiente de determinación](#coeficiente-de-determinación)
+  - [Ejercicios y explicaciones](#ejercicios-y-explicaciones)
 
 # Libros digitales
 
@@ -753,7 +754,10 @@ Una medida de cuán bueno es el modelo de regresión es el siguiente:
   <img src="img/86.png">
 </div>
 
+## Ejercicios y explicaciones
+
 [Ejercicios de la unidad](../pye/Ejercicio3.pdf)
 
 [Explicación coeficiente de variación](../pye/coeficienteVariacion.pdf)
+
 [Explicación coeficiente de variación](../pye/Formulas2.pdf)
