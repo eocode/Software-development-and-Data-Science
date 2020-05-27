@@ -55,6 +55,8 @@ https://joanby.github.io/bookdown-probabilidad/
 
 https://joanby.github.io/bookdown-estadistica-inferencial/
 
+https://www.odiolaestadistica.com/estadistica-python/
+
 # Introducción
 
 > La estadística está muy **involucrada en la toma de decisiones**
