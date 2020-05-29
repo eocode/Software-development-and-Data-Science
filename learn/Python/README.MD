@@ -6,6 +6,7 @@ Apuntes, proyectos y códigos realizados con Python.
 > Python es sin duda un lenguaje que permite hacer muchas cosas, por lo que también es bastante extenso y en está sección lo descubriremos
 
 ## Tabla de Contenido<!-- omit in toc -->
+- [Recursos](#recursos)
 - [Pensamiento Computacional](#pensamiento-computacional)
 - [Python](#python)
   - [Aplicaciones de Python](#aplicaciones-de-python)
@@ -126,6 +127,19 @@ Apuntes, proyectos y códigos realizados con Python.
 - [Time](#time)
 - [XPath](#xpath)
   - [Probando en el navegadpr](#probando-en-el-navegadpr)
+
+# Recursos
+
+Complejidad
+
+https://wiki.python.org/moin/TimeComplexity
+https://hacks.mozilla.org/2020/05/
+
+https://docs.python.org/3/tutorial/datastructures.html
+
+Profiler
+
+building-functiontrace-a-graphical-python-profiler/?utm_source=dev-newsletter&utm_medium=email&utm_campaign=may28-2020&utm_content=profiler
 
 # Pensamiento Computacional
 * Conocimiento declarativo

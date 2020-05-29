@@ -50,6 +50,16 @@
     - [Coeficiente de determinación](#coeficiente-de-determinación)
   - [Ejercicios y explicaciones](#ejercicios-y-explicaciones)
 - [Probabilidades](#probabilidades)
+  - [Evento o suceso aleatorio](#evento-o-suceso-aleatorio)
+  - [Leyes de Morgan](#leyes-de-morgan)
+  - [Probabilidad](#probabilidad)
+    - [Enfoques / Interpretaciones](#enfoques--interpretaciones)
+      - [Probabilidad clásica (regla de laplace)](#probabilidad-clásica-regla-de-laplace)
+      - [Enfoque frecuentista](#enfoque-frecuentista)
+      - [Probabilidad subjetiva](#probabilidad-subjetiva)
+    - [Axiomas (Requisito que tiene que cumplir cierta función para ser una probabilidad)](#axiomas-requisito-que-tiene-que-cumplir-cierta-función-para-ser-una-probabilidad)
+    - [Consecuencias de los axiomas](#consecuencias-de-los-axiomas)
+    - [Ejemplo del dado](#ejemplo-del-dado)
 
 # Libros digitales
 
@@ -771,3 +781,96 @@ Una medida de cuán bueno es el modelo de regresión es el siguiente:
 
 # Probabilidades
 
+## Evento o suceso aleatorio
+
+Un suceso cuyo resultado es **incierto**, no lo sabemos a priori
+
+* Lanzamiento de una moneda
+* El caudal de un fluido que cicula por una tubería
+* El tiempo de atención al cliente de una sucursal bancaria
+* El número de articulos defectuosos de un lote de materia prima
+
+**Ejemplo del dado**
+
+<div align="center">
+  <img src="img/87.png">
+</div>
+
+<div align="center">
+  <img src="img/88.png">
+</div>
+
+<div align="center">
+  <img src="img/89.png">
+</div>
+
+<div align="center">
+  <img src="img/90.png">
+</div>
+
+## Leyes de Morgan
+
+<div align="center">
+  <img src="img/91.png">
+</div>
+
+## Probabilidad
+
+> Tiramos un dado equilibrado
+
+Usamos la intuición
+* Es menos probable  que salga un 1 a que salga un número mayor que 1
+* Es igual de probable que salga un 4 a que salga un 6
+* Es improbable que salga un 7
+* La probabilidad de que salga un número positivo es máxima
+
+> La probabilidad de un suceso es una medida de la confianza que tenemos a priori en que el suceso ocurra cuando se realice el experimento aleatorio
+> A mayor probabilidad de un suceso, más probabilidad de que ocurra
+
+### Enfoques / Interpretaciones
+
+#### Probabilidad clásica (regla de laplace) 
+
+Considera un experimento en el que los sucesos elementales son equiprobables. Si el suceso A tiene n(A) elementos entonces se define la probabilidad de A como:
+
+<div align="center">
+  <img src="img/92.png">
+</div>
+
+#### Enfoque frecuentista
+
+Si repitieramos el experimento muchas veces, la frecuencia relativa con que ocurriria el suceso A convergería a su probabilidad
+
+<div align="center">
+  <img src="img/93.png">
+</div>
+
+#### Probabilidad subjetiva
+
+Depende de la información de la que dispongamos
+
+<div align="center">
+  <img src="img/94.png">
+</div>
+
+### Axiomas (Requisito que tiene que cumplir cierta función para ser una probabilidad)
+
+<div align="center">
+  <img src="img/95.png">
+</div>
+
+### Consecuencias de los axiomas
+
+<div align="center">
+  <img src="img/96.png">
+</div>
+
+### Ejemplo del dado
+
+<div align="center">
+  <img src="img/97.png">
+</div>
+
+<div align="center">
+  <img src="img/98.png">
+</div>
