@@ -72,6 +72,9 @@
     - [Variable aleatoria discreta](#variable-aleatoria-discreta)
     - [Función de probabilidad (suma=1)](#función-de-probabilidad-suma1)
     - [Función de distribución](#función-de-distribución)
+    - [Media y varianza con la función de probabilidad](#media-y-varianza-con-la-función-de-probabilidad)
+  - [Distribución para variables aleatorias continuas](#distribución-para-variables-aleatorias-continuas)
+    - [Distribución de Binomial y Bernoulli](#distribución-de-binomial-y-bernoulli)
 
 # Libros digitales
 
@@ -971,7 +974,7 @@ Los sucesos A y B son independientes
 
 Se dispone de un test clínico para una enfermedad rara que afecta a una de cada 10000 personas
 
-El test da positivo (detecta la enfermedad) en 99 de cada 100 personas que la padecen y da negativo (no la detecta) en 97 de cada 100 personas que no la padecen
+  El test da positivo (detecta la enfermedad) en 99 de cada 100 personas que la padecen y da negativo (no la detecta) en 97 de cada 100 personas que no la padecen
 
 > Se aplica el test a una persona elegida al azar y da positivo ¿Cuál es la probabilidad de que padezca la enfermedad?
 
@@ -1011,3 +1014,104 @@ Para una variable aleatoria discreta X, definimos la función de probabilidad co
 
 La función de distribución le asigna a cada valor de la variable la probabilidad de que la variable sea menor o igual que ese valor, es decir, acumula todas las probabilidades de los valores anteriores hacia el
 
+<div align="center">
+  <img src="img/116.png">
+</div>
+
+### Media y varianza con la función de probabilidad
+
+Cuáando hablamos de **función de probabilidad estamos caracterizando** a la población
+
+Podemos definir media y varianza poblacionales en el concepto de **esperanza matemática** o **valor esperado de la variable aleatoria: E(x)**
+
+<div align="center">
+  <img src="img/117.png">
+</div>
+
+## Distribución para variables aleatorias continuas
+
+El método para describir la distribución de las v.a discretas es inadecuada para describir una v.a. continua, no se puede asociar a cada valor de la v.a su probabilidad
+
+La **función de densidad** describe la distribución de probabilidad de una variable aleatoria continua
+
+<div align="center">
+  <img src="img/118.png">
+</div>
+
+No hay harea de t a t por lo tanto es 0
+
+<div align="center">
+  <img src="img/119.png">
+</div>
+
+Definimos como función de distribución a la que a cada valor de la variable aleatoria le asocia la probabilidad de que la variable sea menor o igual a él:
+
+<div align="center">
+  <img src="img/120.png">
+</div>
+
+<div align="center">
+  <img src="img/121.png">
+</div>
+
+[Propiesdades valor esperado](../pye/PropiedadesValorEsperado.pdf)
+
+### Distribución de Binomial y Bernoulli
+
+Supongamos que estamos en una fabrica de bombillas. Tomamos una muestra de 10 bombillas y nos interesa saber si son defectuosas o no
+
+Definir una variable aleatoria
+
+> X: Número de bombillas defectuosas dentro del lote de 10 unidades
+
+**¿Cuál es la distribución de X?**
+
+> Denotemos **p** la probabilidad de que una bombilla sea defectuoosa y como **n** el tamaño de la muestra que tenemos
+
+y es una variable aleatoria que **vale 1, cuando la bombilla es defectuosa** **y vale 0 cuando no es defectuosa** 
+
+Entonces la variable aleatoria Y tiene una distribución que se denomina **Bernoulli. Notación y~Bernoulli(p)**
+
+La función de probabilidad de Y es de la forma:
+
+<div align="center">
+  <img src="img/122.png">
+</div>
+
+**La suma debe de ser 1**
+
+La media y la varianza de Y son:
+
+<div align="center">
+  <img src="img/123.png">
+</div>
+
+El número **de bombillas defectuosas entre 10** va a ser la siguiente v.a
+
+<div align="center">
+  <img src="img/124.png">
+</div>
+
+<div align="center">
+  <img src="img/125.png">
+</div>
+
+La distribución de **X se llama Binomial, Notación X~Binomial(n,p)**
+
+<div align="center">
+  <img src="img/126.png">
+</div>
+
+Si tenemos **n = 10 bombillas** y sabemos que la probabilidad de que alguna de ellas sea defectuosa es **p = 0.1**
+
+¿Cuál es la probabilidad de encontrarnos con 4 bombillas defectuosas dentro del lote de 10 bombillas?
+
+<div align="center">
+  <img src="img/127.png">
+</div>
+
+¿Cuál es el número esperado de bombillas defectuosas dentro del lote de 10 bombillas?
+
+<div align="center">
+  <img src="img/128.png">
+</div>
