@@ -60,6 +60,18 @@
     - [Axiomas (Requisito que tiene que cumplir cierta función para ser una probabilidad)](#axiomas-requisito-que-tiene-que-cumplir-cierta-función-para-ser-una-probabilidad)
     - [Consecuencias de los axiomas](#consecuencias-de-los-axiomas)
     - [Ejemplo del dado](#ejemplo-del-dado)
+  - [Probabilidad condicionada](#probabilidad-condicionada)
+    - [Ejemplo](#ejemplo)
+  - [Sucesos independientes](#sucesos-independientes)
+  - [Teorema de la probabilidad total](#teorema-de-la-probabilidad-total)
+    - [Ejemplo](#ejemplo-1)
+    - [Teorema de bayes](#teorema-de-bayes)
+      - [Ejemplo](#ejemplo-2)
+  - [Ejercicios](#ejercicios-1)
+  - [Distribuciones](#distribuciones)
+    - [Variable aleatoria discreta](#variable-aleatoria-discreta)
+    - [Función de probabilidad (suma=1)](#función-de-probabilidad-suma1)
+    - [Función de distribución](#función-de-distribución)
 
 # Libros digitales
 
@@ -874,3 +886,128 @@ Depende de la información de la que dispongamos
 <div align="center">
   <img src="img/98.png">
 </div>
+
+## Probabilidad condicionada
+
+<div align="center">
+  <img src="img/103.png">
+</div>
+
+### Ejemplo
+
+Se clasifica un grupo de 100 ejecutivos según su peso y al hecho de si sufren o no hipertensión:
+
+<div align="center">
+  <img src="img/99.png">
+</div>
+
+**Experimento aleatorio**: se selecciona de forma equiprobable a uno de los 100 ejecutivos y se observa su clasificación de tensión y peso
+
+<div align="center">
+  <img src="img/100.png">
+</div>
+
+<div align="center">
+  <img src="img/101.png">
+</div>
+
+<div align="center">
+  <img src="img/102.png">
+</div>
+
+## Sucesos independientes
+
+Intuitivamente: el saber si uno de ellos ha ocurrido no nos da ninguna información sobre si el otro ha ocurrido
+
+Dos sucesos A y B son **Independientes** sí:
+
+<div align="center">
+  <img src="img/104.png">
+</div>
+
+Se lanza un dado equilibrado
+* **Suceso A:** Sale un resultado par
+* **Suceso B:** Sale un resultado mayor que 2
+
+Nos dicen que al tirar un dado ocurrió B. Sabiendo esto, ¿CUál es la probabilidad condicionada de que el resultado haya sido par?
+
+<div align="center">
+  <img src="img/105.png">
+</div>
+
+Los sucesos A y B son independientes
+
+## Teorema de la probabilidad total
+
+<div align="center">
+  <img src="img/106.png">
+</div>
+
+<div align="center">
+  <img src="img/107.png">
+</div>
+
+### Ejemplo
+
+<div align="center">
+  <img src="img/108.png">
+</div>
+
+<div align="center">
+  <img src="img/109.png">
+</div>
+
+### Teorema de bayes
+
+<div align="center">
+  <img src="img/110.png">
+</div>
+
+<div align="center">
+  <img src="img/111.png">
+</div>
+
+#### Ejemplo
+
+Se dispone de un test clínico para una enfermedad rara que afecta a una de cada 10000 personas
+
+El test da positivo (detecta la enfermedad) en 99 de cada 100 personas que la padecen y da negativo (no la detecta) en 97 de cada 100 personas que no la padecen
+
+> Se aplica el test a una persona elegida al azar y da positivo ¿Cuál es la probabilidad de que padezca la enfermedad?
+
+<div align="center">
+  <img src="img/112.png">
+</div>
+
+<div align="center">
+  <img src="img/113.png">
+</div>
+
+## Ejercicios
+
+[Probabilidades](../pye/probabilidades.pdf)
+[Hoja de Probabilidades](../pye/HojaProbabilidades.pdf)
+[Soluciones hoja de probabilidades](../pye/SolucionesHojaProbabilidades.pdf)
+
+## Distribuciones
+
+Con que probabilidad toma esos valores la **distribución**
+
+### Variable aleatoria discreta
+
+<div align="center">
+  <img src="img/114.png">
+</div>
+
+### Función de probabilidad (suma=1)
+
+Para una variable aleatoria discreta X, definimos la función de probabilidad como la que le asocia a cada valor de la viable una probabilidad
+
+<div align="center">
+  <img src="img/115.png">
+</div>
+
+### Función de distribución
+
+La función de distribución le asigna a cada valor de la variable la probabilidad de que la variable sea menor o igual que ese valor, es decir, acumula todas las probabilidades de los valores anteriores hacia el
+
