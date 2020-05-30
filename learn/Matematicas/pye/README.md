@@ -5,6 +5,7 @@
 
 ## Tabla de Contenido<!-- omit in toc -->
 - [Libros digitales](#libros-digitales)
+- [Conceptos](#conceptos)
 - [Introducción](#introducción)
   - [Investigación](#investigación)
     - [Propositos](#propositos)
@@ -75,6 +76,8 @@
     - [Media y varianza con la función de probabilidad](#media-y-varianza-con-la-función-de-probabilidad)
   - [Distribución para variables aleatorias continuas](#distribución-para-variables-aleatorias-continuas)
     - [Distribución de Binomial y Bernoulli](#distribución-de-binomial-y-bernoulli)
+  - [Distribución de POISSON](#distribución-de-poisson)
+    - [Ejemplo](#ejemplo-3)
 
 # Libros digitales
 
@@ -89,6 +92,11 @@ https://www.odiolaestadistica.com/estadistica-python/
 [DataScience](../pye/DataScience.pdf)
 
 [Series temporales](../pye/SeriesTemporales.pdf)
+
+# Conceptos
+
+* Valor aleatorio - Valores que cambian en un rango determinado
+* Valor deterministico - Asume un valor puntual
 
 # Introducción
 
@@ -994,6 +1002,8 @@ Se dispone de un test clínico para una enfermedad rara que afecta a una de cada
 
 ## Distribuciones
 
+https://blog.adrianistan.eu/estadistica-python-distribucion-binomial-normal-poisson-parte-vi
+
 Con que probabilidad toma esos valores la **distribución**
 
 ### Variable aleatoria discreta
@@ -1114,4 +1124,40 @@ Si tenemos **n = 10 bombillas** y sabemos que la probabilidad de que alguna de e
 
 <div align="center">
   <img src="img/128.png">
+</div>
+
+## Distribución de POISSON
+
+* En una variable aleatoria de tipo discreto
+* Nos permite calcular las probabilidades de sucesos independienes que aparecen de manera estable en un **intervalo de tiempo**, sabiendo el **promedio**
+* Ejemplos: número de llegadas de personas en una hora a un banco
+
+**x~Poisson(lambda)**
+
+El rango de valores que toma la variable es: rx = {0,1,2,...}
+
+La función de probabilidad es:
+
+<div align="center">
+  <img src="img/129.png">
+</div>
+
+### Ejemplo
+
+Sabiendo que el número promedio de clientes que llegan en una hora a un banco es 10 ¿Cuál sería la probabilidad de que llegaran 15 clientes en una hora?
+
+<div align="center">
+  <img src="img/130.png">
+</div>
+
+¿Y la probabilidad de que lleguen 15 en dos horas?
+
+<div align="center">
+  <img src="img/131.png">
+</div>
+
+¿Y la probabilidad de que lleguen menos de dos personas en una hora?
+
+<div align="center">
+  <img src="img/132.png">
 </div>
