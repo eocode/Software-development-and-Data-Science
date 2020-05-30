@@ -12,6 +12,10 @@
     - [Proceso](#proceso)
     - [Pasos en el proceso de investigación](#pasos-en-el-proceso-de-investigación)
 - [Muestra](#muestra)
+- [Escalas de medición](#escalas-de-medición)
+  - [Variables cualitativas:](#variables-cualitativas)
+  - [Variables cuantitativas](#variables-cuantitativas)
+  - [Ejemplos](#ejemplos)
 - [Estadística descriptiva univariada](#estadística-descriptiva-univariada)
   - [Los tres análisis descriptivos fundamentales](#los-tres-análisis-descriptivos-fundamentales)
     - [Tablas de frecuencias](#tablas-de-frecuencias)
@@ -69,7 +73,15 @@
     - [Teorema de bayes](#teorema-de-bayes)
       - [Ejemplo](#ejemplo-2)
   - [Ejercicios](#ejercicios-1)
-  - [Distribuciones](#distribuciones)
+- [Distribuciones](#distribuciones)
+  - [Distribución de probabilidad](#distribución-de-probabilidad)
+  - [Distribuciones de variable discreta](#distribuciones-de-variable-discreta)
+  - [Distribuciones de variable continua](#distribuciones-de-variable-continua)
+  - [Histogramas](#histogramas)
+  - [Función de Masa de Probabilidad](#función-de-masa-de-probabilidad)
+  - [Función de distribución acumulada](#función-de-distribución-acumulada)
+  - [Función de Densidad de Probabilidad](#función-de-densidad-de-probabilidad)
+  - [Principales distribuciones](#principales-distribuciones)
     - [Variable aleatoria discreta](#variable-aleatoria-discreta)
     - [Función de probabilidad (suma=1)](#función-de-probabilidad-suma1)
     - [Función de distribución](#función-de-distribución)
@@ -95,8 +107,8 @@ https://www.odiolaestadistica.com/estadistica-python/
 
 # Conceptos
 
-* Valor aleatorio - Valores que cambian en un rango determinado
-* Valor deterministico - Asume un valor puntual
+* **Valor aleatorio** - Valores que cambian en un rango determinado
+* **Valor deterministico** - Asume un valor puntual
 
 # Introducción
 
@@ -180,6 +192,35 @@ Ejemplo
   * Puede ser discreta o continua
 * Se mide la característica en una población, pero es demasiado grande, se toma una muestra representativa de esa característica en la pobleción
 * Obtenemos información de esa población
+
+#  Escalas de medición
+
+Existen cuatro escalas, organizadas de la que brinda menos información a la que brinda más información:
+
+## Variables cualitativas:
+* **Nominal:** Ocurre cuando sólo podemos decir que **dos valores son distintos.** Usualmente son **categorías** o **identificadores**.
+* **Ordinal:** Ocurre cuando podemos decir que **un valor es mayor o menor que otro.** Dicho de otra manera, podemos ordenar o establecer **relaciones de orden entre los valores** de la variable. Sin embargo, no podemos cuantificar la diferencia entre un valor y otro.
+
+<div align="center">
+  <img src="img/escalas-de-medicion.jpg">
+</div>
+
+## Variables cuantitativas
+
+* **Intervalo:** Tienen lo que se conoce como un cero por convención, o un cero que existe porque se convino que ese valor sea cero pero NO implica ausencia de la variable. Esto hace que tenga sentido calcular la **diferencia o intervalo entre dos valores distintos**, pero no la razón entre valores. Por ejemplo, la **fecha** es una variable medida en escala de intervalo, puesto que tiene sentido calcular la diferencia entre valores, pero no tiene sentido decir, por ejemplo, que una fecha es dos veces más que otra, ya que el cero es una fecha que se estableció por convención y no se puede interpretar como ausencia.
+* **Razón:** Utilizamos esta escala cuando la variable cuantitativa tiene un cero absoluto, o cuando el cero significa efectivamente ausencia. Esto implica que sí tiene sentido calcular razones entre valores. Por ejemplo, **si medimos el número de habitantes de un país, si el valor es cero, esto implicaría ausencia de habitantes, y tiene todo el sentido del mundo decir que un país tiene el doble de habitantes que otro.**
+
+## Ejemplos
+
+**Nombre** -	Nominal
+**Edad** -	Razón
+**Fecha de nacimiento** -	Intervalo
+**Estatura** -	Razón
+**Peso** -	Razón
+**Color de cabello** -	Nominal
+**Lugar de nacimiento** -	Nominal
+**Número de pasaporte** -	Nominal
+**Estrato socioeconómico** -	Ordinal
 
 # Estadística descriptiva univariada
 
@@ -1000,11 +1041,69 @@ Se dispone de un test clínico para una enfermedad rara que afecta a una de cada
 [Hoja de Probabilidades](../pye/HojaProbabilidades.pdf)
 [Soluciones hoja de probabilidades](../pye/SolucionesHojaProbabilidades.pdf)
 
-## Distribuciones
+# Distribuciones
+
+Las variables aleatorias han llegado a desempeñar un papel importante en casi todos los campos de estudio: en la Física, la Química y la Ingeniería; y especialmente en las ciencias biológicas y sociales. **Estas variables aleatorias son medidas y analizadas en términos de sus propiedades estadísticas y probabilísticas**, de las cuales una característica subyacente es su **función de distribución**. A pesar de que el número potencial de distribuciones puede ser muy grande, en la práctica, un número relativamente pequeño se utilizan; ya sea porque tienen características matemáticas que las hace fáciles de usar o porque se asemejan bastante bien a una porción de la realidad, o por ambas razones combinadas.
+
+Las distribuciones de probabilidad teóricas **son útiles en la inferencia estadística porque sus propiedades y características son conocidas.** Si la distribución real de un conjunto de datos dado es razonablemente cercana a la de una distribución de probabilidad teórica, muchos de los cálculos se pueden realizar en los datos reales utilizando hipótesis extraídas de la distribución teórica.
+
+## Distribución de probabilidad
+
+En teoría de la probabilidad y estadística, **la distribución de probabilidad de una variable aleatoria es una función que asigna a cada suceso definido sobre la variable la probabilidad de que dicho suceso ocurra.** 
+
+> La distribución de probabilidad **está definida sobre el conjunto de todos los sucesos y cada uno de los sucesos es el rango de valores de la variable aleatoria.** También puede decirse que tiene una relación estrecha con las **distribuciones de frecuencia.** De hecho, una distribución de probabilidades puede comprenderse como una **frecuencia teórica**, ya que **describe cómo se espera que varíen los resultados**.
+
+La distribución de probabilidad está completamente especificada por la **función de distribución**, cuyo valor en cada **x real es la probabilidad de que la variable aleatoria sea menor o igual que x.**
+
+## Distribuciones de variable discreta
+
+**Se denomina distribución de variable discreta a aquella cuya función de probabilidad solo toma valores positivos en un conjunto de valores de X finito o infinito numerable.** A dicha función se le llama **función de masa de probabilidad.** En este caso la distribución de probabilidad es la suma de la función de masa, por lo que tenemos entonces que: 
+
+<div align="center">
+  <img src="img/133.png">
+</div>
+
+## Distribuciones de variable continua
+
+**Se denomina variable continua a aquella que puede tomar cualquiera de los infinitos valores existentes dentro de un intervalo.** En el caso de variable continua la distribución de probabilidad es la integral de la función de densidad, por lo que tenemos entonces que:
+
+<div align="center">
+  <img src="img/134.png">
+</div>
+
+## Histogramas
+
+Una de las mejores maneras de describir una variable es representar los valores que aparecen en el conjunto de datos y el número de veces que aparece cada valor. La representación más común de una distribución es un histograma, que **es un gráfico que muestra la frecuencia de cada valor.**
+
+<div align="center">
+  <img src="img/hist.png">
+</div>
+
+## Función de Masa de Probabilidad
+
+Otra forma de representar a las **distribuciones discretas** es utilizando su **Función de Masa de Probabilidad o FMP**, la cual relaciona **cada valor con su probabilidad en lugar de su frecuencia**. **Esta función es normalizada de forma tal que el valor total de probabilidad sea 1**. 
+
+> La ventaja que nos ofrece utilizar la FMP es que **podemos comparar dos distribuciones** sin necesidad de ser confundidos por las diferencias en el tamaño de las muestras. También debemos tener en cuenta que FMP **funciona bien si el número de valores es pequeño**; pero a medida que el número de valores aumenta, la probabilidad asociada a cada valor se hace cada vez más pequeña y el efecto del ruido aleatorio aumenta. Veamos un ejemplo con Python.
+
+## Función de distribución acumulada
+
+Si queremos evitar los problemas que se generan con **FMP cuando el número de valores es muy grande**, podemos recurrir a utilizar la **Función de Distribución Acumulada o FDA**, para representar a nuestras distribuciones, tanto discretas como continuas. 
+
+> Esta función relaciona los valores con su correspondiente percentil; es decir que va a describir la probabilidad de que una variable aleatoria X sujeta a cierta ley de distribución de probabilidad se sitúe en la zona de valores menores o iguales a x.
+
+## Función de Densidad de Probabilidad
+
+Por último, el equivalente a la FMP para distribuciones continuas es la Función de Densidad de Probabilidad o FDP. **Esta función es la derivada de la Función de Distribución Acumulada.**
+
+
 
 https://blog.adrianistan.eu/estadistica-python-distribucion-binomial-normal-poisson-parte-vi
 
 Con que probabilidad toma esos valores la **distribución**
+
+https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_probabilidad
+
+## Principales distribuciones
 
 ### Variable aleatoria discreta
 
@@ -1068,6 +1167,10 @@ Definimos como función de distribución a la que a cada valor de la variable al
 
 ### Distribución de Binomial y Bernoulli
 
+Un ensayo de Bernouilli se **define como un experimento donde puede darse un éxito o fracaso** y donde cada ensayo es independiente del anterior. Por ejemplo, un ensayo de Bernoulli de parámetro 0.5 sería lanzar una moneda a cara o cruz (mitad de posibilidades de cara, mitad de posibilidades de cruz).
+
+**Si repetimos N veces los ensayos de Bernouilli tenemos una distribución binomial.**
+
 Supongamos que estamos en una fabrica de bombillas. Tomamos una muestra de 10 bombillas y nos interesa saber si son defectuosas o no
 
 Definir una variable aleatoria
@@ -1128,9 +1231,15 @@ Si tenemos **n = 10 bombillas** y sabemos que la probabilidad de que alguna de e
 
 ## Distribución de POISSON
 
+La distribución de Poisson **recoge sucesos independientes** que ocurren en un soporte continuo.**El número medio de sucesos por unidad de soporte se le conoce como λ** y caracteriza la distribución. poisson nos permite crear distribuciones de este tipo.
+
+> Concretamente, se especializa en la probabilidad de ocurrencia de sucesos con probabilidades muy pequeñas, o sucesos «raros».
+
 * En una variable aleatoria de tipo discreto
 * Nos permite calcular las probabilidades de sucesos independienes que aparecen de manera estable en un **intervalo de tiempo**, sabiendo el **promedio**
-* Ejemplos: número de llegadas de personas en una hora a un banco
+
+**Algunos ejemplos de distribuciones de Poisson:** número de clientes que llegan cada hora a cierto puesto de servicio, número de averías diarias de un sistema informático, número de vehículos que pasan diariamente por un túnel, número de defectos por kilómetro de cable, ...
+
 
 **x~Poisson(lambda)**
 
