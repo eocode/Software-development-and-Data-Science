@@ -25,6 +25,7 @@ Proyectos realizados con Python
 * [News Scraper with Python full ETL Process](https://github.com/eocode/News-Scraper-A-Complete-ETL-Process)
 * [Amazon Web Scraping y Clusterizacion con R](https://github.com/eocode/Amazon-Web-Scraping-y-Clusterizacion-con-R)
 * [Analizando una base de datos de Peliculas con PostgreSQL y Tableau](https://github.com/eocode/Proyecto-de-Peliculas-Data-Science-con-PostgreSQL)
+* [Practicas de modelos estadístico con Python](https://github.com/eocode/Practicas-de-estadistica-con-Python)
 
 # Prácticas con Python
 
