@@ -2,38 +2,38 @@
 # Programación en R <!-- omit in toc -->
 
 ## Tabla de Contenido<!-- omit in toc -->
-- [Introducción](#introducci%c3%b3n)
+- [Introducción](#introducción)
   - [Revoluciones industriales](#revoluciones-industriales)
   - [Big Data](#big-data)
-- [Introducción a R](#introducci%c3%b3n-a-r)
-- [Preparación del entorno](#preparaci%c3%b3n-del-entorno)
+- [Introducción a R](#introducción-a-r)
+- [Preparación del entorno](#preparación-del-entorno)
 - [Tidiverse a libary for DataScience](#tidiverse-a-libary-for-datascience)
-- [Introducción a R](#introducci%c3%b3n-a-r-1)
-  - [Primeros cálculos con R](#primeros-c%c3%a1lculos-con-r)
+- [Introducción a R](#introducción-a-r-1)
+  - [Primeros cálculos con R](#primeros-cálculos-con-r)
   - [Tipos de datos con R](#tipos-de-datos-con-r)
     - [Vectores](#vectores)
     - [Listas](#listas)
     - [Matrices](#matrices)
   - [Vectores](#vectores-1)
   - [Matrices](#matrices-1)
-  - [Operadores de comparación y ubicación de datos](#operadores-de-comparaci%c3%b3n-y-ubicaci%c3%b3n-de-datos)
+  - [Operadores de comparación y ubicación de datos](#operadores-de-comparación-y-ubicación-de-datos)
   - [Factores y listas](#factores-y-listas)
 - [EDA: Exploratory Data Analysis](#eda-exploratory-data-analysis)
-  - [Estadística](#estad%c3%adstica)
+  - [Estadística](#estadística)
   - [EDA](#eda)
-  - [Tipos de visualización en EDA](#tipos-de-visualizaci%c3%b3n-en-eda)
-  - [Interpretación del Boxplot](#interpretaci%c3%b3n-del-boxplot)
-  - [EDA En código](#eda-en-c%c3%b3digo)
-    - [Diagramas de dispersión](#diagramas-de-dispersi%c3%b3n)
-      - [Visualización de datos con ggplot](#visualizaci%c3%b3n-de-datos-con-ggplot)
+  - [Tipos de visualización en EDA](#tipos-de-visualización-en-eda)
+  - [Interpretación del Boxplot](#interpretación-del-boxplot)
+  - [EDA En código](#eda-en-código)
+    - [Diagramas de dispersión](#diagramas-de-dispersión)
+      - [Visualización de datos con ggplot](#visualización-de-datos-con-ggplot)
     - [Histogramas](#histogramas)
     - [Boxplot](#boxplot)
   - [Dplyr](#dplyr)
-  - [Gráficas de dispersión](#gr%c3%a1ficas-de-dispersi%c3%b3n)
-  - [Gráficas interactivas](#gr%c3%a1ficas-interactivas)
-- [Estadística con R](#estad%c3%adstica-con-r)
-  - [Protegiendonos de los peligros del promedio (Desviación estándar)](#protegiendonos-de-los-peligros-del-promedio-desviaci%c3%b3n-est%c3%a1ndar)
-  - [Estadística y visualización aplicada a análisis de datos de mercadeo.](#estad%c3%adstica-y-visualizaci%c3%b3n-aplicada-a-an%c3%a1lisis-de-datos-de-mercadeo)
+  - [Gráficas de dispersión](#gráficas-de-dispersión)
+  - [Gráficas interactivas](#gráficas-interactivas)
+- [Estadística con R](#estadística-con-r)
+  - [Protegiendonos de los peligros del promedio (Desviación estándar)](#protegiendonos-de-los-peligros-del-promedio-desviación-estándar)
+  - [Estadística y visualización aplicada a análisis de datos de mercadeo.](#estadística-y-visualización-aplicada-a-análisis-de-datos-de-mercadeo)
 - [Transformaciones y ajustes de datos](#transformaciones-y-ajustes-de-datos)
 - [Mejora de visualizaciones](#mejora-de-visualizaciones)
 - [R Markdown](#r-markdown)
@@ -75,6 +75,7 @@ Un científico de datos necesita tener los conocimientos de:
 https://es.r4ds.hadley.nz/
 https://myrbooksp.netlify.app/
 https://bookdown.org/jboscomendoza/r-principiantes4/
+https://bookdown.org/aquintela/EBE/
 
 Para la ciencia de datos es común utilizar dos lenguajes: **R y Python**.
 
