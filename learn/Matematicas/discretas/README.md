@@ -35,6 +35,17 @@
   - [Matriz de adyacencia](#matriz-de-adyacencia)
   - [Matriz de incidencia](#matriz-de-incidencia)
   - [Ejercicio con matrices](#ejercicio-con-matrices)
+- [Arboles](#arboles)
+  - [Tipos de árboles:](#tipos-de-árboles)
+  - [Sub árboles, vértices terminales e internos](#sub-árboles-vértices-terminales-e-internos)
+  - [Árbol de expansión mínimo](#árbol-de-expansión-mínimo)
+  - [Árbol binario](#árbol-binario)
+  - [Recorrido de árboles](#recorrido-de-árboles)
+  - [Expresiones aritméticas](#expresiones-aritméticas)
+    - [Ejercicio](#ejercicio)
+    - [Ejercicio 2](#ejercicio-2)
+- [Algoritmos](#algoritmos)
+  - [Algoritmo de Prim](#algoritmo-de-prim)
 
 # Lógica
 ## ¿Qué es la lógica?
@@ -501,3 +512,184 @@ Grafo resultante
   <img src="img/57.png">
 </div>
 
+# Arboles
+
+Los árboles son un tipo de gráfica que tiene muchas aplicaciones en **Machine Learning, Ciencias de la computación y en la programación.** Un árbol representa una **estructura de datos**.
+
+<div align="center">
+  <img src="img/58.png">
+</div>
+
+**Los Árboles nos permiten organizar o estructurar información.** Si tenemos un nodo A y un nodo B, solo existirá una conexión entre ellos.
+
+<div align="center">
+  <img src="img/59.png">
+</div>
+
+Los árboles son usados frecuentemente para expresar **relaciones de jerarquía.**
+
+<div align="center">
+  <img src="img/60.png">
+</div>
+
+<div align="center">
+  <img src="img/61.png">
+</div>
+
+## Tipos de árboles:
+
+* **Libre:** no es claro cual es el nodo principal o nodo raíz dentro de este árbol.
+
+<div align="center">
+  <img src="img/62.png">
+</div>
+
+
+* **Raíz:** se ve una estructura clara de los nodos. Todos parten de un mismo nodo.
+
+<div align="center">
+  <img src="img/63.png">
+</div>
+
+* **Expansión:** es similar al grafo empoderado, la conexión entre los nodos tiene un recurso asociado.
+
+<div align="center">
+  <img src="img/64.png">
+</div>
+
+* **Binario:** en cada uno de los niveles del árbol se tiene un máximo de dos conexiones.
+
+<div align="center">
+  <img src="img/65.png">
+</div>
+
+
+Dentro de los árboles **existe el nivel y la altura**, los valores de estos cambiaran dependiendo del nodo que tomes como raíz.
+
+* El nivel de un árbol es igual al **máximo nivel posible de un nodo**, el nivel de un nodo se define por el número de conexiones entre el nodo y la raíz más uno.
+* **La altura de un árbol es igual al nivel del árbol más el nivel raíz**.
+
+<div align="center">
+  <img src="img/66.png">
+</div>
+
+## Sub árboles, vértices terminales e internos
+
+Un **subárbol** es una parte de un árbol que hace parte de un árbol más grande.
+
+Un **vértice terminal** es aquel nodo que ya no tiene más hijos o donde el árbol ya no se expande. 
+
+Por otro lado, los **vértices internos** son aquellos que tienen hijos.
+
+<div align="center">
+  <img src="img/67.png">
+</div>
+
+## Árbol de expansión mínimo
+
+Un árbol de expansión mínimo es aquel árbol que **partiendo de una raíz** pueda **conectar todos los vértices buscando los caminos de menor costo.** 
+
+Para sacar el costo mínimo del árbol solo basta con ir sumando el valor que tiene cada conexión nivel por nivel, luego sumar todos los niveles.
+
+<div align="center">
+  <img src="img/68.png">
+</div>
+
+## Árbol binario
+
+Un árbol binario **es aquel donde tenemos un máximo de dos hijos** por cada uno de los vértices.
+
+<div align="center">
+  <img src="img/69.png">
+</div>
+
+Existen dos tipos de arboles binarios: 
+
+* El **árbol binario completo** donde cada uno de los vértices tiene sus dos ramas bien definidas o no tiene ninguna.
+* El **árbol binario lleno** es aquel donde todos los nodos **llegan a un mismo punto y al final todas sus ramas son terminales.**
+
+<div align="center">
+  <img src="img/70.png">
+</div>
+
+El árbol degenerado es donde la mayoría de sus nodos tienen solo un hijo.
+
+<div align="center">
+  <img src="img/71.png">
+</div>
+
+> Un árbol binario es una estructura recursiva pues puede llamarse a si misma, puedes descomponerlo en partes más pequeñas.
+
+<div align="center">
+  <img src="img/72.png">
+</div>
+
+## Recorrido de árboles
+
+<div align="center">
+  <img src="img/73.png">
+</div>
+
+Al momento de representar un árbol debemos elegir **el orden en el cual vamos a recorrer dicho árbol.** Dependiendo de qué orden se elija será la forma en que se va a representar el árbol.
+
+Existen tres formas de recorrer un árbol:
+
+* **Pre orden**: se inicia leyendo el nodo raíz, luego se pasa al hijo izquierdo y por ultimo al derecho.
+* **In orden**: inicia leyendo el hijo izquierdo, luego la raíz y por último el hijo derecho.
+* **Pos orden**: comienza por el hijo izquierdo para posteriormente ir al hijo derecho y por último al nodo raíz.
+
+<div align="center">
+  <img src="img/74.png">
+</div>
+
+## Expresiones aritméticas
+
+Los árboles también nos sirven para **representar expresiones aritméticas**, para ello debe cumplir con las siguientes condiciones:
+
+* Los vértices terminales son operandos.
+* Los vértices internos son operadores.
+* La raíz siempre debe ser un operador.
+
+Así como vimos las diferentes formas para recorrer un árbol, las expresiones aritméticas tienen también sus propias formas:
+
+* **Pre fijo**: raíz-izquierda-derecha
+* **In fijo**: izquierda-raíz-derecha
+* **Pos fijo**: izquierda-derecha-raíz
+
+<div align="center">
+  <img src="img/75.png">
+</div>
+
+### Ejercicio
+
+<div align="center">
+  <img src="img/76.png">
+</div>
+
+<div align="center">
+  <img src="img/77.png">
+</div>
+
+### Ejercicio 2
+
+<div align="center">
+  <img src="img/78.png">
+</div>
+
+<div align="center">
+  <img src="img/79.png">
+</div>
+
+# Algoritmos
+
+> Un algoritmo es una serie de pasos que nosotros seguiremos de acuerdo con una lógica.
+
+## Algoritmo de Prim
+
+El algoritmo de Prim **nos sirve para conectar todos los vértices a través de un árbol con el mínimo coste.** Para calcular el coste total del árbol debemos sumar el valor de todas las aristas conectadas.
+
+El algoritmo de Prim nos indica que este se **termina cuando hemos conectado todos los vértices con n-1 aristas**, donde n es el número de vértices.
+
+<div align="center">
+  <img src="img/80.png">
+</div>
