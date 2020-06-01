@@ -1,29 +1,503 @@
 # Matemáticas discretas<!-- omit in toc -->
 
 ## Tabla de Contenido<!-- omit in toc -->
-- [Lógica](#l%c3%b3gica)
-  - [¿Qué es la lógica?](#%c2%bfqu%c3%a9-es-la-l%c3%b3gica)
-    - [¿Qué es una proposición o afirmación?](#%c2%bfqu%c3%a9-es-una-proposici%c3%b3n-o-afirmaci%c3%b3n)
+- [Lógica](#lógica)
+  - [¿Qué es la lógica?](#qué-es-la-lógica)
+  - [¿Qué es una proposición o afirmación?](#qué-es-una-proposición-o-afirmación)
+  - [Conectores lógicos](#conectores-lógicos)
+  - [Tablas de verdad](#tablas-de-verdad)
+    - [Ejemplo de tabla de verdad](#ejemplo-de-tabla-de-verdad)
+  - [Circuitos lógicos](#circuitos-lógicos)
+    - [¿Qué es un circuito lógico?](#qué-es-un-circuito-lógico)
+    - [Ejercicios](#ejercicios)
+- [Teoría de conjuntos](#teoría-de-conjuntos)
+  - [Subconjuntos](#subconjuntos)
+    - [Conjuntos especiales](#conjuntos-especiales)
+  - [Operaciones entre conjuntos](#operaciones-entre-conjuntos)
+  - [Nomenclatura](#nomenclatura)
+  - [Representación gráfica de conjuntos](#representación-gráfica-de-conjuntos)
+    - [Unión](#unión)
+    - [Intersección](#intersección)
+    - [Resta](#resta)
+    - [Complemento](#complemento)
+  - [Ley de Morgan: Unión de conjuntos](#ley-de-morgan-unión-de-conjuntos)
+    - [1ra Ley](#1ra-ley)
+    - [Segunda Ley](#segunda-ley)
+    - [Comprobación gráfica](#comprobación-gráfica)
+    - [Propiedades y teoremas](#propiedades-y-teoremas)
+- [Teoría de grafos](#teoría-de-grafos)
+  - [Tipos de grafos](#tipos-de-grafos)
+  - [Grados, caminos, cadenas y ciclos](#grados-caminos-cadenas-y-ciclos)
+    - [¿Qué es el grado de un vértice?](#qué-es-el-grado-de-un-vértice)
+  - [Caminos y ciclos eulerianos](#caminos-y-ciclos-eulerianos)
+  - [Caminos y ciclos hamiltonianos](#caminos-y-ciclos-hamiltonianos)
+    - [Ejemplos de gráficos no hamiltonianos](#ejemplos-de-gráficos-no-hamiltonianos)
+  - [Matriz de adyacencia](#matriz-de-adyacencia)
+  - [Matriz de incidencia](#matriz-de-incidencia)
+  - [Ejercicio con matrices](#ejercicio-con-matrices)
 
 # Lógica
 ## ¿Qué es la lógica?
 
-Es todo lo que tu cerebro piensa con base a lo que para ti es coherente, está estructurado y tiene sentido.
+Es todo lo que tu cerebro piensa con base a lo que para ti es:
+* Coherente, 
+* Está estructurado 
+* Tiene sentido.
 
-### ¿Qué es una proposición o afirmación?
+> **Lógica proposicional**, que como su nombre lo indica se basa en proposiciones o afirmaciones.
 
-No es más que una sentencia, oración o enunciado el cual puede ser verdadero o falso. Ni las pregunta, las órdenes y los deseos contaran como proposiciones.
+## ¿Qué es una proposición o afirmación?
 
-En la lógica proposicional, nos interesa saber la relación que hay entre estas.
+No es más que una sentencia, **oración o enunciado al cual le puedes dar algún de verdadero o falso**. Ni las preguntas, las órdenes y los deseos contaran como proposiciones.
+
+<div align="center">
+  <img src="img/1.png">
+</div>
+
+> En la lógica proposicional, nos interesa saber la relación que hay entre estas.
 
 Existen dos tipos de proposiciones, las simples y las compuestas:
 
-Las proposiciones simples tienen un valor de verdadero o falso, son representadas por la letra p, q, r, s, t.
-Las proposiciones compuestas como su nombre lo indica están compuestas por proposiciones simples. Estas proposiciones necesitan conectores lógicos para unir las diferentes proposiciones simples que la integren.
+* Las **proposiciones simples** tienen un valor de **verdadero o falso**, son representadas por la letra p, q, r, s, t.
+* Las **proposiciones compuestas** como su nombre lo indica están compuestas por proposiciones simples. 
+  
+Estas proposiciones **necesitan conectores lógicos** para unir las diferentes proposiciones simples que la integren.
 
-Existen múltiples conectores lógicos, entre ellos se encuentran la conjunción, disyunción, implicación, equivalencia y negación.
+Existen múltiples conectores lógicos, entre ellos se encuentran la **conjunción, disyunción, implicación, equivalencia y negación.**
 
 <div align="center">
   <img src="img/conectores.png">
-  <small><p>Conectores lógicos</p></small>
 </div>
+
+## Conectores lógicos
+
+**El valor de verdad.** Así como una proposición simple puede tener un valor de verdadero o falso, las proposiciones complejas tienen un valor de verdad el cual puede ser verdadero o falso.
+
+**Las opciones de valor de verdad** de una proposición compleja van a depender del numero de proposiciones simples que contenga
+
+> Una forma rápida de calcular el numero de opciones es elevando 2 al número de proposiciones simples que contenga.
+
+<div align="center">
+  <img src="img/2.png">
+</div>
+
+Esto nos servirá para evaluar una tabla de verdad, la cual nos va a mostrar el valor de verdad de una proposición compuesta.
+
+> La tabla de verdad de una **Conjunción** nos muestra que, para que el valor de verdad de una conjunción sea verdadero ambas proposiciones simples deben ser verdaderas, si alguna es falsa o ambas son falsas entonces el valor de verdad será falso.
+
+<div align="center">
+  <img src="img/3.png">
+</div>
+
+> Para **la Disyunción débil** si una de las proposiciones simples es verdadera entonces el valor de verdad será verdadero, si todas las proposiciones simples son falsas entonces el valor de verdad será falso. 
+
+<div align="center">
+  <img src="img/4.png">
+</div>
+
+> Por otro lado, la **Disyunción fuerte** va a tener su valor de verdad verdadero solo cuando una de las proposiciones sea verdadera y la otra falsa, de otro modo el valor de verdad será falso.
+
+<div align="center">
+  <img src="img/5.png">
+</div>
+
+>El valor de verdad de un **Condicional** solamente será falso cuando la primera preposición sea verdadera y la segunda sea falsa, para los demás casos el valor de verdad será verdadero.
+
+<div align="center">
+  <img src="img/6.png">
+</div>
+
+> **Bicondicional** tendrá valor de verdad verdadero solo cuando ambas preposiciones tengan el mismo valor de verdad, si alguna es falsa y la otra es verdadera entonces el valor de verdad de una tabla Bicondicional será falso.
+
+<div align="center">
+  <img src="img/7.png">
+</div>
+
+> Obtener el valor de verdad de la **Negación** es bastante fácil, si la preposición era verdadera entonces pasara a ser falso y viceversa.
+
+<div align="center">
+  <img src="img/8.png">
+</div>
+
+<div align="center">
+  <img src="img/9.png">
+</div>
+
+## Tablas de verdad
+
+<div align="center">
+  <img src="img/10.png">
+</div>
+
+<div align="center">
+  <img src="img/11.png">
+</div>
+
+<div align="center">
+  <img src="img/12.png">
+</div>
+
+### Ejemplo de tabla de verdad
+
+<div align="center">
+  <img src="img/13.png">
+</div>
+
+Lo primero que vamos a hacer para este ejercicio es identificar los conectores lógicos que se utilizan en nuestra primera proposición compleja de nuestro problema, luego anotaremos sus tablas de verdad para que nos sirvan de ayuda.
+
+Para encontrar el valor de verdad en una proposición compuesta necesitas empezar a descomponerla en pequeñas partes y ayudarte de las tablas de verdad de los conectores lógicos. 
+
+## Circuitos lógicos
+
+### ¿Qué es un circuito lógico?
+
+Es una serie de elementos que cumple las leyes de la lógica y que nos permite representar proposiciones complejas, cumpliendo las leyes de los circuitos eléctricos.
+
+<div align="center">
+  <img src="img/14.png">
+</div>
+
+En un circuito eléctrico tenemos un generador que proporcionara energía a, por ejemplo, una bombilla. En este caso la energía pasara libremente siempre y cuando los interruptores que conformen dicho circuito estén todos cerrados.
+
+<div align="center">
+  <img src="img/15.png">
+</div>
+
+Así como en la lógica vemos que las **proposiciones pueden tener un valor de verdadero o falso**, **en un circuito un interruptor puede estar cerrado o abierto**, esto es igual que representar a verdadero como 1 y a falso como 0.
+
+> Dentro de los circuitos, **el conector lógico de Conjunción es igual a un circuito en serie**. 
+
+<div align="center">
+  <img src="img/16.png">
+</div>
+
+> Por otro lado, **la Disyunción se representa como un circuito en paralelo.**
+
+<div align="center">
+  <img src="img/17.png">
+</div>
+
+<div align="center">
+  <img src="img/18.png">
+</div>
+
+<div align="center">
+  <img src="img/19.png">
+</div>
+
+### Ejercicios
+
+<div align="center">
+  <img src="img/20.png">
+</div>
+
+<div align="center">
+  <img src="img/21.png">
+</div>
+
+# Teoría de conjuntos
+
+"Un conjunto lo podemos definir como un grupo de objetos, personas, o elementos unidos por una misma característica como por ejemplo sería el conjunto de números pares. 
+
+> Dentro de un conjunto no importa el orden de los elementos ni si se repite alguno de ellos.
+
+**En conjuntos es muy importante hablar sobre la relación de pertenencia**, esto indica si un objeto pertenece a algún conjunto, es representada por el símbolo **∈**. Mientras que cuando un objeto no pertenece a algún conjunto, usaremos el símbolo **∉**.
+
+<div align="center">
+  <img src="img/22.png">
+</div>
+
+Podemos determinar un conjunto de dos diferentes formas:
+
+* **Por extensión:** usada cuando conocemos cada elemento individualmente dentro del conjunto, nombramos cada elemento que integra el conjunto.
+* **Por compresión:** nos sirve para describir solamente las cualidades de los elementos que integran el conjunto.
+
+<div align="center">
+  <img src="img/23.png">
+</div>
+
+Por lo general cuando hablamos de conjuntos finitos los determinamos por extensión a menos que sean muy grandes; los conjuntos infinitos siempre vas a ser determinados por compresión.
+
+> La cardinalidad es el número de elementos que integran un conjunto.
+
+Un conjunto puede incluir dentro otro conjunto, a este ultimo se le llama subconjunto.
+
+<div align="center">
+  <img src="img/24.png">
+</div>
+
+## Subconjuntos
+
+<div align="center">
+  <img src="img/25.png">
+</div>
+
+### Conjuntos especiales
+
+Al momento de hablar de conjuntos es necesario saber que existen algunos conjuntos especiales. 
+
+* El primero es el **conjunto nulo**, es un conjunto donde no hay ningún elemento.
+* Un **conjunto unitario** es integrado solo por un único elemento. 
+* Por otro lado, el **conjunto universal** es aquel que este compuesto por todos los conjuntos que estés manejando.
+
+<div align="center">
+  <img src="img/26.png">
+</div>
+
+## Operaciones entre conjuntos
+
+* Dentro de las operaciones entre conjuntos podemos encontrar la **Unión**, la cual representa **la adición de un conjunto A con el conjunto B.**
+* La **Intersección** de dos conjuntos A y B son aquellos elementos que se encuentran tanto en A como en B.
+* En la **Resta de conjuntos** a diferencia de la unión y la intersección, si importa el orden de los conjuntos, por ejemplo, la Resta de un conjunto B a un conjunto A retira los elementos que contiene B que se encuentran en el conjunto A.
+* Por ultimo el **Complemento** de un conjunto son todos los elementos que le faltan al conjunto para volverse el conjunto universal.
+
+<div align="center">
+  <img src="img/27.png">
+</div>
+
+## Nomenclatura
+
+* ⋃ Unión
+* ⋂ Intersección
+* – Resta
+* ∈ Pertenencia
+* ∉ No es un elemento de
+* ⊂ Subconjunto estricto
+* ⊃ Superconjunto estricto
+* |A| Cardinalidad
+* #A Cardinalidad
+* Cª Complemento
+
+## Representación gráfica de conjuntos
+
+Cuando representamos gráficamente algún conjunto **utilizamos figuras geométricas como los círculos, cuadrados o triángulos.**
+
+Representar gráficamente los conjuntos nos sirve mucho al momento de identificar las operaciones entre conjuntos.
+
+El complemento de algún conjunto también puede ser expresado como la resta del conjunto al conjunto universal.
+
+<div align="center">
+  <img src="img/28.png">
+</div>
+
+### Unión
+
+<div align="center">
+  <img src="img/29.png">
+</div>
+
+### Intersección
+
+<div align="center">
+  <img src="img/30.png">
+</div>
+
+### Resta
+
+<div align="center">
+  <img src="img/31.png">
+</div>
+
+### Complemento
+
+<div align="center">
+  <img src="img/32.png">
+</div>
+
+## Ley de Morgan: Unión de conjuntos
+
+> Las leyes de Morgan establecen cuál es el resultado de negar una disyunción y una conjunción de proposiciones o variables proposicionales.
+
+Representar gráficamente los conjuntos también nos sirve para **demostrar propiedades que se dan entre los conjuntos.** Vamos a ver si el complemento de la unión de dos conjuntos es igual a la unión del complemento de estos dos conjuntos, ¿Qué pasa si en lugar de buscar la unión de los complementos buscamos la intersección de estos?
+
+<div align="center">
+  <img src="img/33.png">
+</div>
+
+### 1ra Ley
+
+El complemento de un producto de "n" variables es igual a la suma de los complementos de "n" variables. En otras palabras el complemento de dos o más variables a las que se les aplica la operación AND es equivalente a aplicar la operación OR.
+
+<div align="center">
+  <img src="img/34.png">
+</div>
+
+### Segunda Ley
+
+El complemento de una suma de "n" variables es igual al producto de los complementos de "n" variables. En otras palabras el complemento de dos o más variables a las que se les aplica la operación OR es equivalente a aplicar la operación AND.
+
+<div align="center">
+  <img src="img/35.png">
+</div>
+
+### Comprobación gráfica
+
+<div align="center">
+  <img src="img/36.png">
+</div>
+
+### Propiedades y teoremas
+
+<div align="center">
+  <img src="img/37.png">
+</div>
+
+<div align="center">
+  <img src="img/38.png">
+</div>
+
+# Teoría de grafos
+
+El concepto básico de un gráfico es, un modelo matemático que sirve para representar las **relaciones entre objetos de un conjunto**.
+
+> **Un gráfico o grafo es un conjunto de vértices, o nodos, que están conectados a través de aristas, líneas o conexiones.**
+
+<div align="center">
+  <img src="img/39.png">
+</div>
+
+## Tipos de grafos
+
+* **Nodo simple** donde tenemos los nodos y las conexiones gracias a las cuales nos podemos mover fácilmente a través del grafo.
+* **El Multígrafo** tiene varias conexiones entre dos nodos, permitiendo tener dos rutas distintas para estos nodos.
+* **Un Pseudografo** al igual que el multígrafo puede tener múltiples conexiones entre dos nodos y, además, una de estas conexiones puede partir y terminar en el mismo nodo.
+* **El Grafo Ponderado** cuenta con un valor dentro de las conexiones, esto puede verse como el costo, o recurso, de una ruta de nodos.
+* Por último, **el Grafo Dirigido** establece una dirección en las conexiones, **esta dirección se representa con una flecha**
+* **El Multígrafo Dirigido** que cuenta con dirección en las conexiones y puede haber múltiples conexiones entre dos nodos.
+
+<div align="center">
+  <img src="img/40.png">
+</div>
+
+## Grados, caminos, cadenas y ciclos
+
+### ¿Qué es el grado de un vértice?
+
+> Es el número de aristas que tiene un nodo con otros nodos.
+
+<div align="center">
+  <img src="img/41.png">
+</div>
+
+
+* Existe una propiedad matemática que nos dice que **la sumatoria de todos los grados de los vértices de un grafo es igual al doble de las aristas.**
+
+<div align="center">
+  <img src="img/42.png">
+</div>
+
+* Otra propiedad nos indica que **si tenemos más de dos vértices con grado impar es imposible recorrer de una sola vez todo el grafo sin repetir un camino.**
+
+<div align="center">
+  <img src="img/43.png">
+</div>
+
+* **Una cadena es una sucesión de vértices y de conexiones entre sí.**
+
+<div align="center">
+  <img src="img/44.png">
+</div>
+
+* Un camino a diferencia de una cadena es una **sucesión de vértices y conexiones donde no puedes repetir ningún vértice ni conexión** 
+
+<div align="center">
+  <img src="img/45.png">
+</div>
+
+* **En un ciclo el vértice de inicio es igual al vértice donde termina.**
+
+<div align="center">
+  <img src="img/46.png">
+</div>
+
+* La cadena cerrada es lo mismo solo que **el inicio y final son iguales, dónde inicia termina**
+
+<div align="center">
+  <img src="img/48.png">
+</div>
+
+* **Un grafo conexo es aquel donde todos los nodos están unidos entre sí.**
+
+<div align="center">
+  <img src="img/47.png">
+</div>
+
+## Caminos y ciclos eulerianos
+
+Un **camino** es una sucesión de vértices y conexiones donde no pasas dos veces por el mismo vértice, y un **ciclo** es una sucesión de vértices y conexiones donde el nodo de inicio es igual al nodo final.
+
+> Pues un **Camino Euleriano** es aquel camino que recorre todo el grafo sin repetir una conexión, esto se cumplirá siempre y cuando un grafo no tenga más de dos vértices con grado impar.
+
+> Un **Ciclo Euleriano** es aquel ciclo que recorre todo el grafo sin repetir una conexión, este se cumplirá solo cuando todos los vértices del grafo son grado par.
+
+<div align="center">
+  <img src="img/49.png">
+</div>
+
+## Caminos y ciclos hamiltonianos
+
+A diferencia de los caminos y ciclos eulerianos, los caminos y ciclos hamiltonianos **buscaran recorrer los nodos una sola vez sin importar el camino que utilicemos.**
+
+Para afirmar que hay **un camino hamiltoniano se debe cumplir la condición donde la suma del grado de dos vértices es mayor o igual al número de vértices menos uno**, de otra forma puede que exista el camino hamiltoniano, pero no se podrá afirmar.
+
+<div align="center">
+  <img src="img/50.png">
+</div>
+
+### Ejemplos de gráficos no hamiltonianos
+
+> Si hay un camino hamiltoniano, pero no un ciclo, entonces el grafo no es hamiltoniano.
+
+<div align="center">
+  <img src="img/51.png">
+</div>
+
+## Matriz de adyacencia
+
+Dentro de la matriz **vamos a representar cada fila y columna con un nodo**, si existe una conexión entre dos nodos entonces colocaremos un uno en la celda correspondiente, si no existe una conexión colocaremos un cero. Si algún nodo tiene una conexión consigo mismo entonces colocaremos un 2.
+
+> Al sumar todas las filas nos dará como resultado el grado de cada vértice.
+
+**La matriz de adyacencia es una de las representaciones más utilizadas.**
+
+<div align="center">
+  <img src="img/52.png">
+</div>
+
+## Matriz de incidencia
+
+**Antes de construir una matriz de incidencia deberás darle un nombre o identificador a cada conexión de tu grafo.** Estas conexiones van a representar las columnas de tu matriz y los nodos van a representar las filas.
+
+Colocaremos un 1 en las celdas donde una conexión incida en un nodo, si no incide en el nodo entonces colocaremos un 0.
+
+<div align="center">
+  <img src="img/53.png">
+</div>
+
+<div align="center">
+  <img src="img/54.png">
+</div>
+
+## Ejercicio con matrices
+
+<div align="center">
+  <img src="img/56.png">
+</div>
+
+Identificar si la matriz es simetrica o no
+
+* Grafo dirigido = matriz asimétrica
+* Grafo no dirigido = matriz simétrica
+
+En la matriz de adyacencia asimétrica, si sumamos las filas de cada nodo nos dirá la cantidad de conexiones que inciden en el nodo, y si miramos las columna nos dirá sobre que nodo inciden los nodos.
+
+<div align="center">
+  <img src="img/55.png">
+</div>
+
+Grafo resultante
+
+<div align="center">
+  <img src="img/57.png">
+</div>
+
