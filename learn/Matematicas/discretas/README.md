@@ -46,6 +46,10 @@
     - [Ejercicio 2](#ejercicio-2)
 - [Algoritmos](#algoritmos)
   - [Algoritmo de Prim](#algoritmo-de-prim)
+  - [Algoritmo Dijkstra](#algoritmo-dijkstra)
+  - [Algoritmo de Kruskal](#algoritmo-de-kruskal)
+  - [Algoritmo de Fleury](#algoritmo-de-fleury)
+  - [Algoritmo de flujo máximo](#algoritmo-de-flujo-máximo)
 
 # Lógica
 ## ¿Qué es la lógica?
@@ -692,4 +696,107 @@ El algoritmo de Prim nos indica que este se **termina cuando hemos conectado tod
 
 <div align="center">
   <img src="img/80.png">
+</div>
+
+<div align="center">
+  <img src="img/81.png">
+</div>
+
+<div align="center">
+  <img src="img/82.png">
+</div>
+
+## Algoritmo Dijkstra
+
+El algoritmo de Dijkstra **va a buscar la ruta optima o de menor coste entre dos vértices.**
+
+Los pasos de este algoritmo son los siguientes:
+
+* Asignar el valor infinito a cada nodo que no ha sido visitado.
+* Mantener un registro de los nodos visitados.
+* Calcular la distancia a cada nuevo nodo sumando la distancia anterior.
+* Si la nueva distancia que se calculo es menor que la anterior entonces reemplazar en el nodo, sino dejar la anterior.
+* Se finalizará cuando se llega al nodo final.
+
+<div align="center">
+  <img src="img/83.png">
+</div>
+
+<div align="center">
+  <img src="img/84.png">
+</div>
+
+<div align="center">
+  <img src="img/85.png">
+</div>
+
+<div align="center">
+  <img src="img/86.png">
+</div>
+
+<div align="center">
+  <img src="img/87.png">
+</div>
+
+## Algoritmo de Kruskal
+
+**El algoritmo de Kruskal al igual que el algoritmo de Prim sirve para buscar el árbol de expansión mínimo**, la diferencia es que el algoritmo de Kruskal inicia seleccionando la arista de menor valor y después en cada iteración se agrega la arista de menor valor del conjunto disponible.
+
+<div align="center">
+  <img src="img/88.png">
+</div>
+
+<div align="center">
+  <img src="img/90.png">
+</div>
+
+<div align="center">
+  <img src="img/89.png">
+</div>
+
+## Algoritmo de Fleury
+
+El algoritmo de Fleury **va a encontrar un ciclo euleriano**. Recordemos que un ciclo euleriano es un ciclo donde **inicias y terminas en el mismo punto**, pasando por todas las aristas una sola vez.
+
+Los pasos que seguir son:
+
+* Verificar grado del grafo.
+* Realizar un circuito cerrado.
+* En cada nueva iteración realizar un nuevo camino cerrado visitando aristas que no han sido visitadas.
+* Reemplazar cada nuevo circuito en el inicial hasta visitar todas las aristas.
+
+Para grados **pares**
+
+<div align="center">
+  <img src="img/91.png">
+</div>
+
+<div align="center">
+  <img src="img/92.png">
+</div>
+
+Dependiendo del grado, unicamente pueden aparecer n/2 veces
+
+<div align="center">
+  <img src="img/93.png">
+</div>
+
+## Algoritmo de flujo máximo
+
+Habrá ocasiones donde no vamos a querer el coste mínimo, sino buscar el flujo máximo, para esas ocasiones nos servirá este algoritmo. **Para este algoritmo usaremos un grafo dirigido empoderado.**
+
+Los pasos del algoritmo son los siguientes:
+
+* Direccionar los flujos e iniciar en ceros.
+* Obtener trayectorias buscando el mayor flujo.
+* Escoger el menor flujo de la trayectoria, esto es la arista de menor valor dentro de tu camino que seleccionaste.
+* Actualizar el gráfico con las capacidades mínimas, ósea, restando el valor de la arista del anterior paso a cada una de las aristas del camino.
+* Buscar nueva trayectoria o camina en aumento y repetir hasta que no existan más.
+
+<div align="center">
+  <img src="img/94.png">
+</div>
+
+<div align="center">
+  <img src="img/95.png">
 </div>
