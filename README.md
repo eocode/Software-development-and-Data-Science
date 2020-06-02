@@ -49,6 +49,7 @@ Ruta de aprendizaje con los lenguajes Python, R, Scala y Bases de datos
 * [Probabilidad y Estadística](/learn/Matematicas/pye)
 * [Matemáticas Discretas](/learn/Matematicas/discretas)
 * [Ecuaciones diferenciales](/learn/Matematicas/diferenciales)
+* [Matemáticas para IA](/learn/Matematicas/matesparaia)
 
 ## Lenguajes y programación
 * [Python](/learn/Python)

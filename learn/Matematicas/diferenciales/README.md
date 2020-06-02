@@ -21,6 +21,7 @@
     - [Saber si una ecuación es separable](#saber-si-una-ecuación-es-separable)
   - [Método de sustitución lineal](#método-de-sustitución-lineal)
     - [Ejemplo](#ejemplo-1)
+    - [Ejemplo de sustitución lineal](#ejemplo-de-sustitución-lineal)
 
 # Introducción
 
@@ -212,4 +213,14 @@ Al final obtendremos una nueva ecuación separable, la cual ya sabemos resolver.
 
 <div align="center">
   <img src="img/21.png">
+</div>
+
+### Ejemplo de sustitución lineal
+
+<div align="center">
+  <img src="img/22.png">
+</div>
+
+<div align="center">
+  <img src="img/23.png">
 </div>
