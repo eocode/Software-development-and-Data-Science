@@ -2,25 +2,28 @@
 # Entrenamiento Google Cloud Platform <!-- omit in toc -->
 
 ## Tabla de Contenido<!-- omit in toc -->
-- [Introducción](#introducci%c3%b3n)
+- [Introducción](#introducción)
   - [Laboratorios oficiales de Google](#laboratorios-oficiales-de-google)
 - [Computo en la nube](#computo-en-la-nube)
-    - [La nube pública](#la-nube-p%c3%bablica)
-    - [¿Por qué Google?](#%c2%bfpor-qu%c3%a9-google)
-  - [Opciones de cómputo en la nube](#opciones-de-c%c3%b3mputo-en-la-nube)
+    - [La nube pública](#la-nube-pública)
+    - [¿Por qué Google?](#por-qué-google)
+  - [Opciones de cómputo en la nube](#opciones-de-cómputo-en-la-nube)
   - [Maquinas virtuales (Compute Engine)](#maquinas-virtuales-compute-engine)
     - [Laboratorios](#laboratorios)
   - [Plataforma como servicio (App Engine)](#plataforma-como-servicio-app-engine)
     - [Contenedores](#contenedores)
       - [Docker](#docker)
     - [Laboratorios](#laboratorios-1)
-  - [Cómputo contenerizado (App Engine Flex)](#c%c3%b3mputo-contenerizado-app-engine-flex)
+  - [Cómputo contenerizado (App Engine Flex)](#cómputo-contenerizado-app-engine-flex)
     - [Acceso a VPC](#acceso-a-vpc)
     - [Sabores de App Engine](#sabores-de-app-engine)
   - [Serverless](#serverless)
     - [Serverles y contenedores](#serverles-y-contenedores)
     - [Cloud functions](#cloud-functions)
       - [Evento detonador (Triggers)](#evento-detonador-triggers)
+- [Continous Integration](#continous-integration)
+- [Kubernetes](#kubernetes)
+- [Machine learning](#machine-learning)
 
 
 # Introducción
@@ -384,3 +387,9 @@ Pool de conexiones a una Cloud functions, para que reutilize llamadas a la base 
 https://firebase.google.com/docs/functions
 
 https://cloud.google.com/functions
+
+# Continous Integration
+
+# Kubernetes
+
+# Machine learning

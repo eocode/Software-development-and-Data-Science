@@ -51,6 +51,10 @@
     - [Ejemplo](#ejemplo-4)
   - [Ecuación diferencial no homogenea](#ecuación-diferencial-no-homogenea)
     - [Coeficientes indeterminados](#coeficientes-indeterminados)
+    - [Ejemplo](#ejemplo-5)
+    - [Variación de parametros (Determinante Wronskiano)](#variación-de-parametros-determinante-wronskiano)
+    - [Ejemplo](#ejemplo-6)
+  - [Ejercicios](#ejercicios-1)
 
 # Introducción
 
@@ -1126,3 +1130,177 @@ El proceso para resolver una ecuación no homogénea es:
 
 ### Coeficientes indeterminados
 
+Obtenemos la solución general
+
+<div align="center">
+  <img src="img/152.png">
+</div>
+
+Para la solución particular
+
+<div align="center">
+  <img src="img/153.png">
+</div>
+
+Los coeficientes indeterminados ya los tenemos
+
+<div align="center">
+  <img src="img/154.png">
+</div>
+
+Tenemos nuestra solución particular
+
+<div align="center">
+  <img src="img/156.png">
+</div>
+
+### Ejemplo
+
+<div align="center">
+  <img src="img/157.png">
+</div>
+
+Solución general para la ecuación homogenea
+
+<div align="center">
+  <img src="img/158.png">
+</div>
+
+Para la solución particular y realizamos nuestras dobles derivadas
+
+<div align="center">
+  <img src="img/160.png">
+</div>
+
+Sustituimos la primera y segunda derivada en nuestra ecuación inicial y simplificamos
+
+<div align="center">
+  <img src="img/161.png">
+</div>
+
+La igualdad debe cumplir que lo de la izquierda es = a lo de la derecha, resolvemos el sistema de ecuaciones
+
+El coeficiente de seno y conseno debe ser igual al del otro lado
+
+<div align="center">
+  <img src="img/162.png">
+</div>
+
+Ahora solo tenemos que hayar la solución general
+
+<div align="center">
+  <img src="img/163.png">
+</div>
+
+Ejemplo con una exponencial
+
+https://www.youtube.com/watch?v=-tsBMdiZ7oc
+
+### Variación de parametros (Determinante Wronskiano)
+
+<div align="center">
+  <img src="img/164.png">
+</div>
+
+Para encontrar u1 y u2 necesitamos encontrar lo siguiente
+
+w wronskiano
+
+<div align="center">
+  <img src="img/165.png">
+</div>
+
+El wronskiano es un determinante de la matriz de 2x2
+
+<div align="center">
+  <img src="img/166.png">
+</div>
+
+### Ejemplo
+
+<div align="center">
+  <img src="img/167.png">
+</div>
+
+Intercambio de constantes c x u
+
+<div align="center">
+  <img src="img/168.png">
+</div>
+
+Obtenemos el Wrowskiano
+
+<div align="center">
+  <img src="img/169.png">
+</div>
+
+Obtenemos el Wrowskiano
+
+<div align="center">
+  <img src="img/170.png">
+</div>
+
+Encontramos u1 y u2
+
+<div align="center">
+  <img src="img/171.png">
+</div>
+
+Obtenemos u1
+
+<div align="center">
+  <img src="img/172.png">
+</div>
+
+<div align="center">
+  <img src="img/173.png">
+</div>
+
+Para u2
+
+<div align="center">
+  <img src="img/174.png">
+</div>
+
+<div align="center">
+  <img src="img/175.png">
+</div>
+
+Ya tenemos todo para encontrar nuestra solución
+
+<div align="center">
+  <img src="img/176.png">
+</div>
+
+<div align="center">
+  <img src="img/177.png">
+</div>
+
+Encontramos la solución
+
+<div align="center">
+  <img src="img/178.png">
+</div>
+
+## Ejercicios
+
+<div align="center">
+  <img src="img/179.png">
+</div>
+
+<div align="center">
+  <img src="img/180.png">
+</div>
+
+<div align="center">
+  <img src="img/181.png">
+</div>
+
+Soluciones
+
+<div align="center">
+  <img src="img/ej4.jpg">
+</div>
+<div align="center">
+  <img src="img/ej5.jpg">
+</div>
