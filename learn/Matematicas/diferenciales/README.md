@@ -55,6 +55,8 @@
     - [Variación de parametros (Determinante Wronskiano)](#variación-de-parametros-determinante-wronskiano)
     - [Ejemplo](#ejemplo-6)
   - [Ejercicios](#ejercicios-1)
+- [Modelos matemáticos](#modelos-matemáticos)
+  - [Crecimiento poblacional](#crecimiento-poblacional)
 
 # Introducción
 
@@ -1303,4 +1305,50 @@ Soluciones
 </div>
 <div align="center">
   <img src="img/ej5.jpg">
+</div>
+
+# Modelos matemáticos
+
+Las ecuaciones diferenciales nos permiten modelar un fenomeno que depende del tiempo y que queremos conocer su comportamiento en el futuro
+
+Se lee, la población en el primer año es de dos mil
+
+<div align="center">
+  <img src="img/182.png">
+</div>
+
+**La derivada representa una razón de cambio, una velocidad asociada**
+
+<div align="center">
+  <img src="img/183.png">
+</div>
+
+**¿Qué se necesita para hacer un modelo matemático?**
+
+<div align="center">
+  <img src="img/184.png">
+</div>
+
+## Crecimiento poblacional
+
+<div align="center">
+  <img src="img/185.png">
+</div>
+
+Consideramos el crecimiento - el decrecimiento
+
+<div align="center">
+  <img src="img/186.png">
+</div>
+
+Generamos la ecuación considerando N-M como una constante
+
+<div align="center">
+  <img src="img/187.png">
+</div>
+
+Nos queda una ecuación separable
+
+<div align="center">
+  <img src="img/188.png">
 </div>
