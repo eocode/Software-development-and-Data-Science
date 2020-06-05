@@ -38,6 +38,9 @@
       - [Caso 3](#caso-3)
     - [Ejemplo Factor integrante caso 1:](#ejemplo-factor-integrante-caso-1)
     - [Ejemplo Factor integrante caso 2:](#ejemplo-factor-integrante-caso-2)
+    - [Ejemplo Factor integrante caso 3:](#ejemplo-factor-integrante-caso-3)
+  - [Ecuaciones diferenciales lineales](#ecuaciones-diferenciales-lineales)
+    - [Ejemplo de ecuaciones diferenciales lineales](#ejemplo-de-ecuaciones-diferenciales-lineales)
 
 # Introducción
 
@@ -763,4 +766,160 @@ Volvemos a integrar para tener la función para obtener g(x)
 Para la ecuación final sustituimos en nuestra función
 
 ### Ejemplo Factor integrante caso 2:
+
+**Verificamos que se de tipo 2**
+
+<div align="center">
+  <img src="img/101.png">
+</div>
+
+Aplicamos la formula y vemos que depende sólo de y
+
+<div align="center">
+  <img src="img/102.png">
+</div>
+
+Sustituimos para obtener el factor integrante
+
+<div align="center">
+  <img src="img/103.png">
+</div>
+
+<div align="center">
+  <img src="img/104.png">
+</div>
+
+Obtenemos un nuevo M y N
+
+<div align="center">
+  <img src="img/105.png">
+</div>
+
+Verificamos si las derivadas son iguales
+
+<div align="center">
+  <img src="img/106.png">
+</div>
+
+Vemos que es exacta y ahora tenemos una nueva ecuación diferencial, integramos N por ser más sencilla
+
+<div align="center">
+  <img src="img/107.png">
+</div>
+
+Resolvemos la ecuación
+
+<div align="center">
+  <img src="img/108.png">
+</div>
+
+### Ejemplo Factor integrante caso 3:
+
+Validamos si es exacta caso por caso
+
+Evaluando caso 1
+
+<div align="center">
+  <img src="img/109.png">
+</div>
+
+Evaluando caso 2
+
+<div align="center">
+  <img src="img/110.png">
+</div>
+
+Evaluamos caso 3, cumple y aplicamos la formula
+
+<div align="center">
+  <img src="img/111.png">
+</div>
+
+Integramos para encontrar el factor integrante
+
+<div align="center">
+  <img src="img/112.png">
+</div>
+
+Multipliquemos toda la ecuación
+
+<div align="center">
+  <img src="img/113.png">
+</div>
+
+Vemos que podemos simplificar y obtenemos un nuevo m y n
+
+<div align="center">
+  <img src="img/114.png">
+</div>
+
+Derivamos respecto a m y n y vemos que son iguales
+
+<div align="center">
+  <img src="img/115.png">
+</div>
+
+Solución de la ecuación exacta
+
+[Factor integrante](/learn/Matematicas/diferenciales/factorintegrantecaso3.pdf)
+
+## Ecuaciones diferenciales lineales
+
+El **factor integrante** además de ayudarnos a solucionar ecuaciones que en un principio no eran exactas, también nos ayudara a solucionar ecuaciones diferenciales lineales.
+
+<div align="center">
+  <img src="img/116.png">
+</div>
+
+La ecuación diferencial lineal va a tener una función que multiplica por la derivada de y con respecto a la derivada de x, más una segunda función que multiplica a y todo esto que es igual a una tercera función, cada función va a depender de x.
+
+Qué pasaría si
+
+<div align="center">
+  <img src="img/117.png">
+</div>
+
+El primer paso es dividir todo sobre f1 y aplicamos el factor integrante
+
+<div align="center">
+  <img src="img/118.png">
+</div>
+
+### Ejemplo de ecuaciones diferenciales lineales
+
+Aplicamos lo siguiente
+
+<div align="center">
+  <img src="img/119.png">
+</div>
+
+Para la siguiente ecuación, dividimos por x3
+
+<div align="center">
+  <img src="img/120.png">
+</div>
+
+Obtenemos P y Q
+
+<div align="center">
+  <img src="img/121.png">
+</div>
+
+Aplicamos la formula
+
+<div align="center">
+  <img src="img/122.png">
+</div>
+
+Quitamos e y obtenemos el factor integrante
+
+<div align="center">
+  <img src="img/123.png">
+</div>
+
+Resolvemos sustituyendo
+
+<div align="center">
+  <img src="img/124.png">
+</div>
 
