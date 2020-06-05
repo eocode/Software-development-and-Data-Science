@@ -41,6 +41,13 @@
     - [Ejemplo Factor integrante caso 3:](#ejemplo-factor-integrante-caso-3)
   - [Ecuaciones diferenciales lineales](#ecuaciones-diferenciales-lineales)
     - [Ejemplo de ecuaciones diferenciales lineales](#ejemplo-de-ecuaciones-diferenciales-lineales)
+  - [Ejercicios](#ejercicios)
+    - [Soluciones](#soluciones)
+- [Ecuaciones diferenciales de segundo orden](#ecuaciones-diferenciales-de-segundo-orden)
+  - [¿Qué es una solución linealmente independiente?](#qué-es-una-solución-linealmente-independiente)
+  - [Ecuaciones lineales homogeneas de coeficientes constantes](#ecuaciones-lineales-homogeneas-de-coeficientes-constantes)
+    - [Ejemplo](#ejemplo-3)
+  - [Ecuaciones lineales homogéneas con raíces complejas](#ecuaciones-lineales-homogéneas-con-raíces-complejas)
 
 # Introducción
 
@@ -923,3 +930,139 @@ Resolvemos sustituyendo
   <img src="img/124.png">
 </div>
 
+## Ejercicios
+
+<div align="center">
+  <img src="img/125.png">
+</div>
+
+<div align="center">
+  <img src="img/126.png">
+</div>
+
+<div align="center">
+  <img src="img/127.png">
+</div>
+<div align="center">
+  <img src="img/128.png">
+</div>
+<div align="center">
+  <img src="img/129.png">
+</div>
+<div align="center">
+  <img src="img/130.png">
+</div>
+
+### Soluciones
+
+<div align="center">
+  <img src="img/ej1.jpg">
+</div>
+
+<div align="center">
+  <img src="img/ej2.jpg">
+</div>
+
+<div align="center">
+  <img src="img/ej3.jpg">
+</div>
+
+# Ecuaciones diferenciales de segundo orden
+
+**Estas ecuaciones son aquellas donde está la segunda derivada de una función.** Existe un concepto muy importante: Soluciones linealmente independientes
+
+## ¿Qué es una solución linealmente independiente?
+
+Son aquellas donde **no existe ninguna constante por la que puedas multiplicar para obtener o llegar a otra solución.**
+
+Una ecuación diferencial de segundo orden solo **tiene dos soluciones linealmente independientes**, o mejor dicho, **una solución diferencial de n orden solo tiene n soluciones linealmente independientes.**
+
+**Las soluciones linealmente independientes de una ecuación diferencial de segundo orden juntas forman lo que se conoce como Combinación lineal**, la cual vendría siendo la solución general de la ecuación.
+
+<hr/>
+
+Evaluemos si y=ex es una solución de la ecuación encontrando primera, segunda derivada y reemplazando en la ecuación
+
+<div align="center">
+  <img src="img/131.png">
+</div>
+
+Con una constante también es solución
+
+<div align="center">
+  <img src="img/133.png">
+</div>
+
+Por lo tanto las ecuaciones de n orden tienen n soluciones independientes
+
+<div align="center">
+  <img src="img/132.png">
+</div>
+
+## Ecuaciones lineales homogeneas de coeficientes constantes
+
+Las ecuaciones lineales homogéneas **son aquellas que son igualadas a 0**. Para que sean de coeficientes constantes como su nombre lo indica, todos **los coeficientes de la ecuación deben de ser una constante y no una función.**
+
+Para resolver este tipo de ecuaciones debemos **buscar su ecuación característica**, la solución a esta ecuación nos dará las constantes para nuestras soluciones linealmente independientes y con ello nuestra solución general.
+
+<div align="center">
+  <img src="img/134.png">
+</div>
+
+Encontramos la ecuación catacterística
+
+<div align="center">
+  <img src="img/135.png">
+</div>
+
+### Ejemplo
+
+> Vemos una ecuación con **coeficientes constantes** ya que los terminos que acompañan a y no dependen de x, es **homogenea** por que es  igual a 0
+
+<div align="center">
+  <img src="img/136.png">
+</div>
+
+Asumimos una solución
+
+<div align="center">
+  <img src="img/137.png">
+</div>
+
+Intentamos encontrar una ecuación carácteristica
+
+<div align="center">
+  <img src="img/138.png">
+</div>
+
+Verificamos con el procedimiento
+
+<div align="center">
+  <img src="img/139.png">
+</div>
+
+Reemplazamos en la ecuación y factorizamos
+
+<div align="center">
+  <img src="img/140.png">
+</div>
+
+Solucionamos la ecuación cuadrática con la chicharronera
+
+<div align="center">
+  <img src="img/141.png">
+</div>
+
+Tenemos nuestras dos soluciones
+
+<div align="center">
+  <img src="img/142.png">
+</div>
+
+La solución general seria
+
+<div align="center">
+  <img src="img/143.png">
+</div>
+
+## Ecuaciones lineales homogéneas con raíces complejas
