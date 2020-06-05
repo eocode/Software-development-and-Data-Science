@@ -48,6 +48,9 @@
   - [Ecuaciones lineales homogeneas de coeficientes constantes](#ecuaciones-lineales-homogeneas-de-coeficientes-constantes)
     - [Ejemplo](#ejemplo-3)
   - [Ecuaciones lineales homogéneas con raíces complejas](#ecuaciones-lineales-homogéneas-con-raíces-complejas)
+    - [Ejemplo](#ejemplo-4)
+  - [Ecuación diferencial no homogenea](#ecuación-diferencial-no-homogenea)
+    - [Coeficientes indeterminados](#coeficientes-indeterminados)
 
 # Introducción
 
@@ -1066,3 +1069,60 @@ La solución general seria
 </div>
 
 ## Ecuaciones lineales homogéneas con raíces complejas
+
+Al resolver ecuaciones lineales homogéneas podrá darse el caso donde sus soluciones **incluyan un término imaginario o letra i**, **el cual es dado por la raíz cuadrada de un número negativo.**
+
+<div align="center">
+  <img src="img/144.png">
+</div>
+
+No se puede dejar una solución expresada con números imaginarios
+
+<div align="center">
+  <img src="img/145.png">
+</div>
+
+### Ejemplo
+
+<div align="center">
+  <img src="img/146.png">
+</div>
+
+<div align="center">
+  <img src="img/147.png">
+</div>
+
+La solución quedaría
+
+<div align="center">
+  <img src="img/148.png">
+</div>
+
+Pero no podemos expresarla como número negativo por lo que aplicamos la formula
+
+<div align="center">
+  <img src="img/149.png">
+</div>
+
+## Ecuación diferencial no homogenea
+
+A este punto ya hemos aprendido como **resolver ecuaciones de n orden que sean homogéneas ósea que estén igualadas a 0**, **pero que pasa con aquellas donde están igualadas a alguna función o simplemente diferente de 0.**
+
+Estas ecuaciones diferenciales no homogéneas **tienen una ecuación diferencial homogénea relacionada**, simplemente es una ecuación donde **vamos a anular la función** a la cual esta igualada nuestra ecuación o mejor dicho **igualarla a 0.**
+
+<div align="center">
+  <img src="img/150.png">
+</div>
+
+El proceso para resolver una ecuación no homogénea es:
+
+* Encontrar la solución general de la ecuación diferencial homogénea relacionada. Recuerda que encontrar la solución general primero debes hallar las soluciones linealmente independientes.
+* Encontrar la solución particular para la ecuación diferencial no homogénea. Existen dos métodos para encontrar estas soluciones **Coeficientes Indeterminados** y **Variación de parámetros**.
+* Por último, la solución de nuestra ecuación diferencial no homogénea será la suma de la solución del primer paso más la del segundo paso.
+
+<div align="center">
+  <img src="img/151.png">
+</div>
+
+### Coeficientes indeterminados
+
