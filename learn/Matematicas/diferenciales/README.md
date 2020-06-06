@@ -63,10 +63,16 @@
   - [Segundo ejemplo de crecimiento poblacional](#segundo-ejemplo-de-crecimiento-poblacional)
   - [Ley de enfriamiento de Newton](#ley-de-enfriamiento-de-newton)
     - [Ejemplo](#ejemplo-7)
+  - [Propagación de un virus](#propagación-de-un-virus)
+  - [Más ejemplos de modelos matemáticos](#más-ejemplos-de-modelos-matemáticos)
+  - [Ejercicios](#ejercicios-2)
 - [Conceptos para la transformada de laplace](#conceptos-para-la-transformada-de-laplace)
   - [Integrales parciales](#integrales-parciales)
   - [Integrales impropias](#integrales-impropias)
 - [Transformada de laplace](#transformada-de-laplace)
+  - [Transformada de Laplace de una exponencial](#transformada-de-laplace-de-una-exponencial)
+  - [Tablas de laplace](#tablas-de-laplace)
+  - [Propiedades de la transformada](#propiedades-de-la-transformada)
 
 # Introducción
 
@@ -1491,6 +1497,78 @@ Para encontrar el modelo
   <img src="img/211.png">
 </div>
 
+## Propagación de un virus
+
+<div align="center">
+  <img src="img/212.png">
+</div>
+
+Por el método de ecuaciones separables
+
+<div align="center">
+  <img src="img/213.png">
+</div>
+
+Generamos el modelo
+
+<div align="center">
+  <img src="img/214.png">
+</div>
+
+Para t = 4 y p = 10
+
+<div align="center">
+  <img src="img/215.png">
+</div>
+
+Obtenemos nuestra constante de crecimiento
+
+<div align="center">
+  <img src="img/216.png">
+</div>
+
+¿En que momento toda la población va a ser infectada 1000?
+
+<div align="center">
+  <img src="img/216.png">
+</div>
+
+Ponemos a prueba el mdelo
+
+<div align="center">
+  <img src="img/217.png">
+</div>
+
+## Más ejemplos de modelos matemáticos
+
+[Modelos matemáticos](/learn/Matematicas/diferenciales/modelosmatematicos.pdf)
+
+## Ejercicios
+
+1. ¿Cuánto dinero debes invertir para obtener en 5 años 6000000 COP si la tasa de interés es del 7% compuesto continuamente?
+
+2. Una inversión de 300 dólares se capitaliza continuamente a una tasa de interés anual del 7,5% ¿Cuál será el valor de la inversión después de 72 meses?
+
+3. El número de personas que viven en un pueblo es de 10000. Si después de una década hay 20000 personas. Calcule cuántas personas habrá a los 15 años (partiendo desde el inicio), y en qué momento se llegará a los 50000 habitantes.
+
+4. En el año 2000 la población mundial era de 6.6 mil millones de personas con una tasa de crecimiento de 300 mil personas por día . Calcule con esa tasa de crecimiento cuántas personas se esperan para el 2018.
+
+5. Si en una base de datos el número de datos se triplicó en 7 horas. ¿Cuánto tardó en duplicarse?
+
+6. Una cadena de bloques crece a un ritmo de 20 bloques por hora cuando hay 400 bloques. ¿Cuántos bloques hay después de 5 horas? ¿En cuánto tiempo se duplicarán el número de bloques?
+
+7. Actualmente tienes 1500 amigos en Facebook. Tu red de amigos de Facebook crece actualmente a una tasa de 10 amigos nuevos por semana, ¿cuánto tiempo tardarás en alcanzar el límite permitido de los 5000 amigos en Facebook?
+
+8. Un cuerpo se calienta a 90° y se expone al aire libre con una temperatura de 13°. Si al cabo de una hora su temperatura es de 40° ¿En cuánto tiempo alcanzará los 23°?
+
+<div align="center">
+  <img src="img/ej6.jpg">
+</div>
+
+<div align="center">
+  <img src="img/ej7.jpg">
+</div>
+
 # Conceptos para la transformada de laplace
 
 ## Integrales parciales
@@ -1510,6 +1588,8 @@ Para encontrar el modelo
 </div>
 
 # Transformada de laplace
+
+https://www.youtube.com/watch?v=McSN9g7DbYA
 
 Que es la trasformada de la place?
 **Es una integral impropia de varias variables y que esta definida**. Cuando hablamos de la trasformada de laplace, es cuando ingresamos una función y obtenemos otra función.
@@ -1534,4 +1614,37 @@ Cuando el limite es igual a infinito diverge, si tiene un valor decimos que conv
 
 <div align="center">
   <img src="img/199.png">
+</div>
+
+## Transformada de Laplace de una exponencial
+
+<div align="center">
+  <img src="img/218.png">
+</div>
+
+## Tablas de laplace
+
+[Tablas de transformada de laplace](/learn/Matematicas/diferenciales/tablasdelaplace.pdf)
+
+## Propiedades de la transformada
+
+* Producto por una constante
+* Linealidad
+* Traslación
+* Derivada
+
+<div align="center">
+  <img src="img/219.png">
+</div>
+
+<div align="center">
+  <img src="img/220.png">
+</div>
+
+<div align="center">
+  <img src="img/221.png">
+</div>
+
+<div align="center">
+  <img src="img/222.png">
 </div>
