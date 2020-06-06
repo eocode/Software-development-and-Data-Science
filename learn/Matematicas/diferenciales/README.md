@@ -13,6 +13,8 @@
     - [Potencias con misma base](#potencias-con-misma-base)
     - [Propiedades trigonometricas](#propiedades-trigonometricas)
     - [Tablas de integrales](#tablas-de-integrales)
+    - [Logaritmos](#logaritmos)
+    - [Número e](#número-e)
     - [Propiedad ln](#propiedad-ln)
 - [Ecuaciones diferenciales de primer orden](#ecuaciones-diferenciales-de-primer-orden)
   - [Ecuación separable](#ecuación-separable)
@@ -57,6 +59,10 @@
   - [Ejercicios](#ejercicios-1)
 - [Modelos matemáticos](#modelos-matemáticos)
   - [Crecimiento poblacional](#crecimiento-poblacional)
+  - [Ejemplo de crecimiento poblacional](#ejemplo-de-crecimiento-poblacional)
+- [Transformada de Laplace](#transformada-de-laplace)
+  - [Integrales parciales](#integrales-parciales)
+  - [Integrales impropias](#integrales-impropias)
 
 # Introducción
 
@@ -155,7 +161,28 @@ Si tenemos potencias con misma base a la hora de multiplicar las potencias se su
   <img src="img/03.png">
 </div>
 
+### Logaritmos
+
+<div align="center">
+  <img src="img/log.png">
+</div>
+
+<div align="center">
+  <img src="img/log1.png">
+</div>
+
+### Número e
+
+<div align="center">
+  <img src="img/e.png">
+</div>
+
 ### Propiedad ln
+
+<div align="center">
+  <img src="img/ln.png">
+</div>
+
 Para poder eliminar el logaritmo natural de nuestra ecuación deberemos convertir este en la potencia de e. También, si tenemos alguna constante multiplicando a logaritmo natural entonces podemos representarlo como la potencia de dicho logaritmo.
 
 <div align="center">
@@ -1351,4 +1378,59 @@ Nos queda una ecuación separable
 
 <div align="center">
   <img src="img/188.png">
+</div>
+
+## Ejemplo de crecimiento poblacional
+
+1. Conocer el problema
+
+> Crecimiento poblacional de usuarios de mi red social
+
+2. Conocer las variables
+
+> P = número de usuarios de mi red
+> t = tiempo en años
+> p(0) = 50, 000
+> p(2) = 200, 000
+
+Para obtener la constante de crecimiento
+
+<div align="center">
+  <img src="img/189.png">
+</div>
+
+Con la ecuación ya podemos responder más preguntas
+
+<div align="center">
+  <img src="img/190.png">
+</div>
+
+Para calcular el tiempo en el que llegara a los 500,000
+
+<div align="center">
+  <img src="img/191.png">
+</div>
+
+¿Qué tanto debo de preparar mis servidores en 5 años?
+
+<div align="center">
+  <img src="img/192.png">
+</div>
+
+# Transformada de Laplace
+
+## Integrales parciales
+
+<div align="center">
+  <img src="img/193.png">
+</div>
+
+<div align="center">
+  <img src="img/194.png">
+</div>
+
+## Integrales impropias
+
+<div align="center">
+  <img src="img/195.png">
 </div>
