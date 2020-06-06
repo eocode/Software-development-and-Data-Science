@@ -60,9 +60,13 @@
 - [Modelos matemáticos](#modelos-matemáticos)
   - [Crecimiento poblacional](#crecimiento-poblacional)
   - [Ejemplo de crecimiento poblacional](#ejemplo-de-crecimiento-poblacional)
-- [Transformada de Laplace](#transformada-de-laplace)
+  - [Segundo ejemplo de crecimiento poblacional](#segundo-ejemplo-de-crecimiento-poblacional)
+  - [Ley de enfriamiento de Newton](#ley-de-enfriamiento-de-newton)
+    - [Ejemplo](#ejemplo-7)
+- [Conceptos para la transformada de laplace](#conceptos-para-la-transformada-de-laplace)
   - [Integrales parciales](#integrales-parciales)
   - [Integrales impropias](#integrales-impropias)
+- [Transformada de laplace](#transformada-de-laplace)
 
 # Introducción
 
@@ -1417,7 +1421,77 @@ Para calcular el tiempo en el que llegara a los 500,000
   <img src="img/192.png">
 </div>
 
-# Transformada de Laplace
+## Segundo ejemplo de crecimiento poblacional
+
+<div align="center">
+  <img src="img/200.png">
+</div>
+
+Resolvemos
+
+<div align="center">
+  <img src="img/201.png">
+</div>
+
+<div align="center">
+  <img src="img/202.png">
+</div>
+
+¿Cuál es la población en 8 años del modelo?
+
+<div align="center">
+  <img src="img/203.png">
+</div>
+
+¿En que momento llegara a 40,000 bloques?
+
+<div align="center">
+  <img src="img/204.png">
+</div>
+
+## Ley de enfriamiento de Newton
+
+<div align="center">
+  <img src="img/205.png">
+</div>
+
+Búscamos encontrar la ecuación
+
+<div align="center">
+  <img src="img/206.png">
+</div>
+
+### Ejemplo
+
+¿Cuál es la temperatura inicial de una cerveza?
+
+<div align="center">
+  <img src="img/207.png">
+</div>
+
+<div align="center">
+  <img src="img/208.png">
+</div>
+
+Obtenemos una constante de calentamiento positiva, ya que lo estamos metiendo a una nevera
+
+<div align="center">
+  <img src="img/209.png">
+</div>
+
+Generamos el modelo
+
+<div align="center">
+  <img src="img/210.png">
+</div>
+
+Para encontrar el modelo
+
+<div align="center">
+  <img src="img/211.png">
+</div>
+
+# Conceptos para la transformada de laplace
 
 ## Integrales parciales
 
@@ -1433,4 +1507,31 @@ Para calcular el tiempo en el que llegara a los 500,000
 
 <div align="center">
   <img src="img/195.png">
+</div>
+
+# Transformada de laplace
+
+Que es la trasformada de la place?
+**Es una integral impropia de varias variables y que esta definida**. Cuando hablamos de la trasformada de laplace, es cuando ingresamos una función y obtenemos otra función.
+
+<div align="center">
+  <img src="img/196.png">
+</div>
+
+Sabemos que la integral es
+
+<div align="center">
+  <img src="img/197.png">
+</div>
+
+Para laplace
+
+<div align="center">
+  <img src="img/198.png">
+</div>
+
+Cuando el limite es igual a infinito diverge, si tiene un valor decimos que converge
+
+<div align="center">
+  <img src="img/199.png">
 </div>
