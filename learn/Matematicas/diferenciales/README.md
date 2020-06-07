@@ -72,7 +72,9 @@
 - [Transformada de laplace](#transformada-de-laplace)
   - [Transformada de Laplace de una exponencial](#transformada-de-laplace-de-una-exponencial)
   - [Tablas de laplace](#tablas-de-laplace)
+    - [Principales Transformadas](#principales-transformadas)
   - [Propiedades de la transformada](#propiedades-de-la-transformada)
+  - [Ejemplo laplace](#ejemplo-laplace)
 
 # Introducción
 
@@ -1626,6 +1628,30 @@ Cuando el limite es igual a infinito diverge, si tiene un valor decimos que conv
 
 [Tablas de transformada de laplace](/learn/Matematicas/diferenciales/tablasdelaplace.pdf)
 
+### Principales Transformadas
+
+Constante
+
+<div align="center">
+  <img src="img/223.png">
+</div>
+
+Exponencial
+
+<div align="center">
+  <img src="img/224.png">
+</div>
+
+Seno y coseno
+
+<div align="center">
+  <img src="img/225.png">
+</div>
+
+<div align="center">
+  <img src="img/226.png">
+</div>
+
 ## Propiedades de la transformada
 
 * Producto por una constante
@@ -1647,4 +1673,10 @@ Cuando el limite es igual a infinito diverge, si tiene un valor decimos que conv
 
 <div align="center">
   <img src="img/222.png">
+</div>
+
+## Ejemplo laplace
+
+<div align="center">
+  <img src="img/227.png">
 </div>

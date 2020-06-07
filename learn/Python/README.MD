@@ -18,10 +18,6 @@ Apuntes, proyectos y códigos realizados con Python.
     - [Tiempo de ejecusión](#tiempo-de-ejecusión)
   - [Clasificación de tipado de lenguaje](#clasificación-de-tipado-de-lenguaje)
   - [Paradigmas de programación](#paradigmas-de-programación)
-    - [Programación estructurada:](#programación-estructurada)
-    - [Programación por procedimientos](#programación-por-procedimientos)
-      - [Programación funcional](#programación-funcional)
-    - [Programación orientada a objetos](#programación-orientada-a-objetos)
   - [El Zen de Python](#el-zen-de-python)
   - [Elementos básicos](#elementos-básicos)
   - [Variables y expresiones](#variables-y-expresiones)
@@ -126,7 +122,7 @@ Apuntes, proyectos y códigos realizados con Python.
   - [Universal time coordinator (UTC)](#universal-time-coordinator-utc)
 - [Time](#time)
 - [XPath](#xpath)
-  - [Probando en el navegadpr](#probando-en-el-navegadpr)
+  - [Probando en el navegador](#probando-en-el-navegador)
 
 # Recursos
 
@@ -274,21 +270,22 @@ Clasificación de un valor dentro del lenguaje
 
 ## Paradigmas de programación
 
-### Programación estructurada: 
-> Es un paradigma de programación **orientado a mejorar la claridad, calidad y tiempo de desarrollo** de un programa de computadora recurriendo únicamente a subrutinas y tres estructuras básicas: secuencia, selección (if y switch) e iteración (bucles for y while)
+**Paradigma:** Una manera de hacer las cosas
 
-### Programación por procedimientos
+Hay dos estilos de programación, 
+* **Imperativos:** Los de la vieja escuela que son los imperativos. Indican que pasos y secuencia deben seguir los programas
+  * **Programación procedimental:** Desgloza algoritmos en porciones más manejables, como rutinas, funciones o subprogramas. Assembly, Basic
+  * **Programación estructurada:** orientado a mejorar la claridad, calidad y tiempo de desarrollo de un programa, recurriendo únicamente a subrutinas y tres estructuras básicas: secuencia, selección (if y switch) e iteración (bucles for y while). C
+  * **Programación orientada a objetos:** Usa objetos y sus interacciones, para diseñar aplicaciones y programas informáticos Está basado en varias técnicas, incluyendo herencia, abstracción, polimorfismo y encapsulamiento. Java, C++
+  * **Programación modular:** Divide el código por bloques parciales e independientes adaptandose a los requerimientos de proyectos de software, permitiendo pruebas individuales Java, Python
+  * **Programación paralela:** Instrucciones ejecutadas en multiples procesadores o hilos
+* **Declarativos:** que son los modernos. Describen la solución o el resultado sin tomar en cuenta pasos intermedios
+  * **Programación funcional:** Son llamadas a funciones concatenadas, dónde cada parte del programa es interpretado por una función. Cloud Functions, Serverless, Aws Lambda, cualquier lenguaje
+  * **Programación lógica:** Se basa en la lógica matemática, en lugar de una serie de instrucciones, tienen un conjunto de principios (hechos/suposiciones) aplicando reglas para alcanzar el resultado Prolog, Python, R
+  * **Programación basada en datos:** Basada en la metodología Data Driven. SQL
 
-> La programación procedimental o programación por procedimientos es un paradigma de la programación. Muchas veces es aplicable tanto en lenguajes de programación de bajo nivel como en lenguajes de alto nivel. En el caso de que esta técnica se aplique en lenguajes de alto nivel, recibirá el nombre de programación funcional. Esta técnica consiste en basarse de un número muy bajo de expresiones repetidas, englobarlas todas en un procedimiento o función y llamarlo cada vez que tenga que ejecutarse.
-
-#### Programación funcional
-> Es un paradigma de **programación declarativa** basado en el uso de **funciones matemáticas**, en contraste con la programación imperativa, que enfatiza los cambios de estado mediante la mutación de variables.
-
-### Programación orientada a objetos
-
-> Es un paradigma de programación que **usa objetos y sus interacciones**, para diseñar aplicaciones y programas informáticos. Está basado en varias técnicas, incluyendo herencia, abstracción, polimorfismo y encapsulamiento.
-> 
-> Los objetos manipulan los datos de entrada para la obtención de datos de salida específicos, donde cada objeto ofrece una funcionalidad especial.
+https://www.ionos.mx/digitalguide/paginas-web/desarrollo-web/paradigmas-de-programacion/
+https://www.geeksforgeeks.org/introduction-of-programming-paradigms/
 
 ## El Zen de Python
 * Hermoso es mejor que feo.
@@ -1819,7 +1816,7 @@ XML Path Language, el lenguage del web scraping profesional.
 * **Xpath** es un lenguaje para encontrar información dentro de una respuesta. 
 * **Selenium** es un emulador del navegador web
 
-## Probando en el navegadpr
+## Probando en el navegador
 
 http://quotes.toscrape.com/
 
