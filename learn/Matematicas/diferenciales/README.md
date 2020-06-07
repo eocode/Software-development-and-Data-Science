@@ -74,10 +74,10 @@
   - [Tablas de laplace](#tablas-de-laplace)
     - [Principales Transformadas](#principales-transformadas)
   - [Propiedades de la transformada](#propiedades-de-la-transformada)
-  - [Ejemplo laplace](#ejemplo-laplace)
   - [Transformada inversa](#transformada-inversa)
     - [Ejemplo de  transformada inversa](#ejemplo-de-transformada-inversa)
   - [Ejercicios](#ejercicios-3)
+- [Solucionador de ecuaciones](#solucionador-de-ecuaciones)
 
 # Introducción
 
@@ -1678,12 +1678,6 @@ Seno y coseno
   <img src="img/222.png">
 </div>
 
-## Ejemplo laplace
-
-<div align="center">
-  <img src="img/227.png">
-</div>
-
 ## Transformada inversa
 
 <div align="center">
@@ -1735,3 +1729,7 @@ ejercicio N 2: (48 -12s + 6s^2 - s^3)/s^4
 ejercicio N 3: 1/(s-3) - 4/s + 1/(s+4)
 ejercicio N 4: 2 + 5/2t^2 + 1/6sin6t
 ejercicio N 5: (4(7)^-1)/7*cosht(7)^-1
+
+# Solucionador de ecuaciones
+
+https://es.symbolab.com/solver/ordinary-differential-equation-calculator/
