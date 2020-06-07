@@ -75,6 +75,9 @@
     - [Principales Transformadas](#principales-transformadas)
   - [Propiedades de la transformada](#propiedades-de-la-transformada)
   - [Ejemplo laplace](#ejemplo-laplace)
+  - [Transformada inversa](#transformada-inversa)
+    - [Ejemplo de  transformada inversa](#ejemplo-de-transformada-inversa)
+  - [Ejercicios](#ejercicios-3)
 
 # Introducción
 
@@ -1680,3 +1683,55 @@ Seno y coseno
 <div align="center">
   <img src="img/227.png">
 </div>
+
+## Transformada inversa
+
+<div align="center">
+  <img src="img/228.png">
+</div>
+
+<div align="center">
+  <img src="img/229.png">
+</div>
+
+### Ejemplo de  transformada inversa
+
+Función escalon unitario
+
+<div align="center">
+  <img src="img/230.png">
+</div>
+
+## Ejercicios
+
+<div align="center">
+  <img src="img/231.png">
+</div>
+
+<div align="center">
+  <img src="img/232.png">
+</div>
+
+<div align="center">
+  <img src="img/233.png">
+</div>
+
+<div align="center">
+  <img src="img/234.png">
+</div>
+
+<div align="center">
+  <img src="img/235.png">
+</div>
+
+<div align="center">
+  <img src="img/236.png">
+</div>
+
+Soluciones
+
+ejercicio N 1: 3/((s-25)^2 + 9)
+ejercicio N 2: (48 -12s + 6s^2 - s^3)/s^4
+ejercicio N 3: 1/(s-3) - 4/s + 1/(s+4)
+ejercicio N 4: 2 + 5/2t^2 + 1/6sin6t
+ejercicio N 5: (4(7)^-1)/7*cosht(7)^-1
