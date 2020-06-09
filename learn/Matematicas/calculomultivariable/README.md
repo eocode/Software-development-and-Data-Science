@@ -16,6 +16,7 @@
   - [¿Qué es un vector?](#qué-es-un-vector)
     - [Ejemplo](#ejemplo-3)
   - [Producto punto y producto cruz](#producto-punto-y-producto-cruz)
+  - [Gráficación de un plano](#gráficación-de-un-plano)
 
 https://www.geogebra.org/3d?lang=es
 
@@ -273,23 +274,35 @@ Situaciones dónde encontramos vectores
 
 ## Producto punto y producto cruz
 
-Producto Punto
-
-El Producto punto o producto escalar es la multiplicación de dos vectores, donde multiplicaremos componente por componente y sumaremos el resultado, obtendremos un escalar o numero real.
+El **Producto punto o producto escalar** es la multiplicación de dos vectores, donde multiplicaremos componente por componente y sumaremos el resultado, obtendremos un escalar o numero real.
 
 Cuando tenemos dos vectores tenemos un angulo que los separa llamado angulo theta y el teorema del producto punto nos dice que ese producto punto va a ser igual a la magnitud de los dos vectores por el coseno de theta.
 
+<div align="center">
+  <img src="img/37.png">
+</div>
+
 Dependiendo si el producto punto es mayor, menor o igual a cero obtendremos diferentes ángulos
-a·b > 0 -> angulo menor de 90º
-a·b < 0 -> angulo mayor de 90º
-a·b = 0 -> el angulo sera de 90º, los dos vectores serán ortogonales
 
-Producto Cruz
+* a·b > 0 -> angulo menor de 90º
+* a·b < 0 -> angulo mayor de 90º
+* a·b = 0 -> el angulo sera de 90º, los dos vectores serán ortogonales
 
-El producto cruz o producto vectorial, la multiplicación se representa con una cruz(x) y solo es posible realizarlo a través de vectores en 3D,
+El **producto cruz o producto vectorial**, la multiplicación se representa con una cruz(x) y solo es posible realizarlo a través de vectores en 3D,
 
 La multiplicación de los dos vectores nos dará como resultado un tercer vector ortogonal a ambos vectores
+
+<div align="center">
+  <img src="img/38.png">
+</div>
 
 Tenemos que tener en cuanta la propiedad del producto cruz, no sera lo mismo multiplicar (a x b) que (b x a), no son conmutativos, el orden importa ya que nos dará vector distinto.
 
 Para hallar el angulo entre los dos vectores sera igualando el producto cruz a la magnitud de los dos vectores por el seno de theta.
+
+## Gráficación de un plano
+
+Para hallar la ecuación de un plano necesitaremos dos cosas:
+
+* Un vector que este en la superficie es decir, un vector que todos los puntos estén sobre el plano
+* Un vector normal o ortogonal a la superficie del plano
