@@ -17,6 +17,11 @@
     - [Ejemplo](#ejemplo-3)
   - [Producto punto y producto cruz](#producto-punto-y-producto-cruz)
   - [Gráficación de un plano](#gráficación-de-un-plano)
+    - [Ejercicio](#ejercicio)
+- [Superficies cuadráticas](#superficies-cuadráticas)
+  - [Elipsoide](#elipsoide)
+  - [Hiperbole de una hoja](#hiperbole-de-una-hoja)
+  - [Paraboloide Elíptico](#paraboloide-elíptico)
 
 https://www.geogebra.org/3d?lang=es
 
@@ -305,4 +310,181 @@ Para hallar el angulo entre los dos vectores sera igualando el producto cruz a l
 Para hallar la ecuación de un plano necesitaremos dos cosas:
 
 * Un vector que este en la superficie es decir, un vector que todos los puntos estén sobre el plano
-* Un vector normal o ortogonal a la superficie del plano
+* Un **vector normal (n)** o ortogonal a la superficie del plano
+
+> Para vector usamos corchetes y para un punto parentesis
+> El producto punto nos dice que si multiplico dos vectores y es cero, es normal y es mi ecuación vectorial del plano
+
+<div align="center">
+  <img src="img/39.png">
+</div>
+
+Tenemos tres ecuaciones
+
+* Ecuación vectoria
+* Ecuación escalar
+* Ecuación lineal
+
+<div align="center">
+  <img src="img/40.png">
+</div>
+
+Función de dos variables
+https://www.youtube.com/watch?v=ut_iqneq8EA
+
+### Ejercicio
+
+Gráficaremos un plano a partir de una ecuación
+
+<div align="center">
+  <img src="img/41.png">
+</div>
+
+Agregamos valores para cuando x = 0, y = 0 y z = 0
+
+<div align="center">
+  <img src="img/42.png">
+</div>
+
+<div align="center">
+  <img src="img/43.png">
+</div>
+
+# Superficies cuadráticas
+
+* Tienen variables elevadas al cuadrado
+* Variables solas
+* Coeficientes
+
+<div align="center">
+  <img src="img/44.png">
+</div>
+
+Las ecuaciones de superficies cuadráticas se caracterizan por estar formadas por polinomios que son la unión de monomios a partir de signos (+, -), estos monomios tienen variables que estarán elevados a la segunda potencia ej: 2x^2 o simplemente con la variable ej : 2x, el polinomio también contiene coeficientes que es un numero sin variable ej: 7
+> ``2x^2 + 2x = 7 -> polinomio``
+
+## Elipsoide
+
+La ecuación de la elipsoide es un ejemplo de superficie cuadráticas ya que contiene variables elevadas al cuadrado y un coeficiente.
+
+Si nos dan una ecuación con estas características podemos hacer arreglos hasta que sea igual a la ecuación de la elipsoide para proceder a gratificar la figura que obtendremos al sustituir los valores en la ecuación.
+
+La ecuación del elipsoide es de la siguiente forma
+
+<div align="center">
+  <img src="img/45.png">
+</div>
+
+Para el plano yz
+
+<div align="center">
+  <img src="img/46.png">
+</div>
+
+El gráfico es el siguiente
+
+<div align="center">
+  <img src="img/47.png">
+</div>
+
+Para el plano xz
+
+<div align="center">
+  <img src="img/48.png">
+</div>
+
+Para el plano xy
+
+<div align="center">
+  <img src="img/49.png">
+</div>
+
+<div align="center">
+  <img src="img/50.png">
+</div>
+
+Este sería la representación de un balón de futbol americano
+
+<div align="center">
+  <img src="img/51.png">
+</div>
+
+En machine learning estableces polinomios que cubran patrones de datos y determinadas características
+
+Para el caso de un paciente puedes tener temperatura, peso, etc
+
+<div align="center">
+  <img src="img/52.png">
+</div>
+
+## Hiperbole de una hoja
+
+<div align="center">
+  <img src="img/53.png">
+</div>
+
+Su gráfica es de la siguiente manera
+
+<div align="center">
+  <img src="img/54.png">
+</div>
+
+Si las ecuaciones tienen todas las componentes elevadas al cuadrado el eje es simétrico.
+
+* Abre al eje positivo, al eje x en este caso
+* a,b,c indica el desplazamiento al eje
+* Asíntotas a las esquinas
+
+Para el plano xy
+
+<div align="center">
+  <img src="img/55.png">
+</div>
+
+Para el plano xz
+
+<div align="center">
+  <img src="img/56.png">
+</div>
+
+Para el plano yz
+
+<div align="center">
+  <img src="img/57.png">
+</div>
+
+Para el plano tridimensional
+
+<div align="center">
+  <img src="img/58.png">
+</div>
+
+<div align="center">
+  <img src="img/59.png">
+</div>
+
+## Paraboloide Elíptico
+
+<div align="center">
+  <img src="img/60.png">
+</div>
+
+<div align="center">
+  <img src="img/61.png">
+</div>
+
+Para z = 3
+
+<div align="center">
+  <img src="img/62.png">
+</div>
+
+En 3 dimensiones
+
+<div align="center">
+  <img src="img/63.png">
+</div>
+
+<div align="center">
+  <img src="img/64.png">
+</div>
