@@ -22,6 +22,19 @@
   - [Elipsoide](#elipsoide)
   - [Hiperbole de una hoja](#hiperbole-de-una-hoja)
   - [Paraboloide Elíptico](#paraboloide-elíptico)
+- [Funciones de varias variables](#funciones-de-varias-variables)
+  - [¿Qué es una función de varias variables?](#qué-es-una-función-de-varias-variables)
+  - [Derivadas de funciones vectoriales](#derivadas-de-funciones-vectoriales)
+    - [Aplicaciones](#aplicaciones)
+    - [Ejercicio de derivadas](#ejercicio-de-derivadas)
+    - [Ejercicio 2](#ejercicio-2)
+  - [Integrales de funciones vectoriales](#integrales-de-funciones-vectoriales)
+    - [Integral de funciones vectoriales](#integral-de-funciones-vectoriales)
+    - [Ejemplo](#ejemplo-4)
+  - [Curvas de nivel](#curvas-de-nivel)
+    - [Ejercicio de curvas de nivel](#ejercicio-de-curvas-de-nivel)
+  - [Derivadas parciales](#derivadas-parciales)
+    - [Ejemplo](#ejemplo-5)
 
 https://www.geogebra.org/3d?lang=es
 
@@ -487,4 +500,234 @@ En 3 dimensiones
 
 <div align="center">
   <img src="img/64.png">
+</div>
+
+# Funciones de varias variables
+
+## ¿Qué es una función de varias variables?
+
+Un ejemplo de una función con varias variables sera la formula para calcular el volumen de un cilindro V = pi * r^2 * h, es una función de dos variables porque tenemos un volumen (V) que depende de dos variables, el radio ® y la altura (h)
+
+<div align="center">
+  <img src="img/66.png">
+</div>
+
+<div align="center">
+  <img src="img/67.png">
+</div>
+
+
+## Derivadas de funciones vectoriales
+
+Si tenemos una función de (x) -> f(x), **la derivada de (x) va a ser la pendiente de la curva de nuestra función**, este concepto se utiliza para las funciones de varias variables.
+
+<div align="center">
+  <img src="img/68.png">
+</div>
+
+**Una función vectorial tiene varias variables y al desarrollar la derivada** de este tipo de función determinamos que la derivada de una función vectorial consistirá en sacar la derivada de los componentes de la función, o sea de sus variables.
+
+<div align="center">
+  <img src="img/69.png">
+</div>
+
+La finalidad de la derivada de una función vectorial es que **una vez resuelta la derivada obtenemos un vector tangente a la superficie**, si **calculamos la derivada en muchos puntos podríamos saber exactamente como se comporta la función.**
+
+> **El vector tangente de la función nos permite saber como se va a comportar la función, como una predicción de lo que sera el siguiente punto.**
+
+### Aplicaciones
+
+Si tengo un dataset, puedo calcular una derivada en cada uno de ellos
+
+<div align="center">
+  <img src="img/70.png">
+</div>
+
+ya que se pueden ver como coordenadas y ver como se comportan los datos
+
+<div align="center">
+  <img src="img/71.png">
+</div>
+
+### Ejercicio de derivadas
+
+Importante para hallar el vector tangente unitario se consigue **dividiendo el vector que obtenemos al darle un valor a (t) una vez resuelta la derivada,** entre la magnitud del vector.
+
+La magnitud del vector se conseguía con la raíz de la suma de los valores del vector al cuadrado.
+
+<div align="center">
+  <img src="img/72.png">
+</div>
+
+Derivando i, j y k
+
+<div align="center">
+  <img src="img/73.png">
+</div>
+
+Para t = 0
+
+<div align="center">
+  <img src="img/74.png">
+</div>
+
+Para encontrar el vector tangente unitario
+
+<div align="center">
+  <img src="img/75.png">
+</div>
+
+Para el vector unitario en 1
+
+<div align="center">
+  <img src="img/76.png">
+</div>
+
+<div align="center">
+  <img src="img/77.png">
+</div>
+
+### Ejercicio 2
+
+<div align="center">
+  <img src="img/78.png">
+</div>
+
+Derivando y obteniendo el valor en un punto con su tanjente nos da
+
+<div align="center">
+  <img src="img/79.png">
+</div>
+
+## Integrales de funciones vectoriales
+
+https://www.youtube.com/watch?v=Ec-cGjh0Fr0&t=228s
+
+**En la función de una sola variable tenemos una curva donde a cada punto de (x) le asignamos un punto a (y)**, queremos hallar el **área bajo la curva** que estará comprendida entre dos valores de (a) y (b)
+
+Para hallar ese área la dividiremos en rectángulos mas pequeños, de un rectángulo **extraeremos su área y tendremos que hacer los mismo con todos los rectángulos para hallar ese área bajo la curva, haciendo el sumatorio de sus áreas.**
+
+<div align="center">
+  <img src="img/80.png">
+</div>
+
+Pero si estos rectángulos son muy grandes el área va a quedar con ciertos espacios vacíos arriba en la curva, por eso el limite de la función tiene que tender a cero, para hallar cada vez rectángulos más pequeños para que el área sea cada vez mas precisa.
+
+> El calculo de integrales sirve para hallar el área bajo la curva.
+
+### Integral de funciones vectoriales
+
+Al tener una función con varias variables utilizaremos el mismo proceso para calcular la integral de una función de una variable y lo aplicaremos para cada variable (i, j, k).
+
+<div align="center">
+  <img src="img/81.png">
+</div>
+
+Todas y cada una de estas integrales se evaluaron desde los mismo puntos de (a) y (b), para así obtener el área bajo la curva de la función multivariable.
+
+### Ejemplo
+
+<div align="center">
+  <img src="img/82.png">
+</div>
+
+Integramos
+
+<div align="center">
+  <img src="img/83.png">
+</div>
+
+Evaluamos los limites
+
+<div align="center">
+  <img src="img/84.png">
+</div>
+
+## Curvas de nivel
+
+Utilizamos la estrategia de curvas de nivel para representar un figura continua de 3D en un gráfico de coordenadas 2D (x,y),
+
+Nuestra figura la dividiremos en partes,(z1, z2, z3,…zn) al dividirla podremos representarla en nuestro gráfico (x,y)
+
+<div align="center">
+  <img src="img/87.png">
+</div>
+
+<div align="center">
+  <img src="img/88.png">
+</div>
+
+Lo que obtendremos serán curvas de nivel con determinados valores en (x,y) para unas determinadas (z), cuando vamos incrementando el valor en (z) vamos subiendo por la figura
+
+Entre mas puntos evaluemos de nuestra función mas clara se volverá la variable
+
+<div align="center">
+  <img src="img/85.png">
+</div>
+
+<div align="center">
+  <img src="img/86.png">
+</div>
+
+### Ejercicio de curvas de nivel
+
+Las curvas de nivel nos sirve para poder representar figuras de 3D a 2D.
+
+* Nuestra (z) es igual a la función con dos variables (x, y) -> f(x,y), pero vamos a llamar (k) a (z).
+* Conforme vamos resolviendo la ecuación llegamos a la forma de una ecuación elipsoide.
+* Una vez tenemos nuestra ecuación de la elipsoide empezamos a dar valores a (k) y vamos obteniendo diferentes formas de nuestras figura, cuantos mas valores le demos a (k) iremos avanzando a través de la figura.
+
+<div align="center">
+  <img src="img/89.png">
+</div>
+
+Para k = 0, pasamos la raíz al otro lado quedando raíz de zero
+
+<div align="center">
+  <img src="img/90.png">
+</div>
+
+Para k = 2
+
+<div align="center">
+  <img src="img/92.png">
+</div>
+
+Para k = 6
+
+<div align="center">
+  <img src="img/93.png">
+</div>
+
+Resultado
+
+<div align="center">
+  <img src="img/94.png">
+</div>
+
+<div align="center">
+  <img src="img/91.png">
+</div>
+
+## Derivadas parciales
+
+Tenemos un paraboloide que abre hacía abajo, representa como cambia la figura con respecto a x e y, obteniendo una recta paralela al eje
+
+https://www.youtube.com/watch?v=RaR2g-h-WoI
+
+<div align="center">
+  <img src="img/95.png">
+</div>
+
+<div align="center">
+  <img src="img/96.png">
+</div>
+
+### Ejemplo
+
+* **La derivada parcial respecto del eje (x)** Representara como cambia mi figura si mantengo a (y) como constante y vario con respecto a mi eje (x)
+* **La derivada parcial respecto al eje (y)** Representara como cambia mi figura si mantengo a (x) como constante y vario con respecto a mi eje (y)
+
+<div align="center">
+  <img src="img/97.png">
 </div>
