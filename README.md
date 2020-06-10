@@ -87,6 +87,9 @@ http://biblioteca.inu.edu.sv/?wpfb_dl=263
 ## Cloud Computing
 * [GCP](/learn/GCP)
 
+## DevOps
+* [DevOps](/learn/DevOps)
+
 # El camino del saber
 
 Saber y tener conocimiento de algo implica poder explicarlo de forma simple a alguien más

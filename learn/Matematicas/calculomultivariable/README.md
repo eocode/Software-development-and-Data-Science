@@ -35,6 +35,9 @@
     - [Ejercicio de curvas de nivel](#ejercicio-de-curvas-de-nivel)
   - [Derivadas parciales](#derivadas-parciales)
     - [Ejemplo](#ejemplo-5)
+  - [Derivada direccional](#derivada-direccional)
+  - [Vector gradiente](#vector-gradiente)
+    - [Ejemplo](#ejemplo-6)
 
 https://www.geogebra.org/3d?lang=es
 
@@ -731,3 +734,88 @@ https://www.youtube.com/watch?v=RaR2g-h-WoI
 <div align="center">
   <img src="img/97.png">
 </div>
+
+<div align="center">
+  <img src="img/98.png">
+</div>
+
+## Derivada direccional
+
+> La derivada direccional es una suma de derivadas parciales, en este caso sólo con dos variables.
+
+La derivada direccional es:
+
+Du = (gradiente_funcion) * (vector_unitario_en_la direccion)
+
+**La funcion tiene solo dos variables independientes (x,y)**, pero se puede extender naturalmente esa definición al caso de tener **n variables**. Esto puede ser útil en inteligencia artifcial cuando la función de perdida puede relacionarse con los distintos pesos y bias W_i , b
+
+<div align="center">
+  <img src="img/99.png">
+</div>
+
+<div align="center">
+  <img src="img/100.png">
+</div>
+
+<div align="center">
+  <img src="img/101.png">
+</div>
+
+## Vector gradiente
+
+Hay algunas diferencias entre el vector gradiente y la derivada de una función vectorial.
+
+* La primera, es que **el vector gradiente en sí mismo es una función vectorial.**
+* La segunda es que los componentes de la derivada una función vectorial son funciónes derivadas con respecto a x todas las funciones de sus componentes son derivadas con respecto a x. 
+
+**En el vector gradiente tendremos en cada componente la derivada respecto a cada una de sus variables**, es decir, el primero con respecto a x generalmente, el segundo con respecto a y generalmente y el tercero con respecto a z generalmente.
+
+<div align="center">
+  <img src="img/102.png">
+</div>
+
+<div align="center">
+  <img src="img/103.png">
+</div>
+
+https://www.youtube.com/watch?v=Vnbi1S7x6Qg
+
+### Ejemplo
+
+Al hacer derivadas parciales encontramos un vector ortogonal, el que tiene mayor pendiente
+
+<div align="center">
+  <img src="img/104.png">
+</div>
+
+Para encontrar la derivada direccionar tenemos que multiplicar por un vector unitario
+
+Para obtener el vector unitario:
+
+<div align="center">
+  <img src="img/105.png">
+</div>
+
+Vamos a determinar la derivada direccional en el punto 2,1
+
+> Cuando ponemos coordenadas encontramos el vector gradiente en esa dirección, cuando hayamos la derivada direccional encontramos un vector tangente en esa dirección
+
+<div align="center">
+  <img src="img/106.png">
+</div>
+
+Queda aplicar el producto punto de nuestro vector unitario y nuestro gradiente
+
+<div align="center">
+  <img src="img/107.png">
+</div>
+
+Viendolo gráficamente
+
+<div align="center">
+  <img src="img/108.png">
+</div>
+
+* Llegar más rápido a una montaña
+* Dónde cambia más rápido la temperatura
+* Dónde los datos cambian más rápido
