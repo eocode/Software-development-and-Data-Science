@@ -7,6 +7,9 @@
   - [GitLab](#gitlab)
   - [Gitlab vs Github](#gitlab-vs-github)
 - [Administración](#administración)
+  - [Autenticación](#autenticación)
+    - [Recomendaciones](#recomendaciones)
+    - [Generar llave SSH](#generar-llave-ssh)
 - [Planificación](#planificación)
 - [Verificación](#verificación)
 - [Seguridad](#seguridad)
@@ -104,6 +107,28 @@ Github y Gitlab son plataformas que comparten algunas funcionalidades aunque tie
 **Gitlab** nació como una versión open source de Github y a lo largo del tiempo ha encontrado un nicho en agregar herramientas y generar integraciones directamente al producto. **Tiene una visión de que su cliente principal es alguien especializado en DevOps**
 
 # Administración
+
+## Autenticación
+
+GItlab te ofrece varias formas de autenticación tales como:
+
+* **Username y Password**
+* **Two factor authentication(2FA)** (Claves unicas)
+  * OTP One Time Password
+  * FIDO U2F Hace que el browser sea inmune a fishing
+* **SSH Key**
+  * Push
+
+### Recomendaciones
+
+* Google authenticator (OTP)
+* Authy
+  * https://authy.com/
+* Yubico
+
+### Generar llave SSH
+
+
 
 # Planificación
 

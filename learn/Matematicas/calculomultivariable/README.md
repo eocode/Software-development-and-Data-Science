@@ -38,6 +38,15 @@
   - [Derivada direccional](#derivada-direccional)
   - [Vector gradiente](#vector-gradiente)
     - [Ejemplo](#ejemplo-6)
+  - [Máximos y mínimos](#máximos-y-mínimos)
+    - [Ejercicio](#ejercicio-1)
+  - [Integrales dobles](#integrales-dobles)
+  - [Campos vectoriales](#campos-vectoriales)
+- [Ejercicios](#ejercicios)
+  - [Ecuaciones paramétricas y coordenadas polares](#ecuaciones-paramétricas-y-coordenadas-polares)
+  - [Geometría del espacio y vectores](#geometría-del-espacio-y-vectores)
+  - [Superficies cuadráticas](#superficies-cuadráticas-1)
+  - [Funciones de varias variables](#funciones-de-varias-variables-1)
 
 https://www.geogebra.org/3d?lang=es
 
@@ -819,3 +828,190 @@ Viendolo gráficamente
 * Llegar más rápido a una montaña
 * Dónde cambia más rápido la temperatura
 * Dónde los datos cambian más rápido
+
+## Máximos y mínimos
+
+Con la derivada tratamos de encontrar la pendiente en una curva
+
+Sí analizo las pendientes en diferentes puntos de la curva
+
+<div align="center">
+  <img src="img/109.png">
+</div>
+
+Para saber si es un máximo o un mínimo se usa la segunda derivaba de la función.
+
+* Si el resultado de reemplazar los puntos obtenido en la segunda derivaba es menor a 0 entonces es un máximo local
+* Si el resultado de reemplazar los puntos obtenido en la segunda derivaba es mayor a 0 entonces es un mínimo local
+
+Si es igual a 0 entonces es un punto de inflexión de la función pero no hay ni un mínimo ni un máximo local.
+
+<div align="center">
+  <img src="img/110.png">
+</div>
+
+### Ejercicio
+
+Se resuelve el sistema de ecuaciones
+
+<div align="center">
+  <img src="img/111.png">
+</div>
+
+<div align="center">
+  <img src="img/112.png">
+</div>
+
+## Integrales dobles
+
+Queremos obtener el volumen en lugar del área
+
+<div align="center">
+  <img src="img/113.png">
+</div>
+
+Analizamos rectangulos en tres dimensiones
+
+<div align="center">
+  <img src="img/114.png">
+</div>
+
+<div align="center">
+  <img src="img/115.png">
+</div>
+
+Realizamos la primer integral
+
+<div align="center">
+  <img src="img/116.png">
+</div>
+
+Realizamos la segunda integral
+
+<div align="center">
+  <img src="img/117.png">
+</div>
+
+De está forma hemos obtenido el volumen
+
+## Campos vectoriales
+
+<div align="center">
+  <img src="img/118.png">
+</div>
+
+Un **campo escalar** viene asociado a unidades que se representan con un único valor (magnitud) como es la presión o la temperatura de una habitación. En cambio, **un campo vectorial viene asociado a magnitudes como la gravedad o la velocidad del aire**, es decir, magnitudes que se representen matematicamente con una magnitud y una dirección.
+
+# Ejercicios
+
+## Ecuaciones paramétricas y coordenadas polares
+
+1. Represente el punto con coordenadas cartesianas (1,-1) en términos de coordenadas polares.
+
+<div align="center">
+  <img src="img/119.png">
+</div>
+
+<div align="center">
+  <img src="img/120.png">
+</div>
+
+2. Bosqueje la siguiente curva polar
+
+<div align="center">
+  <img src="img/124.png">
+</div>
+
+## Geometría del espacio y vectores
+
+1. Ubica el siguiente punto en el espacio usando sistema tridimensional de coordenadas (-2, -3, 5).
+
+<div align="center">
+  <img src="img/125.png">
+</div>
+
+2. ¿Cuál es el producto cruz a x b entre estos dos vectores?
+
+<div align="center">
+  <img src="img/126.png">
+</div>
+
+<div align="center">
+  <img src="img/127.png">
+</div>
+
+https://www.youtube.com/watch?v=io1vem2CmGc
+
+## Superficies cuadráticas
+
+1. Grafique la superficie dada por la ecuación:
+
+<div align="center">
+  <img src="img/128.png">
+</div>
+
+<div align="center">
+  <img src="img/129.png">
+</div>
+
+2. Analiza la siguiente ecuación y determina que superficie cuadrática es y cuales son tus razones:
+
+<div align="center">
+  <img src="img/130.png">
+</div>
+
+<div align="center">
+  <img src="img/131.png">
+</div>
+
+## Funciones de varias variables
+
+1. Calcula la derivada de:
+
+<div align="center">
+  <img src="img/132.png">
+</div>
+
+<div align="center">
+  <img src="img/133.png">
+</div>
+
+2. Observa la siguiente ecuación:
+
+<div align="center">
+  <img src="img/134.png">
+</div>
+
+<div align="center">
+  <img src="img/135.png">
+</div>
+
+3. Sea el siguiente campo escalar:
+
+<div align="center">
+  <img src="img/136.png">
+</div>
+
+¿Cuál es el gradiente?
+
+<div align="center">
+  <img src="img/137.png">
+</div>
+
+4. Calcule la siguiente integral doble:
+
+<div align="center">
+  <img src="img/138.png">
+</div>
+
+<div align="center">
+  <img src="img/139.png">
+</div>
+
+<div align="center">
+  <img src="img/140.png">
+</div>
+
+<div align="center">
+  <img src="img/141.png">
+</div>

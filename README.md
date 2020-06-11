@@ -17,6 +17,7 @@ Proyectos realizados con Python
 * [Photogram with Django](https://github.com/eocode/PhotoGram)
 * [Personal Page with Django](https://github.com/eocode/PersonalPage-with-Django)
 * [Python-Mongo](https://github.com/eocode/Python-Mongo)
+* [Cipher CLI](https://github.com/eocode/Cipher)
 
 ### Data
 * [Algoritmos de Regresión lineal simple con Python](https://github.com/eocode/Algoritmo-de-regresion-lineal-simple-en-Python)
@@ -25,7 +26,7 @@ Proyectos realizados con Python
 * [News Scraper with Python full ETL Process](https://github.com/eocode/News-Scraper-A-Complete-ETL-Process)
 * [Amazon Web Scraping y Clusterizacion con R](https://github.com/eocode/Amazon-Web-Scraping-y-Clusterizacion-con-R)
 * [Analizando una base de datos de Peliculas con PostgreSQL y Tableau](https://github.com/eocode/Proyecto-de-Peliculas-Data-Science-con-PostgreSQL)
-* [Practicas de modelos estadístico con Python](https://github.com/eocode/Practicas-de-estadistica-con-Python)
+* [Activando data, una organización para compartir en el mundo de los datos](https://github.com/ActivandoData)
 
 # Prácticas con Python
 
