@@ -36,8 +36,34 @@
   - [gitlab-ci.yml](#gitlab-ciyml)
 - [gitlab-ci.yml](#gitlab-ciyml-1)
   - [Gitlab pages](#gitlab-pages)
+  - [¿Qué es el desarrollo ágil?](#qué-es-el-desarrollo-ágil)
+  - [Autodevops](#autodevops)
+    - [Habilitar autodevops](#habilitar-autodevops)
+- [Empaquetación](#empaquetación)
+  - [Introducción a los contenedores](#introducción-a-los-contenedores)
+  - [Gitlab container registry](#gitlab-container-registry)
 - [Seguridad](#seguridad)
+  - [Introducción a DevSecOps](#introducción-a-devsecops)
+  - [Firmas de seguridad (Evita usurpar identidad)](#firmas-de-seguridad-evita-usurpar-identidad)
+  - [Pruebas estáticas de seguridad](#pruebas-estáticas-de-seguridad)
+  - [Escaneo de contenedores](#escaneo-de-contenedores)
+  - [Escaneo de dependencias](#escaneo-de-dependencias)
+  - [Pruebas dinámicas de seguridad](#pruebas-dinámicas-de-seguridad)
+  - [Gitlab security dashboard](#gitlab-security-dashboard)
 - [Distribución](#distribución)
+  - [Continuous Delivery (CD)](#continuous-delivery-cd)
+  - [Ambientes](#ambientes)
+  - [Review apps](#review-apps)
+  - [Estrategias de Distribución](#estrategias-de-distribución)
+    - [Big bang deployment](#big-bang-deployment)
+    - [Rolling deployment](#rolling-deployment)
+    - [Blue Green deployment](#blue-green-deployment)
+    - [Canary deployment](#canary-deployment)
+    - [Distribución en Gitlab](#distribución-en-gitlab)
+    - [Feature Flags](#feature-flags)
+    - [Tipos de Feature Flags](#tipos-de-feature-flags)
+    - [Feature Flags en Gitlab](#feature-flags-en-gitlab)
+    - [Rollback](#rollback)
 - [Monitoreo](#monitoreo)
 
 # Introducción
@@ -565,10 +591,512 @@ https://gitlab.com/group/proyect/-/ci/lint
 * Integración con gitlab CI
 * Dominios personalizados
 
+<div align="center">
+  <img src="img/15.png">
+</div>
 
+**Dominios**
+
+<div align="center">
+  <img src="img/16.png">
+</div>
+
+**Configuración y automatización**
+
+<div align="center">
+  <img src="img/17.png">
+</div>
+
+<div align="center">
+  <img src="img/18.png">
+</div>
+
+```yml
+image: node:11.1.0
+stages:
+  - install
+  - test
+  - build
+  - deploy
+
+install-dependencies:
+  stage: install
+  script:
+    - npm install
+  artifacts:
+    expire_in: 1hr
+    paths:
+      - node_modules/
+  cache:
+    paths:
+      - node_modules/
+
+test-apps:
+  stage: test
+  variables:
+    CHROME_BIN: google-chrome
+  dependencies:
+    - install-dependencies
+  before_script:
+    - apt-get update && apt-get install -y apt-transport-https
+    - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+    - sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    - apt-get update && apt-get install -y google-chrome-stable
+  script:
+    - npm run test:ci
+
+build-app:
+  stage: build
+  variables:
+    BUILD_CONFIGURATION: 'production'
+  dependencies:
+    - install-dependencies
+  script:
+    - npm run build
+  artifacts:
+    expire_in: 1hr
+    paths:
+    - dist/
+
+pages:
+  stage: deploy
+  dependencies:
+    - build-app
+  script:
+    - mkdir public
+    - mv ./dist/GitlabCurso/* ./public
+  artifacts:
+    paths:
+      - public
+  environment:
+    name: production
+  only:
+    - branches
+```
+
+## ¿Qué es el desarrollo ágil?
+
+El Desarrollo ágil de software viene del concepto básico de **agilidad**, la capacidad de responder a cambios.
+
+En el "Agile Manifest" la biblia del desarrollo ágil eligen el término por su adaptabilidad.
+
+**Los cuatro valores del desarrollo Agile:**
+
+* A los individuos y su interacción, por encima de los procesos y las herramientas.
+* El software que funciona, por encima de la documentación exhaustiva.
+* La colaboración con el cliente, por encima de la negociación contractual.
+* La respuesta al cambio, por encima del seguimiento de un plan.
+
+Pero… ¿qué es el desarrollo ágil?
+El desarrollo ágil abarca todo un **set de frameworks y prácticas basadas en los 12 principios** del manifiesto ágil, en los que tú eliges cuáles de estos principios son los mejores para tu desarrollo.
+
+1. Nuestra principal prioridad es **satisfacer al cliente** a través de la entrega temprana y continua de software de valor.
+2. Son bienvenidos los **requisitos cambiantes**, incluso si llegan tarde al desarrollo. Los procesos ágiles se doblegan al cambio como ventaja competitiva para el cliente.
+3. Entregar con frecuencia **software que funcione**, en periodos de un par de semanas hasta un par de meses, con preferencia en los periodos breves.
+4. Las personas del **negocio y los desarrolladores deben trabajar juntos** de forma cotidiana a través del proyecto.
+5. C**onstrucción de proyectos en torno a individuos motivados**, dándoles la oportunidad y el respaldo que necesitan y procurándoles confianza para que realicen la tarea.
+6. La forma más eficiente y efectiva de comunicar información de ida y vuelta dentro de un equipo de desarrollo es mediante la **conversación cara a cara**.
+7. El **software que funciona** es la principal medida del progreso. **Programación en pares**, 4 ojos
+8. Los procesos ágiles promueven el **desarrollo sostenido.** Los patrocinadores, desarrolladores y usuarios deben mantener un **ritmo constante** de forma indefinida.
+9. La atención continua a la excelencia técnica enaltece la agilidad. **Excelencia lograda a través de la reflexión.**
+10. La **simplicidad** como arte de maximizar la cantidad de trabajo que se hace, es esencial.
+11. Las mejores arquitecturas, requisitos y diseños emergen de **equipos que se autoorganizan.**
+12. En intervalos regulares, el equipo reflexiona sobre la forma de ser más efectivo y ajusta su conducta en consecuencia. **Cambio constante a circunstancias variables**
+
+## Autodevops
+
+Gitlab autodevops es una **solución que te permite generar un flujo de devops** inmediato con la creación del proyecto que incluye todas las mejores prácticas.
+
+**Features:**
+
+* Auto build
+* Auto test
+* Auto Code Quality
+* Auto SAST
+* Auto dependency scanning
+* Auto container scanning
+* Auto review apps
+* Auto Dast
+* Auto Deploy
+* Auto performance
+* Auto testing
+
+**Prerequisitos**
+
+* Gitlab Runner
+* Kubernetes
+* Base domain
+* Prometheus. 
+
+https://docs.gitlab.com/ee/topics/autodevops/
+
+**Personalización**
+
+* Dockerfile
+* variables
+* .gitlab-ci.yml
+
+<div align="center">
+  <img src="img/19.png">
+</div>
+
+<div align="center">
+  <img src="img/20.png">
+</div>
+
+https://docs.gitlab.com/ee/topics/autodevops/
+
+Levantar un clúster de Kubernetes desde gitlab
+
+* Conectar con cuenta de google
+  * Configurar instancia
+* Instalar Helm Tiller, (Gestor de paquetes(charts))
+* Instalar ingress (Balanceador de carga) Obtiene una IP estática
+* CertManager (Certificados de seguridad automáticos)
+* Prometeus (Monitoreo del cluster)
+
+* VPC networks
+  * Volver estática la IP
+
+### Habilitar autodevops
+
+* Para revisar la instalación basta con revisar la sección de operaciones y en kubernetes
+* Ahora ir a ci/cd dónde podemos habilitarlo
+* Ahora el pipeline tiene más pasos
+  * Build
+  * Test Production
+  * Performance
+* Se puede configurar un dominio proporcionado por gitlab hacia nip.io
+* En enviroments vamos a tener nuestro ambiente en producción a travez de nip.io, también tenemos acceso al monitoreo
+* Generar un pipeline para cada commit en ambientes de prueba
+
+# Empaquetación
+
+## Introducción a los contenedores
+
+Tanto los contenedores como las máquinas virtuales tienen un objetivo común: aislar a la aplicación y sus dependencias en una unidad que pueda ejecutarse en cualquier lugar. Más aún, tanto los contenedores como las máquinas virtuales eliminan la necesidad de proveer a nuestros servicios con hardware físico. Esto significa que se pueden utilizar de manera más eficiente los recursos computacionales que tenemos a nuestra disposición. La gran diferencia entre ambos es el enfoque arquitectónico que toman.
+
+Una máquina virtual es esencialmente una emulación de una computadora con la capacidad de ejecutar procesos y programas. Las máquinas virtuales requieren de un hypervisor para poderse ejecutar sobre una host machine o directamente sobre “el metal”.
+
+El hypervisor es un componente de software o hardware que permite a la host machine compartir recursos (RAM y procesadores) entre varias máquinas virtuales. Esto es importante, porque si el sistema está corriendo una aplicación de cómputo intensivo, se le pueden asignar más recursos que otras aplicaciones corriendo en el mismo sistema.
+
+En este sentido, la máquina virtual que corre sobre un hypervisor se le conoce como la guest machine (máquina invitada). Esta guest machine contiene todo lo necesario para correr la aplicación (por ejemplo, binarios y librerías de sistema). También contiene toda una pila de hardware virtualizado (adaptadores de redes, almacenamiento, CPU, etc.). Desde el interior, la guest machine se comporta exactamente como una unidad de cómputo. Desde afuera, sabemos que está utilizando recursos compartidos que le otorga la host machine.
+
+<div align="center">
+  <img src="img/21.png">
+</div>
+
+A diferencia de las máquinas virtuales –que proveen virtualización de hardware–, los contenedores proveen **virtualización al nivel del sistema operativo** (al abstraer el user space).
+
+A primera vista, los contenedores se parecen mucho a las máquinas virtuales. Por ejemplo, tienen un espacio dedicado al procesamiento, pueden ejecutar comandos como root, tienen interfaces de red privadas y direcciones IP, permiten configurar reglas de ruteo y iptables, tienen la posibilidad de montar file systems, etc.
+
+La gran diferencia es que los contenedores comparten el kernel de la host machine con otros contenedores.
+
+<div align="center">
+  <img src="img/22.png">
+</div>
+
+El diagrama anterior muestra que los contenedores sólo empaquetan el user space, y no el kernel o hardware virtual como lo hace una máquina virtual. Podemos ver que toda la arquitectura del sistema operativo se comparte entre todos los contenedores. Lo único que se crea cada vez son la aplicación y las librerías y binarios. Esto es lo que hace a los contenedores tan ligeros.
+Existen muchas tecnologías para crear contenedores, pero la más importante hoy en día es Docker. Docker es un proyecto open source que utiliza tecnologías de Linux para crear la abstracción de un contenedor. Sin embargo, esta no es la única tecnología en el mercado. Empresas como Google, llevan más de una década utilizando contenedores. Otros contendientes son: Solaris Zones, BSD jails, LXC, etc. Entonces, ¿qué fue lo que hizo que Docker tomara tanta relevancia?
+
+Lo primero, es la facilidad de uso. Docker permite que cualquier usuario (desarrolladores, sysadmins, etc.), pueda empaquetar su aplicación rápidamente en su computadora personal y la misma aplicación puede correr ahora en cualquier nube pública, datacenter privado o directamente en hardware.
+
+Una segunda ventaja es su velocidad. Los contenedores son bastante ligeros (comparados con las máquinas virtuales), pues son simplemente ambientes contenidos corriendo en el kernel. Las imágenes de Docker se crean en segundos, mientras que las máquinas virtuales toman más tiempo pues necesitan inicializar un sistema operativo completo cada vez.
+
+Por último, Docker cuenta con el Docker Hub lo que permite compartir imágenes con mucha facilidad. Docker Hub tiene miles de imágenes públicas que han sido creadas por la comunidad para satisfacer casi cualquier necesidad. Puedes escoger entre decenas de sistemas operativos, lenguajes de programación y librerías para utilizar como base en tu aplicación.
+
+Los contenedores son importantes en el mundo de Gitlab pues nos permiten aprovechar integraciones con clusters de Kubernetes y Gitlab Container Registry, y utilizar AutoDevOps para crear flujos inmediatos de DevOps que podrían tomarnos semanas si hiciéramos una integración ad hoc. Estas herramientas asumen que utilizas Docker y contenedores para empaquetar tu aplicación.
+
+## Gitlab container registry
+
+Gitlab container registry permite almacenar imágenes de Docker para uso posterior. En un caso tradicional, cada vez que el CI tiene un build exitoso, una nueva imagen se envía al container registry
+
+<div align="center">
+  <img src="img/23.png">
+</div>
 
 # Seguridad
 
+## Introducción a DevSecOps
+
+En el pasado, el equipo de Seguridad actuaba aislado y actuaba únicamente al final del proceso de desarrollo, un flujo de waterfall. Esto funcionaba porque eran ciclos de desarrollo que llevaban meses o años.
+
+DevSecOps significa pensar en la seguridad de la aplicación a lo largo del proceso, desde el principio. Se trata de automatizar la seguridad e incluirla en el ciclo de vida de la aplicación (no más seguridad externa y en perímetros)
+
+https://docs.gitlab.com/ee/integration/jenkins.html
+
+<div align="center">
+  <img src="img/24.png">
+</div>
+
+https://www.redhat.com/en/topics/devops/what-is-devsecops
+
+## Firmas de seguridad (Evita usurpar identidad)
+
+**GPG permite identificar**, sin lugar a dudas, **de quién proviene un commit;** añade una capa adicional de seguridad a Git para prevenir "#caballos de troya".
+
+Gitlab despliega un banner junto a los commits para mostrar que dichos commits están verificados.
+
+<div align="center">
+  <img src="img/25.png">
+</div>
+
+Programa gpg para validar los commits
+
+<div align="center">
+  <img src="img/26.png">
+</div>
+
+https://gitlab.com/help/user/project/repository/gpg_signed_commits/index.md
+
+> Se configura en Configuración -> GPG Keys
+
+## Pruebas estáticas de seguridad
+
+Las pruebas estáticas de seguridad analizan nuestros archivos buscando patrones inseguros de código.
+
+Crean un reporte que es añadido como widget al merque request
+Utilizan la imagen de **Docker SAST de Gitlab**
+
+**Tipos de vulnerabilidades**
+
+* **Critical:** Existe un falla de código que da acceso de root o a los sistemas sin necesidad de ingeniería social. Debes atenderla de inmediato.
+* **High:** Si se explota este tipo de vulnerabilidad estamos en riesgo de perder datos. Es difícil de explotar.
+* **Medium:** El hacker va a tener que realizar trabajo adicional para obtener el acceso deseado.
+* **Low:** No representan un riesgo de pérdida de datos.
+* **Unknow:** No han sido clasificadas todavía y debes evaluarlas una por una.
+
+<div align="center">
+  <img src="img/27.png">
+</div>
+
+## Escaneo de contenedores
+
+https://github.com/quay/clair
+
+* Utiliza Clair y clair-Scanner para verificar los contenedores
+* Si deseas omitir vulnerabilidades, las puedes incluir en el archivo clari-whitelist.yml
+* Verifica que los paquetes instalados a nivel contenedor no tengan vulnerabilidades de seguridad
+
+<div align="center">
+  <img src="img/28.png">
+</div>
+
+## Escaneo de dependencias
+
+El Dependency scanning analiza estáticamente las dependencias del proyecto para encontrar vulnerabilidades. Puede generar un reporte que se añade al merge request y utiliza la imagen de Docker Dependency Scanning de Gitlab
+
+<div align="center">
+  <img src="img/29.png">
+</div>
+
+<div align="center">
+  <img src="img/30.png">
+</div>
+
+## Pruebas dinámicas de seguridad
+
+Las pruebas dinámicas de seguridad asumen que es un atacante externo y la aplicación es un blackbox para así correrle ciertas pruebas.
+
+* Utiliza OWASP ZAP proxy y ZAP baseline.
+* Corre análisis pasivo.
+* Genera un reporte que puede ser verificado en el merge request
+
+<div align="center">
+  <img src="img/31.png">
+</div>
+
+## Gitlab security dashboard
+
+El Gitlab security dashboard es un hub centralizado de información donde tienes visibilidad de las vulnerabilidades que actualmente están corriendo en producción.
+
+Permite acceder rápidamente a los riesgos detectados y aceptados para el ambiente de producción, permite marcar una vulnerabilidad como inválida o no aplicable, genera vínculos a los reportes de seguridad externos para entender mejor una vulnerabilidad.
+
 # Distribución
 
+## Continuous Delivery (CD)
+
+Enviar código a producción
+
+<div align="center">
+  <img src="img/32.png">
+</div>
+
+* Los deployments se pueden regular en caso de que se tengan SLAs
+* Gitlab permite generar estrategías
+* Podemos modificar la estrategía de autodevops
+
+## Ambientes
+
+Los Ambientes **se suelen utilizar para determinar si el código escrito cumple con las expectativas del negocio** y los requisitos impuestos con antelación para que así las personas puedan aprobarlos o no.
+
+* Permiten realizar pruebas en diferentes ambientes antes de enviar el código a nuestros usuarios.
+* Se integran con Gitlab CI para hacer realidad el Continuous Deployment.
+* Gitlab lleva el historial de todos los deployments que se han realizado a un ambiente específico.
+* Permiten verificar que el Deployment process se encuentre intacto y da la oportunidad de hacer QA
+
+Tenemos algunos tipos como:
+
+* Estáticos
+* Dinámicos
+* Protegidos
+
+> En operations se pueden generar los ambientes
+
+## Review apps
+
+Las Reviews apps permiten ver los cambios de un feature branch al activar un ambiente para ejecutar el código con cada merge request.
+
+**Los diseñadores y los product managers pueden ver los cambios sin necesidad de levantar un ambiente local** en sus computadoras
+
+Cuando el merge request se aprueba y el feature branch se borra, se detiene el review app y se destruye la infraestructura
+
+Completamente integrado con GitlabCI y merge request.
+
+<div align="center">
+  <img src="img/33.png">
+</div>
+
+<div align="center">
+  <img src="img/34.png">
+</div>
+
+## Estrategias de Distribución
+
+Uno de los temas que más ha cambiado en los últimos años en el mundo de la Ingeniería de Software es la velocidad a la que se distribuyen cambios en nuestros aplicaciones. Los equipos de desarrolladores distribuyen cambios más temprano y más rápido que antes. 
+
+Mientras que antes los ciclos naturales tomaban meses o años, hoy en día los cambios suceden varias veces al día. Los beneficios son claros:
+
+* El tiempo requerido para comercializar productos o servicios se disminuye drásticamente.
+* Los clientes obtienen el valor del producto en menos tiempo.
+* La retroalimentación de los clientes también fluye a velocidades aceleradas, lo que permite al equipo de desarrollo iterar de manera más rápida.
+* La moral del equipo aumenta, pues pueden ver el fruto de su trabajo en producción.
+
+Sin embargo, no todo es felicidad. Con este tipo de estrategias aceleradas, existe un mayor riesgo de introducir cambios que pueden afectar negativamente la experiencia del usuario; o peor aún, traer downtime a nuestro sistema. Por eso, es importante incluir prácticas que permitan minimizar el riesgo de que lo anterior se materialice.
+
+### Big bang deployment
+
+Como lo sugiere su nombre, los despliegues de Big Bang, **actualizan todas las partes del sistema en una sola barrida.** Esta estrategia encuentra sus orígenes en los días en que el software se distribuía en medios físicos y el cliente lo instalaba manualmente en su máquina.
+
+Este tipo de despliegues requieren que el negocio ejecute una enorme cantidad de pruebas durante una fase específica del desarrollo, antes de aprobar el despliegue. Este tipo de pruebas, normalmente se asocian con el modelo waterfall en el que el desarrollo se ejecuta en etapas secuenciales.
+
+Las aplicaciones modernas tienen la ventaja de poderse actualizar automáticamente, en el cliente o el servidor, por lo que este tipo de estrategias han sido casi completamente abandonadas por equipos que siguen las metodologías ágiles.
+
+### Rolling deployment
+
+Los rolling deployments, o despliegue en fases, tienen la ventaja de mitigar algunas de las desventajas de los big bang deployments. Esto es así, porque disminuye el riesgo de downtime al desplegar la aplicación a lo largo del tiempo.
+
+Es importante resaltar que el despliegue consiste en **reemplazar una versión de la aplicación con otra en fases**; de tal manera que existe un tiempo en el que ambas aplicaciones pueden existir. En el caso de un despliegue a Kubernetes, por ejemplo, el reemplazo consiste en destruir el contenedor con la versión anterior y descargar la última versión de la imagen **desde el container registry** en el cual la alojemos.
+
+Y es aquí donde se alcanza a ver otra ventaja de **contenerizar nuestra aplicación:** que los rollbacks resultan ser muy sencillos, cuando antes (en el modelo del Big Bang) resultaban imposibles. Hacer rollback es tan sólo destruir de nueva cuenta el pod, y descargar la versión previa (o cualquier otra versión que queramos) desde nuestro container registry.
+
+### Blue Green deployment
+
+Esta estrategia, también conocida como **A/B deployment**, consiste en tener **dos ambientes de producción paralelos (uno llamado blue y el otro llamado green) en el cual se despliegan las nuevas versiones de las aplicaciones de manera alternativa.** Es decir, si blue tiene instalada la V1 de nuestra aplicación, entonces green tendrá instalada la V2, y cuando se despliegue se la siguiente versión (V3) se utilizará el ambiente blue, nuevamente. ¿Dónde se desplegará el ambiente V4? En green, por supuesto; y la secuencia alternativa continúa indefinidamente.
+
+Una de las ventajas de esta estrategia es que facilita realizar un rollback a la versión anterior, de manera sencilla, cuando nuestra aplicación no se encuentra habilitada para trabajar dentro de contenedores. **En caso de que exista una falla en la nueva versión, simplemente se rutea al ambiente previo.**
+
+**Es importante mencionar, que únicamente el ambiente de la capa de la aplicación se replica.** Las bases de datos, al igual que el almacenamiento de archivos binarios (fotos, imágenes, vídeos, por ejemplo), son compartidas por ambos ambientes.
+
+### Canary deployment
+
+Existe otra modalidad de los despliegues blue green que se conoce como **canary deployment.** El canary deployment en lugar de rutear todo el tráfico de inmediato, se utiliza una **aproximación incremental.** Es decir, se comienza a rutear a la nueva versión progresivamente. Por ejemplo, 25% 50% 75% 100% ó 33% 66% 100%, etc.
+
+Una de las ventajas de adoptar esta estrategia es que se puede probar la nueva versión con un subconjunto de los usuarios para determinar si se encuentra estable, y en caso de confirmarse, se rutea todo el tráfico al ambiente green o blue.
+
+### Distribución en Gitlab
+
+En Gitlab, cuando utilizamos AutoDevOps, **podemos configurar nuestra estrategia de despliegue a través de opciones predeterminadas en el UI o a través de variables de ambiente de Gitlab CI.**
+
+Las variables que podemos configurar son las siguientes:
+**STAGING_ENABLED** activa el ambiente staging cuando se le asigna el valor 1.
+**CANARY_ENABLED** activa el ambiente canary cuando se le asigna el valor 1.
+**INCREMENTAL_ROLLOUT_MODE** define la forma en el que el despliegue incremental se realizará. Acepta los valores manual y timed.
+
+Este es el resultado de la algunas combinaciones de configuración:
+
+Sin la declaración de **INCREMENTAL_ROLLOUT_MODE ni STAGING_ENABLED.**
+
+<div align="center">
+  <img src="img/35.png">
+</div>
+
+Sin la declaración de **INCREMENTAL_ROLLOUT_MODE**, pero con **STAGING_ENABLED** asignado el valor de 1.
+
+<div align="center">
+  <img src="img/36.png">
+</div>
+
+Con INCREMENTAL_ROLLOUT_MODE en modo manual, y sin STAGING_ENABLED.
+
+<div align="center">
+  <img src="img/37.png">
+</div>
+
+Con INCREMENTAL_ROLLOUT_MODE en modo manual, ySTAGING_ENABLED asignado el valor de 1…
+
+<div align="center">
+  <img src="img/38.png">
+</div>
+
+Para modificar la opción de despliegue a través de la UI, navega a Settings > CI/CD > Auto DevOps y selecciona una de la siguientes opciones:
+
+* **Continuous deployment to production:** Habilita el despliegue continuo del branch master al ambiente de producción.
+* **Continuous deployment to production using timed incremental rollout:** Asigna el valor timed a la variable de Gitlab CI INCREMENTAL_ROLLOUT_MODE. Esto significa que el despliegue se realizará cada vez que existe un cambio en el branch master, pero de manera incremental en lapsos de 5 minutos.
+* **Automatic deployment to staging, manual deployment to production:** Asigna el valor de 1 a la variable STAGING_ENABLED y el valor de manual a la variable INCREMENTAL_ROLLOUT_MODE. El resultado es que la rama master se despliega de manera continua al ambiente de staging, y se activan las acciones manuales para el despliegue a producción.
+
+### Feature Flags
+
+Los feature flags son una técnica poderosa, que permite a los equipos **modificar el comportamiento de su sistema sin necesidad de modificar código o realizar un despliegue.** Esto aumenta la velocidad del equipo sin sacrificar la estabilidad del sistema.
+
+Sin embargo, no todo es color rosa: **los feature flags introducen gran complejidad a nuestro sistema**, y si no somos cuidadosos, podemos construir un sistema en el cual sea imposible escribir pruebas unitarias (por la explosión combinatoria de posibilidades que los feature flags introducen). Por eso, como regla general, debemos mantener los feature flags en un mínimo.
+
+Ahora sí, a entrarle de lleno. Para trabajar correctamente con los feature flags, es indispensable reconocer que existen diversas categorías, y el tratamiento que le damos a cada una debe ser distinto.
+
+### Tipos de Feature Flags
+
+La primera categoria se conoce como 
+
+* **Release Flags.** Este tipo de bandera nos permite implementar una estrategia de **Continuous Deliver**y, dónde los diferentes features se activan de manera manual e independiente. Este tipo de estrategia **es importante cuando se requiere lanzar una funcionalidad compleja que requiere estar concluida al 100% para ser lanzada o cuando se necesita** coordinar un evento externo junto con el despliegue de la funcionalidad (por ejemplo, cuando el feature se lanza en coordinación con una campaña de marketing).
+
+* La segunda categoría son los **Experiment Flags.** Este tipo de flag se utiliza cuando nuestra aplicación permite la realización de experimentos A/B. **Cada usuario de la aplicación es segmentado en cohortes y se muestran diferentes funcionalidades dependiendo del cohorte al que pertenezcan.** Este tipo de flags tiene un periodo de vida muy corto, pues una vez que se ha determinado el resultado del experimento, se opta por una u otra versión, y se estandariza el uso en el sistema. También, es importante tener duraciones cortas porque cuando se corren diversos experimentos **A/B de manera simultánea**, **existen altas posibilidades que los experimentos interfieran el uno con el otro, eliminando así la validez estadística del resultado.**
+* Por su parte, los **Ops Flags**, permiten crear switches que facilitan controlar el comportamiento del sistema en runtime. **Existen ocasiones, por ejemplo, en el que los sistemas reciben cargas inusuales y es necesario optimizar los recursos que tenemos disponibles para servir nuestra aplicación.** En este caso, a través de feature flags es posible deshabilitar temporalmente servicios no críticos (como quizá un proceso que utiliza mucha memoria o procesamiento), para después habilitarlos una vez que la carga se haya normalizado.
+
+* Por último, los **Permission Flags** nos permiten habilitar funcionalidades para usuarios específicos de nuestra aplicación. Un ejemplo de lo anterior acontece cuando una compañía decide hacer **dogfooding para probar internamente funcionalidades antes de habilitarlas para todos los clientes.** En este caso, se puede utilizar una lista de Ids de usuarios para determinar si es necesario mostrar la funcionalidad o no.
+
+### Feature Flags en Gitlab
+
+**Gitlab ofrece la funncionalidad de manejar feature flags directamente desde la interfaz del proyecto.** Detrás de bambalinas, Gitlab utiliza el proyecto open source **Unleash. Unleash** tiene dos componentes: **un servidor (que permite definir y administrar feature flags), y librerías para el cliente para que pueda consultar el estado de un flag específico.** Gitlab implementa el servidor, y deja que los desarrolladores implementen la parte del cliente, según su lenguaje de programación.
+
+Para crear un feature flag, es necesario realizar lo siguientes pasos:
+
+Navega al menú Operations > Feature Flags
+Da click en el botón que dice New Feature Flag
+Escoge un nombre y una descripción para tu feature flag
+Y da click en el botón Create feature flag
+
+<div align="center">
+  <img src="img/39.png">
+</div>
+
+Un punto importante son los **Environment Specs**, los cuales permiten activar el feature en diferentes ambientes (por ejemplo, staging y producción). También se puede habilitar el ambiente * que aplica para todos los ambientes. Gitlab toma por default el ambiente más específico.
+
+<div align="center">
+  <img src="img/40.png">
+</div>
+
+Por último, para generar la **integración del lado del cliente es necesario utilizar una de las múltiples librerías que ofrece Unleash.** Para configurarlo, es necesario obtener los datos de configuración desde la interfaz de Gitlab y añadirlos al momento de inicializar nuestra librería. Para eso, navega a **Operations > Feature Flags y da click en el botón Configure**. En ese momento aparecerá un popup con la información que necesitas.
+
+<div align="center">
+  <img src="img/41.png">
+</div>
+
+### Rollback
+
+Rollback es un mecanismo que **nos permite regresar a la versión anterior o donde estés seguro de que la aplicación sigue funcionando.** Esto con tan solo un click.
+
+Gitlab ofrece la funcionalidad de "re deploy" para correr cualquier pipeline que haya sido ligado a ambiente.
+**Permite automatizar el regreso a ambientes libres de bugs.**
+
 # Monitoreo
+
