@@ -64,7 +64,11 @@
     - [Tipos de Feature Flags](#tipos-de-feature-flags)
     - [Feature Flags en Gitlab](#feature-flags-en-gitlab)
     - [Rollback](#rollback)
-- [Monitoreo](#monitoreo)
+- [Monitoreo (Opción de Operaciones)](#monitoreo-opción-de-operaciones)
+  - [Métricas de desempeño (performance metrics)](#métricas-de-desempeño-performance-metrics)
+  - [Métricas de salud (health metrics)](#métricas-de-salud-health-metrics)
+  - [Metricas de equipo](#metricas-de-equipo)
+  - [Rastreo de errores](#rastreo-de-errores)
 
 # Introducción
 
@@ -1098,5 +1102,55 @@ Rollback es un mecanismo que **nos permite regresar a la versión anterior o don
 Gitlab ofrece la funcionalidad de "re deploy" para correr cualquier pipeline que haya sido ligado a ambiente.
 **Permite automatizar el regreso a ambientes libres de bugs.**
 
-# Monitoreo
+# Monitoreo (Opción de Operaciones)
 
+Cuando el codebase era relativamente estático, operaciones no se preocupaba mucho del monitoreo, pero ahora con la llegada de DevOps y con cambios muy frecuentes al ambiente, el monitoreo se vuelve indispensable.
+
+**Best practices:**
+
+* Monitorea todos los ambientes(incluyendo review apps).
+* Familiarizate con las métricas "normales" de tu aplicación.
+* Automatiza el monitoreo.
+
+Comparte los datos con el resto de la organización.
+– Reportes.
+– Accesos privilegiados.
+
+Monitorea aplicación, infraestructura y equipo.
+
+<div align="center">
+  <img src="img/42.png">
+</div>
+
+<div align="center">
+  <img src="img/43.png">
+</div>
+
+## Métricas de desempeño (performance metrics)
+
+Las métricas de desempeño nos pueden dar una idea de qué tanto está creciendo la infraestructura y la capacidad de respuesta para nuestros clientes.
+
+* Nos ayudan a medir el rendimiento.
+* Nos dan una idea de cómo afinar un workload a una query.
+
+`Prometheus en Gitlab ayuda en está parte`
+
+## Métricas de salud (health metrics)
+
+Las métricas de salud nos permiten entender si nuestros dispositivos o infraestructura están a punto de fallar. Nos ayuda a decidir si debemos aumentar o disminuir nuestros recursos
+
+## Metricas de equipo
+
+* Cycle analytics. (Idea to production)
+* Lenguajes de programación utilizados
+* Commits por día del mes, de la semana y hora
+* Pipelines exitosas, fallidas y tiempo de ejecución
+* Contribuciones por persona
+Git timeline
+
+## Rastreo de errores
+
+Uso de Sentry
+
+* https://sentry.io/welcome/
+* Operactions->Error tracking
