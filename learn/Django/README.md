@@ -3,35 +3,41 @@
 > Conceptos clave de Django
 
 ## Tabla de Contenido<!-- omit in toc -->
+- [Apuntes sobre Django](#apuntes-sobre-django)
 - [Pycharm](#pycharm)
 - [Python Hosting](#python-hosting)
-- [¿Qué es Django?](#%c2%bfqu%c3%a9-es-django)
+- [¿Qué es Django?](#qué-es-django)
   - [Crear un proyecto nuevo](#crear-un-proyecto-nuevo)
-  - [Jerarquía de ficheros](#jerarqu%c3%ada-de-ficheros)
+  - [Jerarquía de ficheros](#jerarquía-de-ficheros)
 - [Django APPS](#django-apps)
   - [HttpResponse](#httpresponse)
 - [Templates](#templates)
   - [Herencia de templates](#herencia-de-templates)
-  - [Template tag {% url %}](#template-tag--url)
+  - [Template tag {% url %}](#template-tag--url-)
   - [Imagenes](#imagenes)
 - [Modelos](#modelos)
 - [Panel de administrador](#panel-de-administrador)
   - [Nombre de la app](#nombre-de-la-app)
-  - [Campos en español](#campos-en-espa%c3%b1ol)
+  - [Campos en español](#campos-en-español)
   - [Campos especiales](#campos-especiales)
   - [Personalizar el admin](#personalizar-el-admin)
 - [Ficheros multimedia](#ficheros-multimedia)
-  - [Patrón MVT Modelo-Vista-Template](#patr%c3%b3n-mvt-modelo-vista-template)
+  - [Patrón MVT Modelo-Vista-Template](#patrón-mvt-modelo-vista-template)
 - [Relaciones (ORM)](#relaciones-orm)
-- [Internacionalización con Django](#internacionalizaci%c3%b3n-con-django)
+- [Internacionalización con Django](#internacionalización-con-django)
   - [Dependencias necesarias](#dependencias-necesarias)
   - [Marcar texto para traducir](#marcar-texto-para-traducir)
-  - [Generar archivos de traducción](#generar-archivos-de-traducci%c3%b3n)
-  - [Compilar archivos de traducción](#compilar-archivos-de-traducci%c3%b3n)
-  - [Traducción de modelos](#traducci%c3%b3n-de-modelos)
+  - [Generar archivos de traducción](#generar-archivos-de-traducción)
+  - [Compilar archivos de traducción](#compilar-archivos-de-traducción)
+  - [Traducción de modelos](#traducción-de-modelos)
 - [Integrar Django + React](#integrar-django--react)
 - [Graphql con Django](#graphql-con-django)
 - [Multi-Tenant](#multi-tenant)
+
+
+# Apuntes sobre Django
+
+https://data-flair.training/blogs/django-orm-tutorial/
 
 # Pycharm
 
