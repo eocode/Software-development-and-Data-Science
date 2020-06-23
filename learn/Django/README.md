@@ -886,6 +886,10 @@ STATICFILES_DIRS = [
 
 # Graphql con Django
 
+Consultas en Graphene
+
+https://medium.com/analytics-vidhya/create-a-fullstack-app-with-django-graphql-and-vuejs-727a0cf41820
+
 Instalar graphene
 
 `pip install graphene-django`
