@@ -150,6 +150,16 @@ Por lo cual te recomiendo seguir los siguientes pasos:
 * **Segunda leída:** Repara tu solución si es necesario reparar algo.
 * **Tercer leída:** Mejora tu solución lo mas que puedas.
 
+# Otros tips para resolver problemas
+
+* Entiende la descripción del problema
+* Define los datos de entrada
+* Haz tu análisis
+* Resume tus conclusiones
+* Elige el algoritmo
+* Prueba
+* Obtén la complejidad computacional
+
 # Algunas herramientas interesantes
 
 https://www.screentogif.com/
