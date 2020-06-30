@@ -45,6 +45,10 @@ Ruta de aprendizaje con los lenguajes Python, R, Scala y Bases de datos
 ## Trabajo en equipo y gestión de proyectos
 * [Scrum](/learn/Scrum)
 
+## Marketing digital
+
+* [Whatsapp Business](/learn/Mkt/WhatsApp)
+
 ## Matemáticas
 * [Logica](/learn/Matematicas/logica)
 * [Fundamentos de Matemáticas](/learn/Matematicas/fundamentos)
