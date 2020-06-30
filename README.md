@@ -42,6 +42,9 @@ Prácticas de desarrollo y algoritmos con Python
 
 Ruta de aprendizaje con los lenguajes Python, R, Scala y Bases de datos
 
+## Trabajo en equipo y gestión de proyectos
+* [Scrum](/learn/Scrum)
+
 ## Matemáticas
 * [Logica](/learn/Matematicas/logica)
 * [Fundamentos de Matemáticas](/learn/Matematicas/fundamentos)
