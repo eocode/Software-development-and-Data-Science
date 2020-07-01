@@ -13,12 +13,15 @@ Apuntes, proyectos y códigos realizados con Python.
     - [Ciencias](#ciencias)
     - [CLI](#cli)
     - [Aplicaciones web](#aplicaciones-web)
+    - [Empresas usando python](#empresas-usando-python)
   - [Lenguajes de programación](#lenguajes-de-programación)
     - [TIpos de datos](#tipos-de-datos)
     - [Tiempo de ejecusión](#tiempo-de-ejecusión)
   - [Clasificación de tipado de lenguaje](#clasificación-de-tipado-de-lenguaje)
   - [Paradigmas de programación](#paradigmas-de-programación)
+  - [Algoritmos](#algoritmos)
   - [El Zen de Python](#el-zen-de-python)
+  - [La consola](#la-consola)
   - [Elementos básicos](#elementos-básicos)
   - [Variables y expresiones](#variables-y-expresiones)
     - [Reglas de Variables:](#reglas-de-variables)
@@ -188,6 +191,58 @@ https://alexgaynor.net/2010/may/15/pypy-future-python/
 * Gunicorn
 * Tornado
 
+<div align="center">
+  <img src="img/20.png">
+</div>
+
+### Empresas usando python
+
+<div align="center">
+  <img src="img/21.png">
+</div>
+
+**Instagram**
+
+https://instagram-engineering.com/web-service-efficiency-at-instagram-with-python-4976d078e366
+
+**Google**
+
+> Creo que todo empezó porque los primeros que trabajaron en Google (Sergey, Larry, Craig, …) tomaron una buena decisión de ingenieria: «Python donde podemos, C++ donde debemos.»
+
+https://stackoverflow.com/questions/2560310/heavy-usage-of-python-at-google/2561008#2561008
+
+**Spotify**
+
+https://engineering.atspotify.com/2013/03/20/how-we-use-python-at-spotify/
+
+**Netflix**
+
+https://netflixtechblog.com/python-at-netflix-86b6028b3b3e
+
+**Uber**
+
+https://eng.uber.com/tech-stack-part-one-foundation/
+
+**Dropbox**
+
+https://www.pythonpeople.nl/how-python-powers-dropbox/
+
+**Pinteres**
+
+https://stackshare.io/pinterest/pinterest
+
+**Instacart**
+
+https://stackshare.io/posts/the-tech-behind-instacarts-grocery-delivery-service
+
+**Reddit**
+
+https://brainsik.net/2009/why-reddit-uses-python/
+
+**Lyft**
+
+https://www.youtube.com/watch?v=aetoXWRt24k
+
 ## Lenguajes de programación
 Instrucciones que se convierten a código de maquina
 
@@ -287,6 +342,16 @@ Hay dos estilos de programación,
 https://www.ionos.mx/digitalguide/paginas-web/desarrollo-web/paradigmas-de-programacion/
 https://www.geeksforgeeks.org/introduction-of-programming-paradigms/
 
+## Algoritmos
+
+* Serie de pasos ordenados
+* Finito
+* No es ambiguo
+
+<div align="center">
+  <img src="img/22.png">
+</div>
+
 ## El Zen de Python
 * Hermoso es mejor que feo.
 * Explícito es mejor que implícito.
@@ -307,6 +372,15 @@ https://www.geeksforgeeks.org/introduction-of-programming-paradigms/
 * Si la aplicación es difícil de explicar, es una mala idea.
 * Si la aplicación es fácil de explicar, puede ser una buena idea.
 * Los espacios de nombres son una gran idea ¡hay que hacer más de eso!
+
+## La consola
+
+Comandos principales
+
+* cd navegar
+* ls listar
+* mkdir crear carpeta
+* touch crear archivos
 
 ## Elementos básicos
 * Literales
