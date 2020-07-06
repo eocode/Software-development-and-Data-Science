@@ -14,6 +14,26 @@
   - [Estrategía de pruebas](#estrategía-de-pruebas)
   - [Testing en desarrollo de software](#testing-en-desarrollo-de-software)
   - [Testing ágil](#testing-ágil)
+  - [Niveles de pruebas de software](#niveles-de-pruebas-de-software)
+  - [Tipos de pruebas de software](#tipos-de-pruebas-de-software)
+  - [Pruebas estáticas y dinámicas](#pruebas-estáticas-y-dinámicas)
+  - [Definición y diseño de pruebas](#definición-y-diseño-de-pruebas)
+- [Gestión monitoreo y control](#gestión-monitoreo-y-control)
+  - [Caja blanca, gris y negra](#caja-blanca-gris-y-negra)
+  - [Monitoreo y Seguimiento](#monitoreo-y-seguimiento)
+  - [Roles y responsabilidades](#roles-y-responsabilidades)
+- [Gestión de BUGs](#gestión-de-bugs)
+  - [Retrabajo](#retrabajo)
+  - [Sistema de seguimiento de bugs](#sistema-de-seguimiento-de-bugs)
+    - [Repositorio y monitore de defectos](#repositorio-y-monitore-de-defectos)
+  - [Defectos y sugerencias](#defectos-y-sugerencias)
+- [Depuración](#depuración)
+  - [Técnicas de depuración](#técnicas-de-depuración)
+  - [Pruebas de verificación](#pruebas-de-verificación)
+- [Bases de la automatización de pruebas](#bases-de-la-automatización-de-pruebas)
+  - [Automatización de pruebas](#automatización-de-pruebas)
+    - [Frameworks](#frameworks)
+  - [Gherkin](#gherkin)
 
 # Introducción
 
@@ -377,3 +397,418 @@ Cuando ya queremos hablar de **integración continua** y **liberación continua*
 </div>
 
 Las pruebas va a distintos niveles
+
+## Niveles de pruebas de software
+
+Vamos a ver diferentes estrategias de cómo podemos ir probando elementos por capas. **Componentes, estructuras, etc.**
+
+* **Prueba de Componentes:** Componentes son aquellas cosas pequeñas que sueles ver en un video como el botón de pausa, volumen, adelantar, retroceder. Cada una de esas acciones son un componente.
+
+* **Pruebas de integración:** Una aplicación tiene una serie de componentes que trabajando juntos forman un pequeño sistema, pero cuando tienes varios de estos sistemas necesitas integrarlos entre ellos.
+
+* **Prueba de sistema:** Esta parte incluye que estás tomando en cuenta el contexto, no es lo mismo tener las mismas pruebas para iOS, Android y Web.
+
+* **Pruebas de aceptación:** Si ya probamos que nuestro elemento o acción funcionan, estás pruebas nos aseguran con o sin el cliente que tiene cubierta todas las necesidades requeridas en el software. Es la última verificación.
+
+## Tipos de pruebas de software
+
+Necesitamos tener otra clasificación adicional. En los niveles sabemos la **profundidad de las pruebas**, pero en los tipos independientemente de su profundidad son las técnicas que vamos a usar para encontrar los defectos.
+
+* **Pruebas funcionales:** Cómo funciona un sistema, qué debe estar haciendo, cómo está interactuando el usuario con él.
+
+* **Pruebas no-funcionales:** El usuario puede estar experimentando otro tipo de cosas que aún funcionando puede tener la **sensación de lentitud, falta de legibilidad o claridad**. Esas características de **usabilidad** están asociadas a estas pruebas.
+
+* **Pruebas estructurales:** Tienen que ver con la **tecnología y el stack** usado para construir nuestro producto. Nos tenemos que asegurarnos que nuestra base de datos o servidor funcionen de la manera correcta. Son conocidas como **pruebas de caja blanca**.
+
+* **Prueba de manejo de cambios**: Es probar nuevamente un componente ya probado para verificar que no ha sido impactado por actualizaciones.
+
+## Pruebas estáticas y dinámicas
+
+Ya vimos los cuatro diferentes tipos de pruebas, pero estas también se separan en dos formas diferentes de trabajarlas.
+
+* **Pruebas estáticas**: Muchas veces no son consideradas en los proyectos porque significa revisar código, documentación, verificar información documentada de la forma correcta.
+  * Contratos, planes y calendarios del proyecto así como su presupuesto
+  * El análisis de requerimientos
+  * Especificaciones o reglas de negocio
+    * Técnicos
+    * Seguridad
+
+* **Pruebas dinámicas**: Se enfocan en comportamientos externos visibles durante la ejecución del software.
+  * Las definiciones de 
+    * Historias de usuario
+    * Criterios de aceptación
+    * Mockups
+  * El diseño de la arquitectura
+  * Las pruebas (Testware), puntos de verificación CI
+  * Guías de usuario
+  * Evaluación/revisión del código
+
+**Beneficios**
+* Detectar y corregir defectos de manera más eficiente
+* Identificar y priorizar la ejecución de pruebas en etapas posteriores
+* Prevenir defectos
+  * Que no son fácilmente detectables durante las pruebas dinámicas
+  * Durante la etapa de análisis y diseño
+* Cubrir aspectos como:
+  * Inconsistencias, ambigueadades, contradicciones, definiciones inexactas, requerimientos redundantes
+* Reducir el retrabajo e incrementar la productividad
+* Reducir el costo y el tiempo
+* Mejorar la comunicación entre todos los miembros del equipo
+
+## Definición y diseño de pruebas
+
+Esto es algo básico para cada tester. Hay varias cosas necesarias que debemos comprender y estar seguros de para qué lo hacemos.
+
+Tu obligación y por lo que vas a brillar es porque sabes 
+
+* Encontrar Problemas, 
+> Si no encuentro problemas antes de que el producto sea entregado al cliente, entonces su testing ineficiente **Considerar circunstancias adversas u otros escenarios**
+
+* Documentarlos 
+> Si cuendo encuentras un problema no sabes documentar y reproducir los pasos correctos su testing genera retrabajo y sube el costo
+
+* Comunicarlos. 
+> Si como representante de calidad del producto no sabe argumentar y proteger los intereses del negocio o los clientes, entonces su testing no agrega valor
+
+Es crucial documentar, diseñar y nuestros casos de prueba contengan la información necesaria para que se entienda el trabajo.
+
+<div align="center">
+  <img src="img/27.png">
+</div>
+
+# Gestión monitoreo y control
+
+## Caja blanca, gris y negra
+
+Cuando no estamos refiriendo a una caja es la manera de observar el contenido de software.
+
+**Negra:** No podemos observar cómo fue construida, no vemos el código, no sabemos su arquitectura, no tenemos nociones más que la interfaz que estamos interactuando.
+
+* Partición de equivalencia
+* Valores límite
+* Tabla de decisiones
+* Transición de estados
+* Casos de usos
+
+<div align="center">
+  <img src="img/28.png">
+</div>
+
+**Blanca:** Es como una caja de cristal, puedo ver todo lo que hay adentro e incluso puedo ser parte del equipo que desarrolla el software.
+
+* Cobertura de declaración
+* Cobertura de código
+  * Sentencias
+  * Decisiones
+  * Condiciones
+
+<div align="center">
+  <img src="img/29.png">
+</div>
+
+**Gris:** Pueden ser la integraciones, cómo fluye el código y puedo ver como se transmiten los datos a través de las redes.
+
+* Casos de negocios
+* Pruebas End-to-End
+* Pruebas de integración
+
+<div align="center">
+  <img src="img/30.png">
+</div>
+
+## Monitoreo y Seguimiento
+
+Aunque parezca obvio que es necesario gestionar nuestro trabajo y darle seguimiento a las pruebas y ejecución, hay estudios donde las empresas no pueden hacer esto exitosamente.
+
+**Gestión de Pruebas:**
+
+**Planeación:** Definir los objetivos de las pruebas es muy importante, al no tener una estrategia clara termina causando una pobre cobertura de pruebas. Los elementos a considerar para una buena planeación son la estimación, recursos, el alcance y objetivo.
+
+**Monitoreo y Control:** Durante el monitoreo lo que estamos buscando son esas *métricas que nos digan si estamos llevando avances o tenemos retrasos.* Son nuestras alertas cuando nuestro plan no se esta ejecutando.
+
+**Análisis:** Incluye decidir cuáles son esas prioridades que nos ayudará a definir qué debemos probar.
+
+**Diseño:** Normalmente cuándo estas iniciando las pruebas es necesario crear un mapa de ideas. Después de esto, puedes realizar el diseño a detalle de qué va a incluir cada caso de uso. 
+* Casos de alto nivel 
+* Diseñar y priorizar pruebas 
+* Identificar el entorno de pruebas 
+* Hacer una trazabilidad entre pruebas y sus condiciones.
+
+**Implementación:** También nos aseguramos de contar con la estructura necesaria para realizar las pruebas, con un ambiente, datos y dónde documentar o realizar las pruebas.
+
+**Ejecución:** En esta etapa los suites de pruebas se ejecutan de acuerdo al programa o el plan diseñado con anterioridad. Se suelen agrupar los casos de pruebas para que no estén desorganizado y podemos hacerles un buen seguimiento.
+
+**Finalización:** Cuando queremos cerrar el ciclo de las pruebas, necesitamos saber qué porcentaje se cubrió, ejecutó, cuántos defectos se derivaron, aprender lecciones sobre el proceso.
+
+## Roles y responsabilidades
+
+Independientemente del rol, **un tester participa de todas las etapas del proceso de desarrollo de software**, colaborando para asegurar la máxima calidad del producto. Su perfil conjuga un conjunto de habilidades con el conocimiento del negocio, de la aplicación bajo prueba y de cómo planificar, diseñar, ejecutar y administrar las pruebas.
+
+> "Un tester investiga un producto de software con el objetivo de obtener información acerca de su calidad y del valor que representa para quienes lo utilizan"
+
+* **Especialista en pruebas manuales.** Entre las habilidades que debería de tener, es el pensamiento lateral, en la parte de organización, diseño y documentación, debería de ser el especialista en entender cuáles son los casos de uso que se van a llevar para cada área, debe de poder organizarse y asignar trabajo para sí mismo dependiendo las prioridades del negocio, los riesgos o el impacto.
+  * Estrategia
+  * Definición
+  * Ejecución
+  * Cobertura de pruebas para cumplir con los requerimientos
+* **Especialista en pruebas técnicas.** Esta persona se tiene que encargar de estar siempre actualizada en las herramientas que le permitan acelerar el trabajo, mejorar el trabajo, búsqueda, continuo entrenamiento, ser autodidacta.
+  * Acelera la capacidad de ejecusión de las pruebas
+  * Implementa herramientas
+  * Selecciona datos para las pruebas
+  * Monitorea la ejecución de las pruebas
+* **Líder del equipo de pruebas.** Gestiona el equipo y es un facilitador para las actividades a realizar, como apoyar con ambiente de pruebas, darle seguimiento a los defectos, revisar que los lineamientos se sigan.
+  * Facilitador de servicios
+  * Información
+  * Herramientas para el equipo de pruebas
+  * Estimar presupuestos, recursos y tiempos respecto al plan de desarrollo de software
+* **Ingeniero de calidad.** Se dedica a la parte del proceso, es quien se encarga de establecer las políticas, mantener involucrados a los equipos, alineados a las prioridades del negocio; además que verifica que todo esto se cumpla sobre todo para la entrega del cliente.
+  * Se involucra en el negocio
+  * Busca reducir el error humano
+
+<div align="center">
+  <img src="img/31.png">
+</div>
+
+# Gestión de BUGs
+
+## Retrabajo
+
+Es necesario **identificar cada uno de los roles y responsabilidades para después evaluar si se esta haciendo o no re trabajo**, es decir estamos utilizando tiempo que podría ser utilizado en otras actividades o sencillamente que no debería hacerse
+
+También es necesario **medir el rendimiento de nuestro trabajo** y herramientas que nos permitan conocer paso a paso cómo vamos avanzado en el proceso de manera individual o en equipo.
+
+**Acciones de control**
+* Si identificamos un riesgo
+* Falta de ambientes
+* Si el criterio de salida no se cumple
+
+**Prevenir escenarios o circunstancias**
+* Resultados de las pruebas
+* Desempeño del equipo de testing
+
+**Retrabajo:** Es la principal causa del retraso, de que la estimación de tiempo falle, de que costos suban. Cuando estos suceden aumentamos exponencialmente el trabajo de todos
+
+* Falta o mala documentación
+* Falta de capacitación o dominio en las herramientas utilizadas
+* Falta de capacitación o dominio en el software a desarrollar
+* Falta de comunicación
+
+## Sistema de seguimiento de bugs
+
+La mala administración, malas prácticas o falta de seguimiento entorpece las tareas de todo el equipo sino que además sumamos el retrabajo en la mala documentación puede que nuestro proyecto se salga de presupuesto o tiempo.
+
+**Razones por las que aparecen defectos:**
+
+* Hay presión de tiempo en la entrega del software
+* Descuidos en el diseño
+* Inexperiencia o falta de conocimiento
+* Falta de comunicación en los requerimientos
+* Diseño complejo de código
+* Desconocimiento de las tecnologías usadas
+
+**Preguntas a realizar para construir un proceso de gestión de bugs:**
+
+* ¿Qué debe de hacer la persona que encuentre el defecto?
+* ¿En qué herramienta debe documentar el defecto?
+* ¿Cómo vamos a almacenar la información?
+* ¿Qué información requiere el equipo de desarrollo para poder resolver un defecto?
+* ¿Cuáles son los estatus que se manejan para que fluya la resolución del defecto?
+* ¿Cuáles son los criterios de aceptación de cierre del defecto?
+
+<div align="center">
+  <img src="img/32.png">
+</div>
+
+### Repositorio y monitore de defectos
+
+Una vez instaurado el proceso de gestión de bugs, también se debe precisar quién tiene acceso a los bugs y cuales son los permisos que tiene, por cuánto tiempo se almacenan, etc
+
+## Defectos y sugerencias
+
+Dependiendo del objetivo del proyecto podemos encontrar que no todos quieren que des sugerencias, solo encuentres defectos. Cosas que pongan en riesgo por costo, prestigio o calidad del producto.
+
+* **Defectos**: Es aquello que no cumple los requerimientos funciones, de diseño, de arquitectura y es la consecuencia de un error humano en el código o la interpretación de la información.
+
+* **Sugerencias**: Es cómo la experiencia del usuario se ve afectado. La lentitud del proyecto, la legibilidad, combinación de colores, la forma de navegar no es adecuada.
+
+**Algunos ejemplos**
+
+<div align="center">
+  <img src="img/33.png">
+</div>
+
+> Si la calidad la define el usuario final... sus sugerencias se vuelven defectos
+
+Las sugerencias convertidas en defectos pueden ser actualizaciones de software
+
+<div align="center">
+  <img src="img/34.png">
+</div>
+
+# Depuración
+
+Hacer testing o depuración son dos actividades diferentes. Mientras el testing sirven para encontrar defectos, la depuración nos permitirá entender por qué esta sucediendo este defecto y que actividades están implicadas en el. Ambas pueden ir de la mano y son muy importantes.
+
+**Debugger**: Es una herramienta que nos ayuda a encontrar todos estos errores ya sea de sintaxis, advertencias de seguridad, etc. Nos permite ejecutar línea por línea, detener la ejecución temporalmente, visualizar el contenido de las variables, cambiar el valor del entorno de ejecución para poder ver el efecto de una corrección en el programa.
+
+**Beneficiados**
+
+* **Programador:** Requiere cada vez que programa ir depurando lo que ejecuta y escriba para que cumpla con su objetivo
+* **Tester**: Le ayuda a reducir el tiempo de análisis que después puede ser asignado para el desarrollador
+* **Analista**: Puede ser para analisis de encontrar información de un historial sobre cómo se comporta un sistema.
+
+**Objetivo**: Vamos a analizar cómo se comporta el sistema, cómo se transfieren los datos, cómo se procesa la información. Tenemos la capacidad de tener nuestro código en cualquier momento para conocer cómo funciona.
+
+**Sintomas de errores**
+
+* Obtención de salida incorrecta
+* Realización de operaciones fuera de lo normal
+* No finalización del programa (ciclos infinitos, p.ejem.)
+* Caídas del programa
+
+**El depurador (debugger) permite:**
+
+* Ejecutar línea a línea
+* Detener la ejecución temporalmente
+  * En una línea de código concreta
+  * Bajo determinadas condiciones
+* Visualizar el contenido de las variables
+* Cambiar el valor del entorno de ejecución para poder ver el efecto de una corrección en el programa
+
+**Tipos de herramientas**
+
+* Debugger
+* Manual
+* Local / Remota
+
+**Herramientas**
+* Mensajes de advertencia
+* Estándares de compilación
+* Verificación sintáctica y lógica
+
+## Técnicas de depuración
+
+Las técnicas de depuración deben ir cambiando de ser reactivas a ser preventivas. Debemos recordar que parte de los principios del testing moderno es tratar de ir corrigiendo nuestras técnicas, implementar mejores prácticas y hacer uso de mejores herramientas. El debugging debería ser la última técnica que utilizas.
+
+**Técnicas de depuración:**
+
+* **Debugging**: Observar valores de variables, detener temporalmente la aplicación.
+* **Logs**: Hacer un vaciado de cómo las variables van cambiando y es más fácil rastrear la información.
+* **Historial**: Agiliza la forma de monitorear y observar los comportamientos de nuestro software.     
+  * Comparando valores
+  * Agrupando información.
+* **Reportes**: Observar anomalías, acelerar el tiempo de respuesta, prevenir ataques o fallas.
+
+**Desventajas de no usar LOGS**
+
+* Visibilidad nula de errores
+* Metodología de trabajo no estándarizada
+* Accesos e información desentralizada
+* Incremento del tiempo de respuesta
+
+**Ventajas de generar un historial/reporte**
+
+* Aplicar técnicas de Machine Learning
+* Mejorar la gestión y el control de la información
+* Detectar amenazas de red o virus
+* Prevenir fugas de información, así como comportamientos inadecuados
+
+**Fase 1**: Encontrar el error
+**Fase 2**: Corregir el error
+
+**Pasos para depurar:**
+
+* Ir al módulo que falla
+* Establecer breakpoints
+  * En asignación de valores
+  * Procesamiento de valores
+  * Cambio de estados
+* Diseñar una **matrix de pruebas**
+* Establecer los datos de prueba
+* Comenzar a depurar
+
+## Pruebas de verificación
+
+Las pruebas de verificación **sirve para confirmar que un cambio se haya hecho o un defecto se haya corregido.** Queremos verificar que lo que estamos buscando está en los requerimientos o documentación.
+
+**Pruebas de verificación**
+
+Tratan de reproducir el escenario fallido con los dato usados. Pero sería un error usar los mismo datos para después asumir que el error fue corregido.
+**Se buscan nuevos escenarios donde se utilicen valores relativos**. Como 
+
+  * Otras plataformas
+  * Otros sistemas operativos
+  * Otros exploradores
+  * Otros dispositivos
+
+**Pruebas de regresión**
+
+**La matrices de pruebas** cuando se implementan otros dispositivos u otros exploradores nos ayuda a tenerlos en cuenta nuestros puntos de verificación para que no sufran un impacto.
+
+> La matrix de prueba nos funciona para casos donde no solo vemos los defectos sino que todo lo que ya funciona siga funcionando.
+
+Nos ayuda a tener una claridad con los casos de prueba claves que pueden ser automatizados.
+
+**Documentación**
+
+* Comentarios en el código
+* Documentación técnica
+* Pruebas unitarias
+* Pruebas específicas
+* Matrices de pruebas
+* Plan de pruebas
+
+# Bases de la automatización de pruebas
+
+## Automatización de pruebas
+
+En esta unidad vamos a conocer las bases para la automatización de pruebas y podemos automatizar las siguientes tipos de pruebas.
+
+* **Pruebas unitarias:** Tienen que ver con un pedazo de código que el desarrollador esta codificando, pero no tienen que ver con todo el flujo de negocio y proceso del software.
+
+* **Pruebas de integración**: Cómo hacemos que el conjunto del equipo que libera pedacitos de software funcionen juntos y no hagan defectos adicionales.
+
+* **Pruebas funcionales o de aceptación**: Estas pruebas no necesariamente forman parte de los requerimientos especificados por el cliente, una recomendación para automatizar estas pruebas es que deban cumplir con los requerimientos dados por el cliente.
+
+### Frameworks
+
+* **Test Driven Development:** El desarrollo va a estar enfocado haciendo primera las pruebas y después el código. Haciendo que el desarollo sea muy específico con la mayor cobertura y no pongamos líneas de código que no van a funcionar o no se usan.
+
+  * Escribimos una prueba
+  * Ejecutamos la prueba: Falla
+  * Se escribe el código
+  * Ejecutamos la prueba: Pasa
+
+* **Behavior Driven Development**: Si primero vamos a escribir las pruebas, debemos hacerlo bien y usando un lenguaje sencillo, simple para que la prueba sirva al equipo para entender qué es lo que queremos hacer.
+
+<div align="center">
+  <img src="img/35.png">
+</div>
+
+<div align="center">
+  <img src="img/36.png">
+</div>
+
+## Gherkin
+
+Gherkin es un lenguaje de texto plano con estructura, usamos palabras que no son comandos pero permiten entender en un modo de pseudocódigo qué es lo que se tiene que hacer. Esta diseñado para ser fácil de aprender y ser entendido por todos.
+
+**Ventajas**
+
+* Simple
+* Palabras claves o keywords
+* Estandariza los casos de uso
+* Reduce el tiempo de diseño
+
+**Keywords**
+
+* Feature
+* Scenario
+* Given, When, Then, And, But (steps)
+* Background
+* Scenario outline
+* Excamples
+
+<div align="center">
+  <img src="img/37.png">
+</div>
