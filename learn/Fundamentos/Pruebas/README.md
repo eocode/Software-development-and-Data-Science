@@ -492,6 +492,8 @@ Cuando no estamos refiriendo a una caja es la manera de observar el contenido de
 
 <div align="center">
   <img src="img/28.png">
+</div><div align="center">
+  <img src="img/36.png">
 </div>
 
 **Blanca:** Es como una caja de cristal, puedo ver todo lo que hay adentro e incluso puedo ser parte del equipo que desarrolla el software.

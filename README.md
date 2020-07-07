@@ -21,6 +21,7 @@ Reuní trabajo relacionado con datos de forma ordenada y organizada en los lengu
   - [Ciencia de datos y Machine Learning](#ciencia-de-datos-y-machine-learning)
   - [Cloud Computing](#cloud-computing)
   - [DevOps](#devops)
+  - [Inglés](#inglés)
 - [No todo es programar](#no-todo-es-programar)
   - [El camino del saber](#el-camino-del-saber)
   - [La técnica de Feynman](#la-técnica-de-feynman)
@@ -133,6 +134,9 @@ http://biblioteca.inu.edu.sv/?wpfb_dl=263
 * [Fundamentos de DevOps](/learn/DevOps/Fundamentos)
 * [GitLab](/learn/DevOps/GitLab)
 * [Docker](/learn/DevOps/Docker)
+
+## Inglés
+* [Estrategias para aprender inglés en línea](/learn/english/learn)
 
 # No todo es programar
 
