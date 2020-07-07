@@ -76,6 +76,7 @@ Conocimientos relacionados que me interesan y me gustá aplicar
 
 * [Pruebas de software](/learn/Fundamentos/Pruebas)
 * [POO](/learn/Fundamentos/POO)
+* [Postman](/learn/Fundamentos/Postman)
 
 ## Trabajo en equipo y gestión de proyectos
 * [Scrum](/learn/Scrum)

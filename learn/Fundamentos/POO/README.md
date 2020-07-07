@@ -17,6 +17,13 @@
     - [Herencia](#herencia)
     - [Agregación](#agregación)
     - [Composición](#composición)
+- [Orientación a objetos](#orientación-a-objetos)
+  - [Objetos](#objetos)
+    - [Identificar los objetos](#identificar-los-objetos)
+  - [Abstracción y clases](#abstracción-y-clases)
+  - [Modularidad](#modularidad)
+  - [Analizando Uber en Objetos](#analizando-uber-en-objetos)
+- [POO: Análisis](#poo-análisis)
 
 # Introducción
 
@@ -182,3 +189,90 @@ Este es similar al anterior solo que su relación es totalmente compenetrada de 
 <div align="center">
   <img src="img/12.png">
 </div>
+
+# Orientación a objetos
+
+## Objetos
+
+Los Objetos son aquellos que tienen propiedades y comportamientos, también serán **sustantivos**.
+
+* Pueden ser Físicos o Conceptuales
+
+**Las Propiedades también pueden llamarse atributos y estos también serán sustantivos.** Algunos atributos o propiedades son nombre, tamaño, forma, estado, etc. Son todas las características del objeto.
+
+**Los Comportamientos serán todas las operaciones que el objeto puede hacer**, suelen ser verbos o sustantivos y verbo. Algunos ejemplos pueden ser que el usuario pueda hacer login y logout.
+
+### Identificar los objetos
+
+* Tienen propiedades y comportamientos
+* Físicos o Conceptuales
+* Sustantivos
+
+<div align="center">
+  <img src="img/13.png">
+</div>
+
+<div align="center">
+  <img src="img/14.png">
+</div>
+
+<div align="center">
+  <img src="img/15.png">
+</div>
+
+## Abstracción y clases
+
+> Una Clase es el modelo por el cual nuestros objetos se van a construir y nos van a permitir generar más objetos.
+
+**Analizamos Objetos para crear Clases.** Las Clases son los **modelos** sobres los cuales construiremos nuestros objetos.
+
+<div align="center">
+  <img src="img/16.png">
+</div>
+
+> Abstracción es cuando separamos los datos de un objeto para generar un molde.
+
+<div align="center">
+  <img src="img/17.png">
+</div>
+
+## Modularidad
+
+La modularidad va muy relacionada con las clases y es un principio de la Programación Orientado a Objetos y va de la mano con el Diseño Modular que **significa dividir un sistema en partes pequeñas y estas serán nuestros módulos pudiendo funcionar de manera independiente.**
+
+<div align="center">
+  <img src="img/18.png">
+</div>
+
+La modularidad de nuestro código nos va a permitir
+
+<div align="center">
+  <img src="img/19.png">
+</div>
+
+**Beneficios de modularizar**
+
+* Reutilizar
+* Evitar colapsos
+* Hacer nuestro código más mantenible
+* Legibilidad
+* Resolución rápida de problemas
+
+> Una buena práctica es separando las clases en archivos diferentes.
+
+<div align="center">
+  <img src="img/20.png">
+</div>
+
+Tener una clase promueve
+* Modularidad
+* Divide el programa en diferentes partes o módulos / clases
+* Separar las clases en archivos
+
+## Analizando Uber en Objetos
+
+<div align="center">
+  <img src="img/21.png">
+</div>
+
+# POO: Análisis
