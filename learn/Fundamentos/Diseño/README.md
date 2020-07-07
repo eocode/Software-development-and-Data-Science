@@ -80,3 +80,35 @@ Espacio: Como hacerle uso
 <div align="center">
     <img src="img/16.png">
 </div>
+
+## Accesibilidad
+
+> El poder de la web está en su universalidad. El acceso de todas las personas independientemente de la discapacidad es un aspecto esencial 
+> **Tim Berners-Lee W3C Director**
+
+* Utiliza encabezados de manera ordenada para organizar la estructura del contenido (HTML5 semantico) H1
+* Utiliza tamaños de fuentes accesibles
+* Utiliza colores que tengan un contraste adecuado
+* Garantiza que el código de color no sea la única forma de relacionar contenido
+* Diseña teniendo en cuenta los estados **focus** y **active** de los componentes
+* Añade etiquetas y textos descriptivosa los campos de formulario (aria-labels)
+* Escribe contenido descriptivo que pueda reemplazar videos e imagenes
+* Garantiza que las animaciones no bloqueen el acceso al contenido
+
+## Brief y requerimientos técnicos
+
+* Es la hoja de ruta para empezar a diseñar. Es el resultado de las conversaciones con el cliente e incluye datos sobre marca, objetivos y requerimientos de un proyecto
+
+<div align="center">
+    <img src="img/17.png">
+</div>
+
+<div align="center">
+    <img src="img/18.png">
+</div>
+
+<div align="center">
+    <img src="img/19.png">
+</div>
+
+https://github.com/mssroboto/diseno-para-programadores
