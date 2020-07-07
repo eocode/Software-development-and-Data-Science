@@ -75,6 +75,7 @@ Conocimientos relacionados que me interesan y me gustá aplicar
 ## Fundamentos
 
 * [Pruebas de software](/learn/Fundamentos/Pruebas)
+* [POO](/learn/Fundamentos/POO)
 
 ## Trabajo en equipo y gestión de proyectos
 * [Scrum](/learn/Scrum)
