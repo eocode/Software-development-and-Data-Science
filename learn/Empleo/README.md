@@ -9,6 +9,7 @@
   - [Ejemplo de cover letter](#ejemplo-de-cover-letter)
   - [Recursos y plantillas](#recursos-y-plantillas)
 - [Emails](#emails)
+  - [Seguimiento](#seguimiento)
 
 # Carta de presentación
 
@@ -81,3 +82,36 @@
 * Sirven para que la empresa te tenga en top of mind
 * Tendrás información actualizada sobre tu proceso de selección
 
+## Seguimiento
+* Sé breve, los emails demasiado largos pasan desapercibidos
+* Sé formal
+* Intenta sonar motivado y emocionado, evita sonar cortante
+* Revisa tu correo antes de enviarlo para no tener faltas de ortografía
+* Dale un toque personal
+* Siempre manda email de agradecimiento
+* Mandar email de seguimiento si no te han hablado en 1 semana hábil o más
+* No mandes emails de seguimiento diarios
+
+<div align="center">
+  <img src="img/2.png">
+</div>
+
+<div align="center">
+  <img src="img/3.png">
+</div>
+
+<div align="center">
+  <img src="img/4.png">
+</div>
+
+<div align="center">
+  <img src="img/6.png">
+</div>
+
+<div align="center">
+  <img src="img/5.png">
+</div>
+
+<div align="center">
+  <img src="img/7.png">
+</div>
