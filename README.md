@@ -22,6 +22,7 @@ Reuní trabajo relacionado con datos de forma ordenada y organizada en los lengu
   - [Cloud Computing](#cloud-computing)
   - [DevOps](#devops)
   - [Inglés](#inglés)
+- [Pensamiento computacional](#pensamiento-computacional)
 - [No todo es programar](#no-todo-es-programar)
   - [El camino del saber](#el-camino-del-saber)
   - [La técnica de Feynman](#la-técnica-de-feynman)
@@ -140,6 +141,15 @@ http://biblioteca.inu.edu.sv/?wpfb_dl=263
 ## Inglés
 * [Estrategias para aprender inglés en línea](/learn/english/learn)
 
+# Pensamiento computacional
+
+* Definir una pregunta
+* Respuesta que se pueda traducir a código
+  * Variables-proceso
+* Computar
+  * Código
+* Resultado
+
 # No todo es programar
 
 ## El camino del saber
@@ -147,7 +157,6 @@ http://biblioteca.inu.edu.sv/?wpfb_dl=263
 Saber y tener conocimiento de algo implica poder explicarlo de forma simple a alguien más
 
 > El que sabe pensar, pero no sabe expresar lo que piensa, está al mismo nivel del que no sabe pensar.
-
 
 ## La técnica de Feynman
 
