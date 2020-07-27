@@ -4,6 +4,24 @@
 - [Basics](#basics)
   - [The alphabet](#the-alphabet)
   - [Numbers](#numbers)
+  - [What time is it?](#what-time-is-it)
+  - [Days of the week](#days-of-the-week)
+    - [TIMES OF THE DAY](#times-of-the-day)
+    - [PREPOSITIONS OF TIME](#prepositions-of-time)
+  - [Greetings and introductions](#greetings-and-introductions)
+    - [Greetings](#greetings)
+    - [Farewells](#farewells)
+    - [Introducing yourself](#introducing-yourself)
+  - [Jobs and personality](#jobs-and-personality)
+    - [Verb to be](#verb-to-be)
+  - [Places](#places)
+    - [Prepositions of place](#prepositions-of-place)
+    - [What do you like to do?](#what-do-you-like-to-do)
+  - [Likes vs dislikes](#likes-vs-dislikes)
+  - [Adverbs of frequency](#adverbs-of-frequency)
+- [Pronunciation](#pronunciation)
+  - [Exercise](#exercise)
+  - [Introduction to IPA (International Phonetic Alphabet)](#introduction-to-ipa-international-phonetic-alphabet)
 
 # Basics
 
@@ -85,6 +103,179 @@ There are seventeen(17) candles.
 9. There are **nineteen** cups.
 10. There are **Thirty** balloons.
 
+## What time is it?
+
+It’s 8 A.M. (You can also say "it’s 8 o’clock in the morning)
+It’s 9:14 P.M. (You can also say "it’s 09:14 at night)
+It’s 7:30 P.M. (You can also say "it’s seven thirty at night)
+It’s 4:30 A.M. (You can also say "it’s four thirty in the morning)
+I’ts 3:12 P.M. (You can also say "it’s three twelve in the afternoon)
+
+## Days of the week
+
+* Lunes - Monday
+* Martes - Tuesday
+* Miercoles - Wednesday
+* Jueves - Thursday
+* Viernes - Friday
+* Sabado - Saturday
+* Domingo - Sunday
+
+### TIMES OF THE DAY
+
+* In the morning
+* In the afternoon
+* In the evening
+* At night
+
+### PREPOSITIONS OF TIME
+in, on & at
+
+"I go to the park on Saturday at ten in the morning"
+"I go to school on Monday at nine in the morning"
+"I go to the gym on Wednesday at two in the afternoon"
+"I go to the restaurant on Friday at eight thirty at night"
+
+<div align="center">
+  <img src="img/1.jpg">
+</div>
+
+## Greetings and introductions
+
+### Greetings
+Hi, Hello, How Are You?, Good Morning, Good Afternoon, Good Evening.
+### Farewells
+Bye,Good bye, see you later, Take care
+
+### Introducing yourself
+
+“_______________!
+My name is _________.
+My last name is spelled ______________
+I am _____ years old. I am from ___________.”
+
+## Jobs and personality
+
+### Verb to be
+
 <div align="center">
   <img src="img/1.png">
 </div>
+
+<div align="center">
+  <img src="img/2.png">
+</div>
+
+## Places
+
+* This is a bakery
+* This is a Hospital
+* This is an airport
+* This is a School
+* This is a Pharmacy
+* This is a Bank
+* This is a Bookstore
+* This is a Train.station
+
+<div align="center">
+  <img src="img/3.png">
+</div>
+
+### Prepositions of place
+
+<div align="center">
+  <img src="img/4.png">
+</div>
+
+<div align="center">
+  <img src="img/5.png">
+</div>
+
+<div align="center">
+  <img src="img/6.png">
+</div>
+
+<div align="center">
+  <img src="img/7.png">
+</div>
+
+1. The flowers are in the vase.
+2. The books are on the table.
+3. The cushions are next to the cup.
+4. The decorative pineapple is between the vase and the flowers.
+5. The cup is in front of the cushions.
+6. The vase is behind the decorative pineapple.
+
+### What do you like to do?
+
+* I like to watch TV
+* I like to run in the park
+* I lake to play guitar
+
+<div align="center">
+  <img src="img/8.png">
+</div>
+
+## Likes vs dislikes
+
+* I like to read a books
+* I don’t like to smoke.
+
+* I like to study at Platzi.
+* I don’t like to watch tv.
+
+## Adverbs of frequency
+
+Adverbs of frequency
+
+* 100% Always
+* 90% Usually
+* 80% Frequently
+* 70% Often
+* 30% Occasionally
+* 10% Seldom
+* 5% Rarely
+* 0% Never
+
+<div align="center">
+  <img src="img/9.png">
+</div>
+
+**Rules for adverbs of frequency:**
+Noun + frequency + action
+Example: I never drink coffe.
+
+**There is one exception to this rule** --> Sometimes
+Example: Sometimes I go to the beach.
+
+<div align="center">
+  <img src="img/2.jpg">
+</div>
+
+# Pronunciation
+
+<div align="center">
+  <img src="img/10.png">
+</div>
+
+<div align="center">
+  <img src="img/11.png">
+</div>
+
+## Exercise
+
+[Read and record your voice](/learn/English/school/beginners/strategies-to-learn-online.pdf)
+
+## Introduction to IPA (International Phonetic Alphabet)
+
+<div align="center">
+  <img src="img/12.png">
+</div>
+
+<div align="center">
+  <img src="img/13.png">
+</div>
+
+Guía de símbolos fonéticos utilizados en IPA
+
+[Read and record your voice](/learn/English/school/beginners/IPA.pdf)
