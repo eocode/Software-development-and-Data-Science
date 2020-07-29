@@ -22,6 +22,10 @@
 - [Pronunciation](#pronunciation)
   - [Exercise](#exercise)
   - [Introduction to IPA (International Phonetic Alphabet)](#introduction-to-ipa-international-phonetic-alphabet)
+  - [Manage air flow](#manage-air-flow)
+  - [Nasal sounds](#nasal-sounds)
+  - [Lips](#lips)
+  - [Vowels](#vowels)
 
 # Basics
 
@@ -279,3 +283,105 @@ Example: Sometimes I go to the beach.
 Guía de símbolos fonéticos utilizados en IPA
 
 [Read and record your voice](/learn/English/school/beginners/IPA.pdf)
+
+## Manage air flow
+
+<div align="center">
+  <img src="img/14.png">
+</div>
+
+<div align="center">
+  <img src="img/15.png">
+</div>
+
+**T:**
+* tawny
+* thin
+* tiny
+
+**D:**
+* dark
+* date
+* defeat
+
+**TS:**
+* abstracts
+* pharmacists
+* specialists
+
+## Nasal sounds
+
+<div align="center">
+  <img src="img/16.png">
+</div>
+
+<div align="center">
+  <img src="img/17.png">
+</div>
+
+<div align="center">
+  <img src="img/18.png">
+</div>
+
+**N**
+* Nested /ˈnɛstɪd/
+* Number /ˈnʌmbə/
+* New /njuː/
+
+**ŋ**
+* Long /lɒŋ/
+* Sing /sɪŋ/
+* toungue /tʌŋ/
+
+**m**
+* Mess /mɛs/
+* Maybe /ˈmeɪbiː,ˈmeɪbi/
+* Might /mʌɪt/
+
+## Lips
+
+https://dictionary.cambridge.org/us/dictionary/english/van
+
+<div align="center">
+  <img src="img/19.png">
+</div>
+
+Los labios están en una posición similar para todas, sin embargo, la cantidad de presión que se aplica y la cantidad de aire que se escapa o no cambia el sonido.
+El resultado puede ser la diferencia entre decir:
+
+> "I need a frying pan.” y “I need a frying van."
+
+La diferencia entre la “v” en “van” y “b” en “ban”, por ejemplo, se da con la cantidad de presión que se le aplica al labio inferior en la “v”. Junto con el sonido de las cuerdas vocales cuando se deja fluir el aire, se genera una vibración en el labio inferior. Practica manteniendo la vibración de la “v” por 5 segundos seguidos o lo más que puedas.
+
+<div align="center">
+  <img src="img/20.png">
+</div>
+
+De las vocales más confundidas en la pronunciación, la /ɪ/ en “This” y la /iː/ en “These” se logran distinguir por la forma de los labios.
+
+La siguiente gráfica es la que usaremos a lo largo del curso para guiarnos en la pronunciación de las vocales. La línea vertical marca qué tan abierta está la boca
+y la horizontal, el posicionamiento de la lengua.
+
+<div align="center">
+  <img src="img/21.png">
+</div>
+
+Para lograr la distinción del sonido de la /ɪ/ y la /iː/, los labios se extenderán más en la /iː/ y ayudan a formar ese sonido. Algo parecido sucede con los sonidos vocales /uː/ y /ɔː/; los labios forman el sonido y distingue éstos de los sonidos frontales.
+
+Aunque la mayoría de factores en la pronunciación se encuentran detrás de los labios, éstos tienen una gran importancia en la formación de los sonidos fonéticos. Practicar frente a un espejo y fijarse en el movimiento de los labios puede ser lo que te hacía falta para por fin llegar a tu meta en pronunciación.
+
+https://www.ipachart.com/
+
+https://tophonetics.com/
+
+https://www.internationalphoneticassociation.org/sites/default/files/IPA2005_3000px.png
+
+https://www.internationalphoneticassociation.org/content/full-ipa-chart
+
+**Video para pronunciar vocales**
+
+https://www.youtube.com/watch?v=63xKUpuf0w8
+
+## Vowels
+
+https://ingles-americano.blogspot.com/2012/06/vowel-combinations.html
