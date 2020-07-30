@@ -23,7 +23,13 @@
   - [Abstracción y clases](#abstracción-y-clases)
   - [Modularidad](#modularidad)
   - [Analizando Uber en Objetos](#analizando-uber-en-objetos)
+- [Conceptos POO](#conceptos-poo)
 - [POO: Análisis](#poo-análisis)
+  - [UML](#uml-1)
+    - [Modelando objetos de Uber](#modelando-objetos-de-uber)
+  - [¿Qué es la herencia?](#qué-es-la-herencia)
+    - [Herencia en modelo Uber](#herencia-en-modelo-uber)
+  - [Objetos](#objetos-1)
 
 # Introducción
 
@@ -275,4 +281,104 @@ Tener una clase promueve
   <img src="img/21.png">
 </div>
 
+# Conceptos POO
+
+<div align="center">
+  <img src="img/29.png">
+</div>
+
+<div align="center">
+  <img src="img/30.png">
+</div>
+
+<div align="center">
+  <img src="img/31.png">
+</div>
+
+<div align="center">
+  <img src="img/32.png">
+</div>
+
 # POO: Análisis
+
+## UML
+
+<div align="center">
+  <img src="img/22.png">
+</div>
+
+<div align="center">
+  <img src="img/23.png">
+</div>
+
+---
+
+Declaración de una clase en varios lenguajes
+
+<div align="center">
+  <img src="img/24.png">
+</div>
+
+Javascript usa prototipos
+
+<div align="center">
+  <img src="img/25.png">
+</div>
+
+### Modelando objetos de Uber
+
+<div align="center">
+  <img src="img/26.png">
+</div>
+
+<div align="center">
+  <img src="img/27.png">
+</div>
+
+## ¿Qué es la herencia?
+
+**Don’t repeat yourself** es una filosofía que promueve la reducción de duplicación en programación, esto nos va a inculcar que no tengamos líneas de código duplicadas.
+
+> Toda pieza de información nunca debería ser duplicada debido a que incrementa la dificultad en los cambios y evolución
+
+**La herencia nos permite crear nuevas clases a partir de otras**, se basa en modelos y conceptos de la vida real. También tenemos una jerarquía de padre e hijo.
+
+<div align="center">
+  <img src="img/28.png">
+</div>
+
+### Herencia en modelo Uber
+
+<div align="center">
+  <img src="img/33.png">
+</div>
+
+<div align="center">
+  <img src="img/34.png">
+</div>
+
+<div align="center">
+  <img src="img/35.png">
+</div>
+
+<div align="center">
+  <img src="img/36.jpg">
+</div>
+
+## Objetos
+
+**Los objetos nos ayudan a crear instancia de una clase**, el objeto es el resultado de lo que modelamos, de los parámetros declarados y usaremos los objetos para que nuestras clases cobren vida.
+
+<div align="center">
+  <img src="img/36.png">
+</div>
+
+Los métodos constructores dan un estado inicial al objeto y podemos añadirle algunos datos al objeto mediante estos métodos. Los atributos o elementos que pasemos a través del constructor serán los datos mínimos que necesita el objeto para que pueda vivir.
+
+<div align="center">
+  <img src="img/37.png">
+</div>
+
+<div align="center">
+  <img src="img/38.png">
+</div>
