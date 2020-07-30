@@ -21,6 +21,10 @@
   - [Tipografías](#tipografías)
   - [Layout y sistema de grillas](#layout-y-sistema-de-grillas)
   - [Sistemas de componentes UI](#sistemas-de-componentes-ui)
+  - [Themes y customización](#themes-y-customización)
+  - [Imagenes para la web](#imagenes-para-la-web)
+    - [Rendimiento y accesibilidad](#rendimiento-y-accesibilidad)
+  - [Gráficos en movimiento para web](#gráficos-en-movimiento-para-web)
 
 # Fundamentos
 
@@ -254,3 +258,48 @@ Un sistema de componentes es un conjunto de componentes que vamos a usar par cre
 Puedes usar cualquier tecnología que prefieras. Lo importante es encapsular las funcionalidades en componentes. Cada componente tendrá su propio css y funcionalidad dentro de su propia función.
 
 Así podremos importar esas características a cualquier pantalla de nuestra aplicación, reutilizando el código y haciendo más eficiente nuestra aplicación.
+
+## Themes y customización
+
+Separa archivos con paletas de colores diferentes
+
+## Imagenes para la web
+
+<div align="center">
+    <img src="img/33.png">
+</div>
+
+<div align="center">
+    <img src="img/34.png">
+</div>
+
+* Elige imagenes que aporten al contenido
+* Usa imagenes en las que el público se vea reflejado
+* Elige imagenes consistentes con tu paleta de colores
+* Cuidado con las licencias
+
+### Rendimiento y accesibilidad
+
+* Evita imagenes con texto incrustado
+* Exporta las imágenes al tamño del contenedor final
+* Considera el uso de lazy loading
+* Asegurate de añadir alt-text a las imágenes que tengan un fin comunicativo
+
+https://www.pexels.com/
+https://co.pinterest.com/
+https://pixabay.com/es/
+
+## Gráficos en movimiento para web
+
+<div align="center">
+    <img src="img/35.png">
+</div>
+
+<div align="center">
+    <img src="img/36.png">
+</div>
+
+* Procura que no se reproduzcan automaticamente y si lo hacen que no sea con sonido
+* Las animaciones deben aportar al contenido
+* No usar flashes
+* Si tus animaciones aportan al contenido añade subtítulos o transcripciones
