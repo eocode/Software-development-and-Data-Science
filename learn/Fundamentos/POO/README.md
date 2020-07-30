@@ -30,6 +30,8 @@
   - [¿Qué es la herencia?](#qué-es-la-herencia)
     - [Herencia en modelo Uber](#herencia-en-modelo-uber)
   - [Objetos](#objetos-1)
+  - [Aplicando herencia con los lenguejes](#aplicando-herencia-con-los-lenguejes)
+  - [Encapsulamiento](#encapsulamiento)
 
 # Introducción
 
@@ -381,4 +383,33 @@ Los métodos constructores dan un estado inicial al objeto y podemos añadirle a
 
 <div align="center">
   <img src="img/38.png">
+</div>
+
+## Aplicando herencia con los lenguejes
+
+<div align="center">
+  <img src="img/39.png">
+</div>
+
+## Encapsulamiento
+
+El Encapsulamiento es hacer que un dato sea inviolable, inalterable cuando se le asigne un modificador de acceso.
+
+<div align="center">
+  <img src="img/40.png">
+</div>
+
+Para python
+
+_ Protegido
+__Privado
+
+<div align="center">
+  <img src="img/41.png">
+</div>
+
+Setters y getters
+
+<div align="center">
+  <img src="img/42.png">
 </div>
