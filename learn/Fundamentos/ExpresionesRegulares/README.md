@@ -17,6 +17,14 @@
 - [Not (^), su uso y sus peligros](#not--su-uso-y-sus-peligros)
 - [Otras clases preconstruidas](#otras-clases-preconstruidas)
 - [Principio (^) y final de linea ($)](#principio--y-final-de-linea-)
+- [Principales aplicaciones](#principales-aplicaciones)
+  - [LOGS](#logs)
+  - [Telefonos](#telefonos)
+  - [URLs](#urls)
+  - [Mails](#mails)
+  - [Locaciones](#locaciones)
+  - [Nombres](#nombres)
+- [Búsqueda y reemplazo](#búsqueda-y-reemplazo)
 - [RegEX Cheat Sheet](#regex-cheat-sheet)
 
 # Introducción
@@ -199,6 +207,106 @@ Estos dos caracteres indican en qué posición de la línea debe hacerse la bús
 <div align="center">
   <img src="img/8.png">
 </div>
+
+# Principales aplicaciones
+
+## LOGS
+
+Las expresiones regulares son muy útiles para encontrar líneas específicas que nos dicen algo muy puntual dentro de los archivos de logs que pueden llegar a tener millones de líneas.
+
+https://pastebin.com/ptDsJ6tR
+
+<div align="center">
+  <img src="img/9.png">
+</div>
+
+## Telefonos
+
+<div align="center">
+  <img src="img/10.png">
+</div>
+
+
+## URLs
+
+Una de las cosas que más vamos a usar en la vida, seamos frontend o backend, serán directamente dominios o direcciones de internet; ya sea direcciones completas de archivo (una url) o puntualmente dominios para ver si es correcto un mail o no.
+
+https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains
+
+<div align="center">
+  <img src="img/11.png">
+</div>
+
+## Mails
+
+Quedamos en que ya podemos definir URLs, y dentro de las URLs están los dominios. No es infalible, pero es muy útil para detectar la gran mayoría de errores que cometen los usuarios al escribir sus emails.
+
+<div align="center">
+  <img src="img/12.png">
+</div>
+
+## Locaciones
+
+Esta clase nos va a servir para ver unos tips comunes de qué hacer y sobre todo qué no hacer con expresiones regulares, usando como ejemplo datos de posicionamiento en el mapa: latitud y longitud.
+
+<div align="center">
+  <img src="img/13.png">
+</div>
+
+https://what3words.com/snack.wages.verdict
+
+-99.205646,19.429707,2275.10
+-99.205581, 19.429652,2275.10
+-99.204654,19.428952,2275.58
+
+``^\-?\d{1,3}\.\d{1,6},\s?\-?\d{1,3}\.\d{1,6},.*$``
+
+-99 12' 34.08"W, 19 34' 56.98"N
+-34 54' 32.00"E, -3 21' 67.00"S
+
+``^\-?\d{1,3}\s\d{1,2}'\s\d{1,2}\.\d{2,2}"[WE],\s?\-?\d{1,3}\s\d{1,2}'\s\d{1,2}\.\d{2,2}"[NS]$``
+
+gravel.notes.handbag
+reaming.embeds.rats
+
+``^[a-z]{3,}\.[a-z]{3,}\.[a-z]{3,}$``
+
+## Nombres
+
+https://www.fantasynamegenerators.com/hispanic_names.php
+
+Esto puede ser un ejercicio complejo y no suele ser tan útil
+
+<div align="center">
+  <img src="img/14.png">
+</div>
+
+# Búsqueda y reemplazo
+
+Al igual que una navaja suiza, las expresiones regulares son una herramienta increíblemente útil pero tienes que darle la importancia y las responsabilidades adecuadas a cada una, ya que no son la panacea, no solucionan todos los problemas.
+
+El uso más conveniente de las expresiones regulares es buscar coincidencias o matches de cadenas en un texto, y si es necesario, reemplazarlas con un texto diferente.
+
+<div align="center">
+  <img src="img/15.png">
+</div>
+
+<div align="center">
+  <img src="img/16.png">
+</div>
+
+Convirtiendolo a SQL
+
+<div align="center">
+  <img src="img/17.png">
+</div>
+
+Convertir a un JSON
+
+<div align="center">
+  <img src="img/18.png">
+</div>
+
 
 # RegEX Cheat Sheet
 
