@@ -32,6 +32,8 @@
   - [Objetos](#objetos-1)
   - [Aplicando herencia con los lenguejes](#aplicando-herencia-con-los-lenguejes)
   - [Encapsulamiento](#encapsulamiento)
+  - [Polimorfismo](#polimorfismo)
+  - [UML de Uber](#uml-de-uber)
 
 # Introducción
 
@@ -412,4 +414,85 @@ Setters y getters
 
 <div align="center">
   <img src="img/42.png">
+</div>
+
+## Polimorfismo
+
+Polimorfismo: Muchas formas. Poli = muchas, morfismo = formas. NO es Poliformismo
+
+Es construir métodos con el mismo nombre pero con comportamiento diferente
+
+Hay 3 conceptos
+
+**Sobrecarga** -> Principalmente con los métodos
+**Sobre-escritura** -> Debe haber herencia, Cuando le cambias el comportamiento a un método que definió la super-clase
+**Polimorfismo de Subtipado** -> Centrado en usar el mimos nombre de método en diferentes clases, cuando se llamen se ejecutara
+
+
+**Sobrecarga**
+Según algunos autores se le llamaría polimorfismo de sobrecarga, algunos ni si quiera lo llaman polimorfismo así que lo dejare:
+
+<div align="center">
+  <img src="img/43.png">
+</div>
+
+Como pueden ver puede ser productivo en algunos casos, pero empieza a ser contraproducente cuando se usa demasiado(en el segundo caso por ejemplo).
+
+**Sobre-Escritura**
+Un caso puro de polimorfismo, busca alterar el método de la súper-clase, ya que el comportamiento es diferente
+
+<div align="center">
+  <img src="img/44.png">
+</div>
+
+Realmente muy útil, es l a mejor practica ya que la herencia podrá extender el proceso y si se quiere generar una particularidad se hace una clase
+
+**Polimorfismo de sobrecarga**
+
+Mala prática
+
+<div align="center">
+  <img src="img/45.png">
+</div>
+
+Este ultimo me parece algo innecesario pero que también se puede hacer sin necesidad de heredar.
+
+Otra cosa que de pronto se me escapo pero es porque python al ser débilmente tipado puede hacer de forma natural y es el termino llamado **Cohersion**, algo que en Java puede compilarse un poco mas.
+
+## UML de Uber
+
+<div align="center">
+  <img src="img/46.png">
+</div>
+
+<div align="center">
+  <img src="img/47.png">
+</div>
+
+<div align="center">
+  <img src="img/48.png">
+</div>
+
+<div align="center">
+  <img src="img/49.png">
+</div>
+
+<div align="center">
+  <img src="img/50.png">
+</div>
+
+<div align="center">
+  <img src="img/51.png">
+</div>
+
+<div align="center">
+  <img src="img/52.png">
+</div>
+
+Esta clase Trip poseerá la lógica más fuerte del negocio aquí será donde se concentrarán la mayor cantidad de clases.
+
+Esto es todo nuestro diagrama de clases, que quedó totalmente expresado en nuestro proyecto.
+
+<div align="center">
+  <img src="img/53.png">
 </div>
