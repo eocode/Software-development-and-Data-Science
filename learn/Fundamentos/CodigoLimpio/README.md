@@ -22,6 +22,10 @@
   - [Factory](#factory)
   - [Command](#command)
 - [Testing](#testing)
+  - [Test Driven Development](#test-driven-development)
+- [Trabajo en equipo](#trabajo-en-equipo)
+  - [Pull requests](#pull-requests)
+  - [Documentación](#documentación)
 
 # Tips
 
@@ -257,3 +261,48 @@ Problemas del testing manual
 * Costoso
 * Lento
 * Poco confiable
+
+## Test Driven Development
+
+En esta clase el profesor Mauro Chojrin nos explicará cómo el Test Driven Development nos ayudará a reducir al mínimo los errores de nuestra aplicación aplicando primero las pruebas y luego el código de la aplicación.
+
+> **TDD o Test Driven Development** es una metodología donde hacemos todo al revés. Por un momento vamos a dejar de programar para dedicarnos a escribir las pruebas.
+
+<div align="center">
+  <img src="img/11.png">
+</div>
+
+# Trabajo en equipo
+
+## Pull requests
+
+Los pull request son pedidos de mejora a archivos de un proyecto generalmente open source. Sirve para que la comunidad ayude a mejorar el código que ha sido escrito por ti, tu equipo o una empresa; luego de que realizamos un cambio generamos un pull request para ofrecer un cambio a mejora y solo queda esperar a que el dueño del repositorio lo pruebe y lo agregue a el código principal.
+
+https://about.gitlab.com/blog/2014/09/29/gitlab-flow/
+
+## Documentación
+Documentar es una de las mejores prácticas que podemos hacer cuando estamos en un equipo de trabajo. Dejar por escrito cómo hemos hecho algunas funcionalidades, cómo podría ser mejorado el código y por sobretodo debemos dejar comentarios en el código que ayuden a las personas a ubicarse en qué parte de la aplicación están y qué hacen esas líneas de código.
+
+**¿Qué documentar?**
+
+* Como implementar nueva funcionalidad.
+* Como se realizan las pruebas.
+
+> Lo mínimo que necesita las personas que quieren colaborar o heredar tu proyecto.
+
+**¿Como documentar?**
+
+* UML como documentación.
+
+**¿Dónde documentar?**
+
+* Propio código.
+* Sistema de documentación.
+* Wiki
+* Ficheros externos.
+* README
+
+**¿Cuándo documentar?**
+
+* Documentar inmediatamente después de codear.
+* Cuando se resuelve un problema, documentar la solución.
