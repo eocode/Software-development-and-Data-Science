@@ -1,15 +1,29 @@
 # Código limpio <!-- omit in toc -->
 
 ## Tabla de Contenido<!-- omit in toc -->
-- [Introducción](#introducción)
+- [Tips](#tips)
+  - [¿A quién beneficia contar con código bien escrito?](#a-quién-beneficia-contar-con-código-bien-escrito)
+  - [Código prolijo](#código-prolijo)
+  - [Zen de python](#zen-de-python)
+  - [Identificadores mnemotécnicos, específicos y precisos](#identificadores-mnemotécnicos-específicos-y-precisos)
+  - [Código reutilizable / Código modular](#código-reutilizable--código-modular)
+  - [Código reutilizable](#código-reutilizable)
+  - [Código organizado](#código-organizado)
+  - [Evitar el hardcoding](#evitar-el-hardcoding)
+  - [Evitar efectos colaterales](#evitar-efectos-colaterales)
+- [SOLID](#solid)
+  - [S Single Reponsibility Principle](#s-single-reponsibility-principle)
+  - [O Open/Closed Principle](#o-openclosed-principle)
+  - [Liskov Substitution Principle](#liskov-substitution-principle)
+  - [Interface Segregation Principle](#interface-segregation-principle)
+  - [Dependency Inversion Principle](#dependency-inversion-principle)
+- [Patrones de diseño](#patrones-de-diseño)
+  - [Singleton](#singleton)
+  - [Factory](#factory)
+  - [Command](#command)
+- [Testing](#testing)
 
 # Tips
-
-https://learning.postman.com/docs/postman/scripts/intro-to-scripts/
-
-<div align="center">
-  <img src="img/1.png">
-</div>
 
 ## ¿A quién beneficia contar con código bien escrito?
 
@@ -109,3 +123,137 @@ Escribir código reutilizable nos va a ayudar a que en lugar de copiar y pegar u
 
 ## Código organizado
 El código organizado se refiere a cómo tenemos distribuido nuestros archivos en la raíz (root) del proyecto. A mayor organización, mayor entendimiento del código.
+
+<div align="center">
+  <img src="img/1.png">
+</div>
+
+## Evitar el hardcoding
+
+**El hardcoding es la práctica de escribir valores literales en lugar de identificadores.** No debe de usarse, ya que si el día de mañana debemos cambiar los valores eso significa que debemos cambiar el código en los lugares que esté ese valor estático por completo y luego mandar a producción, cuándo podríamos hacer el cambio más orgánico en una variable que afecte a todos los lugares que es llamada.
+
+<div align="center">
+  <img src="img/2.png">
+</div>
+
+<div align="center">
+  <img src="img/3.png">
+</div>
+
+## Evitar efectos colaterales
+
+Debemos analizar muy bien nuestro código para evitar efectos colaterales y evitar que nuestro código deje de funcionar. **No uses variables globales.**
+
+# SOLID
+
+SOLID son cinco principios básicos de la **programación orientada a objetos** que ayudan a crear software mantenible en el tiempo.
+
+**SOLID significa:**
+
+**S:** Single Reponsibility Principle
+**O:** Open/Closed Principle
+**L:** Liskov Substitution Principle
+**I:** Interface Segregation Principle
+**D:** Dependency Inversion Principle
+
+## S Single Reponsibility Principle
+
+La S se trata de una clase que debe tener **sólo una razón para cambiar.**
+
+> Alta Cohesion
+
+Se debe buscar separar las responsabilidades
+
+<div align="center">
+  <img src="img/4.png">
+</div>
+
+## O Open/Closed Principle
+
+Open/Closed Principle establece que **una entidad de software debe quedarse abierta para su extensión**, pero cerrada para su modificación.
+
+<div align="center">
+  <img src="img/5.png">
+</div>
+
+<div align="center">
+  <img src="img/6.png">
+</div>
+
+## Liskov Substitution Principle
+
+El **Liskov Substitution Principle** establece que cada clase que hereda de otra puede usarse como su padre sin necesidad de conocer las diferencias entre ellas. 
+
+Para que pueda darse este principio debe cumplir con dos puntos:
+
+* El cliente debe usar métodos de la clase padre únicamente.
+* La clase hija no debe alterar el comportamiento de los métodos de la clase padre.
+
+https://www.youtube.com/watch?v=2X50sKeBAcQ
+
+## Interface Segregation Principle
+
+El Interface Segregation Principle establece que **los clientes de un programa sólo deberían conocer de éste los métodos que realmente usan.**
+
+No tener una super clase con metodos que no se van a usar, mejor muchas clases específicas con código usable en nuestra aplicación, es mala práctica lanzar un error de un método que no se usa
+
+## Dependency Inversion Principle
+
+Dependency Inversion Principle detalla que **los módulos de alto nivel no deben depender de los de bajo nivel**, ambos deben depender de **abstracciones**.
+
+Las abstracciones no deben depender de los detalles, los detalles deben depender de las abstracciones.
+
+> Se debe de lograr bajo acoplamiento
+
+**Una abstracción se enfoca en la visión externa de un objeto**, separa el comportamiento específico de un objeto, a esta división que realiza se le conoce como la barrera de abstracción, la cuál se consigue aplicando el principio de mínimo compromiso.
+
+Pero… ¿Qué es el principio de mínimo compromiso? Se refiere al proceso por el cuál la interfaz de un objeto muestra su comportamiento específico y nada más, absolutamente nada más.
+
+En otras palabras la abstracción se enfoca en “que hace” sin importar en “cómo lo hace”.
+
+Es como solo fijarse en el nombre de una función calcularHorasDelAño(), sin importar el código que hay dentro, solo nos quedamos con el nombre, que ya nos dice “que hace”, y no "como lo hace".
+
+# Patrones de diseño
+
+Los patrones de diseño son soluciones de arquitectura de software aplicables a diferentes problemas.
+
+<div align="center">
+  <img src="img/1.jpg">
+</div>
+
+## Singleton
+
+El patrón Singleton permite restringir la creación de objetos pertenecientes a una clase o al valor de un tipo a un único objeto.
+
+<div align="center">
+  <img src="img/7.png">
+</div>
+
+## Factory
+
+El patron Factory es creacional, se utiliza para ayudar a la creación de nuevas instancias de objetos.
+
+<div align="center">
+  <img src="img/8.png">
+</div>
+
+## Command
+
+El patrón Command **permite solicitar una operación a un objeto sin conocer realmente el contenido de esta operación**, ni el receptor real de la misma. Para ello se encapsula la petición como un objeto, con lo que además facilita la parametrización de los métodos.
+
+<div align="center">
+  <img src="img/9.png">
+</div>
+
+# Testing
+
+Existen dos tipos de testing:
+
+* **Unit Testing**: Evaluamos el funcionamiento de los componentes individualmente.
+**Integration Testing**: Validar la interacción entre los componentes y el sistema completo.
+
+Problemas del testing manual
+
+* Costoso
+* Lento
+* Poco confiable
