@@ -25,6 +25,13 @@
   - [Locaciones](#locaciones)
   - [Nombres](#nombres)
 - [Búsqueda y reemplazo](#búsqueda-y-reemplazo)
+- [Uso de REGEX para descomponer querys GET](#uso-de-regex-para-descomponer-querys-get)
+- [Expresiones en los lenguajes de programación](#expresiones-en-los-lenguajes-de-programación)
+  - [PHP](#php)
+  - [PERL](#perl)
+  - [Java](#java)
+  - [Javascript](#javascript)
+  - [`grep` y `find` desde consola](#grep-y-find-desde-consola)
 - [RegEX Cheat Sheet](#regex-cheat-sheet)
 
 # Introducción
@@ -307,6 +314,62 @@ Convertir a un JSON
   <img src="img/18.png">
 </div>
 
+Los paréntesis () sirven para agrupar caracteres. Tiene algunas diferencias notables a los paréntesis cuadrados.
+Entre ellas se puede usar caracteres especiales conservan su significado dentro de los paréntesis.
+
+Utilizando dentro del paréntesis una barra "|" podemos separar y hacer búsquedas similares. Ejemplo: (este|oeste|norte|sur)
+
+# Uso de REGEX para descomponer querys GET
+
+Al hacer consultas a sitios web mediante el método GET se envían todas las variables al servidor a través de la misma URL.
+
+La parte de esta url que viene luego del signo de interrogación ? se le llama query del request que es: variable1=valor1&variable2=valor2&... y así tantas veces como se necesite. En esta clase veremos como extraer estas variables usando expresiones regulares.
+
+<div align="center">
+  <img src="img/19.png">
+</div>
+
+<div align="center">
+  <img src="img/20.png">
+</div>
+
+# Expresiones en los lenguajes de programación
+
+## PHP
+
+<div align="center">
+  <img src="img/21.png">
+</div>
+
+<div align="center">
+  <img src="img/23.png">
+</div>
+
+## PERL
+
+<div align="center">
+  <img src="img/22.png">
+</div>
+
+## Java
+
+<div align="center">
+  <img src="img/24.png">
+</div>
+
+## Javascript
+
+<div align="center">
+  <img src="img/25.png">
+</div>
+
+## `grep` y `find` desde consola
+
+En los sistemas operativos basados en UNIX podemos utilizar expresiones regulares a través de la consola mediante los comandos grep y find.
+
+**grep:** Nos ayuda a buscar dentro de los archivos, textos muy puntuales utilizando una versión muy reducida de expresiones regulares.
+
+**find:** Se utiliza para encontrar archivos en un determinado directorio a partir de diversas reglas de búsqueda que incluyen expresiones regulares.
 
 # RegEX Cheat Sheet
 
