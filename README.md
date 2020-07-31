@@ -83,7 +83,8 @@ Conocimientos relacionados que me interesan y me gustá aplicar
 * [Expresiones Regulares](/learn/Fundamentos/ExpresionesRegulares)
 
 ## Trabajo en equipo y gestión de proyectos
-* [Scrum](/learn/Scrum)
+* [Scrum](/learn/Admin/Scrum)
+* [Gerencia](/learn/Admin/)
 
 ## Marketing digital
 
