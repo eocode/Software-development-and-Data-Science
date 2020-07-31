@@ -80,6 +80,7 @@ Conocimientos relacionados que me interesan y me gustá aplicar
 * [Postman](/learn/Fundamentos/Postman)
 * [Código limpio](/learn/Fundamentos/CodigoLimpio)
 * [Diseño](/learn/Fundamentos/Diseño)
+* [Expresiones Regulares](/learn/Fundamentos/ExpresionesRegulares)
 
 ## Trabajo en equipo y gestión de proyectos
 * [Scrum](/learn/Scrum)
