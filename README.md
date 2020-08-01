@@ -12,6 +12,7 @@ Reuní trabajo relacionado con datos de forma ordenada y organizada en los lengu
 - [Retos y prácticas](#retos-y-prácticas)
 - [Base de conocimientos](#base-de-conocimientos)
   - [Fundamentos](#fundamentos)
+  - [Automatización](#automatización)
   - [Trabajo en equipo y gestión de proyectos](#trabajo-en-equipo-y-gestión-de-proyectos)
   - [Marketing digital](#marketing-digital)
   - [Matemáticas](#matemáticas)
@@ -81,6 +82,9 @@ Conocimientos relacionados que me interesan y me gustá aplicar
 * [Código limpio](/learn/Fundamentos/CodigoLimpio)
 * [Diseño](/learn/Fundamentos/Diseño)
 * [Expresiones Regulares](/learn/Fundamentos/ExpresionesRegulares)
+
+## Automatización
+* [RPAs](/learn/Fundamentos/)
 
 ## Trabajo en equipo y gestión de proyectos
 * [Scrum](/learn/Admin/Scrum)
