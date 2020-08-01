@@ -20,6 +20,24 @@
   - [Conectando estrategia y ejecución](#conectando-estrategia-y-ejecución)
 - [Manejo de estado de trabajo y de equipos](#manejo-de-estado-de-trabajo-y-de-equipos)
   - [Días 1 a 60: ¿Cómo te sientes?](#días-1-a-60-cómo-te-sientes)
+  - [El tiempo de ingeniería](#el-tiempo-de-ingeniería)
+    - [Categorización](#categorización)
+    - [Distribución ideal](#distribución-ideal)
+- [Tips](#tips)
+  - [Sé la trabajadora que te gustaría tener](#sé-la-trabajadora-que-te-gustaría-tener)
+  - [Desarrollo de producto](#desarrollo-de-producto)
+  - [El ciclo de desarrollo](#el-ciclo-de-desarrollo)
+  - [Itera rápido y ágil](#itera-rápido-y-ágil)
+  - [¿Qué es velocidad en ingeniería?](#qué-es-velocidad-en-ingeniería)
+  - [Productividad](#productividad)
+  - [Estructurando a tu equipo](#estructurando-a-tu-equipo)
+  - [Estrategias de comunicación](#estrategias-de-comunicación)
+  - [¿Cómo tomar decisiones?](#cómo-tomar-decisiones)
+  - [Performance, contratación y siguientes pasos](#performance-contratación-y-siguientes-pasos)
+    - [El rendimiento grupal](#el-rendimiento-grupal)
+    - [Rendimiento individual](#rendimiento-individual)
+    - [Conversaciones difíciles ¿Cómo despedir a alguien?](#conversaciones-difíciles-cómo-despedir-a-alguien)
+    - [Conversaciones chéveres (Crecimiento y promoción)](#conversaciones-chéveres-crecimiento-y-promoción)
 
 # Introducción
 
@@ -316,3 +334,258 @@ https://github.com/buritica/mgt/blob/master/es/guia-estado.md
 * Toma el control
 * ¿Cómo ingeniero funciona o no funciona?
 * Con personas, hay más insertidumbre y no tienes control
+
+## El tiempo de ingeniería
+
+* El valor del tiempo de ingeniería y sus tipos
+* El tiempo es $$$
+
+### Categorización
+* **Soporte** - Tiempo sirviendole a otras personas, tiempo no planeado al que toca reaccionar
+* **Mantenimiento** - Tiempo dedicado a mejorar y mantener sistemas. Actualizaciones
+* **Desarrollo de funcionalidad nueva** - Creación de productos y servicios nuevos
+
+### Distribución ideal
+
+<div align="center">
+  <img src="img/45.png">
+</div>
+
+<div align="center">
+  <img src="img/46.png">
+</div>
+
+<div align="center">
+  <img src="img/47.png">
+</div>
+
+<div align="center">
+  <img src="img/48.png">
+</div>
+
+<div align="center">
+  <img src="img/49.png">
+</div>
+
+Es más fácil contar gente que horas
+* 1 Soporte
+* 1 Mantenimiento
+* 3 Desarrollo
+
+> No poder desarrollar producto es un riesgo
+
+<div align="center">
+  <img src="img/50.png">
+</div>
+
+Entiende por que sucede y genera una estrategia
+
+Expande tus conocimientos
+
+> Haz un plan para poder tomar mejores decisiones y con base a eso estima
+
+<div align="center">
+  <img src="img/51.png">
+</div>
+
+Finalmente comunica el progreso
+
+# Tips
+
+## Sé la trabajadora que te gustaría tener
+
+Cuándo le enseñes algo a tu equipo nuevo, evalua si lo estás haciendo hacia tu jefa, Hazle la vida fácil
+
+<div align="center">
+  <img src="img/52.png">
+</div>
+
+Haz preguntas
+
+* Cuánto nos cuesta adquirir un usuario, margenes, competencia, más impacto en el negocio
+* ¿Qué te preocupa?
+* Pregunta sobre los miembros del equipo
+* ¿Qué problemas tiene?
+* Establece una relación viendo el lado humano
+
+<div align="center">
+  <img src="img/53.png">
+</div>
+
+¿Cómo le vas a hacer la vida más fácil a tu jefe la próxima semana?
+
+## Desarrollo de producto
+
+<div align="center">
+  <img src="img/54.png">
+</div>
+
+<div align="center">
+  <img src="img/55.png">
+</div>
+
+* El desarrollo de producto es una sociación
+  * Se trae experiencia y muchas habilidades e ideas para construir
+* La entrega del producto es responsabilidad de ingeniería
+
+## El ciclo de desarrollo
+
+<div align="center">
+  <img src="img/56.png">
+</div>
+
+> Desarrollo iterativo
+
+Scrum y el manifesto ágil no necesariamente te hace mejor
+
+## Itera rápido y ágil
+
+> No necesitas una certificación
+
+<div align="center">
+  <img src="img/57.png">
+</div>
+
+<div align="center">
+  <img src="img/58.png">
+</div>
+
+* Esconder a través de banderas, habilitar y desabilitar
+* Reducir errores
+* Adapta tus procesos y no te obsesiones con ellos
+
+## ¿Qué es velocidad en ingeniería?
+
+Se interpreta de manera diferente en cada empresa
+
+<div align="center">
+  <img src="img/59.png">
+</div>
+
+Es de capacidad, cuanto podemos hacer
+
+<div align="center">
+  <img src="img/60.png">
+</div>
+
+La velocidad es relativa y no puedes comparar una con la de otro
+
+<div align="center">
+  <img src="img/61.png">
+</div>
+
+<div align="center">
+  <img src="img/62.png">
+</div>
+
+No funciona para medir equipos
+* No midas líneas de código, ni horas trabajadas
+
+> Considero que se puede medir con base a resultados de equipo. Hacer acuerdos. Y tal vez medir la productividad con ciertos factores durante ese tiempo, como bugs y lanzamientos a producción. 
+> 
+>De esa manera podemos estimar que tan avanzado quedp el proyecto, si está al 100% o a un nivel menor y ver datos como cuántos despliegues nos costo realizar por cada feature, analizando su complejidad. Así mismo ver cuáles fueron los errores que se tuvieron y ver los aprendizajes. Hacer una retrospectiva de que fue lo que sucedió.
+>
+>Me dí cuenta que herramientas como GitLab a nivel de desarrollo te da muchos datos al respecto y en cierta manera son públicos para los integrantes del equipo. Eso mismo orienta a querer ir a alcanzar el resultado y cumplir los objetivos acordados.
+
+## Productividad
+
+<div align="center">
+  <img src="img/63.png">
+</div>
+
+## Estructurando a tu equipo
+
+* Tú equipo te reporta a tí, y es tu responsabilidad decidir cómo se organiza de acuerdo a las prioridades
+
+---
+
+* No crees barreras artificiales o imaginarias, deja que se autoorganizen
+* Motiva a que aprendan de varias cosas
+* Enfócate en dar objetivos claros, y no en decidir cómo se soluciona el problema
+* Balancea la ejecución inmediata con el crecimiento a largo plazo, toma en cuenta presente y futuro
+* Rota las responsabilidades, da oportunidad a que alguien este en áreas diferentes, genera un equipo unido
+
+¿Generalistas o especialistas?
+
+* Organismo Cigoto, es generalista, eventualmente se van a especializar, ambos caben
+* La individualidad impacta el rendimiento y conocimiento Previene errores.
+
+## Estrategias de comunicación
+
+* La comunicación no es lo que dices sino lo que te entienden
+* Comunicación sincrónica vs asincrónica
+  
+<div align="center">
+  <img src="img/64.png">
+</div>
+
+* Sé intencional y explícita al elegir los mecanismos
+* No crees una prisión de presencia
+* La comunicación es el fundamento de la confianza
+
+## ¿Cómo tomar decisiones?
+
+> "No tomar decisión, es mucho peor que tomar una mala decisión" **Juan Pablo Buriticá**
+
+* Tu trabajo ya no es tomar decisiones técnicas
+
+* RFCs cómo mecanismos de decisión de equipos, **viene de los commits y proyectos open source**
+
+<div align="center">
+  <img src="img/66.png">
+</div>
+
+Es mejor discutir en texto que en código
+
+<div align="center">
+  <img src="img/67.png">
+</div>
+
+https://github.com/buritica/mgt/blob/master/es/guia-de-rfcs.md
+
+## Performance, contratación y siguientes pasos
+
+### El rendimiento grupal
+
+Un equipo es como andar a cargo de una banda de música, cada persona hace algo diferente, hay una guitarra, piano, bajo... pero todos deben sonar muy bien, las bandas práctican y aprenden
+
+* Rendimiento grupal
+* No es común ni deseable que todos los miembros del equipo sean estrellas
+* Miden los resultados a partir del resultado del grupo
+  * No líneas de código
+
+### Rendimiento individual
+
+**Un junior**
+
+* Responsabilidades son pocas
+* Tiene que aprender lenguajes
+* Aprender a comunicarse
+* Poco a poco va ganando experiencia
+* Confia en tu equipo
+* Lo que importan son los resultados
+* Retroalimentación continúa
+
+Planes de mejora (Performance improvement plan)
+
+* Se claró
+
+**3 consejos**
+
+* Delinea que tiene la persona para mejorar
+* Cuánto tiempo tiene para mejorar
+* Hazlo por escrito y haz un acuerdo
+
+### Conversaciones difíciles ¿Cómo despedir a alguien?
+
+> Se humano, nunca debe ser una sorpresa cuando despides a alguien
+
+* Sí es por rendimiento debiste haber intentado el plan de mejora
+* Práctica la conversación varias veces
+* Nunca se improvisa, siempre se práctica
+* Siempre ten esta conversación en persona, nunca despidas a alguien por correo, ni por texto ni por whatsapp
+* La persona dedico tiempo a la empresa y a tí
+
+### Conversaciones chéveres (Crecimiento y promoción)
+
+Platicas para dar buenas noticias
