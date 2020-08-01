@@ -84,7 +84,7 @@ Conocimientos relacionados que me interesan y me gustá aplicar
 * [Expresiones Regulares](/learn/Fundamentos/ExpresionesRegulares)
 
 ## Automatización
-* [RPAs](/learn/Fundamentos/)
+* [RPAs](/learn/Automatization/RPAs)
 
 ## Trabajo en equipo y gestión de proyectos
 * [Scrum](/learn/Admin/Scrum)
