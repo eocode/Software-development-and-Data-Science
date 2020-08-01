@@ -84,7 +84,8 @@ Conocimientos relacionados que me interesan y me gustá aplicar
 
 ## Trabajo en equipo y gestión de proyectos
 * [Scrum](/learn/Admin/Scrum)
-* [Gerencia](/learn/Admin/)
+* [Gerencia](/learn/Admin)
+* [Management de Ingenieria](/learn/Admin/Engineering%20Management)
 
 ## Marketing digital
 
