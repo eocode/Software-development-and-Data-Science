@@ -5,8 +5,6 @@ Reuní trabajo relacionado con datos de forma ordenada y organizada en los lengu
 
 > Contenido sobre **Proyectos/Retos/Codigos/Notas** relacionados al tema
 
-```#7AC96F```
-
 ## Tabla de Contenido<!-- omit in toc -->
 - [Proyectos con Python](#proyectos-con-python)
     - [Backend](#backend)
