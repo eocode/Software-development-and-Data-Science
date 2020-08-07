@@ -82,3 +82,21 @@ deploy:
 ## CLI client
 
 https://github.com/travis-ci/travis.rb
+
+Buenas practicas de seguridad: En este curso utilizamos información sensible que deberíamos ocultar. Para eso travis-cli nos ofrece el siguiente comando:
+
+``travis encrypt tu_clave``
+
+para encriptar tu información sensible y que solo travis pueda entender.
+Luego de ejecutar este comando, travis genera lo siguiente
+
+``secure:"..."``
+
+luego eso lo integrarias de la siguiente manera
+
+Ejemplo con api key
+
+``api_key:
+	secure:"..."``
+
+y de esa manera aseguramos nuestras claves y/o información sensible.
