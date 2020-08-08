@@ -26,6 +26,24 @@
   - [Nasal sounds](#nasal-sounds)
   - [Lips](#lips)
   - [Vowels](#vowels)
+- [Fundamentals](#fundamentals)
+  - [Greetings](#greetings-1)
+    - [Good by greetings](#good-by-greetings)
+  - [Discussion: Introduce yourself](#discussion-introduce-yourself)
+  - [Pronunciation: Numbers 1-10 / ABC](#pronunciation-numbers-1-10--abc)
+  - [Personal Information](#personal-information)
+  - [Creating your ID](#creating-your-id)
+  - [Useful expressions](#useful-expressions)
+  - [Jobs](#jobs)
+    - [Where I live](#where-i-live)
+    - [Professions](#professions)
+    - [Verb to Be and Jobs](#verb-to-be-and-jobs)
+  - [Useful expressions: Meeting and greeting](#useful-expressions-meeting-and-greeting)
+  - [Vocabulary: Numbers 1-100](#vocabulary-numbers-1-100)
+- [Grammar](#grammar)
+  - [Can and can´t](#can-and-cant)
+    - [Abilities](#abilities)
+  - [Useful expressions: Love, adore, be crazy about](#useful-expressions-love-adore-be-crazy-about)
 
 # Basics
 
@@ -385,3 +403,332 @@ https://www.youtube.com/watch?v=63xKUpuf0w8
 ## Vowels
 
 https://ingles-americano.blogspot.com/2012/06/vowel-combinations.html
+
+# Fundamentals
+
+## Greetings
+
+* Good morning. How's everything?
+* Hi. How are you?
+* Hello How is it going?
+* Good morning
+* Good evening
+* Good afternoon
+
+### Good by greetings
+
+* Bye
+* Good bye
+* See you
+* So long!
+* See you later!
+
+<div align="center">
+  <img src="img/22.png">
+</div>
+
+## Discussion: Introduce yourself
+
+Read some of the most common questions to introduce yourself:
+
+* What is your first name?
+* How old are you?
+* Where do you come from?
+* What languages do you speak?
+* Here are three examples:
+
+My name is Alex. I come from Spain and I’m 26 years old. I speak Spanish, Portuguese and I’m learning English.
+
+I am Anabella, but my friends call me Ana. I am 19 years old and I was born in Mexico. I speak Spanish and a little bit of English.
+
+My name is Valeria. I am 32 years old and I come from Brazil. I speak Portuguese and I want to speak English.
+
+## Pronunciation: Numbers 1-10 / ABC
+
+<div align="center">
+  <img src="img/23.png">
+</div>
+
+<div align="center">
+  <img src="img/24.png">
+</div>
+
+<div align="center">
+  <img src="img/25.png">
+</div>
+
+## Personal Information
+
+Read the following e-mail and answer the questions:
+
+Juliana Álvarez (julialvarezg@yeahhoo.com)
+To me
+
+Dear John,
+
+My name is Juliana Álvarez. I’m from Argentina and I live in Buenos Aires. I’m twenty-one years old. I study accounting at Universidad de Buenos Aires. My email address is julialvarezg@yeahhoo.com you can reply back here. You can also contact me at 444-5068-4532. I want to learn Portuguese and Italian. I know you are a language teacher, can you help me?
+
+Answer the questions:
+
+Where is Juliana from?
+Where does Juliana live?
+How old is Juliana?
+What does Juliana study?
+Where is she studying?
+What is her e-mail address?
+What is her phone number?
+
+## Creating your ID
+
+<div align="center">
+  <img src="img/26.png">
+</div>
+
+## Useful expressions
+
+**I don’t understand.**
+
+No comprendo.
+
+**Can you repeat that?**
+
+¿Puede repetir?
+
+**Can you speak slowly, please?**
+
+¿Puede hablar más lento, por favor?
+
+**How do you spell that?**
+
+¿Cómo se deletrea?
+
+**What’s the meaning of ________?**
+
+¿Qué significa _________?
+
+**Thank you very much.**
+
+Muchas Gracias.
+
+## Jobs
+
+### Where I live
+
+<div align="center">
+  <img src="img/27.png">
+</div>
+
+<div align="center">
+  <img src="img/28.png">
+</div>
+
+<div align="center">
+  <img src="img/29.png">
+</div>
+
+### Professions
+
+Some more jobs / professions with their pronunciations:
+
+ENGLISH	Phonetic	SPANISH
+accountant	əˈkaʊn.t̬ənt 🔊	contable
+architect	ˈɑːr.kə.tekt 🔊	arquitecto
+astronaut	ˈæs.trə.nɑːt 🔊	astronauta
+consultant	kənˈsʌl.tənt 🔊	asesor
+cook	kʊk 🔊	cocinero
+dentist	ˈden.t̬ɪst 🔊	dentista
+developer	dɪˈvel.ə.pɚ 🔊	desarrollador
+doctor	ˈdɑːk.tɚ 🔊	médico
+driver	ˈdraɪ.vɚ 🔊	conductor
+electrician	ˌɪl.ekˈtrɪʃ.ən 🔊	electricista
+employee	ˌem.plɔɪˈiː 🔊	empleado
+engineer	ˌen.dʒɪˈnɪr 🔊	ingeniero
+fireman	ˈfaɪr.mən 🔊	bombero
+freelancer	ˈfriːlænsər 🔊	freelancer
+gardener	ˈɡɑːr.dən.ɚ 🔊	jardinero
+hairdresser	ˈherˌdres.ɚ 🔊	peluquero
+instructor	ɪnˈstrʌk.tɚ 🔊	monitor
+jeweller	ˈdʒuː.ə.lɚ 🔊	joyero
+journalist	ˈdʒɝː.nə.lɪst 🔊	periodista
+judge	dʒʌdʒ 🔊	juez
+laborer	ˈleɪ.bɚ.ɚ 🔊	obrero
+lawyer	ˈlɑː.jɚ 🔊	abogado
+mechanic	məˈkæn.ɪk 🔊	mecánico
+nurse	nɝːs 🔊	enfermero
+painter	ˈpeɪn.t̬ɚ 🔊	pintor
+pilot	ˈpaɪ.lət 🔊	piloto
+policeman	pəˈliːs.mən 🔊	policía
+politician	ˌpɑː.ləˈtɪʃ.ən 🔊	político
+postman	ˈpoʊst.mən 🔊	cartero
+programmer	ˈproʊ.ɡræm.ɚ 🔊	programador
+receptionist	rɪˈsep.ʃən.ɪst 🔊	recepcionista
+reporter	rɪˈpɔːr.t̬ɚ 🔊	reportero
+salesman	ˈseɪlz.mən 🔊	vendedor
+scientist	ˈsaɪən.tɪst 🔊	científico
+secretary	ˈsek.rə.ter.i 🔊	secretario
+shoemaker	ˈʃuːˌmeɪ.kər 🔊	zapatero
+singer	ˈsɪŋ.ɚ 🔊	cantante
+soldier	ˈsoʊl.dʒɚ 🔊	soldado
+student	ˈstuː.dənt 🔊	estudiante
+surgeon	ˈsɝː.dʒən 🔊	cirujano
+teacher	ˈtiː.tʃɚ 🔊	profesor
+technician	tekˈnɪʃ.ən 🔊	técnico
+translator	trænsˈleɪ.t̬ɚ 🔊	traductor
+waiter	ˈweɪ.t̬ɚ 🔊	camarero
+waitress	ˈweɪ.trəs 🔊	camarera
+writer	ˈraɪ.t̬ɚ 🔊	escritor
+
+### Verb to Be and Jobs
+
+Read the following chart:
+
+<div align="center">
+  <img src="img/30.png">
+</div>
+
+Complete the spaces:
+
+He ______ a teacher and he ____ smart.
+She ______ a nurse and she _____ nice.
+They ______ producers and they _____ talented.
+We ________ friends and we _____ sports fans.
+It ________ big and it _______ cozy.
+
+## Useful expressions: Meeting and greeting
+
+Nice to meet you.
+Hello, nice to meet you too.
+
+Where are you from?
+I’m from Colombia.
+
+What do you do?
+I’m a engineer
+
+What do you like to do in your free time?
+I’m play video games
+
+What´s your phone number?
+My phone number is 12547124588
+
+## Vocabulary: Numbers 1-100
+
+<div align="center">
+  <img src="img/31.png">
+</div>
+
+<div align="center">
+  <img src="img/32.png">
+</div>
+
+# Grammar
+
+<div align="center">
+  <img src="img/33.png">
+</div>
+
+<div align="center">
+  <img src="img/34.png">
+</div>
+
+<div align="center">
+  <img src="img/35.png">
+</div>
+
+<div align="center">
+  <img src="img/36.png">
+</div>
+
+<div align="center">
+  <img src="img/37.png">
+</div>
+
+## Can and can´t
+
+Seasons and clothes
+
+<div align="center">
+  <img src="img/38.png">
+</div>
+
+<div align="center">
+  <img src="img/39.png">
+</div>
+
+<div align="center">
+  <img src="img/can.webp">
+</div>
+
+### Abilities
+
+<div align="center">
+  <img src="img/40.png">
+</div>
+
+<div align="center">
+  <img src="img/41.png">
+</div>
+
+<div align="center">
+  <img src="img/42.png">
+</div>
+
+<div align="center">
+  <img src="img/43.png">
+</div>
+
+<div align="center">
+  <img src="img/44.png">
+</div>
+
+<div align="center">
+  <img src="img/45.png">
+</div>
+
+https://idiomas.gcfglobal.org/es/curso/ingles/gramatica/verb-patterns/
+
+Write about your likes and dislikes:
+
+Example:
+
+My name is César, I like driving and reading literature. I don’t like washing the dishes, I do it a few times. She is María, my wife. She loves cooking and singing, she is an awesome singer. She doesn’t like going out with our dog, Tommy. She prefers to feed him and bathe him.
+
+## Useful expressions: Love, adore, be crazy about
+
+* Love
+* Adore
+* Be crazy about
+
+<div align="center">
+  <img src="img/forms.webp">
+</div>
+
+<div align="center">
+  <img src="img/46.png">
+</div>
+
+<div align="center">
+  <img src="img/have.webp">
+</div>
+
+<div align="center">
+  <img src="img/47.png">
+</div>
+
+<div align="center">
+  <img src="img/48.png">
+</div>
+
+<div align="center">
+  <img src="img/49.png">
+</div>
+
+<div align="center">
+  <img src="img/50.png">
+</div>
+
+<div align="center">
+  <img src="img/51.png">
+</div>
+
+have dinner
