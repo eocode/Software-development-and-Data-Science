@@ -731,4 +731,69 @@ My name is César, I like driving and reading literature. I don’t like washing
   <img src="img/51.png">
 </div>
 
-have dinner
+<div align="center">
+  <img src="img/52.png">
+</div>
+
+<div align="center">
+  <img src="img/53.png">
+</div>
+
+<div align="center">
+  <img src="img/54.png">
+</div>
+
+<div align="center">
+  <img src="img/55.png">
+</div>
+
+I
+You
+We
+They
+Examples:
+I wake up at 6.00 am
+We wake up at 6.00 am
+
+Have an s in the conjugation of the verb:
+He
+She
+It
+Examples: He wakes up at 6.00 am
+She wakes up at 6.00 am
+
+Think about your own routine and create your schedule.
+
+<div align="center">
+  <img src="img/56.png">
+</div>
+
+Read and complete the sentences:
+
+I ______________ at 6:00 am. At 6:30 I ___________ a shower. At 7:00 I have breakfast.
+John _________ breakfast at 7:00 am. He ___________ to work at 8:00 am. He _______ coffee at 10:00 am.
+Andrea __________ dinner at 7:00 pm. She __________ tv and _________ her email at night.
+We ____________ at 5:00 am. We ____________ our car to work.
+They ______________ 8 hours every night.
+
+Organize the sentences:
+
+her / doesn’t / check / at / night. / She / email
+he / a / take / in the morning? / Does / shower / early
+lunch / They / at / don’t / cafeteria. / have / the
+work / We / to / by / bus. / go
+Reportar un problema
+Task: Create your schedule
+
+Task: Create your schedule and someone else’s schedule.
+
+
+
+I wake up at 6:30 in the morning, then I get up at 6:35. At 6:40 I take a shower, after that I have breakfast. At 7:00 am I go to work by bus. I teach class and have some coffee. At noon I have lunch and I go to the office. In the afternoon I have coffee. At 5:00 pm I go home, have dinner and watch tv. I go to bed at 9:00 pm.
+
+Yesica wakes up at 7:00, she takes a shower and has breakfast. At 8:00 she goes to work by taxi. At 1:00 pm she has lunch. In the afternoon she works. She goes home at 7:00 pm, she has dinner and goes to bed.
+
+<div align="center">
+  <img src="img/57.png">
+</div>
+
