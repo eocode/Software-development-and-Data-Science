@@ -44,6 +44,11 @@
   - [Can and can´t](#can-and-cant)
     - [Abilities](#abilities)
   - [Useful expressions: Love, adore, be crazy about](#useful-expressions-love-adore-be-crazy-about)
+  - [WH questions](#wh-questions)
+  - [Useful expressions: Frequency adverbs.](#useful-expressions-frequency-adverbs)
+  - [Past sentences](#past-sentences)
+    - [My childhood](#my-childhood)
+    - [Vocabulary: Adjectives](#vocabulary-adjectives)
 
 # Basics
 
@@ -793,7 +798,85 @@ I wake up at 6:30 in the morning, then I get up at 6:35. At 6:40 I take a shower
 
 Yesica wakes up at 7:00, she takes a shower and has breakfast. At 8:00 she goes to work by taxi. At 1:00 pm she has lunch. In the afternoon she works. She goes home at 7:00 pm, she has dinner and goes to bed.
 
+## WH questions
+
 <div align="center">
   <img src="img/57.png">
 </div>
 
+<div align="center">
+  <img src="img/58.png">
+</div>
+
+<div align="center">
+  <img src="img/59.png">
+</div>
+
+<div align="center">
+  <img src="img/60.png">
+</div>
+
+## Useful expressions: Frequency adverbs.
+
+In this lesson you will learn useful expressions to talk about routines, these are Frequency Adverbs. Listen and repeat.
+
+I **always** work late
+She **almost always** cooks at home
+They **sometimes** eat fish
+We **seldom** go to the movies
+I **almost** never watch TV
+You **never** visit the doctor
+
+Practice these expressions using your habits and routines and share them in the discussion board.
+
+## Past sentences
+
+### My childhood
+
+<div align="center">
+  <img src="img/61.png">
+</div>
+
+<div align="center">
+  <img src="img/62.png">
+</div>
+
+Here are some examples of past tenses:
+
+I was 5 years old in 1995.
+My parents were sales representatives.
+I was very talkative.
+My sister was 10 years old.
+My best friend was Amanda
+
+### Vocabulary: Adjectives
+
+<div align="center">
+  <img src="img/63.png">
+</div>
+
+<div align="center">
+  <img src="img/64.png">
+</div>
+
+<div align="center">
+  <img src="img/65.png">
+</div>
+
+<div align="center">
+  <img src="img/66.png">
+</div>
+
+**Tall** = Alto
+**Short** = Persona baja( enanos v:)
+**Heavy** = Corpulento (Gordo)
+**Thin** = Delgado
+**Blonde** = Rubia
+**Brunette** = Morena, una persona, típicamente una mujer, con cabello castaño oscuro. pero puede ser varias cosas dependiendo del contexto: Brunette hair = Pelo castaño Brunette skin = Piel morena
+**Nice** = Agradable, pero en este caso, en el que estamos hablando de personas puede ser Nice person = Persona simpática
+**Talkative** = Hablador (Persona que habla mucho) 
+**Annoying** = Fastidioso o que molesta mucho.
+**Outgoing** = Extrovertido
+**Shy** = Tímido
+**Mean** = Puede significar molesto también no dispuesto a dar o compartir cosas, especialmente dinero; no generoso En otros casos puede ser intención de transmitir, indicar o referirse a (una cosa o idea en particular); significar
+**Famous** = Famoso
