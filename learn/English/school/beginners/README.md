@@ -49,6 +49,7 @@
   - [Past sentences](#past-sentences)
     - [My childhood](#my-childhood)
     - [Vocabulary: Adjectives](#vocabulary-adjectives)
+    - [Grammar: The Past](#grammar-the-past)
 
 # Basics
 
@@ -880,3 +881,6 @@ My best friend was Amanda
 **Shy** = Tímido
 **Mean** = Puede significar molesto también no dispuesto a dar o compartir cosas, especialmente dinero; no generoso En otros casos puede ser intención de transmitir, indicar o referirse a (una cosa o idea en particular); significar
 **Famous** = Famoso
+
+### Grammar: The Past
+

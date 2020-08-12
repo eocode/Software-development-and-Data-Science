@@ -2,6 +2,7 @@
 # Entrenamiento Google Cloud Platform <!-- omit in toc -->
 
 ## Tabla de Contenido<!-- omit in toc -->
+- [Validar mejor zona](#validar-mejor-zona)
 - [Introducción](#introducción)
   - [Laboratorios oficiales de Google](#laboratorios-oficiales-de-google)
 - [Computo en la nube](#computo-en-la-nube)
@@ -22,9 +23,20 @@
     - [Cloud functions](#cloud-functions)
       - [Evento detonador (Triggers)](#evento-detonador-triggers)
 - [Continous Integration](#continous-integration)
+  - [Pipelines](#pipelines)
+  - [Prácticas](#prácticas)
+  - [Estrategias de Despliegue](#estrategias-de-despliegue)
+  - [Repositorios](#repositorios)
+  - [Infraestructura como código](#infraestructura-como-código)
+  - [Despliegue en Servicios Serverless](#despliegue-en-servicios-serverless)
 - [Kubernetes](#kubernetes)
+  - [DEMO](#demo)
 - [Machine learning](#machine-learning)
 
+
+# Validar mejor zona
+
+http://www.gcping.com/
 
 # Introducción
 
@@ -390,6 +402,256 @@ https://cloud.google.com/functions
 
 # Continous Integration
 
+<div align="center">
+  <img src="img/42.png">
+</div>
+
+## Pipelines
+
+<div align="center">
+  <img src="img/43.png">
+</div>
+
+<div align="center">
+  <img src="img/44.png">
+</div>
+
+## Prácticas
+
+<div align="center">
+  <img src="img/45.png">
+</div>
+
+<div align="center">
+  <img src="img/46.png">
+</div>
+
+<div align="center">
+  <img src="img/47.png">
+</div>
+
+Creado por Netflix: https://spinnaker.io/
+
+https://www.atlassian.com/es/software/bamboo
+
+Creado en Java: https://www.jenkins.io/
+
+## Estrategias de Despliegue
+
+<div align="center">
+  <img src="img/48.png">
+</div>
+
+<div align="center">
+  <img src="img/49.png">
+</div>
+
+<div align="center">
+  <img src="img/50.png">
+</div>
+
+<div align="center">
+  <img src="img/51.png">
+</div>
+
+<div align="center">
+  <img src="img/52.png">
+</div>
+
+<div align="center">
+  <img src="img/53.png">
+</div>
+
+<div align="center">
+  <img src="img/54.png">
+</div>
+
+## Repositorios
+
+<div align="center">
+  <img src="img/55.png">
+</div>
+
+Funciona muy similar y todo se gestiona por comandos
+
+<div align="center">
+  <img src="img/56.png">
+</div>
+
+<div align="center">
+  <img src="img/57.png">
+</div>
+
+```shell
+gcloud source repos create demo_CI-CD
+gcloud source repos clone demo_CI-CD
+```
+
+https://cloud.google.com/source-repositories
+https://cloud.google.com/container-registry
+
+<div align="center">
+  <img src="img/58.png">
+</div>
+
+https://www.jetbrains.com/es-es/teamcity/
+
+<div align="center">
+  <img src="img/59.png">
+</div>
+
+<div align="center">
+  <img src="img/60.png">
+</div>
+
+<div align="center">
+  <img src="img/61.png">
+</div>
+
+<div align="center">
+  <img src="img/62.png">
+</div>
+
+<div align="center">
+  <img src="img/63.png">
+</div>
+
+<div align="center">
+  <img src="img/64.png">
+</div>
+
+<div align="center">
+  <img src="img/65.png">
+</div>
+
+<div align="center">
+  <img src="img/66.png">
+</div>
+
+Lab
+
+https://google.qwiklabs.com/focuses/552?catalog_rank=%7B%22rank%22%3A2%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=5868947
+
+## Infraestructura como código
+
+<div align="center">
+  <img src="img/67.png">
+</div>
+
+<div align="center">
+  <img src="img/68.png">
+</div>
+
+<div align="center">
+  <img src="img/69.png">
+</div>
+
+<div align="center">
+  <img src="img/70.png">
+</div>
+
+<div align="center">
+  <img src="img/71.png">
+</div>
+
+<div align="center">
+  <img src="img/72.png">
+</div>
+
+<div align="center">
+  <img src="img/73.png">
+</div>
+
+https://www.terraform.io/
+
+https://cloud.google.com/deployment-manager
+
+<div align="center">
+  <img src="img/74.png">
+</div>
+
+## Despliegue en Servicios Serverless
+
+<div align="center">
+  <img src="img/75.png">
+</div>
+
+<div align="center">
+  <img src="img/77.png">
+</div>
+
+<div align="center">
+  <img src="img/78.png">
+</div>
+
+<div align="center">
+  <img src="img/79.png">
+</div>
+
+<div align="center">
+  <img src="img/80.png">
+</div>
+
+<div align="center">
+  <img src="img/81.png">
+</div>
+
+<div align="center">
+  <img src="img/82.png">
+</div>
+
+<div align="center">
+  <img src="img/83.png">
+</div>
+
+<div align="center">
+  <img src="img/84.png">
+</div>
+
 # Kubernetes
 
+<div align="center">
+  <img src="img/85.png">
+</div>
+
+<div align="center">
+  <img src="img/86.png">
+</div>
+
+* Un **pod** es un contenedor o un conjunto de contenedores, no tienen estado
+* Los **servicios** son una abstracción de la puerta de red
+* El **volumen** puede almacenar la información
+* Los **namespaces** hacen subdivición de clusters con multitenant
+
+<div align="center">
+  <img src="img/87.png">
+</div>
+
+* **Replicaset**, replica pots, una actualización requiere actualizar cada replica, no es recomendable
+* **Deployment** define un pot y replicaset para mantener el despliegue
+* **Statefullset** Es un desplique pero cuando requieres guardar un estado, para mantener trasabilidad de los pots
+* **Deamonset** Replicación en nodos
+* **Job** Realizar trabajos específicos
+
+<div align="center">
+  <img src="img/88.png">
+</div>
+
+Se debe usar kubectl
+
+<div align="center">
+  <img src="img/89.png">
+</div>
+
+Ejemplo
+
+<div align="center">
+  <img src="img/90.png">
+</div>
+
+## DEMO
+
+https://codelabs.developers.google.com/codelabs/cloud-orchestrate-with-kubernetes/#0
+
 # Machine learning
+
