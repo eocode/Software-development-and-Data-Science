@@ -42,3 +42,7 @@ La ciencia de datos **revela tendencias y genera información que las empresas p
 **6 – Business Data Analyst (analista de datos):** participa en las iniciativas y proyectos de análisis de datos. Es la persona que recoge las necesidades de los usuarios de negocio para los Data Scientist y presenta resultados obtenidos.
 
 **7 – Data Artist:** son expertos en Business Analytics y son los responsables de crear los gráficos, infografías y otras herramientas visuales para ayudar a las diferentes personas de la organización a comprender datos complejos.
+
+<div align="center">
+  <img src="img/data.png">
+</div>
