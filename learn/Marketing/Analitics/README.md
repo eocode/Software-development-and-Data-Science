@@ -13,6 +13,11 @@
     - [Porcentaje de rebote](#porcentaje-de-rebote)
     - [Conceptos importantes](#conceptos-importantes)
 - [Cuenta DEMO](#cuenta-demo)
+- [Tu sitio con analytics](#tu-sitio-con-analytics)
+  - [Tasa de conversión y micro-conversiones](#tasa-de-conversión-y-micro-conversiones)
+  - [Reportes en GA](#reportes-en-ga)
+    - [URL Tagging para campañas](#url-tagging-para-campañas)
+    - [Entender cualquier sitio web](#entender-cualquier-sitio-web)
 
 # Introducción
 
@@ -146,3 +151,117 @@ https://googlemerchandisestore.com
 </div>
 
 https://support.google.com/analytics/answer/6367342?hl=es
+
+# Tu sitio con analytics
+
+Tag Assistant
+
+https://chrome.google.com/webstore/detail/tag-assistant-by-google/kejbdjndbnbjgmefkgdddjlbokphdefk?hl=es
+
+## Tasa de conversión y micro-conversiones
+
+<div align="center">
+  <img src="img/20.png">
+</div>
+
+https://www.mercatitlan.com/blog/7-reportes-de-google-analytics-que-cualquier-marketer-deberia-saber
+
+<div align="center">
+  <img src="img/21.png">
+</div>
+
+## Reportes en GA
+
+
+<div align="center">
+  <img src="img/22.png">
+</div>
+
+<div align="center">
+  <img src="img/23.png">
+</div>
+
+<div align="center">
+  <img src="img/24.png">
+</div>
+
+### URL Tagging para campañas
+
+Para gestionar campañas de publicidad y estandarizar las URLs
+
+https://ga-dev-tools.appspot.com/campaign-url-builder/
+
+### Entender cualquier sitio web
+
+https://www.similarweb.com
+
+<div align="center">
+  <img src="img/25.png">
+</div>
+
+<div align="center">
+  <img src="img/26.png">
+</div>
+
+<div align="center">
+  <img src="img/27.png">
+</div>
+
+Planificación de medios
+
+<div align="center">
+  <img src="img/28.png">
+</div>
+
+Optimizar las conversiones
+
+<div align="center">
+  <img src="img/28.png">
+</div>
+
+Herramienta para optimizar conversiones, graba las acciones del usuario
+Tag manager
+https://www.inspectlet.com
+
+Otra herramienta similar, pero que permite hacer heatmaps
+https://www.hotjar.com
+
+Probar A/B test
+
+<div align="center">
+  <img src="img/29.png">
+</div>
+
+Modelos de atribución
+
+<div align="center">
+  <img src="img/30.png">
+</div>
+
+Segmentos avanzados
+
+<div align="center">
+  <img src="img/31.png">
+</div>
+
+https://supermetrics.com
+
+Recursos
+
+https://skillshop.exceedlms.com/student/path/2938?use_local=true
+https://www.getonbrd.com
+https://marketingplatform.google.com/about/
+
+Más métricas
+
+https://marketingplatform.google.com/about/
+
+<div align="center">
+  <img src="img/33.png">
+</div>
+
+https://www.amazon.com.mx/dp/B00N95HZ92/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1
+
+<div align="center">
+  <img src="img/34.png">
+</div>
