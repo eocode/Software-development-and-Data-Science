@@ -3,7 +3,7 @@
 ## Tabla de Contenido<!-- omit in toc -->
 - [Introducción](#introducción)
   - [¿Problematicas del desarrollo de software profesional?](#problematicas-del-desarrollo-de-software-profesional)
-  - [¿Qué es DevOps?](#qué-es-devops)
+  - [Comandos](#comandos)
 
 # Introducción
 
@@ -32,10 +32,72 @@ A la hora de hacer aplicaciones y proyectos de software nos podemos encontrar co
 
 Build, ship and run your code Anywhere
 
+## Comandos
+
+```bash
+docker
+
+docker run --name system ubuntu
+
+docker run -d --name server nginx
+docker run -d --name server -p 8080:80 nginx
+
+docker run -d --name db mongo
+docker exec -it db bash
+mongo
+use master
+db.users.insert({"name":"Elias"})
+db.users.find()
+
+docker run --name db -d -v /C/Users/elias/Desktop/mongodata:/data/db mongo
+docker exec -it db bash
+
+mongo
+use master
+db.users.insert({"name":"elias"})
+db.users.find()
+```
 
 
-## ¿Qué es DevOps?
+Volumenes
+https://docs.docker.com/storage/volumes/
 
-<div align="center">
-  <img src="img/devops.jpg">
-</div>
+```shell
+docker volume ls
+docker volume prune
+docker volume create dbdata
+docker volume ls
+docker run -d --name db -v dbdata:/data/db mongo
+```
+
+Imagenes
+```shell
+docker pull redis
+```
+
+Dockerfile
+```dockerfile
+FROM ubuntu
+
+RUN touch /usr/src/hola
+```
+
+```shell
+# Construir la imagen
+docker build -t ubuntu:eocode .
+
+# Cambiar tag
+docker run -it ubuntu:eocode
+ls -lac /usr/src
+docker tag ubuntu:eocode eocode/ubuntu:master
+
+# Enviar al repositorio
+docker push eocode/ubuntu:master
+
+# Historial de repositorio
+docker history eocode/ubuntu:master
+```
+
+Herramienta para ver que paso con la imagen
+https://github.com/wagoodman/dive
+
