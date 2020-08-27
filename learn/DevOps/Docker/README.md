@@ -117,4 +117,29 @@ docker run -d --name app -p 3000:3000 --env MONGO_URL=mongodb://db:27017/test do
 
 docker network connect eocodenetwork app
 docker network connect eocodenetwork db
+
+# docker-compose
+docker-compose logs app
+docker-compose exec app bash
+ls -lac
+
+docker-compose build
+docker-compose up -d
+docker-compose logs -f app
+docker-compose exec app bash
+apt-get update
+docker-compose up -d
+docker-compose logs -f app
+
+docker-compose up -d scale=4
+docker build -t dockerapp -f build/production.Dockerfile .
+docker run --rm -it dockerapp bash
+ls -lac
 ```
+
+Docker en Docker
+```
+docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock docker:18.06.1-ce
+```
+
+https://hub.docker.com/_/docker/
