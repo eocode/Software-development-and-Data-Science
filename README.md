@@ -19,6 +19,7 @@ Reuní trabajo relacionado con datos de forma ordenada y organizada en los lengu
   - [Lenguajes y programación](#lenguajes-y-programación)
   - [Backend](#backend-1)
   - [Bases de datos](#bases-de-datos)
+- [Analytics](#analytics)
   - [Ciencia de datos y Machine Learning](#ciencia-de-datos-y-machine-learning)
   - [Cloud Computing](#cloud-computing)
   - [DevOps](#devops)
@@ -125,6 +126,9 @@ http://biblioteca.inu.edu.sv/?wpfb_dl=263
 ## Bases de datos
 * [Fundamentos](/learn/BasesDatos/Fundamentos%20de%20Bases%20de%20Datos)
 
+# Analytics
+* [Analytics](/learn/Marketing/Analytics)
+* [Tag Manager](/learn/Marketing/Analytics)
 
 **Relacionales**
 
