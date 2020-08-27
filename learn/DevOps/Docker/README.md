@@ -4,6 +4,7 @@
 - [Introducción](#introducción)
   - [¿Problematicas del desarrollo de software profesional?](#problematicas-del-desarrollo-de-software-profesional)
   - [Comandos](#comandos)
+  - [Construir aplicaciones](#construir-aplicaciones)
 
 # Introducción
 
@@ -101,3 +102,19 @@ docker history eocode/ubuntu:master
 Herramienta para ver que paso con la imagen
 https://github.com/wagoodman/dive
 
+## Construir aplicaciones
+
+```shell
+# Construir app
+docker build -t dockerapp .
+docker run -it -p 3001:3000 -v /C/Users/elias/Desktop/docker:/usr/src dockerapp
+
+# Red
+docker network ls
+docker network create --attachable eocodenetwork
+docker run -d --name db mongo
+docker run -d --name app -p 3000:3000 --env MONGO_URL=mongodb://db:27017/test dockerapp
+
+docker network connect eocodenetwork app
+docker network connect eocodenetwork db
+```
