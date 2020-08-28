@@ -144,7 +144,8 @@ http://biblioteca.inu.edu.sv/?wpfb_dl=263
 * [Data Science y ML](/learn/DataScience)
 
 ## Cloud Computing
-* [GCP](/learn/GCP)
+* [GCP](/learn/Cloud/GCP)
+* [Serverless](/learn/Cloud/Serverless)
 
 ## DevOps
 * [Fundamentos de DevOps](/learn/DevOps/Fundamentos)
