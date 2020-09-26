@@ -15,12 +15,13 @@ Reuní trabajo relacionado con datos de forma ordenada y organizada en los lengu
   - [Automatización](#automatización)
   - [Trabajo en equipo y gestión de proyectos](#trabajo-en-equipo-y-gestión-de-proyectos)
   - [Marketing digital](#marketing-digital)
+  - [Marketing](#marketing)
   - [Matemáticas](#matemáticas)
   - [Lenguajes y programación](#lenguajes-y-programación)
   - [Backend](#backend-1)
   - [Bases de datos](#bases-de-datos)
-- [Marketing](#marketing)
   - [Ciencia de datos y Machine Learning](#ciencia-de-datos-y-machine-learning)
+  - [BigData](#bigdata)
   - [Cloud Computing](#cloud-computing)
   - [DevOps](#devops)
   - [Inglés](#inglés)
@@ -96,6 +97,10 @@ Conocimientos relacionados que me interesan y me gustá aplicar
 
 * [Whatsapp Business](/learn/Mkt/WhatsApp)
 
+## Marketing
+* [Google Analytics](/learn/Marketing/Analytics)
+* [Tag Manager](/learn/Marketing/Analytics)
+
 ## Matemáticas
 * [Logica](/learn/Matematicas/logica)
 * [Fundamentos de Matemáticas](/learn/Matematicas/fundamentos)
@@ -126,10 +131,6 @@ http://biblioteca.inu.edu.sv/?wpfb_dl=263
 ## Bases de datos
 * [Fundamentos](/learn/BasesDatos/Fundamentos%20de%20Bases%20de%20Datos)
 
-# Marketing
-* [Google Analytics](/learn/Marketing/Analytics)
-* [Tag Manager](/learn/Marketing/Analytics)
-
 **Relacionales**
 
 * [SQL y MySQL](/learn/BasesDatos/SQL%20y%20MySQL)
@@ -142,6 +143,9 @@ http://biblioteca.inu.edu.sv/?wpfb_dl=263
 
 ## Ciencia de datos y Machine Learning
 * [Data Science y ML](/learn/DataScience)
+
+## BigData
+* [Apache Spark](/learn/bigdata/spark)
 
 ## Cloud Computing
 * [GCP](/learn/Cloud/GCP)
