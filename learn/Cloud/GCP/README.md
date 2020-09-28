@@ -31,6 +31,10 @@
   - [Despliegue en Servicios Serverless](#despliegue-en-servicios-serverless)
 - [Kubernetes](#kubernetes)
   - [DEMO](#demo)
+  - [Planeación de tus ambientes](#planeación-de-tus-ambientes)
+  - [Anthos](#anthos)
+  - [Cloud Run for Anthos](#cloud-run-for-anthos)
+  - [Anthos Service MESH](#anthos-service-mesh)
 - [Machine learning](#machine-learning)
 
 
@@ -652,6 +656,189 @@ Ejemplo
 ## DEMO
 
 https://codelabs.developers.google.com/codelabs/cloud-orchestrate-with-kubernetes/#0
+
+```sh
+gcloud init
+gcloud auth list
+# Name of cluster
+export CLUSTER=platzi-cluster
+echo $CLUSTER
+#Set config Zone. South Carolina, USA us-east1
+#You can check the media latency from your region in  http://www.gcping.com/
+export ZONE=us-central1-a
+echo $ZONE
+
+gcloud container clusters create $CLUSTER --addons HorizontalPodAutoscaling,HttpLoadBalancing,CloudRun --enable-ip-alias --enable-stackdriver-kubernetes --machine-type n1-standard-2 --zone $ZONE
+```
+
+* Create a cluster with name platzi-cluster: gcloud container clusters create $CLUSTER
+* Add the following addons (Complementos) and enable them:
+  * HorizontalPodAutoscaling: Automatically scales the number of pods in a replication controller, deployment, replica set or stateful set based on observed CPU utilization. Ref https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
+  * HttpLoadBalancing.
+  * CloudRun
+* Set alias, it is a good idea NOT use IP, it is better alias: –enable-stackdriver-kubernetes
+* Mandatory set machine type: –machine-type n1-standard-2
+* Mandatory set zone: –zone $ZONE
+
+```sh
+gcloud config set project ${PROJECT_ID}
+gcloud config set compute/zone ${COMPUTE_ZONE}
+gcloud container clusters create ${CLUSTER_NAME} --num-nodes=1
+gcloud container clusters get-credentials ${CLUSTER_NAME}
+
+kubectl create deployment hello-server \ --image=gcr.io/google-samples/hello-app:1.0kubectl expose deployment hello-server --type LoadBalancer \--port 80 --target-port 8080
+kubectl get pods
+kubectl get service hello-server
+```
+
+## Planeación de tus ambientes
+
+<div align="center">
+  <img src="img/91.png">
+</div>
+
+<div align="center">
+  <img src="img/92.png">
+</div>
+
+<div align="center">
+  <img src="img/93.png">
+</div>
+
+<div align="center">
+  <img src="img/94.png">
+</div>
+
+<div align="center">
+  <img src="img/95.png">
+</div>
+
+<div align="center">
+  <img src="img/96.png">
+</div>
+
+<div align="center">
+  <img src="img/97.png">
+</div>
+
+<div align="center">
+  <img src="img/98.png">
+</div>
+
+<div align="center">
+  <img src="img/99.png">
+</div>
+
+## Anthos
+
+https://cloud.google.com/anthos/?hl=es-419
+
+
+<div align="center">
+  <img src="img/100.png">
+</div>
+
+<div align="center">
+  <img src="img/101.png">
+</div>
+
+Anthos multinube es única en la industria
+
+<div align="center">
+  <img src="img/102.png">
+</div>
+
+<div align="center">
+  <img src="img/103.png">
+</div>
+
+## Cloud Run for Anthos
+
+La plataforma Anthos simplifica la entrega de servicios de forma global, desde la gestión del tráfico y la telemetría en malla hasta la protección de la comunicación entre los servicios. De esta forma, facilita el trabajo a los equipos de operaciones y desarrollo. Anthos Service Mesh, la malla de servicios totalmente gestionada de Google, te permite gestionar estos entornos complejos de forma muy sencilla y disfrutar de las ventajas que ofrecen.
+
+Kubernetes es una abstracción sobre infraestructura y un conjunto de APIs declarativas
+
+<div align="center">
+  <img src="img/104.png">
+</div>
+
+<div align="center">
+  <img src="img/105.png">
+</div>
+
+<div align="center">
+  <img src="img/106.png">
+</div>
+
+<div align="center">
+  <img src="img/107.png">
+</div>
+
+<div align="center">
+  <img src="img/108.png">
+</div>
+
+<div align="center">
+  <img src="img/110.png">
+</div>
+
+<div align="center">
+  <img src="img/1111.png">
+</div>
+
+<div align="center">
+  <img src="img/112.png">
+</div>
+
+<div align="center">
+  <img src="img/113.png">
+</div>
+
+<div align="center">
+  <img src="img/114.png">
+</div>
+
+<div align="center">
+  <img src="img/115.png">
+</div>
+
+## Anthos Service MESH
+
+<div align="center">
+  <img src="img/116.png">
+</div>
+
+<div align="center">
+  <img src="img/117.png">
+</div>
+
+<div align="center">
+  <img src="img/118.png">
+</div>
+
+<div align="center">
+  <img src="img/119.png">
+</div>
+
+<div align="center">
+  <img src="img/120.png">
+</div>
+
+<div align="center">
+  <img src="img/121.png">
+</div>
+
+<div align="center">
+  <img src="img/122.png">
+</div>
+
+<div align="center">
+  <img src="img/123.png">
+</div>
+
+<div align="center">
+  <img src="img/124.png">
+</div>
 
 # Machine learning
 
