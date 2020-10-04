@@ -5,6 +5,7 @@
   - [¿Problematicas del desarrollo de software profesional?](#problematicas-del-desarrollo-de-software-profesional)
   - [Comandos](#comandos)
   - [Construir aplicaciones](#construir-aplicaciones)
+  - [Borrar imagenes none](#borrar-imagenes-none)
 
 # Introducción
 
@@ -143,3 +144,11 @@ docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock docker:18.06.1-
 ```
 
 https://hub.docker.com/_/docker/
+
+## Borrar imagenes none
+
+A menudo es útil borrar imagenes construidas que no necesitamos o quedan huerfanas
+
+```sh
+docker image prune --filter="dangling=true"
+```
