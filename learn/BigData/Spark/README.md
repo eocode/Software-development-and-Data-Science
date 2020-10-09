@@ -7,12 +7,16 @@
   - [Historia](#historia)
   - [Spark vs Hadoop](#spark-vs-hadoop)
 - [Introducción a los RDDs y DataFrames](#introducción-a-los-rdds-y-dataframes)
-  - [Caracter[isticas de los RDD](#caracteristicas-de-los-rdd)
+  - [Caracteristicas de los RDD](#caracteristicas-de-los-rdd)
     - [Transformaciones y acciones](#transformaciones-y-acciones)
   - [DataFrame](#dataframe)
   - [¿Cuándo usar un RDD?](#cuándo-usar-un-rdd)
   - [¿Cuándo usar DataFrames?](#cuándo-usar-dataframes)
   - [Instalación](#instalación)
+- [Operaciones RDDs](#operaciones-rdds)
+  - [RDD](#rdd)
+  - [DataFrames](#dataframes)
+  - [Monitoreo](#monitoreo)
 
 # Introducción
 
@@ -51,7 +55,7 @@ Es un framework de desarrollo de procesos de Big Data
 Son las dos principales estructuras que soporta spark
 Los RDD son el componente m[inimo con el cual podemos comunicarnos en spark
 
-## Caracter[isticas de los RDD
+## Caracteristicas de los RDD
 
 * Principal abstracción de datos (Abstracción básica)
 * Distribuidos en todo el clúster
@@ -175,3 +179,35 @@ https://github.com/big-data-europe/docker-spark
 <div align="center">
   <img src="img/3.png">
 </div>
+
+# Operaciones RDDs
+
+**Todas las aplicaciones en Spark poseen un manejador central de programa (Driver) y varios ejecutores** que se crean a lo largo del clúster, estas son las computadoras que realizarán las tareas en paralelo y finalmente devolverán los valores al driver, la aplicación central.
+
+## RDD
+
+Para poder realizar estas tareas, Spark posee desde su versión 1.0 los **RDD (Resilient Distributed Dataset)**, los cuales son tolerantes a fallos y pueden ser distribuidos a lo largo de los nodos del clúster.
+
+**Los RDD pueden ser creados al cargar datos de manera distribuida**, como es desde un HDFS, Cassanda, Hbase o cualquier sistema de datos soportado por Hadoop, pero también por **colecciones de datos de Scala o Python**, **además de poder ser leídos desde archivos en el sistema local.**
+
+En visión general, **un RDD puede ser visto como un set de datos** los cuales soportan solo dos tipos de operaciones: **transformaciones y acciones.**
+
+**Las transformaciones permiten crear un nuevo RDD a partir de uno previamente existente**, mientras que las acciones retornan un valor al driver de la aplicación. **El núcleo de operación del paradigma de Spark es la ejecución perezosa** **(Lazy)**, es decir que las transformaciones solo serán calculadas posterior a una llamada de acción.
+
+Además, los RDD poseen una **familiaridad con el paradigma orientado a objetos**, lo cual permite que podamos realizar operaciones de bajo nivel a modo. **Map, filter y reduce son tres de las operaciones más comunes.**
+
+Una de las grandes ventajas que ofrecen los RDD es la **compilación segura**; por su particularidad de ejecución perezosa, se calcula si se generará un error o no antes de ejecutarse, lo cual permite identificar problemas antes de lanzar la aplicación. El pero que podemos encontrar con los RDD es que no son correctamente tratados por el Garbage collector y cuando las lógicas de operación se hacen complejas, su uso puede resultar poco práctico, aquí entran los DataFrames.
+
+## DataFrames
+
+Esos componentes fueron agregados en la versión 1.3 de Spark y pueden ser invocados con el contexto espacial de Spark SQL. Como indica su nombre, **es un módulo especialmente desarrollado para ser ejecutado con instrucciones parecidas al SQL estándar.**
+
+> De la misma forma, como los RDD, estos pueden ser creados a partir de archivos, tablas tipo Hive, bases de datos externas y RDD o DataFrames existentes.
+
+El primer detalle que salta cuando creamos un DataFrame es que poseen **columnas nombradas**, lo que a nivel conceptual es como trabajar con un **DataFrame de Pandas**. Con la excepción que a nivel interno **Spark trabaja con Scala, lo cual le asigna a cada columna el tipo de dato Row, un tipo especial de objeto sin tipo definido.**
+
+Pero no es todo, los DataFrames implementan un sistema llamado **Catalyst**, el cual es un motor de optimización de planes de ejecución, parecido al que usan las bases de datos, pero diseñado para la cantidad de datos propia de Spark, aunado a eso, se tiene implementado un optimizador de memoria y consumo de CPU llamado **Tungsten**, el cual determina cómo se convertirán los planes lógicos creados por Catalyst a un plan físico.
+
+## Monitoreo
+
+https://spark.apache.org/docs/latest/monitoring.html

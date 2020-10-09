@@ -5,6 +5,7 @@
   - [Escalabilidad](#escalabilidad)
   - [Arquitectura](#arquitectura)
   - [12 factores](#12-factores)
+- [Practicas con labs play with docker](#practicas-con-labs-play-with-docker)
 
 # Introducción
 
@@ -49,3 +50,32 @@ Para saberlo, necesitas comprobarlo con los 12 factores
 **Admin processes**: la aplicación tiene que poder ser ejecutable como procesos independientes de la aplicación
 
 https://12factor.net
+
+# Practicas con labs play with docker
+
+Puedes realizar prácticas como si fuera un entorno real en:
+
+https://labs.play-with-docker.com
+
+* Iniciar sesión y crear una instancia
+* Conectar por SSH
+
+Para levantar un worker y un manager usar:
+
+<div align="center">
+  <img src="img/1.png">
+</div>
+
+```sh
+# Up Manager
+docker swarm init --advertise-addr 192.168.0.18
+# Up Worker
+docker swarm join --token SWMTKN-1-30d3gucfxrbn0r8kbv3gkbyprxa7yucctq7mkq27mtuxwy9buf-103i85uavgatwwmlm1boyotu9 192.168.0.18:2377
+# List nodes
+docker node lis
+# Instruction to join workers and managers
+docker swarm join-token worker
+docker swarm join-token manager
+```
+
+https://dockerswarm.rocks
