@@ -6,10 +6,7 @@ Reuní trabajo relacionado con datos de forma ordenada y organizada en los lengu
 > Contenido sobre **Proyectos/Retos/Codigos/Notas** relacionados al tema
 
 ## Tabla de Contenido<!-- omit in toc -->
-- [Proyectos con Python](#proyectos-con-python)
-    - [Backend](#backend)
-    - [Manejo de datos](#manejo-de-datos)
-- [Retos y prácticas](#retos-y-prácticas)
+- [Links](#links)
 - [Base de conocimientos](#base-de-conocimientos)
   - [Fundamentos](#fundamentos)
   - [Automatización](#automatización)
@@ -18,7 +15,7 @@ Reuní trabajo relacionado con datos de forma ordenada y organizada en los lengu
   - [Marketing](#marketing)
   - [Matemáticas](#matemáticas)
   - [Lenguajes y programación](#lenguajes-y-programación)
-  - [Backend](#backend-1)
+  - [Backend](#backend)
   - [Bases de datos](#bases-de-datos)
   - [Ciencia de datos y Machine Learning](#ciencia-de-datos-y-machine-learning)
   - [BigData](#bigdata)
@@ -41,36 +38,12 @@ Reuní trabajo relacionado con datos de forma ordenada y organizada en los lengu
 - [Contribuir al repositorio](#contribuir-al-repositorio)
 - [Licencia](#licencia)
 
-# Proyectos con Python
+# Links
 
-Proyectos realizados con Python
-
-### Backend
-* [Tasks WebApp with Flask](https://github.com/eocode/Flask_TaskApp)
-* [Juego del ahorcado](https://github.com/eocode/Juego-del-ahorcado-Python)
-* [CRUD CLI with Click](https://github.com/eocode/Python-Clients-CLI)
-* [Rider App with Docker-Django-DRF-Celery-Redis-Postgresql](https://github.com/eocode/Rider-App)
-* [Photogram with Django](https://github.com/eocode/PhotoGram)
-* [Personal Page with Django](https://github.com/eocode/PersonalPage-with-Django)
-* [Python-Mongo](https://github.com/eocode/Python-Mongo)
-* [Cipher CLI](https://github.com/eocode/Cipher)
-
-### Manejo de datos
-* [Algoritmos de Regresión lineal simple con Python](https://github.com/eocode/Algoritmo-de-regresion-lineal-simple-en-Python)
-* [COVIT-19 México with Python, Sheets and DataStudio](https://github.com/eocode/COVIT-19-Mexico)
-* [Web Scraper Tools](https://github.com/eocode/Web-Scraper-Tools)
-* [News Scraper with Python full ETL Process](https://github.com/eocode/News-Scraper-A-Complete-ETL-Process)
-* [Amazon Web Scraping y Clusterizacion con R](https://github.com/eocode/Amazon-Web-Scraping-y-Clusterizacion-con-R)
-* [Analizando una base de datos de Peliculas con PostgreSQL y Tableau](https://github.com/eocode/Proyecto-de-Peliculas-Data-Science-con-PostgreSQL)
-* [Activando data, una organización para compartir en el mundo de los datos](https://github.com/ActivandoData)
-
-
-# Retos y prácticas
-
-Prácticas de desarrollo y algoritmos
-
-[Retos realizados](https://github.com/eocode?tab=repositories&q=challenge&type=&language=)
-[Códigos y practicas](/codes)
+https://towardsdatascience.com/some-common-data-science-stacks-7525477c0dd0
+https://medium.com/@coladibriatico94/jupyter-with-multiple-languages-1ae58e98dc8e
+https://towardsdatascience.com/docker-for-data-science-9c0ce73e8263
+https://hands-on.cloud/how-to-build-python-data-science-docker-container-based-on-anaconda/
 
 # Base de conocimientos
 
