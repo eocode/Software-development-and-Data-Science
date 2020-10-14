@@ -44,6 +44,16 @@ https://towardsdatascience.com/some-common-data-science-stacks-7525477c0dd0
 https://medium.com/@coladibriatico94/jupyter-with-multiple-languages-1ae58e98dc8e
 https://towardsdatascience.com/docker-for-data-science-9c0ce73e8263
 https://hands-on.cloud/how-to-build-python-data-science-docker-container-based-on-anaconda/
+https://towardsdatascience.com/python-vs-node-js-which-one-is-best-for-your-project-e98f2c63f020
+https://thenextweb.com/syndication/2020/10/12/10-simple-python-tips-to-speed-up-your-data-analysis/
+https://github.com/akhilanandbv003/data-engineer-airflow-challenge
+
+https://github.com/TheAlgorithms/Python
+
+https://platzi.com/clases/1511-big-data/17904-demo-creando-nuestro-ide-en-la-nube-con-python-bot/
+https://platzi.com/clases/1943-platzi-master-talent-placement/33054-12102020-data-engineer-flat-mx-remoto/
+https://platzi.com/clases/1365-kubernetes-xertica/13732-desplegar-una-aplicacion-stateful-practica/
+https://platzi.com/clases/2045-spark-2020/31916-acciones-de-modificacion-sobre-rdds/
 
 # Base de conocimientos
 
