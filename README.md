@@ -55,6 +55,13 @@ https://platzi.com/clases/1943-platzi-master-talent-placement/33054-12102020-dat
 https://platzi.com/clases/1365-kubernetes-xertica/13732-desplegar-una-aplicacion-stateful-practica/
 https://platzi.com/clases/2045-spark-2020/31916-acciones-de-modificacion-sobre-rdds/
 
+Recomendaciones
+
+https://microk8s.io
+https://multipass.run/docs/installing-on-windows
+https://stackoverflow.com/questions/14155596/how-to-substitute-shell-variables-in-complex-text-files
+https://docs.gitlab.com/ee/ci/variables/
+
 # Base de conocimientos
 
 Conocimientos relacionados que me interesan y me gustá aplicar
