@@ -7,6 +7,8 @@ Reuní trabajo relacionado con datos de forma ordenada y organizada en los lengu
 
 ## Tabla de Contenido<!-- omit in toc -->
 - [Links](#links)
+- [Contenedores](#contenedores)
+- [Recomendaciones](#recomendaciones)
 - [Base de conocimientos](#base-de-conocimientos)
   - [Fundamentos](#fundamentos)
   - [Automatización](#automatización)
@@ -47,6 +49,11 @@ https://hands-on.cloud/how-to-build-python-data-science-docker-container-based-o
 https://towardsdatascience.com/python-vs-node-js-which-one-is-best-for-your-project-e98f2c63f020
 https://thenextweb.com/syndication/2020/10/12/10-simple-python-tips-to-speed-up-your-data-analysis/
 https://github.com/akhilanandbv003/data-engineer-airflow-challenge
+https://medium.com/better-programming/super-slim-docker-containers-fdaddc47e560
+
+# Contenedores
+https://code.visualstudio.com/docs/remote/containers
+https://code.visualstudio.com/docs/remote/containers-tutorial
 
 https://github.com/TheAlgorithms/Python
 
@@ -55,7 +62,7 @@ https://platzi.com/clases/1943-platzi-master-talent-placement/33054-12102020-dat
 https://platzi.com/clases/1365-kubernetes-xertica/13732-desplegar-una-aplicacion-stateful-practica/
 https://platzi.com/clases/2045-spark-2020/31916-acciones-de-modificacion-sobre-rdds/
 
-Recomendaciones
+# Recomendaciones
 
 https://microk8s.io
 https://multipass.run/docs/installing-on-windows
